@@ -575,6 +575,138 @@ const aircraftDB = [
         trivia: "No es solo un avión, sino un 'sistema de sistemas' donde el caza coordina satélites, drones y fragatas simultáneamente.",
         img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Dassault_New_Generation_Fighter_at_Paris_Air_Show_2019.jpg",
         desc: "Proyecto europeo para un caza de sexta generación que sustituirá al Eurofighter y al Rafale en las próximas décadas."
+    },
+    // ═══════════════════════════════════════════
+    // ICONOS ADICIONALES (GUERRA FRÍA Y MODERNOS)
+    // ═══════════════════════════════════════════
+    {
+        id: "f14_tom", name: "F-14 Tomcat", type: "Caza", country: "EE.UU.", year: 1974,
+        speed: 2485, range: 3000, ceiling: 15200, mtow: 33720,
+        arm: "AIM-54 Phoenix, AIM-7 Sparrow, AIM-9 Sidewinder, Cañón M61 20mm",
+        trivia: "Sus alas de geometría variable se ajustan automáticamente para optimizar la sustentación o la velocidad supersónica.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/d/d2/F-14A_Tomcat_VF-114.jpg",
+        desc: "Defensor de la flota de la Armada de EE.UU., famoso por su capacidad de interceptar múltiples blancos a más de 150 km de distancia."
+    },
+    {
+        id: "mig21_fish", name: "MiG-21 Fishbed", type: "Caza", country: "URSS", year: 1959,
+        speed: 2175, range: 1225, ceiling: 19000, mtow: 10400,
+        arm: "2 misiles R-60, Cañón GSh-23L de 23mm",
+        trivia: "Es el caza supersónico más producido de la historia, con más de 11,000 unidades fabricadas en diversas variantes.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/e/e5/MiG-21_%28Fishbed%29_2.jpg",
+        desc: "Un caza ligero y barato de mantener que se convirtió en el símbolo de las fuerzas aéreas del bloque soviético durante décadas."
+    },
+    {
+        id: "harrier_gr9", name: "Harrier GR9", type: "Ataque", country: "Reino Unido", year: 1969,
+        speed: 1176, range: 1900, ceiling: 15600, mtow: 14100,
+        arm: "2 cañones ADEN 30mm, Bombas Paveway, Misiles Maverick",
+        trivia: "Sus toberas orientables le permiten realizar el 'vifing' (vectoring in forward flight) para frenar en seco en pleno combate.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/c/cc/AV-8B_Harrier_VMA-231.jpg",
+        desc: "El primer avión de ataque con capacidad de despegue y aterrizaje vertical (VTOL) exitoso en el mundo."
+    },
+    {
+        id: "mirage_f1", name: "Dassault Mirage F1", type: "Caza", country: "Francia", year: 1973,
+        speed: 2338, range: 3300, ceiling: 20000, mtow: 16200,
+        arm: "2 cañones DEFA 30mm, Misiles Matra Magic y Super 530",
+        trivia: "A diferencia de otros Mirage, este abandonó el ala en delta por un ala en flecha para mejorar el rendimiento en pistas cortas.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/2/26/Dassault_Mirage_F1_at_the_Musee_de_l%27Air_et_de_l%27Espace.jpg",
+        desc: "Caza interceptor francés que sirvió en numerosos conflictos, desde África hasta la Guerra del Golfo."
+    },
+    {
+        id: "tornado_ids", name: "Panavia Tornado", type: "Ataque", country: "Europa (Reino Unido/Alemania/Italia)", year: 1979,
+        speed: 2400, range: 3890, ceiling: 15240, mtow: 28000,
+        arm: "2 cañones Mauser 27mm, Misiles Storm Shadow, AIM-9",
+        trivia: "Su radar de seguimiento del terreno le permite volar de forma autónoma a Match 1 a tan solo 60 metros del suelo.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/3/30/Panavia_Tornado_IDS_of_the_German_Air_Force_at_the_Royal_International_Air_Tattoo_2013.jpg",
+        desc: "Avión de combate de ala de geometría variable optimizado para ataques a baja cota a altas velocidades."
+    },
+    {
+        id: "su24", name: "Su-24 Fencer", type: "Ataque", country: "URSS / Rusia", year: 1974,
+        speed: 1650, range: 2775, ceiling: 11000, mtow: 43750,
+        arm: "Cañón GSh-6-23, Misiles Kh-23, bombas guiadas KAB-500",
+        trivia: "Fue el primer avión soviético en llevar un sistema de navegación y ataque digital integrado.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/2/23/Sukhoi_Su-24M_at_the_MAKS-2011_airshow_%2801%29.jpg",
+        desc: "Bombardero táctico supersónico diseñado para misiones de penetración profunda a baja altitud."
+    },
+    // ═══════════════════════════════════════════
+    // GIGANTES Y ESTRATÉGICOS (BOMBARDEROS Y TRANSPORTE)
+    // ═══════════════════════════════════════════
+    {
+        id: "b52", name: "B-52 Stratofortress", type: "Bombardero", country: "EE.UU.", year: 1955,
+        speed: 1047, range: 16232, ceiling: 15165, mtow: 220000,
+        arm: "31,500 kg de bombas (convencionales o nucleares), misiles de crucero",
+        trivia: "Se espera que el B-52 esté en servicio durante 100 años (hasta la década de 2050), lo que lo convertiría en el avión más longevo de la historia militar.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/f/f3/B-52_Stratofortress_in_flight.jpg",
+        desc: "El pilar de la fuerza de bombardeo estratégico de largo alcance de EE.UU., capaz de llevar a cabo misiones globales con reabastecimiento en vuelo."
+    },
+    {
+        id: "tu95", name: "Tupolev Tu-95 Bear", type: "Bombardero", country: "URSS / Rusia", year: 1956,
+        speed: 920, range: 15000, ceiling: 13700, mtow: 188000,
+        arm: "6 misiles de crucero Kh-55, 2 cañones AM-23 en cola",
+        trivia: "Sus hélices contrarrotatorias son tan ruidosas que pueden ser detectadas por los sistemas de sonar de los submarinos en el océano.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Tupolev_Tu-95MS_at_Engels_air_base.jpg",
+        desc: "El único bombardero estratégico propulsado por turbohélices que sigue en servicio activo en el mundo."
+    },
+    {
+        id: "an225", name: "Antonov An-225 Mriya", type: "Transporte", country: "URSS / Ucrania", year: 1988,
+        speed: 850, range: 15400, ceiling: 11000, mtow: 640000,
+        arm: "Ninguno (Carga civil/militar)",
+        trivia: "Ostenta el récord del avión más pesado jamás construido y poseía la envergadura más grande de cualquier aeronave en servicio operativo.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Antonov_An-225_Mriya_at_Gostomel_Airport.jpg",
+        desc: "Un gigante de seis motores diseñado originalmente para transportar el transbordador espacial soviético Burán."
+    },
+    {
+        id: "c5m", name: "C-5M Super Galaxy", type: "Transporte", country: "EE.UU.", year: 1970,
+        speed: 855, range: 8900, ceiling: 10895, mtow: 381000,
+        arm: "Ninguno",
+        trivia: "Su bodega de carga es más larga que la distancia del primer vuelo de los hermanos Wright.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/a/ab/C-5_Galaxy_front_view.jpg",
+        desc: "El avión de transporte militar más grande de EE.UU., capaz de llevar dos tanques M1 Abrams o un helicóptero Chinook entero en su interior."
+    },
+    // ═══════════════════════════════════════════
+    // RECONOCIMIENTO Y ESPIONAJE
+    // ═══════════════════════════════════════════
+    {
+        id: "sr71", name: "SR-71 Blackbird", type: "Especial", country: "EE.UU.", year: 1966,
+        speed: 3540, range: 5400, ceiling: 25900, mtow: 78000,
+        arm: "Sensores fotográficos y electrónicos",
+        trivia: "En vuelo, el fuselaje se calentaba tanto que se expandía varios centímetros; en tierra, el avión perdía combustible porque los tanques solo sellaban por expansión térmica.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/13/Lockheed_SR-71_Blackbird.jpg",
+        desc: "El avión tripulado más rápido de la historia, diseñado para volar tan alto y tan rápido que ningún misil pudiera alcanzarlo."
+    },
+    {
+        id: "u2s", name: "U-2 Dragon Lady", type: "Especial", country: "EE.UU.", year: 1957,
+        speed: 659, range: 10300, ceiling: 21336, mtow: 18144,
+        arm: "Cámaras ópticas, radares de barrido y sensores de señales",
+        trivia: "Es tan difícil de aterrizar que requiere que otro piloto lo siga en un coche deportivo por la pista para dictar la altura por radio.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/1/1d/U-2S_Dragon_Lady_in_flight.jpg",
+        desc: "Avión de reconocimiento de gran altitud capaz de operar en la estratosfera para vigilar territorio enemigo sin ser detectado."
+    },
+    // ═══════════════════════════════════════════
+    // NAVALES Y OTROS EMBLEMÁTICOS
+    // ═══════════════════════════════════════════
+    {
+        id: "fa18e", name: "F/A-18E Super Hornet", type: "Caza", country: "EE.UU.", year: 1999,
+        speed: 1915, range: 2346, ceiling: 15000, mtow: 29937,
+        arm: "AIM-9X, AIM-120 AMRAAM, AGM-84 Harpoon, Cañón 20mm",
+        trivia: "A pesar de parecerse al Hornet original, el Super Hornet es un 25% más grande y tiene una firma de radar mucho menor.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/3/36/F-A-18E_Super_Hornet_of_VFA-115_in_flight_2011.jpg",
+        desc: "El caballo de batalla actual de los portaaviones de EE.UU., un caza polivalente capaz de realizar misiones de ataque y escolta."
+    },
+    {
+        id: "e3s", name: "E-3 Sentry (AWACS)", type: "Especial", country: "EE.UU.", year: 1977,
+        speed: 855, range: 7400, ceiling: 12500, mtow: 156036,
+        arm: "Sistemas de radar y guerra electrónica",
+        trivia: "El domo giratorio sobre su lomo mide 9 metros de diámetro y puede vigilar un área de más de 300,000 kilómetros cuadrados.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/e/eb/E-3_Sentry_over_the_Pacific_Ocean.jpg",
+        desc: "El 'ojo en el cielo' de la OTAN, un centro de mando y control aerotransportado esencial para coordinar batallas aéreas."
+    },
+    {
+        id: "v22", name: "V-22 Osprey", type: "Transporte", country: "EE.UU.", year: 2007,
+        speed: 509, range: 1627, ceiling: 7620, mtow: 27400,
+        arm: "Ametralladora M240, ametralladora GAU-17 (opcional)",
+        trivia: "Es el primer avión de rotor basculante de producción masiva: despega como helicóptero y vuela como avión.",
+        img: "https://upload.wikimedia.org/wikipedia/commons/c/c2/MV-22_Osprey_in_flight_2014.jpg",
+        desc: "Una aeronave híbrida diseñada para combinar la versatilidad de un helicóptero con la velocidad y alcance de un avión de turbohélice."
     }
 
 ];
