@@ -109,6 +109,14 @@
                         <i class="fas fa-timeline"></i> TIMELINE
                     </button>
 
+                    <!-- Teatro de Operaciones -->
+                    <button onclick="toggleTheater()"
+                            id="theaterBtn"
+                            class="px-4 py-2 border-2 border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest transition-colors flex items-center gap-2 text-slate-500 hover:border-red-500 hover:text-red-500"
+                            title="Teatro de Operaciones (W)">
+                        <i class="fas fa-crosshairs"></i> TEATRO
+                    </button>
+
                     <!-- Theme toggle -->
                     <div class="theme-toggle-wrap" title="Cambiar tema (D)">
                         <i class="theme-toggle-icon fas fa-sun text-yellow-400"></i>
@@ -166,6 +174,10 @@
                                     <span class="text-xs text-slate-300">Instalar app</span>
                                     <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">I</kbd>
                                 </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Teatro de Ops.</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">W</kbd>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -218,6 +230,32 @@
                     <p class="text-[9px] text-slate-500 mono text-center mt-3">
                         Arrastra los extremos para filtrar por rango de años de entrada en servicio
                     </p>
+                </div>
+            </div>
+
+            <!-- Fila 4: Teatro de Operaciones (colapsada por defecto) -->
+            <div id="theaterSection">
+                <div class="bg-slate-900 rounded-2xl p-5 text-white">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-crosshairs text-red-400"></i>
+                            <span class="header-font text-xs font-black uppercase tracking-widest">Teatro de Operaciones</span>
+                            <span id="theaterConflictLabel" class="mono text-[10px] text-red-400 font-black"></span>
+                        </div>
+                        <button id="theaterResetBtn"
+                                onclick="resetConflictFilter()"
+                                disabled
+                                class="text-[9px] mono font-black uppercase text-slate-500 hover:text-white transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                            <i class="fas fa-times mr-1"></i> RESET
+                        </button>
+                    </div>
+                    <p class="text-[10px] text-slate-500 mb-4 mono">
+                        Selecciona un conflicto para filtrar las aeronaves que participaron en él. Clic en un chip de la ficha técnica para ir directamente.
+                    </p>
+                    <div id="theaterGrid"
+                         class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                        <!-- Inyectado por JS -->
+                    </div>
                 </div>
             </div>
 
