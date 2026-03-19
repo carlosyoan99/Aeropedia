@@ -1,7 +1,7 @@
 {
   "name": "AeroPedia: Archivo Global de Aviación",
   "short_name": "AeroPedia",
-  "description": "Enciclopedia interactiva de aviación militar con comparador, gráficos de radar y calculadora Mach.",
+  "description": "Enciclopedia interactiva de aviación militar con más de 70 aeronaves, comparador, teatro de operaciones y calculadora Mach.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -9,8 +9,10 @@
   "theme_color": "#0f172a",
   "background_color": "#0f172a",
   "lang": "es",
-  "categories": ["education", "reference"],
-
+  "categories": [
+    "education",
+    "reference"
+  ],
   "icons": [
     {
       "src": "icons/icon-72.svg",
@@ -43,41 +45,60 @@
       "purpose": "any maskable"
     }
   ],
-
-  "screenshots": [
-    {
-      "src": "screenshots/desktop.png",
-      "sizes": "1280x800",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Vista de galería en escritorio"
-    },
-    {
-      "src": "screenshots/mobile.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Vista de galería en móvil"
-    }
-  ],
-
   "shortcuts": [
     {
-      "name": "Cazas",
-      "short_name": "Cazas",
-      "description": "Filtrar por cazas",
-      "url": "./index.html?cat=Caza",
-      "icons": [{ "src": "icons/icon-96.svg", "sizes": "96x96" }]
+      "name": "Archivo — Galería",
+      "short_name": "Galería",
+      "description": "Ver todas las aeronaves",
+      "url": "./index.html",
+      "icons": [
+        {
+          "src": "icons/icon-96.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
     },
     {
-      "name": "Ranking de velocidad",
-      "short_name": "Ranking",
-      "description": "Ver ranking por velocidad",
-      "url": "./index.html?view=ranking",
-      "icons": [{ "src": "icons/icon-96.svg", "sizes": "96x96" }]
+      "name": "Teatro de Operaciones",
+      "short_name": "Teatro",
+      "description": "Explorar conflictos históricos y sus aeronaves",
+      "url": "./theater.html",
+      "icons": [
+        {
+          "src": "icons/icon-96.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Favoritos",
+      "short_name": "Favoritos",
+      "description": "Ver mis aeronaves favoritas",
+      "url": "./favorites.html",
+      "icons": [
+        {
+          "src": "icons/icon-96.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Calculadora Mach",
+      "short_name": "Mach",
+      "description": "Calcular número Mach por velocidad y altitud",
+      "url": "./mach.html",
+      "icons": [
+        {
+          "src": "icons/icon-96.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
     }
   ],
-
   "related_applications": [],
   "prefer_related_applications": false
 }

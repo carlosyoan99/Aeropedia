@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Mach — AeroPedia</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="description" content="Calculadora de Número Mach con modelo ISA por altitud y referencias de aeronaves reales.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>if(localStorage.getItem('aeropedia_theme')==='dark')document.documentElement.classList.add('dark-preload');</script>
+</head>
+<body class="page-body">
+
+<div id="navContainer"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-label">// Herramienta de análisis</p>
+    <h1 class="page-hero-title">Calculadora <span>Mach</span></h1>
+    <p class="page-hero-sub">
+      Convierte velocidades a número Mach en tiempo real con el modelo de atmósfera estándar ISA.
+      Compara con aeronaves reales de la base de datos.
+    </p>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <div class="mach-page-grid">
+
+    <!-- Columna izquierda: inputs + resultado -->
+    <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+      <!-- Inputs -->
+      <div class="mach-page-card">
+        <p class="mach-page-card-title"><i class="fas fa-sliders-h"></i> Parámetros de vuelo</p>
+
+        <label class="mach-label">Velocidad</label>
+        <div class="mach-input-row" style="margin-bottom:1.25rem">
+          <input type="number" id="machSpeedInput" class="mach-input"
+                 placeholder="Introduce la velocidad..." min="0"
+                 oninput="calcMachPage()">
+          <select id="machUnit" class="mach-select" onchange="calcMachPage()">
+            <option value="kmh">KM/H</option>
+            <option value="knots">KNOTS</option>
+            <option value="mph">MPH</option>
+            <option value="ms">M/S</option>
+          </select>
+        </div>
+
+        <label class="mach-label">Altitud: <span id="altLabel">0 m (nivel del mar)</span></label>
+        <div class="mach-range-wrap" style="margin-bottom:.4rem">
+          <input type="range" id="altSlider" class="mach-range"
+                 min="0" max="30000" step="500" value="0"
+                 oninput="updateAltLabelPage(); calcMachPage()">
+        </div>
+        <div class="timeline-ticks" style="margin-bottom:1.25rem">
+          <span>0</span><span>7.500</span><span>15.000</span><span>22.500</span><span>30.000 m</span>
+        </div>
+
+        <!-- Botones de altitud rápida -->
+        <label class="mach-label">Altitud predefinida</label>
+        <div style="display:flex;flex-wrap:wrap;gap:.4rem">
+          <button class="alt-preset-btn" onclick="setAlt(0)">Mar</button>
+          <button class="alt-preset-btn" onclick="setAlt(1000)">1.000 m</button>
+          <button class="alt-preset-btn" onclick="setAlt(3000)">3.000 m</button>
+          <button class="alt-preset-btn" onclick="setAlt(8000)">8.000 m</button>
+          <button class="alt-preset-btn" onclick="setAlt(11000)">11.000 m</button>
+          <button class="alt-preset-btn" onclick="setAlt(15000)">15.000 m</button>
+          <button class="alt-preset-btn" onclick="setAlt(20000)">20.000 m</button>
+          <button class="alt-preset-btn" onclick="setAlt(25000)">25.000 m</button>
+        </div>
+      </div>
+
+      <!-- Resultado grande -->
+      <div class="mach-big-result">
+        <p id="machBigNumber" class="mach-big-number header-font">—</p>
+        <p class="mach-big-label">Número Mach</p>
+        <span id="machBigCategory" class="mach-big-category empty">Introduce una velocidad</span>
+
+        <!-- Barra relativa al límite hipersónico -->
+        <div class="mach-speed-bar-wrap">
+          <div class="mach-speed-bar-label">
+            <span>Subsónico</span><span>Supersónico</span><span>Hipersónico</span>
+          </div>
+          <div class="mach-speed-bar-track">
+            <div id="machSpeedBar" class="mach-speed-bar-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <!-- Tabla de conversiones -->
+        <div id="machConversions" style="margin-top:1.5rem;display:none">
+          <table style="width:100%;border-collapse:collapse">
+            <tbody id="machConvBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Columna derecha: referencias -->
+    <div style="display:flex;flex-direction:column;gap:1.5rem">
+
+      <!-- Tabla de velocidad del sonido por altitud -->
+      <div class="mach-page-card">
+        <p class="mach-page-card-title"><i class="fas fa-wave-square"></i> Velocidad del sonido por altitud</p>
+        <table class="mach-alt-table">
+          <thead>
+            <tr><th>Altitud</th><th>Temperatura</th><th>V. sonido</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0 m (mar)</td><td>+15 °C</td><td>1.234,8 km/h</td></tr>
+            <tr><td>3.000 m</td><td>+4,5 °C</td><td>1.199,4 km/h</td></tr>
+            <tr><td>5.000 m</td><td>−5,3 °C</td><td>1.183,0 km/h</td></tr>
+            <tr><td>8.000 m</td><td>−25 °C</td><td>1.143,5 km/h</td></tr>
+            <tr><td>10.000 m</td><td>−35 °C</td><td>1.115,5 km/h</td></tr>
+            <tr><td>11.000 m *</td><td>−56,5 °C</td><td>1.084,6 km/h</td></tr>
+            <tr><td>15.000 m</td><td>−56,5 °C</td><td>1.084,6 km/h</td></tr>
+            <tr><td>20.000 m</td><td>−56,5 °C</td><td>1.062,5 km/h</td></tr>
+            <tr><td>30.000 m</td><td>−46,6 °C</td><td>1.062,5 km/h</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:.62rem;color:var(--text-3);margin-top:.6rem">
+          * Por encima de los 11.000 m (tropopausa) la temperatura se mantiene constante en la estratosfera inferior.
+        </p>
+      </div>
+
+      <!-- Referencias de aeronaves reales -->
+      <div class="mach-page-card">
+        <p class="mach-page-card-title"><i class="fas fa-fighter-jet"></i> Referencias de aeronaves</p>
+        <p style="font-size:.72rem;color:var(--text-2);margin-bottom:.75rem">
+          Clic en cualquier aeronave para cargar su velocidad máxima.
+        </p>
+        <div id="machRefPlanes" class="mach-ref-planes">
+          <p style="color:var(--text-3);font-size:.8rem">Cargando datos...</p>
+        </div>
+      </div>
+
+      <!-- Clasificación de regímenes -->
+      <div class="mach-page-card">
+        <p class="mach-page-card-title"><i class="fas fa-list-ol"></i> Clasificación de regímenes</p>
+        <table class="mach-alt-table">
+          <thead><tr><th>Régimen</th><th>Rango Mach</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td style="color:#4ade80">Subsónico</td><td>M &lt; 0,8</td><td>C-130, B-52</td></tr>
+            <tr><td style="color:#facc15">Transsónico</td><td>0,8 – 1,2</td><td>F/A-18, Rafale</td></tr>
+            <tr><td style="color:#fb923c">Supersónico</td><td>1,2 – 5</td><td>F-22, Su-57</td></tr>
+            <tr><td style="color:#f87171">Hipersónico</td><td>5 – 10</td><td>X-15 (M 6,7)</td></tr>
+            <tr><td style="color:#f472b6">Alta hipersonía</td><td>M &gt; 10</td><td>X-15 max (M 6,7+)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<style>
+.alt-preset-btn {
+  padding: .3rem .7rem;
+  background: var(--bg-stat);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: .62rem;
+  font-weight: 700;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: background .15s, border-color .15s;
+}
+.alt-preset-btn:hover { background: var(--border); border-color: var(--primary); color: var(--primary); }
+.mach-conv-row td { padding: .35rem .6rem; border-bottom: 1px solid var(--border); font-family: var(--font-mono); font-size: .7rem; }
+.mach-conv-row td:first-child { color: var(--text-3); }
+.mach-conv-row td:last-child { font-weight: 700; color: var(--primary); text-align: right; }
+</style>
+
+<script src="js/state.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/pages.js"></script>
+<script>
+const MAX_MACH_BAR = 10; // Mach 10 = 100% de la barra
+
+function updateAltLabelPage() {
+  const alt = parseInt(document.getElementById('altSlider').value || 0);
+  const el  = document.getElementById('altLabel');
+  if (el) el.textContent = alt === 0 ? '0 m (nivel del mar)' : `${alt.toLocaleString('es-ES')} m`;
+}
+
+function setAlt(meters) {
+  const slider = document.getElementById('altSlider');
+  if (slider) { slider.value = meters; updateAltLabelPage(); calcMachPage(); }
+}
+
+function calcMachPage() {
+  const rawVal = parseFloat(document.getElementById('machSpeedInput')?.value);
+  const unit   = document.getElementById('machUnit')?.value || 'kmh';
+  const alt    = parseInt(document.getElementById('altSlider')?.value || 0);
+
+  const numEl  = document.getElementById('machBigNumber');
+  const catEl  = document.getElementById('machBigCategory');
+  const barEl  = document.getElementById('machSpeedBar');
+  const convEl = document.getElementById('machConversions');
+
+  if (!rawVal || rawVal <= 0) {
+    numEl.textContent  = '—';
+    numEl.className    = 'mach-big-number header-font';
+    catEl.textContent  = 'Introduce una velocidad';
+    catEl.className    = 'mach-big-category empty';
+    barEl.style.width  = '0%';
+    barEl.style.background = '#60a5fa';
+    convEl.style.display = 'none';
+    return;
+  }
+
+  // Convertir a km/h
+  let kmh = rawVal;
+  if (unit === 'knots') kmh = rawVal * 1.852;
+  if (unit === 'mph')   kmh = rawVal * 1.60934;
+  if (unit === 'ms')    kmh = rawVal * 3.6;
+
+  const sos  = speedOfSound(alt);
+  const mach = kmh / sos;
+
+  numEl.textContent = `M ${mach.toFixed(3)}`;
+
+  let label = '', cls = '', barColor = '';
+  if      (mach < 0.8)  { label='SUBSÓNICO';     cls='subsonic';    barColor='#4ade80'; }
+  else if (mach < 1.2)  { label='TRANSSÓNICO';   cls='transonic';   barColor='#facc15'; }
+  else if (mach < 5)    { label='SUPERSÓNICO';    cls='supersonic';  barColor='#fb923c'; }
+  else if (mach < 10)   { label='HIPERSÓNICO';    cls='hypersonic';  barColor='#f87171'; }
+  else                  { label='ALTA HIPERSONÍA';cls='highersonic'; barColor='#f472b6'; }
+
+  catEl.textContent = label;
+  catEl.className   = `mach-big-category ${cls}`;
+  numEl.className   = `mach-big-number header-font ${cls}`;
+
+  const barPct = Math.min((mach / MAX_MACH_BAR) * 100, 100);
+  barEl.style.width      = `${barPct}%`;
+  barEl.style.background = barColor;
+
+  // Tabla de conversiones
+  const ms    = kmh / 3.6;
+  const knots = kmh / 1.852;
+  const mph   = kmh / 1.60934;
+  const body  = document.getElementById('machConvBody');
+  if (body) {
+    body.innerHTML = [
+      ['KM/H',  kmh.toFixed(1)],
+      ['M/S',   ms.toFixed(1)],
+      ['Nudos', knots.toFixed(1)],
+      ['MPH',   mph.toFixed(1)],
+      ['V. sonido', `${sos.toFixed(1)} km/h`],
+    ].map(([l,v]) => `<tr class="mach-conv-row"><td>${l}</td><td>${v}</td></tr>`).join('');
+  }
+  convEl.style.display = 'block';
+}
+
+function buildRefPlanes() {
+  const container = document.getElementById('machRefPlanes');
+  if (!container || !aircraftDB.length) return;
+
+  const MAX_SPEED = 7274; // X-15
+  // Seleccionar aviones representativos de distintos regímenes, ordenados por velocidad
+  const planes = [...aircraftDB]
+    .filter(p => p.speed > 0)
+    .sort((a, b) => b.speed - a.speed)
+    .slice(0, 18);
+
+  container.innerHTML = planes.map(p => {
+    const pct = Math.min((p.speed / MAX_SPEED) * 100, 100);
+    const mach = (p.speed / 1234.8).toFixed(2);
+    return `
+      <div class="mach-ref-plane" onclick="loadPlaneSpeed(${p.speed})"
+           title="Cargar velocidad del ${p.name}">
+        <span class="mach-ref-plane-name">${p.name}</span>
+        <div class="mach-ref-plane-bar">
+          <div class="mach-ref-plane-fill" style="width:${pct}%"></div>
+        </div>
+        <span class="mach-ref-plane-speed">M ${mach}</span>
+      </div>`;
+  }).join('');
+}
+
+function loadPlaneSpeed(speed) {
+  const input  = document.getElementById('machSpeedInput');
+  const select = document.getElementById('machUnit');
+  if (input && select) {
+    input.value  = speed;
+    select.value = 'kmh';
+    calcMachPage();
+  }
+}
+
+async function initMachPage() {
+  initTheme();
+  document.getElementById('navContainer').innerHTML = buildNavBar('mach');
+  try {
+    await loadData();
+    buildRefPlanes();
+  } catch(e) {
+    document.getElementById('machRefPlanes').textContent = 'No se pudieron cargar las referencias.';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initMachPage);
+</script>
+</body>
+</html>
+

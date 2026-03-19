@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teatro de Operaciones — AeroPedia</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="description" content="Explora los conflictos históricos de aviación militar y los aviones que participaron en cada teatro de operaciones.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script>if(localStorage.getItem('aeropedia_theme')==='dark')document.documentElement.classList.add('dark-preload');</script>
+</head>
+<body class="page-body">
+
+<div id="navContainer"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-label">// Historial de conflictos</p>
+    <h1 class="page-hero-title">Teatro de <span>Operaciones</span></h1>
+    <p class="page-hero-sub">
+      Selecciona un conflicto para ver qué aeronaves participaron, sus especificaciones
+      y su papel en ese teatro de guerra.
+    </p>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <!-- Grid de conflictos -->
+  <section id="conflictsSection">
+    <div id="conflictsGrid" class="theater-page-grid">
+      <p style="color:var(--text-3)">Cargando conflictos...</p>
+    </div>
+  </section>
+
+  <!-- Resultado: aviones del conflicto seleccionado -->
+  <section id="resultSection" style="display:none">
+    <div id="resultHeader" class="theater-result-header"></div>
+
+    <!-- Búsqueda dentro del conflicto -->
+    <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+      <input type="text" id="theaterSearch" class="search-input"
+             placeholder="Filtrar por nombre, país o tipo..."
+             oninput="filterTheaterResults()"
+             style="width:18rem">
+      <span id="theaterCount" style="font-family:var(--font-mono);font-size:.65rem;color:var(--text-3)"></span>
+      <button class="nav-link" onclick="clearSelection()" style="margin-left:auto">
+        <i class="fas fa-arrow-left"></i> Todos los conflictos
+      </button>
+    </div>
+
+    <div id="theaterAircraftGrid" class="mini-grid"></div>
+  </section>
+
+</main>
+
+<script src="js/state.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/pages.js"></script>
+<script>
+let selectedConflictId = null;
+let theaterPlanes      = [];  // aviones del conflicto activo
+
+/* ── Construir grid de conflictos ─────────────────────────── */
+function buildConflictsGrid() {
+  const grid = document.getElementById('conflictsGrid');
+  if (!grid) return;
+
+  grid.innerHTML = Object.entries(conflictsDB).map(([id, cf]) => {
+    const count = aircraftDB.filter(p => (p.conflicts || []).includes(id)).length;
+    const color = cf.color || '#2563eb';
+    return `
+      <button class="theater-cf-card" id="cfcard-${id}"
+              data-id="${id}"
+              onclick="selectConflict('${id}')"
+              style="--cf-color:${color}">
+        <div class="cf-page-head">
+          <span class="cf-page-flag">${cf.flag}</span>
+          <span class="cf-page-years mono">${cf.years}</span>
+        </div>
+        <p class="cf-page-label header-font" style="color:${color}">${cf.label}</p>
+        <p class="cf-page-desc">${cf.desc}</p>
+        <div class="cf-page-count">
+          <span class="cf-page-count-n mono" style="color:${color}">${count}</span>
+          <span class="cf-page-count-l">aeronave${count !== 1 ? 's' : ''}</span>
+        </div>
+      </button>`;
+  }).join('');
+
+  // Si hay hash en la URL, activar ese conflicto
+  const hash = location.hash.replace('#', '').trim();
+  if (hash && conflictsDB[hash]) selectConflict(hash);
+}
+
+/* ── Seleccionar un conflicto ──────────────────────────────── */
+function selectConflict(id) {
+  const cf = conflictsDB[id];
+  if (!cf) return;
+
+  selectedConflictId = id;
+
+  // Marcar tarjeta activa
+  document.querySelectorAll('.theater-cf-card').forEach(c => {
+    c.classList.toggle('active', c.dataset.id === id);
+  });
+
+  // Construir cabecera del resultado
+  const header = document.getElementById('resultHeader');
+  header.style.setProperty('--cf-color', cf.color);
+  header.innerHTML = `
+    <span class="theater-result-flag">${cf.flag}</span>
+    <div>
+      <p class="theater-result-title header-font" style="color:${cf.color}">${cf.label}</p>
+      <p class="theater-result-years mono">${cf.years}</p>
+      <p class="theater-result-desc">${cf.desc}</p>
+    </div>`;
+
+  // Filtrar aeronaves
+  theaterPlanes = aircraftDB
+    .filter(p => (p.conflicts || []).includes(id))
+    .sort((a, b) => a.year - b.year);
+
+  // Limpiar búsqueda
+  const searchEl = document.getElementById('theaterSearch');
+  if (searchEl) searchEl.value = '';
+
+  renderTheaterAircraft(theaterPlanes);
+
+  // Mostrar sección resultado, ocultar grid
+  document.getElementById('conflictsSection').style.display = 'none';
+  document.getElementById('resultSection').style.display = 'block';
+
+  // Actualizar hash de la URL
+  history.replaceState(null, '', `#${id}`);
+
+  // Scroll suave al resultado
+  document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ── Renderizar aviones del teatro ─────────────────────────── */
+function renderTheaterAircraft(planes) {
+  const grid = document.getElementById('theaterAircraftGrid');
+  const countEl = document.getElementById('theaterCount');
+
+  if (!planes.length) {
+    grid.innerHTML = `
+      <div class="theater-empty" style="grid-column:1/-1">
+        <i class="fas fa-satellite-dish"></i>
+        <p>Ninguna aeronave registrada en este conflicto</p>
+      </div>`;
+    if (countEl) countEl.textContent = '0 aeronaves';
+    return;
+  }
+
+  if (countEl) countEl.textContent = `${planes.length} aeronave${planes.length !== 1 ? 's' : ''}`;
+  grid.innerHTML = planes.map(p => buildAircraftCard(p)).join('');
+}
+
+/* ── Filtro de búsqueda dentro del teatro ─────────────────── */
+function filterTheaterResults() {
+  const s = document.getElementById('theaterSearch')?.value.toLowerCase() || '';
+  const filtered = s
+    ? theaterPlanes.filter(p =>
+        p.name.toLowerCase().includes(s)    ||
+        p.country.toLowerCase().includes(s) ||
+        p.type.toLowerCase().includes(s))
+    : theaterPlanes;
+  renderTheaterAircraft(filtered);
+}
+
+/* ── Volver al grid de conflictos ──────────────────────────── */
+function clearSelection() {
+  selectedConflictId = null;
+  document.querySelectorAll('.theater-cf-card').forEach(c => c.classList.remove('active'));
+  document.getElementById('conflictsSection').style.display = 'block';
+  document.getElementById('resultSection').style.display = 'none';
+  history.replaceState(null, '', location.pathname);
+  document.getElementById('conflictsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ── Init ──────────────────────────────────────────────────── */
+async function initTheaterPage() {
+  initTheme();
+  document.getElementById('navContainer').innerHTML = buildNavBar('theater');
+  try {
+    await loadData();
+    buildConflictsGrid();
+  } catch(e) {
+    document.getElementById('conflictsGrid').innerHTML =
+      `<p style="color:var(--text-3)">Error al cargar los datos: ${e.message}</p>`;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initTheaterPage);
+</script>
+</body>
+</html>
+
