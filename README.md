@@ -19,7 +19,8 @@ AeroPedia es una aplicación web para la exploración y consulta de aeronaves mi
 - Filtrado por:
   - País
   - Tipo
-  - Era
+  - Año
+  - Conflictos 
 
 ### Favoritos
 - Persistencia mediante `localStorage`
@@ -45,7 +46,7 @@ AeroPedia es una aplicación web para la exploración y consulta de aeronaves mi
 - HTML + CSS + JavaScript (Vanilla)
 - Manipulación directa del DOM
 - Estado manejado de forma global
-- Datos locales (JS / transición a JSON)
+- Datos locales (JSON)
 
 ---
 
@@ -53,10 +54,10 @@ AeroPedia es una aplicación web para la exploración y consulta de aeronaves mi
 
 | Característica | Estado | Descripción |
 |---------------|--------|------------|
-| Migración a JSON externo | En progreso | Separación de datos y lógica |
-| Capa de servicios (API mock) | En progreso | Abstracción del acceso a datos |
-| Integración con Wikipedia | Planificado | Información extendida en fichas técnicas |
-| Modularización (arquitectura por capas) | Planificado | Separación en `services`, `ui`, `state`, `features` |
+| Migración a JSON externo | Completado | Separación de datos y lógica |
+| Capa de servicios (API mock) | Parcial | Abstracción del acceso a datos |
+| Integración con Wikipedia | Casi total | Información extendida en fichas técnicas |
+| Modularización (arquitectura por capas) | Completado | Separación en `services`, `ui`, `state`, `features` |
 | Cache de datos | Planificado | Reducción de llamadas repetidas |
 | Optimización de búsqueda (debounce) | Planificado | Mejora de rendimiento |
 | Renderizado parcial | Planificado | Evitar re-render innecesario |
