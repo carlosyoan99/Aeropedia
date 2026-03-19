@@ -15,10 +15,13 @@ function speedOfSound(altMeters) {
 function genBadgeHTML(plane) {
   if (!plane.generation) return '';
   const map = {
+    '1ª':   { cls: 'gen-1',  label: 'Gen 1ª' },
+    '2ª':   { cls: 'gen-2',  label: 'Gen 2ª' },
     '3ª':   { cls: 'gen-3',  label: 'Gen 3ª' },
     '4ª':   { cls: 'gen-4',  label: 'Gen 4ª' },
     '4.5ª': { cls: 'gen-45', label: 'Gen 4.5ª' },
     '5ª':   { cls: 'gen-5',  label: '✦ Gen 5ª' },
+    '6ª':   { cls: 'gen-6',  label: '◈ Gen 6ª' },
   };
   const g = map[plane.generation];
   return g ? `<span class="gen-badge ${g.cls}">${g.label}</span>` : '';
