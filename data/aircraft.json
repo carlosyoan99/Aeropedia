@@ -1493,7 +1493,7 @@
   {
     "id": "f47-ngad",
     "name": "Boeing F-47 (NGAD)",
-    "type": "Caza de Dominio Aéreo",
+    "type": "Caza",
     "country": "EE.UU.",
     "year": 2025,
     "generation": "6ª",
@@ -1511,7 +1511,7 @@
   {
     "id": "tempest-gcap",
     "name": "BAE Systems Tempest (GCAP)",
-    "type": "Caza de 6ª Generación",
+    "type": "Caza",
     "country": "Reino Unido / Italia / Japón",
     "year": 2035,
     "generation": "6ª",
@@ -1529,7 +1529,7 @@
   {
     "id": "j36",
     "name": "Chengdu J-36",
-    "type": "Caza de 6ª Generación",
+    "type": "Caza",
     "country": "China",
     "year": 2024,
     "generation": "6ª",
@@ -1547,7 +1547,7 @@
   {
     "id": "ah64",
     "name": "Boeing AH-64 Apache",
-    "type": "Helicóptero de Ataque",
+    "type": "Ataque",
     "country": "EE.UU.",
     "year": 1986,
     "generation": null,
@@ -1565,7 +1565,7 @@
   {
     "id": "mi24",
     "name": "Mil Mi-24 Hind",
-    "type": "Helicóptero de Ataque / Transporte",
+    "type": "Ataque / Transporte",
     "country": "URSS / Rusia",
     "year": 1972,
     "generation": null,
@@ -1616,4 +1616,5 @@
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bayraktar_TB2_Ukraine.jpg/1200px-Bayraktar_TB2_Ukraine.jpg",
     "desc": "Dron táctico de altitud media y larga resistencia (MALE). Se ha hecho famoso por su efectividad operativa y por ser una opción de bajo coste comparada con los sistemas occidentales."
   }
+  
 ]
