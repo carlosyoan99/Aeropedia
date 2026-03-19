@@ -118,6 +118,7 @@ function openDetail(id) {
         <div class="detail-img-glow"></div>
         <img src="${plane.img}"
              onerror="this.src='${FALLBACK_IMG}'"
+             id="detailPlaneImg"
              class="detail-img" alt="${plane.name}">
         <div class="detail-img-stats">
           <div class="img-stat">
@@ -220,7 +221,7 @@ function renderWikiResult(result, textEl, linkEl, spinner) {
   const sentences = result.extract.split(/(?<=[.!?])\s+/);
   const excerpt   = sentences.slice(0, 3).join(' ');
   console.log(`${result.title}: ${result.originalimage?.source}\n icon ${result.thumbnail?.source}`)
-
+  document.getElementById("detailPlainImg").src = result.originalimage?.source;
   textEl.textContent = excerpt || 'Sin extracto disponible.';
   textEl.classList.remove('loading');
 
