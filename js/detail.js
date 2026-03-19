@@ -218,7 +218,8 @@ async function queryWikiAPI(lang, title) {
 function renderWikiResult(result, textEl, linkEl, spinner) {
   spinner?.classList.add('hidden');
   const sentences = result.extract.split(/(?<=[.!?])\s+/);
-  const excerpt   = sentences.slice(0, 4).join(' ');
+  const excerpt   = sentences.slice(0, 3).join(' ');
+  console.log(`${result.title}: ${result.originalimage?.source}\n icon ${result.thumbnail?.source}`)
 
   textEl.textContent = excerpt || 'Sin extracto disponible.';
   textEl.classList.remove('loading');
