@@ -6,7 +6,7 @@ function getFilteredPlanes() {
   const { search, cat } = getFilters();
   const s = search.toLowerCase();
 
-  return aircraftDB.filter(p => {
+  return aircraftDB.sort((a, b) => a.name.localeCompare(b.name)).filter(p => {
     const matchSearch   = p.name.toLowerCase().includes(s)    ||
                           p.country.toLowerCase().includes(s) ||
                           p.type.toLowerCase().includes(s);

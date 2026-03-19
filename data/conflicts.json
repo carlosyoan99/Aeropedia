@@ -1,19 +1,184 @@
 {
-  "vietnam":        { "label": "Guerra de Vietnam",           "years": "1955–1975", "flag": "🇻🇳", "color": "#16a34a", "desc": "El conflicto que redefinió la doctrina aérea moderna y demostró las limitaciones del combate supersónico en combate cercano." },
-  "coldwar_patrols":{ "label": "Guerra Fría",                 "years": "1947–1991", "flag": "☢️",  "color": "#6366f1", "desc": "Patrullas de disuasión nuclear, reconocimiento estratégico y tensiones constantes entre las superpotencias." },
-  "falklands":      { "label": "Guerra de las Malvinas",      "years": "1982",      "flag": "🇦🇷", "color": "#0891b2", "desc": "El primer conflicto donde los misiles guiados y el combate naval moderno fueron protagonistas absolutos." },
-  "gulf_war":       { "label": "Guerra del Golfo",            "years": "1990–1991", "flag": "🇰🇼", "color": "#d97706", "desc": "Primer gran despliegue de tecnología stealth y munición guiada por láser en combate real." },
-  "desert_storm":   { "label": "Tormenta del Desierto",       "years": "1991",      "flag": "🇮🇶", "color": "#b45309", "desc": "La campaña aérea más intensa desde la SGM: 100.000 salidas en 43 días." },
-  "kosovo":         { "label": "Kosovo",                      "years": "1998–1999", "flag": "🇽🇰", "color": "#7c3aed", "desc": "Primera guerra ganada casi exclusivamente con poder aéreo, sin bajas propias en combate." },
-  "gwot":           { "label": "Guerra Global contra el Terror","years": "2001–pres.","flag": "🌍", "color": "#dc2626", "desc": "El conflicto más largo de EE.UU., con operaciones en múltiples teatros simultáneos." },
-  "afghanistan":    { "label": "Afganistán (URSS)",           "years": "1979–1989", "flag": "🇦🇫", "color": "#92400e", "desc": "El 'Vietnam soviético', donde el Su-25 tuvo su bautismo de fuego." },
-  "iraq":           { "label": "Iraq",                        "years": "2003–2011", "flag": "🇮🇶", "color": "#c2410c", "desc": "Segunda campaña en Iraq que demostró la superioridad absoluta de la coalición en el dominio aéreo." },
-  "chechnya":       { "label": "Chechenia",                   "years": "1994–2009", "flag": "🏔️",  "color": "#065f46", "desc": "Conflicto urbano donde la aviación rusa sufrió pérdidas inesperadas frente a MANPADS." },
-  "libya":          { "label": "Libia",                       "years": "2011",      "flag": "🇱🇾", "color": "#0369a1", "desc": "Primer uso del Rafale y del Typhoon en combate real durante la Operación Protector Unificado." },
-  "mali":           { "label": "Mali / Sahel",                "years": "2013–pres.","flag": "🇲🇱", "color": "#78350f", "desc": "Operación Serval: demostró la proyección global del Rafale a larga distancia." },
-  "syria":          { "label": "Siria",                       "years": "2011–pres.","flag": "🇸🇾", "color": "#991b1b", "desc": "El teatro donde más aviaciones han coincidido: EE.UU., Rusia, Francia, RU, Israel y Turquía." },
-  "ukraine":        { "label": "Ucrania",                     "years": "2022–pres.","flag": "🇺🇦", "color": "#1d4ed8", "desc": "El mayor conflicto convencional en Europa desde 1945, con drones y misiles de crucero como protagonistas." },
-  "sixday":         { "label": "Guerra de los Seis Días",     "years": "1967",      "flag": "🇮🇱", "color": "#4338ca", "desc": "El ataque preventivo israelí destruyó 400 aviones árabes en tierra, reescribiendo el manual de la guerra aérea." },
-  "yom_kippur":     { "label": "Guerra de Yom Kipur",         "years": "1973",      "flag": "🌙",  "color": "#6d28d9", "desc": "Reveló la letalidad de los misiles SAM y cambió la doctrina de supresión de defensas aéreas." },
-  "humanitarian":   { "label": "Misiones humanitarias",       "years": "Varias",    "flag": "🕊️",  "color": "#0891b2", "desc": "Evacuaciones, entregas de ayuda y apoyo en desastres naturales." }
+  "wwii_europe": {
+    "label": "SGM — Europa",
+    "years": "1939–1945",
+    "flag": "🎖️",
+    "color": "#78350f",
+    "desc": "El teatro europeo, desde la Batalla de Inglaterra hasta el Día D y la toma de Berlín."
+  },
+  "wwii_pacific": {
+    "label": "SGM — Pacífico",
+    "years": "1941–1945",
+    "flag": "⛩️",
+    "color": "#b45309",
+    "desc": "De Pearl Harbor a Midway, Guadalcanal, Iwo Jima y las bombas atómicas sobre Japón."
+  },
+  "wwii_east": {
+    "label": "SGM — Frente Oriental",
+    "years": "1941–1945",
+    "flag": "❄️",
+    "color": "#1e3a5f",
+    "desc": "El frente más brutal de la historia, entre la URSS y la Alemania Nazi. 30 millones de muertos."
+  },
+  "wwii_africa": {
+    "label": "SGM — Norte de África",
+    "years": "1940–1943",
+    "flag": "🏜️",
+    "color": "#92400e",
+    "desc": "La guerra del desierto entre las fuerzas del Eje y los Aliados, con Rommel y Montgomery como protagonistas."
+  },
+  "korea": {
+    "label": "Guerra de Corea",
+    "years": "1950–1953",
+    "flag": "🇰🇷",
+    "color": "#1e40af",
+    "desc": "El primer conflicto jet-contra-jet de la historia, con los F-86 y MiG-15 disputando el Callejón de los MiGs."
+  },
+  "vietnam": {
+    "label": "Guerra de Vietnam",
+    "years": "1955–1975",
+    "flag": "🇻🇳",
+    "color": "#16a34a",
+    "desc": "El conflicto que redefinió la doctrina aérea moderna y demostró las limitaciones del combate supersónico en combate cercano."
+  },
+  "coldwar_patrols": {
+    "label": "Guerra Fría",
+    "years": "1947–1991",
+    "flag": "☢️",
+    "color": "#6366f1",
+    "desc": "Patrullas de disuasión nuclear, reconocimiento estratégico y tensiones constantes entre las superpotencias."
+  },
+  "falklands": {
+    "label": "Malvinas",
+    "years": "1982",
+    "flag": "🇦🇷",
+    "color": "#0891b2",
+    "desc": "El primer conflicto donde los misiles guiados y el combate naval moderno fueron protagonistas absolutos."
+  },
+  "gulf_war": {
+    "label": "Guerra del Golfo",
+    "years": "1990–1991",
+    "flag": "🇰🇼",
+    "color": "#d97706",
+    "desc": "Primer gran despliegue de tecnología stealth y munición guiada por láser en combate real."
+  },
+  "desert_storm": {
+    "label": "Tormenta del Desierto",
+    "years": "1991",
+    "flag": "🇮🇶",
+    "color": "#b45309",
+    "desc": "La campaña aérea más intensa desde la SGM: 100.000 salidas en 43 días."
+  },
+  "yugoslavia": {
+    "label": "Yugoslavia / Bosnia",
+    "years": "1991–1999",
+    "flag": "🇷🇸",
+    "color": "#7c3aed",
+    "desc": "Los conflictos balcánicos, que vieron el primer uso de armas de precisión en Europa desde la SGM."
+  },
+  "kosovo": {
+    "label": "Kosovo",
+    "years": "1998–1999",
+    "flag": "🇽🇰",
+    "color": "#6d28d9",
+    "desc": "Primera guerra ganada casi exclusivamente con poder aéreo, sin bajas propias en combate."
+  },
+  "gwot": {
+    "label": "Guerra Global contra el Terror",
+    "years": "2001–pres.",
+    "flag": "🌍",
+    "color": "#dc2626",
+    "desc": "El conflicto más largo de EE.UU., con operaciones en múltiples teatros simultáneos."
+  },
+  "afghanistan": {
+    "label": "Afganistán (URSS)",
+    "years": "1979–1989",
+    "flag": "🇦🇫",
+    "color": "#92400e",
+    "desc": "El 'Vietnam soviético', donde el Su-25 tuvo su bautismo de fuego."
+  },
+  "iraq": {
+    "label": "Iraq",
+    "years": "2003–2011",
+    "flag": "🇮🇶",
+    "color": "#c2410c",
+    "desc": "Segunda campaña en Iraq que demostró la superioridad absoluta de la coalición en el dominio aéreo."
+  },
+  "chechnya": {
+    "label": "Chechenia",
+    "years": "1994–2009",
+    "flag": "🏔️",
+    "color": "#065f46",
+    "desc": "Conflicto urbano donde la aviación rusa sufrió pérdidas inesperadas frente a MANPADS."
+  },
+  "libya": {
+    "label": "Libia",
+    "years": "2011",
+    "flag": "🇱🇾",
+    "color": "#0369a1",
+    "desc": "Primer uso del Rafale y del Typhoon en combate real durante la Operación Protector Unificado."
+  },
+  "mali": {
+    "label": "Mali / Sahel",
+    "years": "2013–pres.",
+    "flag": "🇲🇱",
+    "color": "#78350f",
+    "desc": "Operación Serval: demostró la proyección global del Rafale a larga distancia."
+  },
+  "syria": {
+    "label": "Siria",
+    "years": "2011–pres.",
+    "flag": "🇸🇾",
+    "color": "#991b1b",
+    "desc": "El teatro donde más aviaciones han coincidido: EE.UU., Rusia, Francia, RU, Israel y Turquía."
+  },
+  "ukraine": {
+    "label": "Ucrania",
+    "years": "2022–pres.",
+    "flag": "🇺🇦",
+    "color": "#1d4ed8",
+    "desc": "El mayor conflicto convencional en Europa desde 1945, con drones y misiles de crucero como protagonistas."
+  },
+  "sixday": {
+    "label": "Guerra de los Seis Días",
+    "years": "1967",
+    "flag": "🇮🇱",
+    "color": "#4338ca",
+    "desc": "El ataque preventivo israelí destruyó 400 aviones árabes en tierra, reescribiendo el manual de la guerra aérea."
+  },
+  "yom_kippur": {
+    "label": "Guerra de Yom Kipur",
+    "years": "1973",
+    "flag": "🌙",
+    "color": "#6d28d9",
+    "desc": "Reveló la letalidad de los misiles SAM y cambió la doctrina de supresión de defensas aéreas."
+  },
+  "iran_iraq": {
+    "label": "Guerra Irán-Iraq",
+    "years": "1980–1988",
+    "flag": "⚔️",
+    "color": "#9a3412",
+    "desc": "El mayor conflicto bélico entre estados del siglo XX por número de bajas, con el F-14 iranio como protagonista."
+  },
+  "india_pakistan": {
+    "label": "Conflictos India-Pakistán",
+    "years": "Varios",
+    "flag": "🌐",
+    "color": "#065f46",
+    "desc": "Las escaramuzas aéreas entre dos potencias nucleares, con el incidente de Balakot de 2019 como el más reciente."
+  },
+  "sierra_leone": {
+    "label": "Sierra Leona",
+    "years": "1991–2002",
+    "flag": "🌍",
+    "color": "#047857",
+    "desc": "Conflicto civil donde el Super Tucano y otras aeronaves ligeras demostraron la eficacia del apoyo aéreo de bajo coste."
+  },
+  "humanitarian": {
+    "label": "Misiones humanitarias",
+    "years": "Varias",
+    "flag": "🕊️",
+    "color": "#0891b2",
+    "desc": "Evacuaciones, entregas de ayuda y apoyo en desastres naturales."
+  }
 }
