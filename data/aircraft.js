@@ -576,7 +576,6 @@ const aircraftDB = [
         img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Dassault_New_Generation_Fighter_at_Paris_Air_Show_2019.jpg",
         desc: "Proyecto europeo para un caza de sexta generación que sustituirá al Eurofighter y al Rafale en las próximas décadas."
     }
-];
 
 ];
 
