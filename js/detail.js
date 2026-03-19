@@ -208,10 +208,12 @@ async function queryWikiAPI(lang, title) {
     );
     if (!r2.ok) return null;
     const d2 = await r2.json();
+    console.log(d2);
     return { extract: d2.extract || '', url: d2.content_urls?.desktop?.page || '', lang, title: d2.title };
   }
 
   const data = await resp.json();
+  console.log(data);
   return { extract: data.extract || '', url: data.content_urls?.desktop?.page || '', lang, title: data.title };
 }
 
@@ -219,7 +221,6 @@ function renderWikiResult(result, textEl, linkEl, spinner) {
   spinner?.classList.add('hidden');
   const sentences = result.extract.split(/(?<=[.!?])\s+/);
   const excerpt   = sentences.slice(0, 3).join(' ');
-  console.log(result);
   
   textEl.textContent = excerpt || 'Sin extracto disponible.';
   textEl.classList.remove('loading');
