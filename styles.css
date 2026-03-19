@@ -511,4 +511,35 @@ body.dark .rank-row td { color: #94a3b8; }
 /* Result counter en dark */
 body.dark #resultCounter .flex-1 { background: #1e293b; }
 
+/* ══════════════════════════════════════════════════
+   RANGE INPUT (Mach calculator)
+══════════════════════════════════════════════════ */
+input[type=range].mach-range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #334155;
+    border-radius: 9999px;
+    outline: none;
+}
+input[type=range].mach-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #2563eb;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
+/* ══════════════════════════════════════════════════
+   PWA — BANNER DE INSTALACIÓN Y UPDATE TOAST
+══════════════════════════════════════════════════ */
+#pwaInstallBanner,
+#pwaUpdateToast {
+    will-change: opacity, transform;
+}
+
+@media (display-mode: standalone) {
+    #pwaInstallBanner,
+    #pwaUpdateToast { display: none !important; }
+}

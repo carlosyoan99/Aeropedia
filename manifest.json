@@ -1,0 +1,83 @@
+{
+    "name": "AeroPedia: Archivo Global de Aviación",
+    "short_name": "AeroPedia",
+    "description": "Enciclopedia interactiva de aviación militar con comparador, gráficos de radar y calculadora Mach.",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "any",
+    "theme_color": "#0f172a",
+    "background_color": "#0f172a",
+    "lang": "es",
+    "categories": ["education", "reference"],
+
+    "icons": [
+        {
+            "src": "icons/icon-72.svg",
+            "sizes": "72x72",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/icon-96.svg",
+            "sizes": "96x96",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/icon-128.svg",
+            "sizes": "128x128",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/icon-192.svg",
+            "sizes": "192x192",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icons/icon-512.svg",
+            "sizes": "512x512",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+
+    "screenshots": [
+        {
+            "src": "screenshots/desktop.png",
+            "sizes": "1280x800",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Vista de galería en escritorio"
+        },
+        {
+            "src": "screenshots/mobile.png",
+            "sizes": "390x844",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Vista de galería en móvil"
+        }
+    ],
+
+    "shortcuts": [
+        {
+            "name": "Cazas",
+            "short_name": "Cazas",
+            "description": "Filtrar por cazas",
+            "url": "./index.html?cat=Caza",
+            "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+        },
+        {
+            "name": "Ranking de velocidad",
+            "short_name": "Ranking",
+            "description": "Ver ranking por velocidad",
+            "url": "./index.html?view=ranking",
+            "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+        }
+    ],
+
+    "related_applications": [],
+    "prefer_related_applications": false
+}
