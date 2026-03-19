@@ -43,9 +43,12 @@ const MAX_COMPARE   = 3;
 const TIMELINE_MIN_YEAR = 1940;
 const TIMELINE_MAX_YEAR = 2024;
 const TIMELINE_STEP     = 10;
-let timelineMin = TIMELINE_MIN_YEAR;
-let timelineMax = TIMELINE_MAX_YEAR;
-let timelineActive = false;     // true si el filtro está activo
+let timelineMin    = TIMELINE_MIN_YEAR;
+let timelineMax    = TIMELINE_MAX_YEAR;
+let timelineActive = false;
+
+// ── Teatro de Operaciones ─────────────────────────
+let activeConflict = 'all';
 
 // ═══════════════════════════════════════════════════════════
 // HELPERS
@@ -88,6 +91,131 @@ const STAT_META = {
     range:   { label: 'Rango Operativo',       unit: 'km',   max: 15000,  color: '#8b5cf6' },
     ceiling: { label: 'Techo de Servicio',     unit: 'm',    max: 30000,  color: '#06b6d4' },
     mtow:    { label: 'Peso Máx. Despegue',    unit: 'kg',   max: 420000, color: '#f59e0b' },
+};
+
+// ─────────────────────────────────────────────────
+// TEATRO DE OPERACIONES — Catálogo de conflictos
+// ─────────────────────────────────────────────────
+const CONFLICTS_DB = {
+    vietnam: {
+        label: 'Guerra de Vietnam',
+        years: '1955–1975',
+        flag: '🇻🇳',
+        color: '#16a34a',
+        desc: 'El conflicto que redefinió la doctrina aérea moderna y demostró las limitaciones del combate supersónico en combate cercano.'
+    },
+    coldwar_patrols: {
+        label: 'Guerra Fría',
+        years: '1947–1991',
+        flag: '☢️',
+        color: '#6366f1',
+        desc: 'Patrullas de disuasión nuclear, reconocimiento estratégico y tensiones constantes entre las superpotencias.'
+    },
+    falklands: {
+        label: 'Guerra de las Malvinas',
+        years: '1982',
+        flag: '🇦🇷',
+        color: '#0891b2',
+        desc: 'El primer conflicto donde los misiles guiados y el combate naval moderno fueron protagonistas absolutos.'
+    },
+    gulf_war: {
+        label: 'Guerra del Golfo',
+        years: '1990–1991',
+        flag: '🇰🇼',
+        color: '#d97706',
+        desc: 'Primer gran despliegue de tecnología stealth y munición guiada por láser en combate real.'
+    },
+    desert_storm: {
+        label: 'Tormenta del Desierto',
+        years: '1991',
+        flag: '🇮🇶',
+        color: '#b45309',
+        desc: 'La campaña aérea más intensa desde la Segunda Guerra Mundial: 100.000 salidas en 43 días.'
+    },
+    kosovo: {
+        label: 'Kosovo',
+        years: '1998–1999',
+        flag: '🇽🇰',
+        color: '#7c3aed',
+        desc: 'Primera guerra ganada casi exclusivamente con poder aéreo, sin bajas propias en combate.'
+    },
+    gwot: {
+        label: 'Guerra Global contra el Terror',
+        years: '2001–presente',
+        flag: '🌍',
+        color: '#dc2626',
+        desc: 'El conflicto más largo de la historia de EE.UU., con operaciones en múltiples teatros simultáneos.'
+    },
+    afghanistan: {
+        label: 'Afganistán (URSS)',
+        years: '1979–1989',
+        flag: '🇦🇫',
+        color: '#92400e',
+        desc: 'El "Vietnam soviético", donde el Su-25 tuvo su bautismo de fuego y redefinió el apoyo aéreo cercano.'
+    },
+    iraq: {
+        label: 'Iraq',
+        years: '2003–2011',
+        flag: '🇮🇶',
+        color: '#c2410c',
+        desc: 'Segunda gran campaña en Iraq, que demostró la superioridad absoluta de la coalición en el dominio aéreo.'
+    },
+    chechnya: {
+        label: 'Chechenia',
+        years: '1994–2009',
+        flag: '🏔️',
+        color: '#065f46',
+        desc: 'Conflicto en entorno urbano donde la aviación rusa sufrió pérdidas inesperadas frente a MANPADS.'
+    },
+    libya: {
+        label: 'Libia',
+        years: '2011',
+        flag: '🇱🇾',
+        color: '#0369a1',
+        desc: 'Operación Protector Unificado de la OTAN; primer uso del Rafale y del Typhoon en combate real.'
+    },
+    mali: {
+        label: 'Mali / Sahel',
+        years: '2013–presente',
+        flag: '🇲🇱',
+        color: '#78350f',
+        desc: 'Operación Serval: intervención francesa que demostró la capacidad de proyección del Rafale a larga distancia.'
+    },
+    syria: {
+        label: 'Siria',
+        years: '2011–presente',
+        flag: '🇸🇾',
+        color: '#991b1b',
+        desc: 'El teatro donde más aviaciones diferentes han coincidido: EE.UU., Rusia, Francia, Reino Unido, Israel y Turquía.'
+    },
+    ukraine: {
+        label: 'Ucrania',
+        years: '2022–presente',
+        flag: '🇺🇦',
+        color: '#1d4ed8',
+        desc: 'El mayor conflicto convencional en Europa desde 1945, con drones y misiles de crucero como protagonistas.'
+    },
+    sixday: {
+        label: 'Guerra de los Seis Días',
+        years: '1967',
+        flag: '🇮🇱',
+        color: '#4338ca',
+        desc: 'El ataque preventivo israelí destruyó 400 aviones árabes en tierra en pocas horas, reescribiendo el manual de la guerra aérea.'
+    },
+    yom_kippur: {
+        label: 'Guerra de Yom Kipur',
+        years: '1973',
+        flag: '🌙',
+        color: '#6d28d9',
+        desc: 'El conflicto que reveló la lethality de los misiles SAM y cambió para siempre la doctrina de supresión de defensas aéreas.'
+    },
+    humanitarian: {
+        label: 'Misiones humanitarias',
+        years: 'Varias',
+        flag: '🕊️',
+        color: '#0891b2',
+        desc: 'Evacuaciones, entregas de ayuda y apoyo en desastres naturales donde el transporte estratégico es insustituible.'
+    },
 };
 
 const FALLBACK_IMG = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png';
@@ -202,14 +330,15 @@ function createCard(plane) {
 function getFilteredPlanes(search = '', cat = 'all', era = 'all', favsOnly = false) {
     const s = search.toLowerCase();
     return aircraftDB.filter(p => {
-        const matchSearch = p.name.toLowerCase().includes(s) ||
-                            p.country.toLowerCase().includes(s) ||
-                            p.type.toLowerCase().includes(s);
+        const matchSearch   = p.name.toLowerCase().includes(s) ||
+                              p.country.toLowerCase().includes(s) ||
+                              p.type.toLowerCase().includes(s);
         const matchCat      = cat === 'all' || p.type === cat;
         const matchEra      = era === 'all' || getEraFromYear(p.year) === era;
         const matchFav      = !favsOnly || isFav(p.id);
         const matchTimeline = !timelineActive || (p.year >= timelineMin && p.year <= timelineMax);
-        return matchSearch && matchCat && matchEra && matchFav && matchTimeline;
+        const matchConflict = activeConflict === 'all' || (p.conflicts || []).includes(activeConflict);
+        return matchSearch && matchCat && matchEra && matchFav && matchTimeline && matchConflict;
     });
 }
 
@@ -254,6 +383,7 @@ function updateResultCounter(count, f) {
     if (f.era !== 'all') labels.push({ sgm: 'SGM', coldwar: 'GUERRA FRÍA', postgf: 'POST-GF', modern: 'MODERNO' }[f.era] || f.era);
     if (onlyFavs) labels.push('⭐ FAVORITOS');
     if (timelineActive) labels.push(`${timelineMin}–${timelineMax}`);
+    if (activeConflict !== 'all') labels.push(CONFLICTS_DB[activeConflict]?.label || activeConflict);
     if (f.search) labels.push(`"${f.search}"`);
     document.getElementById('resultFilterLabel').textContent = labels.length ? labels.join(' · ') : 'TODOS LOS MODELOS';
 }
@@ -400,16 +530,50 @@ function openDetail(id) {
     currentDetailId = id;
     history.replaceState(null, '', `#${id}`);
 
+    // Badge de conflictos para la ficha
+    const conflictBadges = (plane.conflicts || [])
+        .filter(c => CONFLICTS_DB[c])
+        .map(c => {
+            const cf = CONFLICTS_DB[c];
+            return `<span onclick="selectConflictAndClose('${c}')"
+                         title="${cf.label} (${cf.years})"
+                         class="conflict-chip cursor-pointer"
+                         style="border-color:${cf.color};color:${cf.color};background:${cf.color}18">
+                        ${cf.flag} ${cf.label}
+                    </span>`;
+        }).join('');
+
     document.getElementById('detailContent').innerHTML = `
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
                 <h1 class="header-font text-5xl font-black italic uppercase leading-none mb-2">${plane.name}</h1>
-                <div class="flex items-center gap-3 flex-wrap mb-6">
+                <div class="flex items-center gap-3 flex-wrap mb-4">
                     <p class="text-blue-400 mono text-lg uppercase tracking-widest">${plane.type} // ${plane.country}</p>
                     ${genBadgeHTML(plane)}
                 </div>
+
+                ${conflictBadges ? `
+                <div class="flex flex-wrap gap-2 mb-6">
+                    ${conflictBadges}
+                </div>` : ''}
+
                 <div class="space-y-6 text-slate-300">
                     <p class="text-xl leading-relaxed">${plane.desc}</p>
+
+                    <!-- Sección Wikipedia -->
+                    <div id="wikiSection-${id}" class="bg-slate-800/60 rounded-2xl p-5 border border-slate-700">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fab fa-wikipedia-w text-slate-400 text-sm"></i>
+                            <span class="text-[9px] font-black uppercase text-slate-400 tracking-widest">Wikipedia</span>
+                            <div id="wikiSpinner-${id}" class="w-3 h-3 border-2 border-blue-400 border-t-transparent rounded-full animate-spin ml-1"></div>
+                        </div>
+                        <p id="wikiText-${id}" class="text-sm text-slate-400 leading-relaxed italic">Cargando información...</p>
+                        <a id="wikiLink-${id}" href="#" target="_blank" rel="noopener"
+                           class="hidden mt-3 inline-flex items-center gap-1 text-[9px] font-black uppercase text-blue-400 hover:text-blue-300 transition-colors tracking-widest">
+                            Leer artículo completo <i class="fas fa-external-link-alt text-[8px]"></i>
+                        </a>
+                    </div>
+
                     <div class="grid grid-cols-2 gap-8 border-y border-slate-700 py-8">
                         <div><h4 class="text-blue-400 font-black uppercase text-xs mb-2">Armamento</h4><p class="text-sm mono">${plane.arm}</p></div>
                         <div><h4 class="text-blue-400 font-black uppercase text-xs mb-2">Año de Entrada</h4><p class="text-sm mono">${plane.year}</p></div>
@@ -445,6 +609,9 @@ function openDetail(id) {
     overlay.classList.remove('hidden');
     setTimeout(() => overlay.classList.add('active'), 10);
     document.body.style.overflow = 'hidden';
+
+    // Cargar Wikipedia de forma asíncrona sin bloquear la UI
+    if (plane.wiki) fetchWikipediaSummary(plane);
 }
 
 function closeDetail() {
@@ -1044,11 +1211,200 @@ document.addEventListener('keydown', e => {
         f: toggleFavFilter, m: toggleMachCalc,
         t: toggleTimeline,
         d: toggleTheme,
+        w: toggleTheater,
         i: () => { if (deferredInstallPrompt) triggerInstall(); },
         s: () => { if (currentDetailId) shareCurrentDetail(); }
     };
     shortcuts[e.key.toLowerCase()]?.();
 });
+
+// ═══════════════════════════════════════════════════════════
+// WIKIPEDIA API — resumen en la ficha técnica
+// ═══════════════════════════════════════════════════════════
+
+/** Caché en memoria para no repetir llamadas a la API en la misma sesión */
+const wikiCache = {};
+
+/**
+ * Obtiene el extracto introductorio de Wikipedia en español.
+ * Primero intenta ES; si no hay suficiente contenido, prueba EN.
+ * Rellena los elementos del DOM inyectados por openDetail().
+ */
+async function fetchWikipediaSummary(plane) {
+    const id       = plane.id;
+    const wikiKey  = plane.wiki;
+    const textEl   = document.getElementById(`wikiText-${id}`);
+    const linkEl   = document.getElementById(`wikiLink-${id}`);
+    const spinner  = document.getElementById(`wikiSpinner-${id}`);
+
+    if (!textEl || !wikiKey) return;
+
+    // Servir desde caché si ya fue consultada
+    if (wikiCache[wikiKey]) {
+        renderWikiResult(wikiCache[wikiKey], textEl, linkEl, spinner, wikiKey);
+        return;
+    }
+
+    try {
+        // Intentar Wikipedia en español primero, usando el título en inglés como búsqueda
+        let result = await queryWikiAPI('es', wikiKey);
+
+        // Fallback a inglés si el resumen es muy corto o no encontrado
+        if (!result || result.extract.length < 120) {
+            result = await queryWikiAPI('en', wikiKey);
+        }
+
+        if (result) {
+            wikiCache[wikiKey] = result;
+            renderWikiResult(result, textEl, linkEl, spinner, wikiKey);
+        } else {
+            textEl.textContent = 'Información de Wikipedia no disponible para esta aeronave.';
+            spinner?.classList.add('hidden');
+        }
+    } catch (err) {
+        console.warn('[Wiki] Error al obtener datos:', err);
+        textEl.textContent = 'No se pudo conectar con Wikipedia. Comprueba tu conexión.';
+        spinner?.classList.add('hidden');
+    }
+}
+
+/**
+ * Consulta la API REST de Wikipedia para obtener el resumen de un artículo.
+ * @param {string} lang  Código de idioma ('es' | 'en')
+ * @param {string} title Título del artículo en formato URL
+ */
+async function queryWikiAPI(lang, title) {
+    // Primero buscamos por título exacto; si falla, usamos la API de búsqueda
+    const summaryURL = `https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
+    const resp = await fetch(summaryURL, { signal: AbortSignal.timeout(6000) });
+
+    if (!resp.ok) {
+        // Intentar búsqueda fuzzy si el título exacto no existe
+        const searchURL = `https://${lang}.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(title)}&srlimit=1&format=json&origin=*`;
+        const sResp  = await fetch(searchURL, { signal: AbortSignal.timeout(6000) });
+        if (!sResp.ok) return null;
+        const sData  = await sResp.json();
+        const hit    = sData?.query?.search?.[0];
+        if (!hit) return null;
+
+        const retryURL  = `https://${lang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(hit.title)}`;
+        const retryResp = await fetch(retryURL, { signal: AbortSignal.timeout(6000) });
+        if (!retryResp.ok) return null;
+        const retryData = await retryResp.json();
+        return { extract: retryData.extract || '', url: retryData.content_urls?.desktop?.page || '', lang, title: retryData.title };
+    }
+
+    const data = await resp.json();
+    return { extract: data.extract || '', url: data.content_urls?.desktop?.page || '', lang, title: data.title };
+}
+
+/** Inyecta el resultado de Wikipedia en los elementos del DOM */
+function renderWikiResult(result, textEl, linkEl, spinner, wikiKey) {
+    spinner?.classList.add('hidden');
+
+    // Truncar a ~3 frases para mantener la UI limpia
+    const sentences = result.extract.split(/(?<=[.!?])\s+/);
+    const excerpt   = sentences.slice(0, 3).join(' ');
+
+    textEl.textContent = excerpt || 'Sin extracto disponible.';
+    textEl.classList.remove('italic');
+    textEl.classList.add('text-slate-300');
+
+    if (result.url && linkEl) {
+        linkEl.href = result.url;
+        linkEl.classList.remove('hidden');
+        // Badge de idioma
+        const lang = result.lang === 'es' ? '🇪🇸 ES' : '🇬🇧 EN';
+        linkEl.innerHTML = `Leer en Wikipedia ${lang} <i class="fas fa-external-link-alt text-[8px]"></i>`;
+    }
+}
+
+// ═══════════════════════════════════════════════════════════
+// TEATRO DE OPERACIONES
+// ═══════════════════════════════════════════════════════════
+
+/** Cierra la ficha activa, activa el filtro de conflicto y vuelve a la galería */
+function selectConflictAndClose(conflictId) {
+    closeDetail();
+    setTimeout(() => {
+        activeConflict = conflictId;
+        // Abrir el panel de Teatro si está cerrado
+        const panel = document.getElementById('theaterSection');
+        if (panel && !panel.classList.contains('open')) panel.classList.add('open');
+        highlightConflictCard(conflictId);
+        renderAll();
+    }, 550); // esperar a que cierre el overlay
+}
+
+/** Activa visualmente una tarjeta de conflicto en el panel */
+function highlightConflictCard(conflictId) {
+    document.querySelectorAll('.conflict-card').forEach(c => {
+        c.classList.toggle('conflict-card-active', c.dataset.conflict === conflictId);
+    });
+}
+
+/** Construye el panel del Teatro de Operaciones dinámicamente */
+function buildTheaterPanel() {
+    const container = document.getElementById('theaterGrid');
+    if (!container || container.dataset.built) return;
+    container.dataset.built = 'true';
+
+    container.innerHTML = Object.entries(CONFLICTS_DB).map(([id, cf]) => {
+        const count = aircraftDB.filter(p => (p.conflicts || []).includes(id)).length;
+        return `
+            <button class="conflict-card text-left rounded-2xl p-4 border-2 transition-all"
+                    data-conflict="${id}"
+                    onclick="filterByConflict('${id}')"
+                    style="border-color:${cf.color}22;background:${cf.color}0d">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                    <span class="text-xl">${cf.flag}</span>
+                    <span class="mono text-[8px] font-black text-slate-500 mt-1">${cf.years}</span>
+                </div>
+                <p class="header-font text-xs font-black uppercase leading-tight mb-1" style="color:${cf.color}">${cf.label}</p>
+                <p class="text-[10px] text-slate-500 leading-snug line-clamp-2">${cf.desc}</p>
+                <div class="mt-3 flex items-center gap-1">
+                    <span class="mono text-[9px] font-black" style="color:${cf.color}">${count}</span>
+                    <span class="text-[9px] text-slate-500">aeronave${count !== 1 ? 's' : ''}</span>
+                </div>
+            </button>`;
+    }).join('');
+}
+
+/** Aplica el filtro de conflicto seleccionado */
+function filterByConflict(id) {
+    activeConflict = activeConflict === id ? 'all' : id; // toggle
+    highlightConflictCard(activeConflict);
+    updateTheaterResetBtn();
+    renderAll();
+    // Hacer scroll suave hasta la galería
+    document.getElementById('galleryView')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function resetConflictFilter() {
+    activeConflict = 'all';
+    highlightConflictCard('all');
+    updateTheaterResetBtn();
+    renderAll();
+}
+
+function updateTheaterResetBtn() {
+    const btn = document.getElementById('theaterResetBtn');
+    if (!btn) return;
+    btn.classList.toggle('opacity-40', activeConflict === 'all');
+    btn.disabled = activeConflict === 'all';
+}
+
+function toggleTheater() {
+    const section = document.getElementById('theaterSection');
+    if (!section) return;
+    const willOpen = !section.classList.contains('open');
+    section.classList.toggle('open', willOpen);
+    if (willOpen) {
+        buildTheaterPanel();
+        highlightConflictCard(activeConflict);
+        updateTheaterResetBtn();
+    }
+}
 
 // ═══════════════════════════════════════════════════════════
 // PWA — SERVICE WORKER + INSTALL BANNER
