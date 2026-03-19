@@ -322,12 +322,6 @@ const aircraftDB = [
         trivia: "Está diseñado para que su estruendo supersónico suene como un golpe suave de 75 dB en tierra, en lugar de un boom de 110 dB.",
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/X-59_QueSST_artist_concept_%28cropped%29.jpg/1200px-X-59_QueSST_artist_concept_%28cropped%29.jpg",
         desc: "Demostrador de vuelo supersónico silencioso de la NASA, diseñado para reabrir el espacio aéreo civil a vuelos supersónicos comerciales sobre tierra."
-    }
-];
-        arm: "AIM-120D, AIM-9X, Cañón M61A2 20mm",
-        trivia: "Su firma de radar es del tamaño de una canica metálica, a pesar de medir 19 metros de largo.",
-        img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/F-22_Raptor_edit1_%28cropped%29.jpg/1200px-F-22_Raptor_edit1_%28cropped%29.jpg",
-        desc: "Primer caza de quinta generación del mundo, diseñado para la superioridad aérea total mediante el sigilo, la supercrucero y la agilidad extrema."
     },
     {
         id: "su57", name: "Su-57 Felon", type: "Caza", country: "Rusia", year: 2020,
