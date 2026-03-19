@@ -33,11 +33,19 @@ function toggleFav(id) {
 let compareList  = [];
 let activeEra    = 'all';
 let onlyFavs     = false;
-let currentView  = 'gallery';  // 'gallery' | 'ranking'
+let currentView  = 'gallery';
 let sortStat     = 'speed';
 let sortAsc      = false;
 let currentDetailId = null;
 const MAX_COMPARE   = 3;
+
+// ── Estado de la línea de tiempo ──────────────────
+const TIMELINE_MIN_YEAR = 1940;
+const TIMELINE_MAX_YEAR = 2024;
+const TIMELINE_STEP     = 10;
+let timelineMin = TIMELINE_MIN_YEAR;
+let timelineMax = TIMELINE_MAX_YEAR;
+let timelineActive = false;     // true si el filtro está activo
 
 // ═══════════════════════════════════════════════════════════
 // HELPERS
@@ -197,10 +205,11 @@ function getFilteredPlanes(search = '', cat = 'all', era = 'all', favsOnly = fal
         const matchSearch = p.name.toLowerCase().includes(s) ||
                             p.country.toLowerCase().includes(s) ||
                             p.type.toLowerCase().includes(s);
-        const matchCat = cat === 'all' || p.type === cat;
-        const matchEra = era === 'all' || getEraFromYear(p.year) === era;
-        const matchFav = !favsOnly || isFav(p.id);
-        return matchSearch && matchCat && matchEra && matchFav;
+        const matchCat      = cat === 'all' || p.type === cat;
+        const matchEra      = era === 'all' || getEraFromYear(p.year) === era;
+        const matchFav      = !favsOnly || isFav(p.id);
+        const matchTimeline = !timelineActive || (p.year >= timelineMin && p.year <= timelineMax);
+        return matchSearch && matchCat && matchEra && matchFav && matchTimeline;
     });
 }
 
@@ -244,6 +253,7 @@ function updateResultCounter(count, f) {
     if (f.cat !== 'all') labels.push(f.cat.toUpperCase());
     if (f.era !== 'all') labels.push({ sgm: 'SGM', coldwar: 'GUERRA FRÍA', postgf: 'POST-GF', modern: 'MODERNO' }[f.era] || f.era);
     if (onlyFavs) labels.push('⭐ FAVORITOS');
+    if (timelineActive) labels.push(`${timelineMin}–${timelineMax}`);
     if (f.search) labels.push(`"${f.search}"`);
     document.getElementById('resultFilterLabel').textContent = labels.length ? labels.join(' · ') : 'TODOS LOS MODELOS';
 }
@@ -826,6 +836,149 @@ function toggleShortcutPanel() {
 }
 
 // ═══════════════════════════════════════════════════════════
+// DARK / LIGHT MODE
+// ═══════════════════════════════════════════════════════════
+const THEME_KEY = 'aeropedia_theme';
+
+function applyTheme(theme) {
+    document.body.classList.toggle('dark', theme === 'dark');
+    document.documentElement.classList.remove('dark-preload');
+    localStorage.setItem(THEME_KEY, theme);
+}
+
+function toggleTheme() {
+    const isDark = document.body.classList.contains('dark');
+    applyTheme(isDark ? 'light' : 'dark');
+    // Si el radar está abierto, hay que redibujarlo con los colores actualizados
+    if (radarChartInstance) drawRadarChart();
+}
+
+function initTheme() {
+    const saved = localStorage.getItem(THEME_KEY) || 'light';
+    applyTheme(saved);
+}
+
+// ═══════════════════════════════════════════════════════════
+// LÍNEA DE TIEMPO INTERACTIVA
+// ═══════════════════════════════════════════════════════════
+
+/** Construye los ticks de décadas en el DOM */
+function buildDecadeMarks() {
+    const container = document.getElementById('decadeMarks');
+    if (!container) return;
+    container.innerHTML = '';
+    for (let y = TIMELINE_MIN_YEAR; y <= TIMELINE_MAX_YEAR; y += TIMELINE_STEP) {
+        const mark = document.createElement('div');
+        mark.className = 'decade-mark';
+        mark.dataset.year = y;
+        mark.innerHTML = `
+            <div class="decade-dot"></div>
+            <span class="decade-label">'${String(y).slice(2)}</span>`;
+        mark.addEventListener('click', () => jumpToDecade(y));
+        container.appendChild(mark);
+    }
+    updateDecadeMarks();
+}
+
+/** Resalta las marcas de década dentro del rango activo */
+function updateDecadeMarks() {
+    document.querySelectorAll('.decade-mark').forEach(m => {
+        const y = parseInt(m.dataset.year);
+        m.classList.toggle('active', y >= timelineMin && y <= timelineMax);
+    });
+}
+
+/** Click en una marca: si está en rango, lo reduce a ese punto; si no, lo expande */
+function jumpToDecade(year) {
+    const minEl = document.getElementById('timelineMin');
+    const maxEl = document.getElementById('timelineMax');
+    if (!minEl || !maxEl) return;
+
+    if (year >= timelineMin && year <= timelineMax && timelineMin !== timelineMax) {
+        // Reducir al punto exacto
+        timelineMin = year;
+        timelineMax = year;
+    } else {
+        // Expandir al incluir esa década
+        timelineMin = Math.min(timelineMin, year);
+        timelineMax = Math.max(timelineMax, year);
+    }
+
+    minEl.value = timelineMin;
+    maxEl.value = timelineMax;
+    syncTimeline();
+}
+
+/** Sincroniza estado interno, UI visual y filtro */
+function syncTimeline() {
+    const minEl = document.getElementById('timelineMin');
+    const maxEl = document.getElementById('timelineMax');
+    if (!minEl || !maxEl) return;
+
+    let minVal = parseInt(minEl.value);
+    let maxVal = parseInt(maxEl.value);
+
+    // Evitar cruce
+    if (minVal > maxVal) { minVal = maxVal; minEl.value = minVal; }
+
+    timelineMin = minVal;
+    timelineMax = maxVal;
+    timelineActive = !(timelineMin === TIMELINE_MIN_YEAR && timelineMax === TIMELINE_MAX_YEAR);
+
+    // Actualizar etiqueta
+    const label = document.getElementById('timelineRangeLabel');
+    if (label) {
+        label.textContent = timelineActive
+            ? `${timelineMin} – ${timelineMax}`
+            : 'TODAS LAS ÉPOCAS';
+    }
+
+    // Actualizar fill visual del track entre los dos thumbs
+    const total = TIMELINE_MAX_YEAR - TIMELINE_MIN_YEAR;
+    const leftPct  = ((timelineMin - TIMELINE_MIN_YEAR) / total) * 100;
+    const rightPct = ((timelineMax - TIMELINE_MIN_YEAR) / total) * 100;
+    const fill = document.getElementById('timelineTrackFill');
+    const tMin = document.getElementById('thumbMin');
+    const tMax = document.getElementById('thumbMax');
+    if (fill) {
+        fill.style.left  = `${leftPct}%`;
+        fill.style.width = `${rightPct - leftPct}%`;
+    }
+    if (tMin) tMin.style.left = `${leftPct}%`;
+    if (tMax) tMax.style.left = `${rightPct}%`;
+
+    updateDecadeMarks();
+
+    // Actualizar botón de timeline en el header
+    const btn = document.getElementById('timelineBtn');
+    if (btn) {
+        btn.classList.toggle('border-blue-500', timelineActive);
+        btn.classList.toggle('text-blue-500', timelineActive);
+        btn.classList.toggle('border-slate-200', !timelineActive);
+        btn.classList.toggle('text-slate-500', !timelineActive);
+    }
+
+    renderAll();
+}
+
+function onTimelineChange() { syncTimeline(); }
+
+function toggleTimeline() {
+    const section = document.getElementById('timelineSection');
+    const isOpen  = section.classList.contains('open');
+    section.classList.toggle('open', !isOpen);
+    if (!isOpen) buildDecadeMarks(); // construir marcas la primera vez
+}
+
+function resetTimeline() {
+    const minEl = document.getElementById('timelineMin');
+    const maxEl = document.getElementById('timelineMax');
+    if (minEl) minEl.value = TIMELINE_MIN_YEAR;
+    if (maxEl) maxEl.value = TIMELINE_MAX_YEAR;
+    syncTimeline();
+}
+
+// ═══════════════════════════════════════════════════════════
 // EVENT LISTENERS
 // ═══════════════════════════════════════════════════════════
 document.getElementById('mainSearch').addEventListener('input', renderAll);
@@ -889,6 +1042,8 @@ document.addEventListener('keydown', e => {
     const shortcuts = { '/': () => { e.preventDefault(); document.getElementById('mainSearch').focus(); },
         g: () => setView('gallery'), r: () => setView('ranking'),
         f: toggleFavFilter, m: toggleMachCalc,
+        t: toggleTimeline,
+        d: toggleTheme,
         s: () => { if (currentDetailId) shareCurrentDetail(); }
     };
     shortcuts[e.key.toLowerCase()]?.();
@@ -898,9 +1053,11 @@ document.addEventListener('keydown', e => {
 // INIT
 // ═══════════════════════════════════════════════════════════
 window.onload = () => {
+    initTheme();
     showSkeletons(6);
     setTimeout(() => {
         renderAll();
         resolveHash();
+        syncTimeline(); // inicializar fill visual del timeline
     }, 600);
 };
