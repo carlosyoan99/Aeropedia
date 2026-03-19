@@ -6,11 +6,7 @@
     "country": "EE.UU.",
     "year": 1944,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_europe",
-      "wwii_pacific",
-      "korea"
-    ],
+    "conflicts": ["wwii_europe", "wwii_pacific", "korea"],
     "wiki": "North_American_P-51_Mustang",
     "speed": 703,
     "range": 3540,
@@ -28,10 +24,7 @@
     "country": "Reino Unido",
     "year": 1942,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_europe",
-      "wwii_africa"
-    ],
+    "conflicts": ["wwii_europe", "wwii_africa"],
     "wiki": "Supermarine_Spitfire",
     "speed": 664,
     "range": 1576,
@@ -49,11 +42,7 @@
     "country": "Alemania Nazi",
     "year": 1942,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_europe",
-      "wwii_africa",
-      "wwii_east"
-    ],
+    "conflicts": ["wwii_europe", "wwii_africa", "wwii_east"],
     "wiki": "Messerschmitt_Bf_109",
     "speed": 640,
     "range": 720,
@@ -71,10 +60,7 @@
     "country": "Alemania Nazi",
     "year": 1941,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_europe",
-      "wwii_east"
-    ],
+    "conflicts": ["wwii_europe", "wwii_east"],
     "wiki": "Focke-Wulf_Fw_190",
     "speed": 654,
     "range": 800,
@@ -92,9 +78,7 @@
     "country": "Japón",
     "year": 1940,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_pacific"
-    ],
+    "conflicts": ["wwii_pacific"],
     "wiki": "Mitsubishi_A6M_Zero",
     "speed": 533,
     "range": 3104,
@@ -112,10 +96,7 @@
     "country": "EE.UU.",
     "year": 1941,
     "generation": null,
-    "conflicts": [
-      "wwii_europe",
-      "wwii_pacific"
-    ],
+    "conflicts": ["wwii_europe", "wwii_pacific"],
     "wiki": "Boeing_B-17_Flying_Fortress",
     "speed": 462,
     "range": 3219,
@@ -133,9 +114,7 @@
     "country": "Reino Unido",
     "year": 1942,
     "generation": null,
-    "conflicts": [
-      "wwii_europe"
-    ],
+    "conflicts": ["wwii_europe"],
     "wiki": "Avro_Lancaster",
     "speed": 462,
     "range": 4072,
@@ -153,9 +132,7 @@
     "country": "URSS",
     "year": 1941,
     "generation": null,
-    "conflicts": [
-      "wwii_east"
-    ],
+    "conflicts": ["wwii_east"],
     "wiki": "Ilyushin_Il-2",
     "speed": 404,
     "range": 765,
@@ -173,9 +150,7 @@
     "country": "Alemania Nazi",
     "year": 1944,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_europe"
-    ],
+    "conflicts": ["wwii_europe"],
     "wiki": "Messerschmitt_Me_262",
     "speed": 900,
     "range": 1050,
@@ -193,10 +168,7 @@
     "country": "EE.UU.",
     "year": 1943,
     "generation": "2ª",
-    "conflicts": [
-      "wwii_europe",
-      "wwii_pacific"
-    ],
+    "conflicts": ["wwii_europe", "wwii_pacific"],
     "wiki": "Republic_P-47_Thunderbolt",
     "speed": 689,
     "range": 3782,
@@ -214,10 +186,7 @@
     "country": "EE.UU.",
     "year": 1944,
     "generation": null,
-    "conflicts": [
-      "wwii_pacific",
-      "korea"
-    ],
+    "conflicts": ["wwii_pacific", "korea"],
     "wiki": "Boeing_B-29_Superfortress",
     "speed": 574,
     "range": 9382,
@@ -259,9 +228,7 @@
     "country": "EE.UU.",
     "year": 1949,
     "generation": "1ª",
-    "conflicts": [
-      "korea"
-    ],
+    "conflicts": ["korea"],
     "wiki": "North_American_F-86_Sabre",
     "speed": 1106,
     "range": 2454,
@@ -279,9 +246,7 @@
     "country": "URSS",
     "year": 1949,
     "generation": "1ª",
-    "conflicts": [
-      "korea"
-    ],
+    "conflicts": ["korea"],
     "wiki": "Mikoyan-Gurevich_MiG-15",
     "speed": 1076,
     "range": 2520,
@@ -299,10 +264,7 @@
     "country": "EE.UU.",
     "year": 1958,
     "generation": "3ª",
-    "conflicts": [
-      "coldwar_patrols",
-      "vietnam"
-    ],
+    "conflicts": ["coldwar_patrols", "vietnam"],
     "wiki": "Lockheed_F-104_Starfighter",
     "speed": 2333,
     "range": 2920,
@@ -320,11 +282,7 @@
     "country": "EE.UU.",
     "year": 1961,
     "generation": "3ª",
-    "conflicts": [
-      "vietnam",
-      "desert_storm",
-      "coldwar_patrols"
-    ],
+    "conflicts": ["vietnam", "desert_storm", "coldwar_patrols"],
     "wiki": "McDonnell_Douglas_F-4_Phantom_II",
     "speed": 2370,
     "range": 2960,
@@ -342,11 +300,7 @@
     "country": "URSS",
     "year": 1970,
     "generation": "3ª",
-    "conflicts": [
-      "coldwar_patrols",
-      "yom_kippur",
-      "iraq"
-    ],
+    "conflicts": ["coldwar_patrols", "yom_kippur", "iraq"],
     "wiki": "Mikoyan-Gurevich_MiG-25",
     "speed": 3395,
     "range": 1730,
@@ -364,11 +318,7 @@
     "country": "EE.UU.",
     "year": 1967,
     "generation": null,
-    "conflicts": [
-      "vietnam",
-      "desert_storm",
-      "libya"
-    ],
+    "conflicts": ["vietnam", "desert_storm", "libya"],
     "wiki": "General_Dynamics_F-111_Aardvark",
     "speed": 2655,
     "range": 4707,
@@ -386,10 +336,7 @@
     "country": "EE.UU.",
     "year": 1967,
     "generation": null,
-    "conflicts": [
-      "vietnam",
-      "desert_storm"
-    ],
+    "conflicts": ["vietnam", "desert_storm"],
     "wiki": "LTV_A-7_Corsair_II",
     "speed": 1112,
     "range": 4600,
@@ -407,12 +354,7 @@
     "country": "URSS",
     "year": 1983,
     "generation": "4ª",
-    "conflicts": [
-      "coldwar_patrols",
-      "gulf_war",
-      "kosovo",
-      "ukraine"
-    ],
+    "conflicts": ["coldwar_patrols", "gulf_war", "kosovo", "ukraine"],
     "wiki": "Mikoyan_MiG-29",
     "speed": 2445,
     "range": 1500,
@@ -430,11 +372,7 @@
     "country": "EE.UU.",
     "year": 1974,
     "generation": "4ª",
-    "conflicts": [
-      "coldwar_patrols",
-      "iran_iraq",
-      "gulf_war"
-    ],
+    "conflicts": ["coldwar_patrols", "iran_iraq", "gulf_war"],
     "wiki": "Grumman_F-14_Tomcat",
     "speed": 2485,
     "range": 2960,
@@ -452,12 +390,7 @@
     "country": "Europa",
     "year": 1980,
     "generation": null,
-    "conflicts": [
-      "gulf_war",
-      "desert_storm",
-      "iraq",
-      "libya"
-    ],
+    "conflicts": ["gulf_war", "desert_storm", "iraq", "libya"],
     "wiki": "Panavia_Tornado",
     "speed": 2336,
     "range": 3890,
@@ -475,14 +408,7 @@
     "country": "EE.UU.",
     "year": 1983,
     "generation": "4ª",
-    "conflicts": [
-      "libya",
-      "gulf_war",
-      "desert_storm",
-      "gwot",
-      "iraq",
-      "syria"
-    ],
+    "conflicts": ["libya", "gulf_war", "desert_storm", "gwot", "iraq", "syria"],
     "wiki": "McDonnell_Douglas_F/A-18_Hornet",
     "speed": 1915,
     "range": 2537,
@@ -500,12 +426,7 @@
     "country": "EE.UU.",
     "year": 1999,
     "generation": "4.5ª",
-    "conflicts": [
-      "gwot",
-      "iraq",
-      "syria",
-      "humanitarian"
-    ],
+    "conflicts": ["gwot", "iraq", "syria", "humanitarian"],
     "wiki": "Boeing_F/A-18E/F_Super_Hornet",
     "speed": 1915,
     "range": 2346,
@@ -523,12 +444,7 @@
     "country": "EE.UU.",
     "year": 1983,
     "generation": null,
-    "conflicts": [
-      "desert_storm",
-      "gulf_war",
-      "kosovo",
-      "iraq"
-    ],
+    "conflicts": ["desert_storm", "gulf_war", "kosovo", "iraq"],
     "wiki": "Lockheed_F-117_Nighthawk",
     "speed": 993,
     "range": 2100,
@@ -546,9 +462,7 @@
     "country": "Suecia",
     "year": 1997,
     "generation": "4.5ª",
-    "conflicts": [
-      "libya"
-    ],
+    "conflicts": ["libya"],
     "wiki": "Saab_JAS_39_Gripen",
     "speed": 2204,
     "range": 3200,
@@ -566,10 +480,7 @@
     "country": "Rusia / India",
     "year": 2002,
     "generation": "4.5ª",
-    "conflicts": [
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["syria", "ukraine"],
     "wiki": "Sukhoi_Su-30",
     "speed": 2120,
     "range": 3000,
@@ -587,10 +498,7 @@
     "country": "Rusia",
     "year": 2014,
     "generation": "4.5ª",
-    "conflicts": [
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["syria", "ukraine"],
     "wiki": "Sukhoi_Su-35",
     "speed": 2500,
     "range": 3600,
@@ -608,10 +516,7 @@
     "country": "URSS / Rusia",
     "year": 1981,
     "generation": "4ª",
-    "conflicts": [
-      "coldwar_patrols",
-      "ukraine"
-    ],
+    "conflicts": ["coldwar_patrols", "ukraine"],
     "wiki": "Mikoyan_MiG-31",
     "speed": 3000,
     "range": 3300,
@@ -629,12 +534,7 @@
     "country": "Francia",
     "year": 1984,
     "generation": "4ª",
-    "conflicts": [
-      "gulf_war",
-      "yugoslavia",
-      "mali",
-      "india_pakistan"
-    ],
+    "conflicts": ["gulf_war", "yugoslavia", "mali", "india_pakistan"],
     "wiki": "Dassault_Mirage_2000",
     "speed": 2336,
     "range": 1550,
@@ -652,12 +552,7 @@
     "country": "URSS / Rusia",
     "year": 1974,
     "generation": null,
-    "conflicts": [
-      "afghanistan",
-      "chechnya",
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["afghanistan", "chechnya", "syria", "ukraine"],
     "wiki": "Sukhoi_Su-24",
     "speed": 1700,
     "range": 2850,
@@ -675,9 +570,7 @@
     "country": "EE.UU.",
     "year": 2021,
     "generation": "4.5ª",
-    "conflicts": [
-      "gwot"
-    ],
+    "conflicts": ["gwot"],
     "wiki": "Boeing_F-15EX_Eagle_II",
     "speed": 2655,
     "range": 3900,
@@ -767,11 +660,7 @@
     "country": "Brasil",
     "year": 2003,
     "generation": null,
-    "conflicts": [
-      "gwot",
-      "mali",
-      "sierra_leone"
-    ],
+    "conflicts": ["gwot", "mali", "sierra_leone"],
     "wiki": "Embraer_EMB_314_Super_Tucano",
     "speed": 590,
     "range": 1330,
@@ -825,10 +714,7 @@
     "country": "EE.UU.",
     "year": 2005,
     "generation": "5ª",
-    "conflicts": [
-      "gwot",
-      "syria"
-    ],
+    "conflicts": ["gwot", "syria"],
     "wiki": "Lockheed_Martin_F-22_Raptor",
     "speed": 2410,
     "range": 2960,
@@ -846,10 +732,7 @@
     "country": "Rusia",
     "year": 2020,
     "generation": "5ª",
-    "conflicts": [
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["syria", "ukraine"],
     "wiki": "Sukhoi_Su-57",
     "speed": 2600,
     "range": 3500,
@@ -867,10 +750,7 @@
     "country": "EE.UU. / Aliados",
     "year": 2015,
     "generation": "5ª",
-    "conflicts": [
-      "syria",
-      "gwot"
-    ],
+    "conflicts": ["syria", "gwot"],
     "wiki": "Lockheed_Martin_F-35_Lightning_II",
     "speed": 1930,
     "range": 2220,
@@ -888,10 +768,7 @@
     "country": "Europa",
     "year": 2003,
     "generation": "4.5ª",
-    "conflicts": [
-      "libya",
-      "syria"
-    ],
+    "conflicts": ["libya", "syria"],
     "wiki": "Eurofighter_Typhoon",
     "speed": 2495,
     "range": 2900,
@@ -909,12 +786,7 @@
     "country": "URSS",
     "year": 1959,
     "generation": "3ª",
-    "conflicts": [
-      "vietnam",
-      "sixday",
-      "yom_kippur",
-      "falklands"
-    ],
+    "conflicts": ["vietnam", "sixday", "yom_kippur", "falklands"],
     "wiki": "Mikoyan-Gurevich_MiG-21",
     "speed": 2175,
     "range": 1225,
@@ -932,13 +804,7 @@
     "country": "EE.UU.",
     "year": 1978,
     "generation": "4ª",
-    "conflicts": [
-      "gulf_war",
-      "desert_storm",
-      "gwot",
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["gulf_war", "desert_storm", "gwot", "syria", "ukraine"],
     "wiki": "General_Dynamics_F-16_Fighting_Falcon",
     "speed": 2120,
     "range": 3200,
@@ -956,12 +822,7 @@
     "country": "EE.UU.",
     "year": 1976,
     "generation": "4ª",
-    "conflicts": [
-      "desert_storm",
-      "gwot",
-      "iraq",
-      "syria"
-    ],
+    "conflicts": ["desert_storm", "gwot", "iraq", "syria"],
     "wiki": "McDonnell_Douglas_F-15_Eagle",
     "speed": 2655,
     "range": 3450,
@@ -979,11 +840,7 @@
     "country": "Francia",
     "year": 2001,
     "generation": "4.5ª",
-    "conflicts": [
-      "libya",
-      "mali",
-      "syria"
-    ],
+    "conflicts": ["libya", "mali", "syria"],
     "wiki": "Dassault_Rafale",
     "speed": 1912,
     "range": 3700,
@@ -1019,10 +876,7 @@
     "country": "URSS / Rusia",
     "year": 1985,
     "generation": "4ª",
-    "conflicts": [
-      "chechnya",
-      "ukraine"
-    ],
+    "conflicts": ["chechnya", "ukraine"],
     "wiki": "Sukhoi_Su-27",
     "speed": 2500,
     "range": 3530,
@@ -1040,12 +894,7 @@
     "country": "EE.UU.",
     "year": 1997,
     "generation": null,
-    "conflicts": [
-      "kosovo",
-      "gwot",
-      "iraq",
-      "libya"
-    ],
+    "conflicts": ["kosovo", "gwot", "iraq", "libya"],
     "wiki": "Northrop_Grumman_B-2_Spirit",
     "speed": 1010,
     "range": 11100,
@@ -1063,11 +912,7 @@
     "country": "Rusia",
     "year": 1987,
     "generation": null,
-    "conflicts": [
-      "chechnya",
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["chechnya", "syria", "ukraine"],
     "wiki": "Tupolev_Tu-160",
     "speed": 2220,
     "range": 12300,
@@ -1085,13 +930,7 @@
     "country": "EE.UU.",
     "year": 1955,
     "generation": null,
-    "conflicts": [
-      "vietnam",
-      "gulf_war",
-      "desert_storm",
-      "gwot",
-      "iraq"
-    ],
+    "conflicts": ["vietnam", "gulf_war", "desert_storm", "gwot", "iraq"],
     "wiki": "Boeing_B-52_Stratofortress",
     "speed": 1047,
     "range": 14200,
@@ -1109,12 +948,7 @@
     "country": "EE.UU.",
     "year": 1986,
     "generation": null,
-    "conflicts": [
-      "desert_storm",
-      "gwot",
-      "iraq",
-      "syria"
-    ],
+    "conflicts": ["desert_storm", "gwot", "iraq", "syria"],
     "wiki": "Rockwell_B-1_Lancer",
     "speed": 1340,
     "range": 9400,
@@ -1132,12 +966,7 @@
     "country": "URSS / Rusia",
     "year": 1956,
     "generation": null,
-    "conflicts": [
-      "coldwar_patrols",
-      "chechnya",
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["coldwar_patrols", "chechnya", "syria", "ukraine"],
     "wiki": "Tupolev_Tu-95",
     "speed": 920,
     "range": 15000,
@@ -1155,12 +984,7 @@
     "country": "EE.UU.",
     "year": 1977,
     "generation": null,
-    "conflicts": [
-      "gulf_war",
-      "desert_storm",
-      "gwot",
-      "iraq"
-    ],
+    "conflicts": ["gulf_war", "desert_storm", "gwot", "iraq"],
     "wiki": "Fairchild_Republic_A-10_Thunderbolt_II",
     "speed": 706,
     "range": 4150,
@@ -1178,12 +1002,7 @@
     "country": "URSS / Rusia",
     "year": 1981,
     "generation": null,
-    "conflicts": [
-      "afghanistan",
-      "chechnya",
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["afghanistan", "chechnya", "syria", "ukraine"],
     "wiki": "Sukhoi_Su-25",
     "speed": 975,
     "range": 1000,
@@ -1201,10 +1020,7 @@
     "country": "Rusia",
     "year": 2014,
     "generation": null,
-    "conflicts": [
-      "syria",
-      "ukraine"
-    ],
+    "conflicts": ["syria", "ukraine"],
     "wiki": "Sukhoi_Su-34",
     "speed": 1900,
     "range": 4000,
@@ -1222,11 +1038,7 @@
     "country": "EE.UU. / Reino Unido",
     "year": 1985,
     "generation": null,
-    "conflicts": [
-      "falklands",
-      "gulf_war",
-      "gwot"
-    ],
+    "conflicts": ["falklands", "gulf_war", "gwot"],
     "wiki": "McDonnell_Douglas_AV-8B_Harrier_II",
     "speed": 1065,
     "range": 3200,
@@ -1244,10 +1056,7 @@
     "country": "EE.UU.",
     "year": 1966,
     "generation": null,
-    "conflicts": [
-      "vietnam",
-      "coldwar_patrols"
-    ],
+    "conflicts": ["vietnam", "coldwar_patrols"],
     "wiki": "Lockheed_SR-71_Blackbird",
     "speed": 3540,
     "range": 5400,
@@ -1265,13 +1074,7 @@
     "country": "EE.UU.",
     "year": 1977,
     "generation": null,
-    "conflicts": [
-      "gulf_war",
-      "desert_storm",
-      "gwot",
-      "iraq",
-      "syria"
-    ],
+    "conflicts": ["gulf_war", "desert_storm", "gwot", "iraq", "syria"],
     "wiki": "Boeing_E-3_Sentry",
     "speed": 855,
     "range": 9250,
@@ -1289,11 +1092,7 @@
     "country": "EE.UU.",
     "year": 1956,
     "generation": null,
-    "conflicts": [
-      "coldwar_patrols",
-      "vietnam",
-      "gwot"
-    ],
+    "conflicts": ["coldwar_patrols", "vietnam", "gwot"],
     "wiki": "Lockheed_U-2",
     "speed": 805,
     "range": 10300,
@@ -1311,11 +1110,7 @@
     "country": "EE.UU.",
     "year": 2001,
     "generation": null,
-    "conflicts": [
-      "gwot",
-      "iraq",
-      "syria"
-    ],
+    "conflicts": ["gwot", "iraq", "syria"],
     "wiki": "Northrop_Grumman_RQ-4_Global_Hawk",
     "speed": 629,
     "range": 22780,
@@ -1333,11 +1128,7 @@
     "country": "EE.UU.",
     "year": 1995,
     "generation": null,
-    "conflicts": [
-      "gwot",
-      "iraq",
-      "humanitarian"
-    ],
+    "conflicts": ["gwot", "iraq", "humanitarian"],
     "wiki": "Boeing_C-17_Globemaster_III",
     "speed": 830,
     "range": 4480,
@@ -1380,9 +1171,7 @@
     "country": "URSS / Ucrania",
     "year": 1986,
     "generation": null,
-    "conflicts": [
-      "humanitarian"
-    ],
+    "conflicts": ["humanitarian"],
     "wiki": "Antonov_An-124_Ruslan",
     "speed": 865,
     "range": 5400,
@@ -1616,5 +1405,4 @@
     "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bayraktar_TB2_Ukraine.jpg/1200px-Bayraktar_TB2_Ukraine.jpg",
     "desc": "Dron táctico de altitud media y larga resistencia (MALE). Se ha hecho famoso por su efectividad operativa y por ser una opción de bajo coste comparada con los sistemas occidentales."
   }
-  
 ]
