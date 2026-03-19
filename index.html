@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroPedia: Archivo Global de Aviación</title>
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-100">
+
+    <!-- ══════════════════════════════════════════════════
+         HEADER / HUD DE NAVEGACIÓN
+    ══════════════════════════════════════════════════ -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
+
+            <!-- Fila 1: Logo + controles -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-3 cursor-pointer" onclick="closeDetail()">
+                    <div class="bg-blue-600 text-white p-2 rounded-lg rotate-12">
+                        <i class="fas fa-fighter-jet text-2xl"></i>
+                    </div>
+                    <h1 class="header-font text-2xl font-black tracking-tighter uppercase">
+                        AERO<span class="text-blue-600">PEDIA</span>
+                    </h1>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2 items-center">
+                    <!-- Buscador -->
+                    <input type="text" id="mainSearch" placeholder="Buscar avión, país..."
+                           class="px-4 py-2 border rounded-full text-sm w-56 focus:ring-2 focus:ring-blue-500 outline-none">
+
+                    <!-- Filtro categoría -->
+                    <select id="catFilter" class="px-4 py-2 border rounded-full text-[10px] font-bold uppercase cursor-pointer outline-none">
+                        <option value="all">TODOS LOS MODELOS</option>
+                        <option value="Caza">CAZAS</option>
+                        <option value="Bombardero">BOMBARDEROS</option>
+                        <option value="Ataque">ATAQUE CAS</option>
+                        <option value="Especial">INTELIGENCIA / AWACS</option>
+                        <option value="Transporte">TRANSPORTE</option>
+                        <option value="Experimental">EXPERIMENTAL</option>
+                    </select>
+
+                    <!-- Favoritos -->
+                    <button onclick="toggleFavFilter()" id="favFilterBtn"
+                            class="px-4 py-2 border-2 border-slate-200 rounded-full text-[10px] font-black uppercase tracking-widest transition-colors flex items-center gap-2 text-slate-500 hover:border-yellow-400 hover:text-yellow-500">
+                        <i class="fas fa-star"></i> FAVORITOS
+                    </button>
+
+                    <!-- Toggle de vista -->
+                    <div class="flex border-2 border-slate-200 rounded-full overflow-hidden">
+                        <button onclick="setView('gallery')" id="viewGalleryBtn"
+                                class="px-3 py-2 text-[10px] font-black uppercase transition-colors bg-slate-900 text-white"
+                                title="Vista galería (G)">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button onclick="setView('ranking')" id="viewRankingBtn"
+                                class="px-3 py-2 text-[10px] font-black uppercase transition-colors bg-white text-slate-500 hover:bg-slate-100"
+                                title="Vista ranking (R)">
+                            <i class="fas fa-list-ol"></i>
+                        </button>
+                    </div>
+
+                    <!-- Calculadora Mach -->
+                    <button onclick="toggleMachCalc()"
+                            class="px-4 py-2 bg-slate-900 text-white rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-blue-600 transition-colors flex items-center gap-2"
+                            title="Calculadora Mach (M)">
+                        <i class="fas fa-tachometer-alt"></i> MACH CALC
+                    </button>
+
+                    <!-- Atajos de teclado -->
+                    <div class="relative">
+                        <button onclick="toggleShortcutPanel()" id="shortcutBtn"
+                                class="px-3 py-2 border-2 border-slate-200 rounded-full text-slate-400 hover:border-slate-400 hover:text-slate-600 transition-colors text-[10px] font-black"
+                                title="Atajos de teclado">
+                            <i class="fas fa-keyboard"></i>
+                        </button>
+                        <div id="shortcutPanel" class="absolute right-0 top-10 w-64 bg-slate-900 text-white rounded-2xl shadow-2xl p-4 z-50 hidden">
+                            <p class="header-font text-[10px] font-black uppercase text-blue-400 mb-3 tracking-widest">Atajos de teclado</p>
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Buscar aeronave</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">/</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Cerrar overlay</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">ESC</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Vista galería</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">G</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Vista ranking</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">R</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Toggle favoritos</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">F</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Calculadora Mach</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">M</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Compartir ficha</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">S</kbd>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fila 2: Filtros por época -->
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start" id="eraFilters">
+                <span class="text-[9px] font-black uppercase text-slate-400 self-center mr-1">ÉPOCA:</span>
+                <button class="era-pill active" data-era="all">TODAS</button>
+                <button class="era-pill" data-era="sgm">SGM (pre-1945)</button>
+                <button class="era-pill" data-era="coldwar">GUERRA FRÍA (1945–1991)</button>
+                <button class="era-pill" data-era="postgf">POST-GF (1991–2010)</button>
+                <button class="era-pill" data-era="modern">MODERNO (2010+)</button>
+            </div>
+
+            <!-- Calculadora Mach (colapsada por defecto) -->
+            <div id="machCalc" class="bg-slate-900 rounded-2xl text-white overflow-hidden">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-5">
+                        <i class="fas fa-tachometer-alt text-blue-400 text-xl"></i>
+                        <h3 class="header-font text-sm font-black uppercase tracking-widest">Calculadora de Número Mach</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Velocidad -->
+                        <div>
+                            <label class="text-[9px] font-black uppercase text-blue-400 block mb-2">Velocidad</label>
+                            <div class="flex gap-2">
+                                <input type="number" id="machSpeedInput" placeholder="Valor..."
+                                       class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm mono text-white outline-none focus:border-blue-500"
+                                       oninput="calcMach()">
+                                <select id="machUnit" onchange="calcMach()"
+                                        class="bg-slate-800 border border-slate-700 rounded-lg px-2 py-2 text-xs font-bold text-white outline-none">
+                                    <option value="kmh">KM/H</option>
+                                    <option value="knots">KNOTS</option>
+                                    <option value="mph">MPH</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Altitud -->
+                        <div>
+                            <label class="text-[9px] font-black uppercase text-blue-400 block mb-2">
+                                Altitud: <span id="altLabel" class="text-white">0 m (nivel del mar)</span>
+                            </label>
+                            <input type="range" id="altSlider" min="0" max="20000" step="500" value="0"
+                                   oninput="updateAltLabel(); calcMach()" class="mt-3">
+                            <div class="flex justify-between text-[8px] text-slate-500 mt-1">
+                                <span>0 m</span><span>5.000</span><span>10.000</span><span>15.000</span><span>20.000 m</span>
+                            </div>
+                        </div>
+                        <!-- Resultado -->
+                        <div class="flex flex-col justify-center">
+                            <label class="text-[9px] font-black uppercase text-blue-400 block mb-2">Resultado</label>
+                            <div class="bg-slate-800 rounded-xl p-4 text-center border border-slate-700">
+                                <p id="machResult" class="header-font text-4xl font-black text-white">—</p>
+                                <p class="text-[9px] text-slate-400 uppercase mt-1">Número Mach</p>
+                                <p id="machCategory" class="text-[9px] font-black uppercase mt-2 text-blue-400">Introduce una velocidad</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Referencia -->
+                    <div class="mt-4 pt-4 border-t border-slate-700 grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                        <div class="bg-slate-800 rounded-lg p-3">
+                            <p class="text-[8px] text-slate-400 uppercase font-black">Nivel del mar</p>
+                            <p class="mono text-xs font-black text-white">1.234,8 km/h</p>
+                        </div>
+                        <div class="bg-slate-800 rounded-lg p-3">
+                            <p class="text-[8px] text-slate-400 uppercase font-black">5.000 m</p>
+                            <p class="mono text-xs font-black text-white">1.183,0 km/h</p>
+                        </div>
+                        <div class="bg-slate-800 rounded-lg p-3">
+                            <p class="text-[8px] text-slate-400 uppercase font-black">10.000 m</p>
+                            <p class="mono text-xs font-black text-white">1.084,6 km/h</p>
+                        </div>
+                        <div class="bg-slate-800 rounded-lg p-3">
+                            <p class="text-[8px] text-slate-400 uppercase font-black">20.000 m</p>
+                            <p class="mono text-xs font-black text-white">1.062,5 km/h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════════════
+         CONTENIDO PRINCIPAL
+    ══════════════════════════════════════════════════ -->
+    <main class="max-w-7xl mx-auto px-6 py-8">
+
+        <!-- Contador de resultados -->
+        <div id="resultCounter" class="flex items-center gap-3 mb-6">
+            <span class="mono text-[10px] font-black text-slate-400 uppercase">// MOSTRANDO</span>
+            <span id="resultCount" class="header-font text-lg font-black text-slate-900">0</span>
+            <span class="mono text-[10px] font-black text-slate-400 uppercase">AERONAVES</span>
+            <div class="flex-1 h-px bg-slate-200 ml-2"></div>
+            <span id="resultFilterLabel" class="mono text-[9px] text-blue-500 font-black uppercase"></span>
+        </div>
+
+        <!-- Vista galería -->
+        <div id="galleryView">
+            <div id="gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Cards inyectadas por JS -->
+            </div>
+        </div>
+
+        <!-- Vista ranking -->
+        <div id="rankingView">
+            <div class="flex flex-wrap gap-2 mb-6 items-center">
+                <span class="text-[9px] font-black uppercase text-slate-400 mr-1">ORDENAR POR:</span>
+                <button class="rank-stat-pill px-3 py-1.5 rounded-full text-[9px] font-black uppercase bg-slate-900 text-white" data-stat="speed">Velocidad</button>
+                <button class="rank-stat-pill px-3 py-1.5 rounded-full text-[9px] font-black uppercase bg-slate-200 text-slate-600" data-stat="range">Alcance</button>
+                <button class="rank-stat-pill px-3 py-1.5 rounded-full text-[9px] font-black uppercase bg-slate-200 text-slate-600" data-stat="ceiling">Techo</button>
+                <button class="rank-stat-pill px-3 py-1.5 rounded-full text-[9px] font-black uppercase bg-slate-200 text-slate-600" data-stat="mtow">MTOW</button>
+                <button class="rank-stat-pill px-3 py-1.5 rounded-full text-[9px] font-black uppercase bg-slate-200 text-slate-600" data-stat="year">Año</button>
+            </div>
+            <div class="bg-white rounded-2xl shadow-sm overflow-hidden border border-slate-100">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase text-slate-400 w-10">#</th>
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase text-slate-300">Aeronave</th>
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase sort-th text-slate-300" data-col="speed">Velocidad <span class="sort-icon">↕</span></th>
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase sort-th text-slate-300 hidden md:table-cell" data-col="range">Alcance <span class="sort-icon">↕</span></th>
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase sort-th text-slate-300 hidden md:table-cell" data-col="ceiling">Techo <span class="sort-icon">↕</span></th>
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase sort-th text-slate-300 hidden lg:table-cell" data-col="mtow">MTOW <span class="sort-icon">↕</span></th>
+                            <th class="px-4 py-3 text-left text-[9px] font-black uppercase sort-th text-slate-300 hidden lg:table-cell" data-col="year">Año <span class="sort-icon">↕</span></th>
+                            <th class="px-4 py-3 w-24"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="rankingBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- ══════════════════════════════════════════════════
+         BARRA FLOTANTE DE COMPARACIÓN
+    ══════════════════════════════════════════════════ -->
+    <div id="compareBar" class="fixed bottom-0 left-0 right-0 z-40 bg-slate-900/95 backdrop-blur-md border-t border-blue-600/40 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 flex-wrap">
+            <div class="flex items-center gap-3">
+                <i class="fas fa-balance-scale text-blue-400"></i>
+                <span class="header-font text-xs font-black uppercase text-white">MODO COMPARACIÓN</span>
+                <div id="compareSlots" class="flex gap-2 flex-wrap"></div>
+            </div>
+            <div class="flex gap-3 items-center">
+                <span class="text-[9px] text-slate-400 uppercase font-black" id="compareHint">Selecciona 2 o 3 aeronaves</span>
+                <button onclick="openCompare()" id="compareBtn" disabled
+                        class="px-5 py-2 bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded-full hover:bg-blue-500 transition-colors disabled:opacity-40 disabled:cursor-not-allowed">
+                    <i class="fas fa-chart-bar mr-1"></i> COMPARAR
+                </button>
+                <button onclick="clearCompare()"
+                        class="px-4 py-2 bg-slate-700 text-white text-[10px] font-black uppercase rounded-full hover:bg-slate-600 transition-colors">
+                    <i class="fas fa-times"></i> CANCELAR
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de compartir -->
+    <div id="shareToast" class="bg-slate-900 text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 border border-blue-500/40">
+        <i class="fas fa-check-circle text-blue-400"></i>
+        <span class="text-xs font-black uppercase tracking-widest">Enlace copiado al portapapeles</span>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         OVERLAY: FICHA TÉCNICA
+    ══════════════════════════════════════════════════ -->
+    <div id="detailOverlay" class="fixed inset-0 z-50 bg-slate-900 text-white overflow-y-auto hidden">
+        <div class="min-h-screen p-6 md:p-12">
+            <div class="flex items-center justify-between mb-8">
+                <button onclick="closeDetail()"
+                        class="flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest hover:text-white transition-colors">
+                    <i class="fas fa-arrow-left"></i> Volver al Archivo
+                </button>
+                <button onclick="shareCurrentDetail()"
+                        class="flex items-center gap-2 px-4 py-2 border border-slate-700 rounded-full text-[10px] font-black uppercase text-slate-400 hover:border-blue-500 hover:text-blue-400 transition-colors">
+                    <i class="fas fa-share-alt"></i> Compartir ficha
+                </button>
+            </div>
+            <div id="detailContent" class="max-w-5xl mx-auto"></div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         OVERLAY: COMPARADOR
+    ══════════════════════════════════════════════════ -->
+    <div id="compareOverlay" class="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-md text-white overflow-y-auto hidden">
+        <div class="min-h-screen p-6 md:p-10">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex justify-between items-center mb-8">
+                    <div>
+                        <h2 class="header-font text-3xl font-black uppercase tracking-tight">
+                            ANÁLISIS <span class="text-blue-400">COMPARATIVO</span>
+                        </h2>
+                        <p class="text-slate-400 text-sm mono mt-1 uppercase">// Confrontación de especificaciones técnicas</p>
+                    </div>
+                    <button onclick="closeCompare()"
+                            class="flex items-center gap-2 text-slate-400 hover:text-white font-bold uppercase text-xs tracking-widest transition-colors">
+                        <i class="fas fa-times"></i> CERRAR
+                    </button>
+                </div>
+                <div id="compareContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         SCRIPTS (orden importante: DB primero, luego app)
+    ══════════════════════════════════════════════════ -->
+    <script src="data/aircraft.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
+
