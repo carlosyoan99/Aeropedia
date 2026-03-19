@@ -6,10 +6,9 @@
   <title>AeroPedia: Archivo Global de Aviación</title>
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="AeroPedia">
   <link rel="apple-touch-icon" href="icons/icon-192.svg">
-  <link rel="icon" href="icons/icon-192.svg">
   <meta name="description" content="Enciclopedia interactiva de aviación militar: fichas técnicas, comparador, radar y calculadora Mach.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -37,13 +36,16 @@
           <option value="Experimental">Experimental</option>
         </select>
         <button id="favFilterBtn" class="header-btn" onclick="toggleFavFilter()" title="Favoritos (F)"><i class="fas fa-star"></i> Favoritos</button>
+        <a class="header-btn" href="favorites.html" title="Página de Favoritos" style="text-decoration:none"><i class="fas fa-external-link-alt"></i></a>
         <div class="view-toggle">
           <button id="viewGalleryBtn" class="view-btn active" onclick="setView('gallery')" title="Galería (G)"><i class="fas fa-th-large"></i></button>
           <button id="viewRankingBtn" class="view-btn" onclick="setView('ranking')" title="Ranking (R)"><i class="fas fa-list-ol"></i></button>
         </div>
         <button id="theaterBtn" class="header-btn" onclick="toggleTheater()" title="Teatro de Operaciones (W)"><i class="fas fa-crosshairs"></i> Teatro</button>
+        <a class="header-btn" href="theater.html" title="Página de Teatro" style="text-decoration:none"><i class="fas fa-external-link-alt"></i></a>
         <button id="timelineBtn" class="header-btn" onclick="toggleTimeline()" title="Línea de tiempo (T)"><i class="fas fa-timeline"></i> Timeline</button>
         <button class="header-btn dark-btn" onclick="toggleMachCalc()" title="Calculadora Mach (M)"><i class="fas fa-tachometer-alt"></i> Mach</button>
+        <a class="header-btn dark-btn" href="mach.html" title="Calculadora Mach completa" style="text-decoration:none"><i class="fas fa-external-link-alt"></i></a>
         <div class="theme-toggle-wrap" title="Cambiar tema (D)">
           <i class="theme-icon fas fa-sun" style="color:#eab308"></i>
           <button id="themeToggle" onclick="toggleTheme()" aria-label="Cambiar tema"></button>
