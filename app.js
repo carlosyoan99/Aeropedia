@@ -49,6 +49,23 @@ function getEraFromYear(year) {
     return 'modern';
 }
 
+/**
+ * Devuelve el HTML del badge de generación para cazas.
+ * Para otros tipos devuelve cadena vacía.
+ */
+function genBadgeHTML(plane) {
+    if (!plane.generation) return '';
+    const map = {
+        '3ª':   { cls: 'gen-3',  label: 'Gen 3ª' },
+        '4ª':   { cls: 'gen-4',  label: 'Gen 4ª' },
+        '4.5ª': { cls: 'gen-45', label: 'Gen 4.5ª' },
+        '5ª':   { cls: 'gen-5',  label: '✦ Gen 5ª' },
+    };
+    const g = map[plane.generation];
+    if (!g) return '';
+    return `<span class="gen-badge ${g.cls}">${g.label}</span>`;
+}
+
 /** Velocidad del sonido en km/h según altitud (modelo ISA simplificado) */
 function speedOfSound(altMeters) {
     if (altMeters <= 11000) {
@@ -108,7 +125,10 @@ function createCard(plane) {
                 <div class="flex justify-between items-start mb-4">
                     <div>
                         <h2 class="header-font text-2xl font-black italic tracking-tighter uppercase leading-none mb-1">${plane.name}</h2>
-                        <span class="mono text-[10px] font-bold text-slate-400 block uppercase">${plane.country}</span>
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <span class="mono text-[10px] font-bold text-slate-400 uppercase">${plane.country}</span>
+                            ${genBadgeHTML(plane)}
+                        </div>
                     </div>
                 </div>
 
@@ -374,7 +394,10 @@ function openDetail(id) {
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h1 class="header-font text-5xl font-black italic uppercase leading-none mb-2">${plane.name}</h1>
-                <p class="text-blue-400 mono text-lg mb-6 uppercase tracking-widest">${plane.type} // ${plane.country}</p>
+                <div class="flex items-center gap-3 flex-wrap mb-6">
+                    <p class="text-blue-400 mono text-lg uppercase tracking-widest">${plane.type} // ${plane.country}</p>
+                    ${genBadgeHTML(plane)}
+                </div>
                 <div class="space-y-6 text-slate-300">
                     <p class="text-xl leading-relaxed">${plane.desc}</p>
                     <div class="grid grid-cols-2 gap-8 border-y border-slate-700 py-8">
@@ -476,6 +499,9 @@ function clearCompare() {
     prev.forEach(id => refreshCardCompareState(id));
 }
 
+// Instancia activa del gráfico para poder destruirla antes de redibujar
+let radarChartInstance = null;
+
 function openCompare() {
     if (compareList.length < 2) return;
     const planes  = compareList.map(id => aircraftDB.find(p => p.id === id));
@@ -484,6 +510,7 @@ function openCompare() {
     const maxVals  = {};
     statKeys.forEach(k => { maxVals[k] = Math.max(...planes.map(p => p[k])); });
 
+    // ── Cabecera con imágenes ──────────────────────────
     const headerCols = planes.map((p, i) => `
         <div class="text-center">
             <div class="w-full h-36 rounded-2xl overflow-hidden mb-3 border-2" style="border-color:${COLORS[i]}">
@@ -491,9 +518,13 @@ function openCompare() {
             </div>
             <p class="header-font text-lg font-black uppercase leading-tight" style="color:${COLORS[i]}">${p.name}</p>
             <p class="mono text-[9px] text-slate-400 uppercase">${p.country} · ${p.year}</p>
-            <span class="inline-block mt-1 px-2 py-0.5 rounded-full text-[8px] font-black uppercase text-white" style="background:${COLORS[i]}">${p.type}</span>
+            <div class="flex justify-center gap-2 mt-1 flex-wrap">
+                <span class="inline-block px-2 py-0.5 rounded-full text-[8px] font-black uppercase text-white" style="background:${COLORS[i]}">${p.type}</span>
+                ${genBadgeHTML(p)}
+            </div>
         </div>`).join('');
 
+    // ── Filas de stats ─────────────────────────────────
     const statRows = statKeys.map(k => {
         const meta    = STAT_META[k];
         const barCols = planes.map((p, i) => {
@@ -517,10 +548,23 @@ function openCompare() {
     }).join('');
 
     document.getElementById('compareContent').innerHTML = `
-        <div class="grid gap-6 mb-8" style="grid-template-columns:180px repeat(${planes.length},1fr)">
+        <!-- Cabecera -->
+        <div class="grid gap-6 mb-6" style="grid-template-columns:180px repeat(${planes.length},1fr)">
             <div></div>${headerCols}
         </div>
-        <div class="overflow-x-auto">
+
+        <!-- Tabs de vista: Tabla / Radar -->
+        <div class="flex gap-2 mb-6">
+            <button class="compare-tab active" id="tabTable" onclick="switchCompareTab('table')">
+                <i class="fas fa-table mr-1"></i> Tabla de stats
+            </button>
+            <button class="compare-tab" id="tabRadar" onclick="switchCompareTab('radar')">
+                <i class="fas fa-spider mr-1"></i> Gráfico radar
+            </button>
+        </div>
+
+        <!-- Panel: Tabla -->
+        <div id="compareTablePanel" class="overflow-x-auto">
             <table class="w-full border-collapse">
                 <thead>
                     <tr>
@@ -540,15 +584,184 @@ function openCompare() {
                     </tr>
                 </tbody>
             </table>
-        </div>`;
+        </div>
+
+        <!-- Panel: Radar (oculto por defecto) -->
+        <div id="compareRadarPanel" class="hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                <!-- Canvas del radar -->
+                <div class="radar-wrapper bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
+                    <p class="header-font text-xs text-slate-400 uppercase tracking-widest mb-4 text-center">
+                        Perfil de capacidades comparado
+                    </p>
+                    <canvas id="radarCanvas"></canvas>
+                </div>
+                <!-- Leyenda y análisis -->
+                <div class="space-y-4">
+                    <p class="header-font text-xs font-black uppercase text-slate-400 tracking-widest mb-2">
+                        // Análisis de dominio
+                    </p>
+                    ${planes.map((p, i) => {
+                        // Calcular qué stat lidera este avión
+                        const dominated = statKeys.filter(k => p[k] === maxVals[k] && planes.filter(x => x[k] === maxVals[k]).length === 1);
+                        const dominated_labels = dominated.map(k => STAT_META[k].label);
+                        return `
+                        <div class="bg-slate-800 rounded-xl p-4 border-l-4" style="border-color:${COLORS[i]}">
+                            <p class="header-font text-sm font-black uppercase mb-1" style="color:${COLORS[i]}">${p.name}</p>
+                            <p class="text-xs text-slate-400 mono">${p.country} · ${p.year}</p>
+                            ${dominated.length > 0
+                                ? `<p class="text-[9px] text-yellow-400 font-black uppercase mt-2">▲ Líder en: ${dominated_labels.join(', ')}</p>`
+                                : `<p class="text-[9px] text-slate-500 uppercase mt-2">Sin liderazgo absoluto</p>`
+                            }
+                        </div>`;
+                    }).join('')}
+                    <p class="text-[9px] text-slate-600 italic mt-2">
+                        * Los valores del radar están normalizados al máximo global de cada categoría para permitir la comparación visual.
+                    </p>
+                </div>
+            </div>
+        </div>
+    `;
 
     const overlay = document.getElementById('compareOverlay');
     overlay.classList.remove('hidden');
     requestAnimationFrame(() => overlay.classList.add('active'));
     document.body.style.overflow = 'hidden';
+
+    // Guardar los datos para dibujar el radar cuando se active el tab
+    overlay._planes = planes;
+    overlay._colors = COLORS;
+}
+
+/**
+ * Alterna entre el panel de tabla y el panel de radar.
+ * Dibuja el chart solo cuando se activa el tab de radar.
+ */
+function switchCompareTab(tab) {
+    const tablePanel = document.getElementById('compareTablePanel');
+    const radarPanel = document.getElementById('compareRadarPanel');
+    const tabTable   = document.getElementById('tabTable');
+    const tabRadar   = document.getElementById('tabRadar');
+
+    if (tab === 'table') {
+        tablePanel.classList.remove('hidden');
+        radarPanel.classList.add('hidden');
+        tabTable.classList.add('active');
+        tabRadar.classList.remove('active');
+    } else {
+        tablePanel.classList.add('hidden');
+        radarPanel.classList.remove('hidden');
+        tabTable.classList.remove('active');
+        tabRadar.classList.add('active');
+        // Dibujar el radar (destruir el anterior si existe)
+        drawRadarChart();
+    }
+}
+
+/**
+ * Construye y renderiza el gráfico de radar con Chart.js.
+ * Normaliza cada eje al máximo global de la DB para ser coherente.
+ */
+function drawRadarChart() {
+    const overlay = document.getElementById('compareOverlay');
+    const planes  = overlay._planes;
+    const COLORS  = overlay._colors;
+
+    // Ejes del radar: speed, range, ceiling, mtow + stealth si aplica
+    const RADAR_AXES = [
+        { key: 'speed',   label: 'Velocidad', max: 8000 },
+        { key: 'range',   label: 'Alcance',   max: 15000 },
+        { key: 'ceiling', label: 'Techo',     max: 30000 },
+        { key: 'mtow',    label: 'Masa',      max: 420000 },
+    ];
+
+    // Normalizar valores a escala 0-100
+    const datasets = planes.map((p, i) => {
+        const data = RADAR_AXES.map(ax => Math.round((p[ax.key] / ax.max) * 100));
+        const hex  = COLORS[i];
+        return {
+            label: p.name,
+            data,
+            backgroundColor: hex + '26',      // 15% opacidad
+            borderColor:     hex,
+            pointBackgroundColor: hex,
+            pointBorderColor: '#0f172a',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: hex,
+            borderWidth: 2,
+            pointRadius: 4,
+            pointHoverRadius: 6,
+        };
+    });
+
+    // Destruir instancia previa si existe
+    if (radarChartInstance) {
+        radarChartInstance.destroy();
+        radarChartInstance = null;
+    }
+
+    const ctx = document.getElementById('radarCanvas').getContext('2d');
+    radarChartInstance = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: RADAR_AXES.map(ax => ax.label),
+            datasets,
+        },
+        options: {
+            responsive: true,
+            animation: { duration: 700, easing: 'easeInOutQuart' },
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: '#94a3b8',
+                        font: { family: 'JetBrains Mono', size: 11, weight: 'bold' },
+                        padding: 16,
+                        boxWidth: 12,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#0f172a',
+                    borderColor: '#334155',
+                    borderWidth: 1,
+                    titleColor: '#fff',
+                    bodyColor: '#94a3b8',
+                    callbacks: {
+                        label: ctx => {
+                            const ax   = RADAR_AXES[ctx.dataIndex];
+                            const raw  = planes[ctx.datasetIndex][ax.key];
+                            const unit = ax.key === 'mtow' ? `${(raw/1000).toFixed(1)} T` : `${raw.toLocaleString()} ${ax.key === 'speed' ? 'km/h' : ax.key === 'range' ? 'km' : ax.key === 'ceiling' ? 'm' : ''}`;
+                            return ` ${ctx.dataset.label}: ${unit}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                r: {
+                    min: 0,
+                    max: 100,
+                    ticks: {
+                        display: false,
+                        stepSize: 20,
+                    },
+                    grid:        { color: 'rgba(51,65,85,0.7)' },
+                    angleLines:  { color: 'rgba(51,65,85,0.7)' },
+                    pointLabels: {
+                        color: '#94a3b8',
+                        font: { family: 'Orbitron', size: 10, weight: '700' },
+                    }
+                }
+            }
+        }
+    });
 }
 
 function closeCompare() {
+    // Destruir instancia del gráfico si existe para evitar memory leaks
+    if (radarChartInstance) {
+        radarChartInstance.destroy();
+        radarChartInstance = null;
+    }
     const overlay = document.getElementById('compareOverlay');
     overlay.classList.remove('active');
     setTimeout(() => { overlay.classList.add('hidden'); document.body.style.overflow = 'auto'; }, 400);
@@ -691,4 +904,3 @@ window.onload = () => {
         resolveHash();
     }, 600);
 };
-
