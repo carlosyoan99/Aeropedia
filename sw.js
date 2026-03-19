@@ -10,7 +10,7 @@
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
-const CACHE_VERSION  = 'aeropedia-v1';
+const CACHE_VERSION  = 'aeropedia-v1.1';
 const STATIC_CACHE   = `${CACHE_VERSION}-static`;
 const IMAGE_CACHE    = `${CACHE_VERSION}-images`;
 const CDN_CACHE      = `${CACHE_VERSION}-cdn`;
@@ -20,8 +20,21 @@ const STATIC_ASSETS = [
     './',
     './index.html',
     './styles.css',
-    './app.js',
-    './data/aircraft.js',
+    './js/compare.js',
+    './js/detail.js',
+    './js/filters.js',
+    './js/mach.js',
+    './js/main.js',
+    './js/pwa.js',
+    './js/render.js',
+    './js/shorcuts.js',
+    './js/state.js',
+    './js/theater.js',
+    './js/theme.js',
+    './js/timeline.js',
+    './js/utils.js',
+    './data/aircraft.json',
+    './data/conflicts.json',
     './manifest.json',
     './icons/icon-192.svg',
     './icons/icon-512.svg',
@@ -29,7 +42,6 @@ const STATIC_ASSETS = [
 
 // Dominios CDN que usamos
 const CDN_ORIGINS = [
-    'cdn.tailwindcss.com',
     'cdnjs.cloudflare.com',
     'fonts.googleapis.com',
     'fonts.gstatic.com',
@@ -38,7 +50,6 @@ const CDN_ORIGINS = [
 // Dominios de imágenes externas
 const IMAGE_ORIGINS = [
     'upload.wikimedia.org',
-    'images.unsplash.com',
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
