@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AeroPedia: Archivo Global de Aviación</title>
 
+    <!-- PWA — Manifest y meta tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a" id="themeColorMeta">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AeroPedia">
+    <link rel="apple-touch-icon" href="icons/icon-192.svg">
+
+    <!-- SEO básico -->
+    <meta name="description" content="Enciclopedia interactiva de aviación militar: fichas técnicas, comparador, gráficos radar y calculadora Mach.">
+    <meta name="keywords" content="aviación militar, cazas, bombarderos, aeronaves, F-22, Su-57, B-2">
+    <meta property="og:title" content="AeroPedia: Archivo Global de Aviación">
+    <meta property="og:description" content="Enciclopedia interactiva de aviación militar con comparador y gráficos de radar.">
+    <meta property="og:type" content="website">
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
@@ -146,6 +161,10 @@
                                 <div class="flex justify-between items-center">
                                     <span class="text-xs text-slate-300">Cambiar tema</span>
                                     <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">D</kbd>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-xs text-slate-300">Instalar app</span>
+                                    <kbd class="mono text-[9px] bg-slate-700 px-2 py-0.5 rounded font-black">I</kbd>
                                 </div>
                             </div>
                         </div>
@@ -398,6 +417,50 @@
     ══════════════════════════════════════════════════ -->
     <script src="data/aircraft.js"></script>
     <script src="app.js"></script>
+
+    <!-- ══════════════════════════════════════════════════
+         BANNER DE INSTALACIÓN PWA
+    ══════════════════════════════════════════════════ -->
+    <div id="pwaInstallBanner"
+         class="fixed bottom-6 left-1/2 z-[60] hidden"
+         style="transform: translateX(-50%) translateY(20px); opacity:0; transition: opacity 0.4s ease, transform 0.4s ease; pointer-events:none; white-space:nowrap;">
+        <div class="bg-slate-900 border border-blue-500/40 text-white rounded-2xl shadow-2xl px-5 py-4 flex items-center gap-4">
+            <div class="bg-blue-600 p-2 rounded-xl">
+                <i class="fas fa-fighter-jet text-white"></i>
+            </div>
+            <div>
+                <p class="header-font text-xs font-black uppercase tracking-widest">Instalar AeroPedia</p>
+                <p class="text-[10px] text-slate-400 mt-0.5">Acceso rápido desde tu pantalla de inicio</p>
+            </div>
+            <div class="flex gap-2 ml-2">
+                <button id="pwaInstallBtn"
+                        class="px-4 py-2 bg-blue-600 text-white text-[10px] font-black uppercase rounded-full hover:bg-blue-500 transition-colors">
+                    Instalar
+                </button>
+                <button id="pwaDismissBtn"
+                        class="px-3 py-2 text-slate-500 hover:text-white text-[10px] transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast de nueva versión disponible -->
+    <div id="pwaUpdateToast"
+         class="fixed top-6 right-6 z-[60] hidden"
+         style="opacity:0; transform:translateY(-10px); transition: opacity 0.3s ease, transform 0.3s ease; pointer-events:none;">
+        <div class="bg-slate-900 border border-green-500/40 text-white rounded-2xl shadow-2xl px-5 py-4 flex items-center gap-4">
+            <i class="fas fa-rotate text-green-400"></i>
+            <div>
+                <p class="text-xs font-black uppercase tracking-widest">Nueva versión disponible</p>
+                <p class="text-[10px] text-slate-400 mt-0.5">Recarga para aplicar la actualización</p>
+            </div>
+            <button onclick="applyPWAUpdate()"
+                    class="px-4 py-2 bg-green-600 text-white text-[10px] font-black uppercase rounded-full hover:bg-green-500 transition-colors ml-2">
+                Recargar
+            </button>
+        </div>
+    </div>
 
 </body>
 </html>

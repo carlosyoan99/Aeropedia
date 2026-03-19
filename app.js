@@ -1044,20 +1044,150 @@ document.addEventListener('keydown', e => {
         f: toggleFavFilter, m: toggleMachCalc,
         t: toggleTimeline,
         d: toggleTheme,
+        i: () => { if (deferredInstallPrompt) triggerInstall(); },
         s: () => { if (currentDetailId) shareCurrentDetail(); }
     };
     shortcuts[e.key.toLowerCase()]?.();
 });
 
 // ═══════════════════════════════════════════════════════════
+// PWA — SERVICE WORKER + INSTALL BANNER
+// ═══════════════════════════════════════════════════════════
+
+let deferredInstallPrompt = null;   // prompt nativo guardado
+let swRegistration        = null;   // referencia al SW registrado
+
+/** Registra el Service Worker y escucha eventos de actualización */
+function registerServiceWorker() {
+    if (!('serviceWorker' in navigator)) return;
+
+    navigator.serviceWorker.register('./sw.js', { scope: './' })
+        .then(reg => {
+            swRegistration = reg;
+            console.log('[PWA] Service Worker registrado:', reg.scope);
+
+            // Detectar nueva versión esperando activación
+            reg.addEventListener('updatefound', () => {
+                const newSW = reg.installing;
+                newSW?.addEventListener('statechange', () => {
+                    if (newSW.statechange === 'installed' && navigator.serviceWorker.controller) {
+                        showPWAUpdateToast();
+                    }
+                });
+            });
+
+            // Si hay un SW esperando desde antes, mostrar el toast directamente
+            if (reg.waiting) showPWAUpdateToast();
+        })
+        .catch(err => console.warn('[PWA] Error al registrar SW:', err));
+
+    // Recargar cuando el nuevo SW tome el control
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+    });
+}
+
+/** Intercepta el prompt nativo de instalación (beforeinstallprompt) */
+function initInstallBanner() {
+    // No mostrar si ya está instalada como PWA
+    if (window.matchMedia('(display-mode: standalone)').matches) return;
+    // No mostrar si el usuario la descartó en los últimos 7 días
+    const dismissed = localStorage.getItem('aeropedia_pwa_dismissed');
+    if (dismissed && Date.now() - parseInt(dismissed) < 7 * 24 * 3600 * 1000) return;
+
+    window.addEventListener('beforeinstallprompt', e => {
+        e.preventDefault();
+        deferredInstallPrompt = e;
+        // Mostrar el banner después de 3 segundos para no interrumpir la carga
+        setTimeout(() => showPWAInstallBanner(), 3000);
+    });
+
+    // Confirmar instalación exitosa
+    window.addEventListener('appinstalled', () => {
+        hidePWAInstallBanner();
+        deferredInstallPrompt = null;
+        console.log('[PWA] App instalada correctamente');
+    });
+}
+
+function showPWAInstallBanner() {
+    const banner = document.getElementById('pwaInstallBanner');
+    if (!banner) return;
+    banner.classList.remove('hidden');
+    requestAnimationFrame(() => {
+        banner.style.opacity   = '1';
+        banner.style.transform = 'translateX(-50%) translateY(0)';
+        banner.style.pointerEvents = 'all';
+    });
+
+    document.getElementById('pwaInstallBtn')?.addEventListener('click', triggerInstall);
+    document.getElementById('pwaDismissBtn')?.addEventListener('click', dismissInstallBanner);
+}
+
+function hidePWAInstallBanner() {
+    const banner = document.getElementById('pwaInstallBanner');
+    if (!banner) return;
+    banner.style.opacity   = '0';
+    banner.style.transform = 'translateX(-50%) translateY(20px)';
+    banner.style.pointerEvents = 'none';
+    setTimeout(() => banner.classList.add('hidden'), 400);
+}
+
+async function triggerInstall() {
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    const { outcome } = await deferredInstallPrompt.userChoice;
+    console.log(`[PWA] Resultado de instalación: ${outcome}`);
+    deferredInstallPrompt = null;
+    hidePWAInstallBanner();
+}
+
+function dismissInstallBanner() {
+    localStorage.setItem('aeropedia_pwa_dismissed', String(Date.now()));
+    hidePWAInstallBanner();
+}
+
+function showPWAUpdateToast() {
+    const toast = document.getElementById('pwaUpdateToast');
+    if (!toast) return;
+    toast.classList.remove('hidden');
+    requestAnimationFrame(() => {
+        toast.style.opacity   = '1';
+        toast.style.transform = 'translateY(0)';
+        toast.style.pointerEvents = 'all';
+    });
+}
+
+function applyPWAUpdate() {
+    swRegistration?.waiting?.postMessage({ type: 'SKIP_WAITING' });
+}
+
+/** Actualiza el theme-color del meta tag según el tema activo */
+function syncThemeColorMeta() {
+    const isDark = document.body.classList.contains('dark');
+    const meta   = document.getElementById('themeColorMeta');
+    if (meta) meta.setAttribute('content', isDark ? '#0a0f1e' : '#ffffff');
+}
+
+// ═══════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════
 window.onload = () => {
     initTheme();
+    syncThemeColorMeta();
+    registerServiceWorker();
+    initInstallBanner();
     showSkeletons(6);
     setTimeout(() => {
         renderAll();
         resolveHash();
-        syncTimeline(); // inicializar fill visual del timeline
+        syncTimeline();
     }, 600);
+};
+
+// Sincronizar theme-color cuando se cambie el tema
+const _originalApplyTheme = applyTheme;
+applyTheme = function(theme) {
+    _originalApplyTheme(theme);
+    syncThemeColorMeta();
 };
