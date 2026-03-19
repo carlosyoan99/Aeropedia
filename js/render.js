@@ -149,7 +149,7 @@ function renderRanking(planes) {
         <td class="rank-pos mono">${medal[i] || (i + 1)}</td>
         <td class="rank-plane">
           <div class="rank-thumb-wrap">
-            <img src="${p.img}" class="rank-thumb" alt="${p.name}"
+            <img src="./public/${p.wiki}.webp" class="rank-thumb" alt="${p.name}"
                  onerror="this.src='${FALLBACK_IMG}'">
           </div>
           <div>

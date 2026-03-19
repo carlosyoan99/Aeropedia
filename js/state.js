@@ -41,7 +41,7 @@ const STAT_META = {
 };
 
 // ── Fallback de imagen ────────────────────────────────────────
-const FALLBACK_IMG = 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png';
+const FALLBACK_IMG = './public/No-Image-Placeholder.png';
 
 // ── Claves de localStorage ─────────────────────────────────────
 const FAV_KEY   = 'aeropedia_favs';
