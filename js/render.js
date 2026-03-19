@@ -55,7 +55,7 @@ function createCard(plane) {
   return `
     <div id="card-${plane.id}" class="card${isSelected ? ' selected-for-compare' : ''}">
       <div class="card-img-wrap">
-        <img src="${plane.img}" alt="${plane.name}" loading="lazy"
+        <img src="./public/${plane.wiki}.webp" alt="${plane.name}" loading="lazy"
              onerror="this.src='${FALLBACK_IMG}'">
         <span class="card-badge-type">${plane.type}</span>
         <span class="card-badge-year mono">${plane.year}</span>

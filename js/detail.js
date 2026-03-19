@@ -116,7 +116,7 @@ function openDetail(id) {
       <!-- Columna derecha: imagen -->
       <div class="detail-visual">
         <div class="detail-img-glow"></div>
-        <img src="${plane.img}"
+        <img src="./public/${plane.wiki}.webp"
              onerror="this.src='${FALLBACK_IMG}'"
              class="detail-img" alt="${plane.name}">
         <div class="detail-img-stats">
