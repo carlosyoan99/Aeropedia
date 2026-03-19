@@ -1,7 +1,7 @@
 [
   {
     "id": "p51d",
-    "name": "P-51D Mustang",
+    "name": "North American P-51D Mustang",
     "type": "Caza",
     "country": "EE.UU.",
     "year": 1944,
@@ -14,7 +14,7 @@
     "mtow": 5490,
     "arm": "6× ametralladoras M2 de 12,7 mm, 2× bombas de 227 kg",
     "trivia": "Diseñado en solo 117 días. Con depósitos externos podía escoltar bombarderos de Inglaterra a Berlín y volver, algo considerado imposible.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/North_American_P-51D_Mustang.jpg/1200px-North_American_P-51D_Mustang.jpg",
+    "img": "North_American_P-51_Mustang",
     "desc": "El mejor caza de escolta aliado de la Segunda Guerra Mundial. Su motor Merlin y sus depósitos externos le dieron un alcance sin rival que salvó las campañas de bombardeo estratégico sobre Alemania."
   },
   {
@@ -32,7 +32,7 @@
     "mtow": 3397,
     "arm": "2× cañones Hispano 20 mm, 4× ametralladoras Browning .303",
     "trivia": "Fue el único avión aliado producido ininterrumpidamente durante toda la Segunda Guerra Mundial, con más de 20.000 unidades en 24 variantes distintas.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Supermarine_Spitfire_%28IXT%29_EN398_6.jpg/1200px-Supermarine_Spitfire_%28IXT%29_EN398_6.jpg",
+    "img": "Supermarine_Spitfire",
     "desc": "El símbolo de la Batalla de Inglaterra. Su ala elíptica y motor Merlin lo convirtieron en un caza excepcional que evolucionó constantemente para mantenerse al día frente a cada nuevo diseño alemán."
   },
   {
@@ -50,7 +50,7 @@
     "mtow": 3400,
     "arm": "1× cañón MK 108 30 mm, 2× ametralladoras MG 131 13 mm",
     "trivia": "Con más de 33.984 unidades construidas, es el caza más producido de la historia. Sus pilotos más destacados acumularon más de 300 victorias aéreas individuales.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Messerschmitt_Bf_109G-6.jpg/1200px-Messerschmitt_Bf_109G-6.jpg",
+    "img": "Messerschmitt_Bf_109",
     "desc": "La columna vertebral de la Luftwaffe desde 1937 hasta el final de la guerra. El Bf 109G fue la versión más producida, aunque su tren de aterrizaje estrecho seguía causando accidentes."
   },
   {
@@ -68,7 +68,7 @@
     "mtow": 4417,
     "arm": "4× cañones MG 151 20 mm, 2× ametralladoras MG 17",
     "trivia": "Cuando el Fw 190 apareció sobre el Canal de la Mancha en 1941, era superior a todo lo que tenía la RAF. Los británicos capturaron uno aterrizando por error en un aeródromo inglés para estudiar sus secretos.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Focke-Wulf_Fw_190_A-8_Airshow_Duxford_2013.jpg/1200px-Focke-Wulf_Fw_190_A-8_Airshow_Duxford_2013.jpg",
+    "img": "Focke-Wulf_Fw_190",
     "desc": "El gran rival del Spitfire, considerado por muchos el mejor caza alemán de la guerra. Su diseño robusto y versátil permitió múltiples variantes de ataque y caza."
   },
   {
@@ -86,7 +86,7 @@
     "mtow": 2796,
     "arm": "2× cañones Type 99 20 mm, 2× ametralladoras Type 97 7,7 mm",
     "trivia": "En los primeros meses de la guerra, el Zero era tan superior a cualquier avión aliado que los pilotos enemigos recibieron órdenes de no enfrentarse a él en combate directo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/A6M3_Zero_0224.jpg/1200px-A6M3_Zero_0224.jpg",
+    "img": "Mitsubishi_A6M_Zero",
     "desc": "El caza japonés que dominó el Pacífico en 1941-42. Su extraordinario alcance y maniobrabilidad fueron posibles gracias a un diseño que sacrificó totalmente la protección del piloto."
   },
   {
@@ -104,7 +104,7 @@
     "mtow": 29710,
     "arm": "13× ametralladoras M2 .50 cal, 2.724 kg de bombas",
     "trivia": "El B-17 fue tan difícil de derribar que los alemanes le pusieron el apodo de 'la fortaleza volante'. Hay constancia de B-17 que volvieron a base con la nariz arrancada, sin cola o con dos motores.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/B-17_Flying_Fortress.jpg/1200px-B-17_Flying_Fortress.jpg",
+    "img": "Boeing_B-17_Flying_Fortress",
     "desc": "El bombardero estratégico que llevó la guerra a suelo alemán de día. La campaña de bombardeo del 8.º Ejército Aéreo desde Inglaterra fue uno de los esfuerzos bélicos más costosos de la historia."
   },
   {
@@ -122,7 +122,7 @@
     "mtow": 31751,
     "arm": "10× ametralladoras .303, 6.350 kg de bombas (o Tallboy/Grand Slam)",
     "trivia": "El Lancaster fue el único avión capaz de transportar la bomba 'Grand Slam' de 10 toneladas, la mayor bomba convencional usada en la guerra, que podía destruir un viaducto desde dentro del suelo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lancaster_BI%28FE%29_PA474_STC_1.jpg/1200px-Lancaster_BI%28FE%29_PA474_STC_1.jpg",
+    "img": "Avro_Lancaster",
     "desc": "El bombardero nocturno por excelencia del Mando de Bombarderos de la RAF. Protagonizó la Operación Chastise (los Dambusters) y fue el que más toneladas de bombas lanzó de cualquier avión aliado."
   },
   {
@@ -140,7 +140,7 @@
     "mtow": 6360,
     "arm": "2× cañones VYa 23 mm, 2× ametralladoras ShKAS, 8× cohetes RS-82, 600 kg de bombas",
     "trivia": "Con 36.183 unidades fabricadas, es el avión militar más producido de la historia. Stalin lo llamó 'tan necesario para el Ejército Rojo como el aire y el pan'.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ilyushin_Il-2_in_flight.jpg/1200px-Ilyushin_Il-2_in_flight.jpg",
+    "img": "Ilyushin_Il-2",
     "desc": "El avión de ataque más producido de la historia y el terror de los acorazados alemanes en el Frente Oriental. Su fuselaje de acero blindado lo hacía excepcionalmente resistente al fuego antiaéreo."
   },
   {
@@ -158,7 +158,7 @@
     "mtow": 6775,
     "arm": "4× cañones MK 108 30 mm, 24× cohetes R4M",
     "trivia": "El primer caza a reacción operativo de la historia era tan rápido que los pilotos aliados apenas podían verlo pasar. Su talón de Aquiles era que solo era vulnerable durante el despegue y aterrizaje.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Me_262_color.jpg/1200px-Me_262_color.jpg",
+    "img": "Messerschmitt_Me_262",
     "desc": "El primer avión a reacción de combate de la historia. Llegó demasiado tarde para cambiar el resultado de la guerra, pero su diseño de ala en flecha influyó en todos los cazas de la posguerra."
   },
   {
@@ -176,7 +176,7 @@
     "mtow": 9185,
     "arm": "8× ametralladoras M2 .50 cal, 1.134 kg de bombas o cohetes",
     "trivia": "El P-47 era tan robusto que sobrevivía a golpes que habrían derribado a cualquier otro caza. Un piloto regresó a base con 150 impactos de bala, el motor en llamas y sin instrumentos.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Republic_P-47D_Thunderbolt_USAF.jpg/1200px-Republic_P-47D_Thunderbolt_USAF.jpg",
+    "img": "Republic_P-47_Thunderbolt",
     "desc": "El mayor y más pesado caza de la guerra. Llamado 'el Jug' por sus tripulaciones, fue extraordinariamente efectivo en misiones de ataque a tierra y escolta de bombarderos en los últimos años de la guerra."
   },
   {
@@ -194,7 +194,7 @@
     "mtow": 63503,
     "arm": "12× ametralladoras M2 .50 cal, 9.072 kg de bombas",
     "trivia": "Fue el proyecto más caro de la Segunda Guerra Mundial, superando incluso al Proyecto Manhattan. Sus dos misiones finales sobre Hiroshima y Nagasaki cambiaron la historia para siempre.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/B-29_Superfortress.jpg/1200px-B-29_Superfortress.jpg",
+    "img": "Boeing_B-29_Superfortress",
     "desc": "El bombardero estratégico más avanzado de su época. Fue el primero con cabina presurizada y torreta de control remoto, y el único en usar armas nucleares en combate."
   },
   {
@@ -218,7 +218,7 @@
     "mtow": 14061,
     "arm": "Hasta 6.800 kg de carga o 28 paracaidistas",
     "trivia": "Eisenhower lo consideró uno de los instrumentos más decisivos de la victoria aliada. La versión AC-47 'Spooky' siguió en combate en Vietnam 25 años después.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Douglas_C-47_Skytrain_USAF.jpg/1200px-Douglas_C-47_Skytrain_USAF.jpg",
+    "img": "Douglas_C-47_Skytrain",
     "desc": "El transporte militar más importante de la Segunda Guerra Mundial. Versátil hasta lo imposible: soltó paracaidistas en Normandía, abasteció Berlín durante el bloqueo soviético y combatió en Vietnam."
   },
   {
@@ -236,7 +236,7 @@
     "mtow": 8234,
     "arm": "6× ametralladoras M3 de 12,7 mm o 4× cañones M24A1 de 20 mm",
     "trivia": "El Sabre logró una proporción de victorias de 10:1 contra el MiG-15 en Corea, aunque muchos pilotos norcoreanos eran en realidad pilotos soviéticos que combatían de incógnito.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/F-86D_Sabre_of_the_325th_FIS.jpg/1200px-F-86D_Sabre_of_the_325th_FIS.jpg",
+    "img": "North_American_F-86_Sabre",
     "desc": "El primer caza de ala en flecha occidental. Sus combates con el MiG-15 sobre el 'Callejón de los MiGs' en Corea definieron los parámetros del combate aéreo a reacción durante décadas."
   },
   {
@@ -254,7 +254,7 @@
     "mtow": 6105,
     "arm": "1× cañón N-37 de 37 mm, 2× cañones NR-23 de 23 mm",
     "trivia": "Cuando el MiG-15 apareció sobre Corea, era superior a todos los aviones de la ONU excepto el F-86. La CIA pagó 100.000 dólares a un piloto norcoreano para que desertara con uno.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mig-15_Leeuwarden.jpg/1200px-Mig-15_Leeuwarden.jpg",
+    "img": "Mikoyan-Gurevich_MiG-15",
     "desc": "El caza soviético que sorprendió a las fuerzas de la ONU en Corea. Diseñado con tecnología del motor alemán Heinkel y el perfil de ala de Focke-Wulf capturados al final de la Segunda Guerra Mundial."
   },
   {
@@ -272,7 +272,7 @@
     "mtow": 13054,
     "arm": "1× cañón M61A1 20 mm, AIM-9 Sidewinder, bombas",
     "trivia": "La Luftwaffe alemana perdió 292 de sus 916 F-104s en accidentes. El apodo del avión era 'el ataúd volador' o 'el misil tripulado'. Su piloto de pruebas lo llamó 'la mano de Dios a alta velocidad'.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/F-104_Starfighter_2.jpg/1200px-F-104_Starfighter_2.jpg",
+    "img": "Lockheed_F-104_Starfighter",
     "desc": "El interceptor diseñado para volar más rápido y más alto que cualquier amenaza. Sus alas delta de solo 2,45 metros eran tan afiladas que los mecánicos debían usar protecciones para no cortarse."
   },
   {
@@ -290,7 +290,7 @@
     "mtow": 28030,
     "arm": "AIM-7 Sparrow, AIM-9 Sidewinder, 8.480 kg de bombas (sin cañón original)",
     "trivia": "El F-4 fue diseñado originalmente sin cañón porque se creía que los misiles hacían el combate cercano obsoleto. Vietnam demostró lo contrario: perdió dogfights contra MiGs más lentos.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/F-4_Phantom_II_VF-74_1985.JPEG/1200px-F-4_Phantom_II_VF-74_1985.JPEG",
+    "img": "McDonnell_Douglas_F-4_Phantom_II",
     "desc": "El avión multirol más importante de la posguerra fría temprana. Batió 16 récords mundiales de velocidad y altitud, y voló con las fuerzas aéreas de 11 países."
   },
   {
@@ -308,12 +308,12 @@
     "mtow": 36720,
     "arm": "4× misiles R-40 (aire-aire)",
     "trivia": "Cuando un piloto soviético desertó con un MiG-25 a Japón en 1976, los expertos occidentales descubrieron que el avión que tanto temían estaba construido principalmente con acero inoxidable de soldadura, no con titanio.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mig-25.jpg/1200px-Mig-25.jpg",
+    "img": "Mikoyan-Gurevich_MiG-25",
     "desc": "El interceptor diseñado para cazar el B-70 americano que nunca entró en servicio. Su velocidad extrema (Mach 2,8 en operativo) lo hizo tan valioso para el reconocimiento como para la intercepción."
   },
   {
     "id": "f111",
-    "name": "General Dynamics F-111",
+    "name": "General Dynamics F-111 Aardvark",
     "type": "Ataque",
     "country": "EE.UU.",
     "year": 1967,
@@ -326,7 +326,7 @@
     "mtow": 45360,
     "arm": "1× cañón M61A1 20 mm, 14.288 kg de bombas, misiles AGM-69",
     "trivia": "El F-111 fue el primer avión de producción con geometría variable de alas. Volando a baja altitud en la oscuridad, podía penetrar las defensas soviéticas antes de que los radares lo detectaran.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/F-111_Aardvark.jpg/1200px-F-111_Aardvark.jpg",
+    "img": "General_Dynamics_F-111_Aardvark",
     "desc": "El primer avión de geometría variable en entrar en servicio, concebido para misiones de penetración nocturna a baja altitud. Fue muy efectivo en el bombardeo de Libia en 1986."
   },
   {
@@ -344,7 +344,7 @@
     "mtow": 19050,
     "arm": "1× cañón M61A1 20 mm, 6.804 kg de bombas y misiles",
     "trivia": "El A-7 fue el primer avión de combate con HUD (pantalla frontal) de navegación y ataque digital, y el primero con un sistema de dirección de armas por computadora totalmente integrado.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/A-7E_Corsair_II_VA-105_1988.jpg/1200px-A-7E_Corsair_II_VA-105_1988.jpg",
+    "img": "LTV_A-7_Corsair_II",
     "desc": "El sucesor del F8U Crusader en roles de ataque naval. Su aviónica avanzada sentó precedentes para los sistemas de armas digitales de las décadas siguientes."
   },
   {
@@ -362,7 +362,7 @@
     "mtow": 20000,
     "arm": "1× cañón GSh-30-1 30 mm, R-60, R-73, R-27",
     "trivia": "El MiG-29 puede detectar aviones enemigos con su sensor de búsqueda y seguimiento infrarrojo (IRST) sin encender el radar, manteniéndose completamente invisible para los sistemas de alerta de misiles.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mikoyan_MiG-29_%281%29.jpg/1200px-Mikoyan_MiG-29_%281%29.jpg",
+    "img": "Mikoyan_MiG-29",
     "desc": "El caza ligero de superioridad aérea soviético que se convirtió en rival del F-16. Sus motores de alta potencia y el casco IRST le dan capacidades únicas que aún operan en más de 25 países."
   },
   {
@@ -380,7 +380,7 @@
     "mtow": 33724,
     "arm": "1× cañón M61A1 20 mm, AIM-54 Phoenix, AIM-7, AIM-9",
     "trivia": "El F-14 es el único caza occidental capaz de disparar el misil Phoenix, con alcance de 200 km. La película Top Gun (1986) causó tal aumento de solicitudes de alistamiento en la Marina que el Pentágono la llamó 'anuncio de reclutamiento más efectivo de la historia'.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/F-14A_Tomcat_of_VF-84_in_1978.jpg/1200px-F-14A_Tomcat_of_VF-84_in_1978.jpg",
+    "img": "Grumman_F-14_Tomcat",
     "desc": "El caza de ala variable de la Marina americana, diseñado para defender flotas de ataques de misiles soviéticos a larga distancia. Su radar AWG-9 podía rastrear 24 objetivos simultáneamente."
   },
   {
@@ -398,12 +398,12 @@
     "mtow": 28000,
     "arm": "2× cañones Mauser BK-27 27 mm, JP.233, ALARM, Storm Shadow, 9.000 kg total",
     "trivia": "El Tornado fue el primer avión de la OTAN diseñado específicamente para atacar aeródromos enemigos con las bombas dispersoras JP.233, siendo las misiones más peligrosas del Golfo Pérsico de 1991.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Tornado_gr1.jpg/1200px-Tornado_gr1.jpg",
+    "img": "Panavia_Tornado",
     "desc": "El avión de ala variable desarrollado conjuntamente por Reino Unido, Alemania Occidental e Italia para penetración a baja altitud y ataque al suelo en el teatro europeo."
   },
   {
     "id": "fa18hornet",
-    "name": "F/A-18C Hornet",
+    "name": "McDonnell Douglas F/A-18C Hornet",
     "type": "Caza",
     "country": "EE.UU.",
     "year": 1983,
@@ -416,12 +416,12 @@
     "mtow": 25401,
     "arm": "1× cañón M61A1 20 mm, AIM-9, AIM-7, AIM-120, JDAM, HARM, Harpoon",
     "trivia": "El F/A-18 es el único avión diseñado desde el inicio para ser tanto caza de superioridad aérea como atacante de precisión, sin comprometer ninguno de los dos roles.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/F-A-18C_Hornet_VFA-82.jpg/1200px-F-A-18C_Hornet_VFA-82.jpg",
+    "img": "McDonnell_Douglas_FA-18_Hornet",
     "desc": "El caballo de batalla de la aviación naval americana durante 40 años. Diseñado para operar desde portaviones en misiones de superioridad aérea y ataque con la misma eficacia."
   },
   {
     "id": "fa18super",
-    "name": "F/A-18E/F Super Hornet",
+    "name": "Boeing F/A-18E/F Super Hornet",
     "type": "Caza",
     "country": "EE.UU.",
     "year": 1999,
@@ -434,12 +434,12 @@
     "mtow": 29937,
     "arm": "1× cañón M61A2 20 mm, AIM-9X, AIM-120D, JDAM, AGM-84, SLAM-ER",
     "trivia": "El Super Hornet no es una versión mejorada del Hornet sino un avión completamente nuevo: comparte solo el 10% de sus piezas con el modelo original.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/F-A-18F_Super_Hornet_VFA-102.jpg/1200px-F-A-18F_Super_Hornet_VFA-102.jpg",
+    "img": "Boeing_FA-18_Super_Hornet",
     "desc": "El sucesor del F-14 Tomcat y el F/A-18 Hornet en la Marina americana. La versión F de dos plazas sirve también como plataforma de guerra electrónica en la variante EA-18G Growler."
   },
   {
     "id": "f117",
-    "name": "F-117A Nighthawk",
+    "name": "Lockheed F-117A Nighthawk",
     "type": "Especial",
     "country": "EE.UU.",
     "year": 1983,
@@ -452,7 +452,7 @@
     "mtow": 23814,
     "arm": "2× bahías internas: GBU-27, JDAM, bombas guiadas láser (2.268 kg total)",
     "trivia": "El F-117 fue tan secreto que los pilotos que lo volaban no podían decirle a sus familias qué avión pilotaban. Estuvo activo 10 años antes de ser reconocido oficialmente por el gobierno de EE.UU.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/F-117_Nighthawk_Front.jpg/1200px-F-117_Nighthawk_Front.jpg",
+    "img": "Lockheed_F-117_Nighthawk",
     "desc": "El primer avión furtivo operativo de la historia, diseñado aplicando matemáticas de dispersión de radar calculadas a mano por un matemático soviético. Su geometría angular era el precio del sigilo."
   },
   {
@@ -470,7 +470,7 @@
     "mtow": 14000,
     "arm": "1× cañón Mauser BK-27 27 mm, IRIS-T, Meteor, JDAM",
     "trivia": "El Gripen puede operar desde autopistas suecas en caso de guerra. Sus tripulaciones de tierra son tan reducidas que un técnico con un equipo básico puede repostarlo y rearmarlo en 10 minutos.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/JAS39_Gripen_-_RIAT_2009_%28cropped%29.jpg/1200px-JAS39_Gripen_-_RIAT_2009_%28cropped%29.jpg",
+    "img": "Saab_JAS_39_Gripen",
     "desc": "El caza sueco diseñado para ser barato, flexible y difícil de detectar. Su relación coste-prestaciones es la mejor de su generación y ha sido exportado a 10 países."
   },
   {
@@ -488,7 +488,7 @@
     "mtow": 38800,
     "arm": "1× cañón GSh-30-1 30 mm, R-77, BrahMos, Kh-29, 8.000 kg total",
     "trivia": "El Su-30MKI de la Fuerza Aérea India tiene vectorización de empuje tridimensional, lo que le permite realizar la maniobra 'Cobra de Pugachev' —detenerse en el aire durante un segundo— de forma rutinaria.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Su-30MKI_Aero_India_2013.jpg/1200px-Su-30MKI_Aero_India_2013.jpg",
+    "img": "Sukhoi_Su-30",
     "desc": "La versión de exportación más avanzada del Flanker, cofabricada con India. Con más de 370 unidades en servicio en la India, es el caza más numeroso de ese país."
   },
   {
@@ -506,7 +506,7 @@
     "mtow": 34500,
     "arm": "1× cañón GSh-30-1 30 mm, R-77-1, R-74, Kh-31, 8.000 kg total",
     "trivia": "El Su-35S puede realizar la maniobra 'Kulbit' —un salto mortal completo en el aire— gracias a sus motores con vectorización de empuje. Ningún caza occidental puede replicarlo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Sukhoi_Su-35S_%28Россия%2C_2015%29_%28cropped%29.jpg/1200px-Sukhoi_Su-35S_%28Россия%2C_2015%29_%28cropped%29.jpg",
+    "img": "Sukhoi_Su-35",
     "desc": "El caza más avanzado de cuarta generación rusa, sin tecnología furtiva pero con sensores pasivos IRST, radar Irbis-E y vectorización de empuje que lo convierten en un adversario formidable."
   },
   {
@@ -524,7 +524,7 @@
     "mtow": 46200,
     "arm": "1× cañón GSh-6-23 23 mm, R-33, R-37M (alcance 400 km)",
     "trivia": "El MiG-31 es el único avión de combate diseñado desde el principio para derribar misiles de crucero a baja altitud y satélites en órbita baja, con el misil Kinzhal hipersónico como complemento.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MiG-31_%28RAF_photo%29.jpg/1200px-MiG-31_%28RAF_photo%29.jpg",
+    "img": "Mikoyan_MiG-31",
     "desc": "Interceptor pesado diseñado para proteger el inmenso espacio aéreo soviético. Opera en grupos de cuatro aviones que crean una barrera radar de 1.100 km de ancho, y actualmente porta el misil hipersónico Kinzhal."
   },
   {
@@ -542,7 +542,7 @@
     "mtow": 17000,
     "arm": "2× cañones DEFA 554 30 mm, Magic 2, MICA, ASMP nuclear",
     "trivia": "El Mirage 2000 fue el único caza francés en servicio activo durante más de 40 años. India lo usó contra cazas F-16 paquistaníes en 2019, en el primer combate aéreo entre naciones nucleares.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Dassault_Mirage_2000C.jpg/1200px-Dassault_Mirage_2000C.jpg",
+    "img": "Dassault_Mirage_2000",
     "desc": "El regreso de Francia al ala delta con tecnología fly-by-wire. Su diseño simple y fiable lo hizo muy popular en exportaciones, con 9 países operándolo aún hoy."
   },
   {
@@ -560,7 +560,7 @@
     "mtow": 39700,
     "arm": "1× cañón GSh-6-23M 23 mm, Kh-23, Kh-25, Kh-29, 8.000 kg total",
     "trivia": "En 2015, un Su-24 ruso fue derribado por un F-16 turco en la frontera sirio-turca, el primer derribo de un avión de combate ruso por un miembro de la OTAN desde la Guerra de Corea.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Sukhoi_Su-24.jpg/1200px-Sukhoi_Su-24.jpg",
+    "img": "Sukhoi_Su-24",
     "desc": "El bombardero táctico soviético equivalente al F-111 americano. Con alas de geometría variable y sistema de vuelo por instrumentos, fue el primer avión soviético con capacidad de ataque todo tiempo."
   },
   {
@@ -578,7 +578,7 @@
     "mtow": 36741,
     "arm": "1× cañón M61A1 20 mm, AIM-120D, AIM-9X, GBU-28, JASSM, 13.381 kg total",
     "trivia": "El F-15EX puede portar hasta 22 misiles aire-aire simultáneamente, más que cualquier otro caza en servicio. Con su arquitectura digital abierta, puede integrar sistemas aún no inventados.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/F-15EX_first_flight_%281%29.jpg/1200px-F-15EX_first_flight_%281%29.jpg",
+    "img": "Boeing_F-15EX_Eagle_II",
     "desc": "La versión más moderna del legendario Eagle, con fuselaje nuevo, cockpit totalmente digital y arquitectura abierta. Es la apuesta de la USAF para mantener capacidades mientras el F-35 madura."
   },
   {
@@ -596,7 +596,7 @@
     "mtow": 25600,
     "arm": "1× cañón M61A1 20 mm, IRIS-T, AIM-120, Meteor, JDAM",
     "trivia": "El KF-21 es el primer caza de diseño propio de Corea del Sur. Para su desarrollo, el país tuvo que negociar el acceso a tecnología estadounidense con restricciones: no puede exportarse sin permiso de EE.UU.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/KF-21_Boramae_prototype_1_%28KF-21_001%29_first_flight_%28cropped%29.jpg/1200px-KF-21_Boramae_prototype_1_%28KF-21_001%29_first_flight_%28cropped%29.jpg",
+    "img": "KAI_KF-21_Boramae",
     "desc": "El primer caza de diseño coreano, desarrollado para reemplazar al F-4E y F-5 en servicio. Alcanzará capacidad operacional inicial en 2026 con tecnología furtiva parcial."
   },
   {
@@ -614,7 +614,7 @@
     "mtow": 19277,
     "arm": "1× cañón 23 mm, PL-5, PL-8, PL-12, SD-10, bombas guiadas",
     "trivia": "El J-10 fue desarrollado con la asistencia técnica de Israel, que compartió tecnología del caza Lavi que EE.UU. había obligado a cancelar. Luego China y EE.UU. se acusaron mutuamente de robo de secretos.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/J-10_fighter_jet.jpg/1200px-J-10_fighter_jet.jpg",
+    "img": "Chengdu_J-10",
     "desc": "El primer caza de diseño chino completamente moderno. Su configuración delta-canard y motor ruso lo convierten en un competidor directo del F-16 y el Gripen en el mercado de exportación."
   },
   {
@@ -632,7 +632,7 @@
     "mtow": 33000,
     "arm": "1× cañón 30 mm, PL-12, PL-15, YJ-12, YJ-91, 12.000 kg total",
     "trivia": "El J-16 es básicamente un clon no autorizado del Su-30MKK ruso. Rusia protestó, pero China argumentó que había comprado los derechos de producción de la familia Su-27.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Shenyang_J-16_at_Airshow_China_2018.jpg/1200px-Shenyang_J-16_at_Airshow_China_2018.jpg",
+    "img": "Shenyang_J-16",
     "desc": "El equivalente chino del F-15E Strike Eagle. Muy numeroso en la PLAAF con más de 200 unidades, sirve como principal plataforma de ataque pesado y cuenta con una variante de guerra electrónica J-16D."
   },
   {
@@ -650,7 +650,7 @@
     "mtow": 28000,
     "arm": "1× cañón interno, PL-15E, PL-10, bombas guiadas (estimado)",
     "trivia": "China se convirtió en 2024 en el segundo país del mundo, tras EE.UU., en operar simultáneamente dos cazas de quinta generación diferentes en servicio activo: el J-20 y el J-35A.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/J-35A_airshow_China_2024.jpg/1200px-J-35A_airshow_China_2024.jpg",
+    "img": "Shenyang_FC-31",
     "desc": "El segundo caza furtivo chino de quinta generación, diseñado para operar desde los portaviones de la Marina china. Más pequeño que el J-20, prioriza el sigilo sobre la velocidad."
   },
   {
@@ -668,7 +668,7 @@
     "mtow": 5400,
     "arm": "2× ametralladoras .50 M3P, cohetes, 1.500 kg de bombas y misiles",
     "trivia": "El Super Tucano es turbohélice y cuesta 15 millones de dólares, contra 80 del F-16. EE.UU. lo seleccionó para el programa Light Air Support tras años de intentar imponer el F-16 como plataforma COIN.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/EMB_314_Super_Tucano_in_flight.jpg/1200px-EMB_314_Super_Tucano_in_flight.jpg",
+    "img": "Embraer_EMB_314_Super_Tucano",
     "desc": "El avión de contrainsurgencia más exitoso del mercado. Turbohélice, barato, fiable y letal en el combate de baja intensidad; operado por más de 15 países en cuatro continentes."
   },
   {
@@ -686,7 +686,7 @@
     "mtow": 22100,
     "arm": "1× cañón JM61A1 20 mm, AAM-3, AAM-4, ASM-2, JDAM",
     "trivia": "El F-2 es un F-16 japonés 25% más grande, con ala compuesta de fibra de carbono y un radar AESA diseñado enteramente en Japón. EE.UU. obstaculizó el desarrollo de su tecnología propia para forzar la compra de su tecnología.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mitsubishi_F-2_Japan_Air_Self-Defense_Force.jpg/1200px-Mitsubishi_F-2_Japan_Air_Self-Defense_Force.jpg",
+    "img": "Mitsubishi_F-2",
     "desc": "El caza polivalente de la Fuerza de Autodefensa Aérea de Japón. Desarrollado en colaboración forzada con EE.UU., su rol principal es el ataque antibuque para defender las costas japonesas."
   },
   {
@@ -704,12 +704,12 @@
     "mtow": 13500,
     "arm": "1× cañón GSh-23 23 mm, R-73, Derby, MICA, ASTRA, 4.000 kg total",
     "trivia": "El Tejas tardó 33 años desde su inicio de diseño hasta su entrega inicial, un récord negativo que India atribuyó a los embargos occidentales de tecnología tras sus pruebas nucleares de 1998.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/HAL_Tejas_single_seat.jpg/1200px-HAL_Tejas_single_seat.jpg",
+    "img": "HAL_Tejas",
     "desc": "El primer caza diseñado y fabricado íntegramente en India. Su desarrollo fortaleció la industria aeronáutica india y sentó las bases para el futuro AMCA de quinta generación."
   },
   {
     "id": "f22",
-    "name": "F-22 Raptor",
+    "name": "Lockheed Martin F-22 Raptor",
     "type": "Caza",
     "country": "EE.UU.",
     "year": 2005,
@@ -722,12 +722,12 @@
     "mtow": 38000,
     "arm": "AIM-120D, AIM-9X, Cañón M61A2 20mm",
     "trivia": "Su firma de radar es del tamaño de una canica metálica, a pesar de medir 19 metros de largo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/F-22_Raptor_edit1_%28cropped%29.jpg/1200px-F-22_Raptor_edit1_%28cropped%29.jpg",
+    "img": "Lockheed_Martin_F-22_Raptor",
     "desc": "Primer caza de quinta generación del mundo, diseñado para la superioridad aérea total mediante el sigilo, la supercrucero y la agilidad extrema."
   },
   {
     "id": "su57",
-    "name": "Su-57 Felon",
+    "name": "Sukhoi Su-57 Felon",
     "type": "Caza",
     "country": "Rusia",
     "year": 2020,
@@ -740,12 +740,12 @@
     "mtow": 35000,
     "arm": "R-77M, R-73, Kh-59MK2, Cañón 30mm GSh-30-1",
     "trivia": "Utiliza un sistema de radar distribuido por toda la superficie de sus alas, sin precedentes en la aviación.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sukhoi_Su-57_at_the_MAKS-2019_airshow_%285%29.jpg/1200px-Sukhoi_Su-57_at_the_MAKS-2019_airshow_%285%29.jpg",
+    "img": "Sukhoi_Su-57",
     "desc": "Respuesta rusa al F-22, destacando por su vectorización de empuje 3D y su potente conjunto de sensores distribuidos."
   },
   {
     "id": "f35",
-    "name": "F-35 Lightning II",
+    "name": "Lockheed Martin F-35 Lightning II",
     "type": "Caza",
     "country": "EE.UU. / Aliados",
     "year": 2015,
@@ -758,7 +758,7 @@
     "mtow": 31800,
     "arm": "AIM-120C, AIM-9X, JDAM, Cañón 25mm GAU-22/A",
     "trivia": "El casco del piloto integra seis cámaras que le permiten ver a través del fuselaje en tiempo real.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/F-35A_flight_%28cropped%29.jpg/1200px-F-35A_flight_%28cropped%29.jpg",
+    "img": "Lockheed_Martin_F-35_Lightning_II",
     "desc": "La computadora voladora más avanzada del mundo, centrada en la fusión de sensores y el combate en red multidomain."
   },
   {
@@ -776,12 +776,12 @@
     "mtow": 23500,
     "arm": "Meteor, IRIS-T, Brimstone, Cañón Mauser BK-27",
     "trivia": "Su diseño canard-delta es inestable por diseño: sin el fly-by-wire, el avión sería incontrolable.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Eurofighter_Typhoon_of_the_Royal_Air_Force_MOD_45156521.jpg/1200px-Eurofighter_Typhoon_of_the_Royal_Air_Force_MOD_45156521.jpg",
+    "img": "Eurofighter_Typhoon",
     "desc": "Caza polivalente de cuarta generación plus desarrollado por Reino Unido, Alemania, Italia y España."
   },
   {
     "id": "mig21",
-    "name": "MiG-21 Fishbed",
+    "name": "Mikoyan Gurevich MiG-21 Fishbed",
     "type": "Caza",
     "country": "URSS",
     "year": 1959,
@@ -794,12 +794,12 @@
     "mtow": 10400,
     "arm": "K-13, R-60, Cañón GSh-23L 23mm",
     "trivia": "Con más de 11.000 unidades fabricadas, es el caza supersónico más producido de la historia.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/MiG-21_%28Fishbed%29_2.jpg/1200px-MiG-21_%28Fishbed%29_2.jpg",
+    "img": "Mikoyan-Gurevich_MiG-21",
     "desc": "Símbolo de la aviación soviética de la Guerra Fría, exportado a más de 50 países."
   },
   {
     "id": "f16",
-    "name": "F-16 Fighting Falcon",
+    "name": "General Dynamics F-16 Fighting Falcon",
     "type": "Caza",
     "country": "EE.UU.",
     "year": 1978,
@@ -812,12 +812,12 @@
     "mtow": 19187,
     "arm": "AIM-9, AIM-120, Cañón M61A1 20mm, JDAM",
     "trivia": "Primer caza de producción con inestabilidad aerodinámica deliberada para maximizar la maniobrabilidad.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/F-16_June_2008.jpg/1200px-F-16_June_2008.jpg",
+    "img": "Lockheed_Martin_F-16_Fighting_Falcon",
     "desc": "El caza multirol más exportado del mundo, con más de 4.600 unidades para 25 países."
   },
   {
     "id": "f15",
-    "name": "F-15 Eagle",
+    "name": "McDonnell Douglas F-15 Eagle",
     "type": "Caza",
     "country": "EE.UU.",
     "year": 1976,
@@ -830,7 +830,7 @@
     "mtow": 30845,
     "arm": "AIM-7, AIM-9, AIM-120, Cañón M61A1 20mm",
     "trivia": "El F-15 tiene un récord de combate de más de 100 victorias aéreas con cero derrotas confirmadas.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/F-15_MSIP_II.jpg/1200px-F-15_MSIP_II.jpg",
+    "img": "McDonnell_Douglas_F-15_Eagle",
     "desc": "Caza de superioridad aérea por excelencia de la USAF durante tres décadas."
   },
   {
@@ -848,7 +848,7 @@
     "mtow": 24500,
     "arm": "MICA, Meteor, AASM, Cañón DEFA 791B 30mm",
     "trivia": "El Rafale fue el primer avión en combinar capacidades nucleares tácticas y estratégicas simultáneamente.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Dassault_Rafale_%28cropped%29.jpg/1200px-Dassault_Rafale_%28cropped%29.jpg",
+    "img": "Dassault_Rafale",
     "desc": "Caza omnirrol francés para operar desde portaviones y tierra, cubriendo todas las misiones sin compromisos."
   },
   {
@@ -866,12 +866,12 @@
     "mtow": 37000,
     "arm": "PL-15, PL-10, Cañón interno en pruebas",
     "trivia": "China reveló el J-20 durante la visita oficial del Secretario de Defensa de EE.UU.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Chengdu_J-20_at_Airshow_China_2016_%28cropped%29.jpg/1200px-Chengdu_J-20_at_Airshow_China_2016_%28cropped%29.jpg",
+    "img": "Chengdu_J-20",
     "desc": "Primer caza furtivo de quinta generación de China, diseñado para combate BVR de largo alcance."
   },
   {
     "id": "su27",
-    "name": "Su-27 Flanker",
+    "name": "Sukhoi Su-27 Flanker",
     "type": "Caza",
     "country": "URSS / Rusia",
     "year": 1985,
@@ -884,12 +884,12 @@
     "mtow": 33000,
     "arm": "R-27, R-73, Cañón GSh-30-1 30mm",
     "trivia": "La maniobra Pugachev Cobra deja el avión suspendido en el aire a 90° durante un segundo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Su-27_inflight_2005.jpg/1200px-Su-27_inflight_2005.jpg",
+    "img": "Sukhoi_Su-27",
     "desc": "Caza de superioridad aérea soviético diseñado para superar al F-15, base de toda la familia Flanker."
   },
   {
     "id": "b2",
-    "name": "B-2 Spirit",
+    "name": "Northrop Grumman B-2 Spirit",
     "type": "Bombardero",
     "country": "EE.UU.",
     "year": 1997,
@@ -902,12 +902,12 @@
     "mtow": 170600,
     "arm": "80× JDAM 227kg, B61/B83 nuclear, MOP 14.000kg",
     "trivia": "Con un coste de 2.100 millones de dólares por unidad, es el avión más caro jamás fabricado.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/B-2_Spirit_Spirit_of_Mississippi.jpg/1200px-B-2_Spirit_Spirit_of_Mississippi.jpg",
+    "img": "Northrop_Grumman_B-2_Spirit",
     "desc": "Bombardero estratégico invisible al radar, capaz de penetrar las defensas aéreas más densas del mundo."
   },
   {
     "id": "tu160",
-    "name": "Tu-160 Blackjack",
+    "name": "Tupolev Tu-160 WhiteSwan",
     "type": "Bombardero",
     "country": "Rusia",
     "year": 1987,
@@ -920,12 +920,12 @@
     "mtow": 275000,
     "arm": "Kh-101, Kh-555, Kh-55 (12 misiles de crucero)",
     "trivia": "Es el avión de combate más grande, pesado y rápido del mundo, apodado 'el cisne blanco'.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Russian_Air_Force_Tupolev_Tu-160.jpg/1200px-Russian_Air_Force_Tupolev_Tu-160.jpg",
+    "img": "Tupolev_Tu-160",
     "desc": "Bombardero estratégico supersónico de alas variables para lanzar misiles de crucero intercontinentales."
   },
   {
     "id": "b52",
-    "name": "B-52 Stratofortress",
+    "name": "Boeing B-52 Stratofortress",
     "type": "Bombardero",
     "country": "EE.UU.",
     "year": 1955,
@@ -938,12 +938,12 @@
     "mtow": 220000,
     "arm": "31.500 kg: JDAM, ALCM, bombas convencionales y nucleares",
     "trivia": "Se espera que el B-52 vuele hasta 2050, con casi 100 años de operación activa.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/B-52_Stratofortress_side_view.jpg/1200px-B-52_Stratofortress_side_view.jpg",
+    "img": "Boing_B-52_Stratofortress",
     "desc": "El pilar del mando estratégico estadounidense durante siete décadas, en constante actualización."
   },
   {
     "id": "b1b",
-    "name": "B-1B Lancer",
+    "name": "Rockwell B-1B Lancer",
     "type": "Bombardero",
     "country": "EE.UU.",
     "year": 1986,
@@ -956,12 +956,12 @@
     "mtow": 216400,
     "arm": "56.700 kg: JASSM, JSOW, JDAM, minas Mk-62",
     "trivia": "Puede llevar 24 misiles JASSM-ER internamente, la mayor carga de precisión del mundo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/B-1B_Lancer_040316-F-0000S-001.jpg/1200px-B-1B_Lancer_040316-F-0000S-001.jpg",
+    "img": "Rockwell_B-1_Lancer",
     "desc": "Bombardero supersónico de ala variable, el más rápido de la tríada nuclear americana."
   },
   {
     "id": "tu95",
-    "name": "Tu-95 Bear",
+    "name": "Tupolev Tu-95 Bear",
     "type": "Bombardero",
     "country": "URSS / Rusia",
     "year": 1956,
@@ -974,12 +974,12 @@
     "mtow": 188000,
     "arm": "Kh-101, Kh-55, Kh-20 (hasta 15 misiles de crucero)",
     "trivia": "El avión de turbohélice más rápido del mundo y el único bombardero estratégico a hélice en activo.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tupolev_Tu-95.jpg/1200px-Tupolev_Tu-95.jpg",
+    "img": "Tupolev_Tu-95",
     "desc": "Bombardero estratégico soviético modernizado para misiles de crucero de última generación."
   },
   {
     "id": "a10",
-    "name": "A-10 Thunderbolt II",
+    "name": "Fairchild Republic A-10 Thunderbolt II",
     "type": "Ataque",
     "country": "EE.UU.",
     "year": 1977,
@@ -992,12 +992,12 @@
     "mtow": 23000,
     "arm": "Cañón GAU-8/A 30mm, AGM-65 Maverick, Mk-82",
     "trivia": "El avión fue diseñado alrededor del cañón: el GAU-8 no cabría en ningún otro fuselaje.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A-10_Thunderbolt_II_In-flight-2009.jpg/1200px-A-10_Thunderbolt_II_In-flight-2009.jpg",
+    "img": "Fairchild-Republic_A-10_Thunderbolt_II",
     "desc": "Diseñado para destruir tanques, famoso por su resistencia extrema y el rugido BRRRT de su cañón."
   },
   {
     "id": "su25",
-    "name": "Su-25 Grach",
+    "name": "Sukhoi Su-25 Grach",
     "type": "Ataque",
     "country": "URSS / Rusia",
     "year": 1981,
@@ -1010,12 +1010,12 @@
     "mtow": 19300,
     "arm": "Cañón GSh-30-2 30mm, Cohetes S-25, FAB-500",
     "trivia": "Sus motores pueden funcionar con queroseno, gasolina de automoción o aceite vegetal en emergencias.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sukhoi_Su-25SM%2C_Russia_-_Air_Force_AN2149479.jpg/1200px-Sukhoi_Su-25SM%2C_Russia_-_Air_Force_AN2149479.jpg",
+    "img": "Sukhoi_Su-25",
     "desc": "El equivalente soviético del A-10, con blindaje extensivo para apoyo cercano a las tropas."
   },
   {
     "id": "su34",
-    "name": "Su-34 Fullback",
+    "name": "Sukhoi Su-34 Fullback",
     "type": "Ataque",
     "country": "Rusia",
     "year": 2014,
@@ -1028,12 +1028,12 @@
     "mtow": 45100,
     "arm": "Kh-29, Kh-31, KAB-500, Cañón GSh-30-1 30mm",
     "trivia": "La cabina tiene espacio para caminar y una cocinilla eléctrica para misiones de larga duración.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sukhoi_Su-34_in_2010.jpg/1200px-Sukhoi_Su-34_in_2010.jpg",
+    "img": "Sukhoi_Su-34",
     "desc": "Bombardero táctico de largo alcance basado en el Flanker, con capacidades nucleares y aviónica avanzada."
   },
   {
     "id": "av8b",
-    "name": "AV-8B Harrier II",
+    "name": "McDonnell Douglas AV-8B Harrier II",
     "type": "Ataque",
     "country": "EE.UU. / Reino Unido",
     "year": 1985,
@@ -1046,12 +1046,12 @@
     "mtow": 14100,
     "arm": "GAU-12 25mm, AIM-9, Mk-82, AGM-65",
     "trivia": "El único avión de combate de ala fija occidental capaz de despegue y aterrizaje vertical (VTOL).",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/AV-8B_Harrier_VMA-231.jpg/1200px-AV-8B_Harrier_VMA-231.jpg",
+    "img": "McDonnell_Douglas_AV-8B_Harrier_II",
     "desc": "Avión de ataque STOVL para portaaviones de cubierta corta y bases improvisadas en tierra."
   },
   {
     "id": "sr71",
-    "name": "SR-71 Blackbird",
+    "name": "Lockheed SR-71 Blackbird",
     "type": "Especial",
     "country": "EE.UU.",
     "year": 1966,
@@ -1064,12 +1064,12 @@
     "mtow": 78000,
     "arm": "Sistemas de inteligencia óptica y SIGINT",
     "trivia": "El fuselaje goteaba combustible en tierra porque las planchas de titanio solo encajaban al dilatarse por el calor.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/SR-71_Blackbird.jpg/1200px-SR-71_Blackbird.jpg",
+    "img": "Lockheed_SR-71",
     "desc": "El avión de reconocimiento tripulado más rápido de la historia: ningún misil logró alcanzarlo."
   },
   {
     "id": "e3",
-    "name": "E-3 Sentry (AWACS)",
+    "name": "Boeing E-3 Sentry (AWACS)",
     "type": "Especial",
     "country": "EE.UU.",
     "year": 1977,
@@ -1082,12 +1082,12 @@
     "mtow": 156000,
     "arm": "Radar rotativo AN/APY-2 (detección a +400 km)",
     "trivia": "Su radar detecta 600 blancos aéreos y coordina más de 100 interceptaciones simultáneamente.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/E-3_Sentry_over_the_Pacific_Ocean.jpg/1200px-E-3_Sentry_over_the_Pacific_Ocean.jpg",
+    "img": "Boeing_E-3_Sentry",
     "desc": "Plataforma de mando aerotransportado que actúa como cuartel general volante coordinando operaciones."
   },
   {
     "id": "u2",
-    "name": "U-2 Dragon Lady",
+    "name": "Lockheed U-2 Dragon Lady",
     "type": "Especial",
     "country": "EE.UU.",
     "year": 1956,
@@ -1100,12 +1100,12 @@
     "mtow": 18600,
     "arm": "Cámaras de alta resolución, sensores SIGINT/IMINT",
     "trivia": "Los pilotos llevan trajes de astronauta. El avión vuela tan alto que ven la curvatura de la Tierra.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/U-2_high_altitude_aircraft.jpg/1200px-U-2_high_altitude_aircraft.jpg",
+    "img": "Lockheed_U-2",
     "desc": "Avión de reconocimiento de altísima cota, aún en servicio. Sus imágenes desencadenaron la Crisis de los Misiles de Cuba."
   },
   {
     "id": "rq4",
-    "name": "RQ-4 Global Hawk",
+    "name": "Northrop Grumman RQ-4 Global Hawk",
     "type": "Especial",
     "country": "EE.UU.",
     "year": 2001,
@@ -1118,12 +1118,12 @@
     "mtow": 14628,
     "arm": "Sensores SAR, EO/IR, SIGINT; sin armamento",
     "trivia": "Puede sobrevolar un área del tamaño de Corea del Sur en 24 horas con resolución para leer matrículas.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/RQ-4A_Global_Hawk.jpg/1200px-RQ-4A_Global_Hawk.jpg",
+    "img": "Northrop_Grumman_RQ-4_Global_Hawk",
     "desc": "UAV estratégico de reconocimiento persistente, el ISR no tripulado de mayor alcance del mundo."
   },
   {
     "id": "c17",
-    "name": "C-17 Globemaster III",
+    "name": "Boeing C-17 Globemaster III",
     "type": "Transporte",
     "country": "EE.UU.",
     "year": 1995,
@@ -1136,12 +1136,12 @@
     "mtow": 265350,
     "arm": "1 tanque M1 Abrams, 102 paracaidistas o 36 pacientes",
     "trivia": "Puede aterrizar en pistas de tierra de 900 m y dar marcha atrás con carga completa por empuje inverso.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/C-17_Globemaster_III.jpg/1200px-C-17_Globemaster_III.jpg",
+    "img": "Boeing_C-17_Globemaster_III",
     "desc": "Avión de transporte estratégico-táctico capaz de llevar cargas pesadas a cualquier punto del planeta."
   },
   {
     "id": "c130",
-    "name": "C-130 Hercules",
+    "name": "Lockheed C-130 Hercules",
     "type": "Transporte",
     "country": "EE.UU.",
     "year": 1956,
@@ -1161,12 +1161,12 @@
     "mtow": 79380,
     "arm": "92 tropas, 74 camillas o 20.000 kg de carga",
     "trivia": "El único avión de ala fija que aterrizó en un portaviones sin catapultas (1963).",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lockheed_C-130_Hercules_%28modified%29.jpg/1200px-Lockheed_C-130_Hercules_%28modified%29.jpg",
+    "img": "Lockheed_C-130_Hercules",
     "desc": "El caballo de batalla del transporte táctico militar, con más de 70 variantes y 2.500 unidades para 63 países."
   },
   {
     "id": "an124",
-    "name": "An-124 Ruslan",
+    "name": "Antonov An-124 Ruslan",
     "type": "Transporte",
     "country": "URSS / Ucrania",
     "year": 1986,
@@ -1179,12 +1179,12 @@
     "mtow": 405000,
     "arm": "Carga útil: 150.000 kg (doble que el C-17)",
     "trivia": "Su morro abatible y rampa trasera permiten cargar por ambos extremos simultáneamente.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Antonov_An-124_Ruslan%2C_Volga-Dnepr_Airlines_AN1895955.jpg/1200px-Antonov_An-124_Ruslan%2C_Volga-Dnepr_Airlines_AN1895955.jpg",
+    "img": "Antonov_An-124_Ruslan",
     "desc": "El mayor avión de transporte en producción, capaz de transportar locomotoras, turbinas o helicópteros completos."
   },
   {
     "id": "kc135",
-    "name": "KC-135 Stratotanker",
+    "name": "Boeing KC-135 Stratotanker",
     "type": "Transporte",
     "country": "EE.UU.",
     "year": 1957,
@@ -1204,7 +1204,7 @@
     "mtow": 134717,
     "arm": "Barra extensible de repostaje, 90.700 kg de combustible transferible",
     "trivia": "Ha repostado en vuelo a más de un millón de aviones, multiplicando el alcance de la flota de la USAF.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/KC-135_Stratotanker_Refuels_B-2_Spirit_%28cropped%29.jpg/1200px-KC-135_Stratotanker_Refuels_B-2_Spirit_%28cropped%29.jpg",
+    "img": "Boeing_KC-135_Stratotanker",
     "desc": "El repostador aéreo que hizo posible el poder global americano."
   },
   {
@@ -1222,7 +1222,7 @@
     "mtow": 15420,
     "arm": "Instrumentación científica",
     "trivia": "Cruzó la línea de Kármán (100 km), convirtiendo a sus pilotos en astronautas.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/North_American_X-15.jpg/1200px-North_American_X-15.jpg",
+    "img": "North_American_X-15",
     "desc": "Avión-cohete experimental cuyos datos nutrieron directamente los programas Mercury, Gemini y Apollo."
   },
   {
@@ -1240,12 +1240,12 @@
     "mtow": 20215,
     "arm": "Dos bahías de armamento (demostradora)",
     "trivia": "Primer UAV de combate en despegar y aterrizar autónomamente en un portaviones en mar abierto.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/X-47B_CVN77.jpg/1200px-X-47B_CVN77.jpg",
+    "img": "Northrop_Grumman_X-47B",
     "desc": "UCAV demostrativo que validó la operación autónoma en portaviones."
   },
   {
     "id": "b21",
-    "name": "B-21 Raider",
+    "name": "Northrop Grumman B-21 Raider",
     "type": "Experimental",
     "country": "EE.UU.",
     "year": 2023,
@@ -1258,7 +1258,7 @@
     "mtow": 90000,
     "arm": "JDAM, B61-12 nuclear, GBU-57 MOP (estimado)",
     "trivia": "Northrop Grumman creó un lenguaje de programación propio para proteger el código fuente del avión.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/B-21_Raider_first_flight.jpg/1200px-B-21_Raider_first_flight.jpg",
+    "img": "Northrop_Grumman_B-21_Raider",
     "desc": "Sucesor del B-2 con arquitectura digital abierta para actualizar capacidades furtivas según evolucionen las amenazas."
   },
   {
@@ -1276,7 +1276,7 @@
     "mtow": 14700,
     "arm": "Sensores acústicos y de vuelo",
     "trivia": "Diseñado para que su estruendo supersónico suene como un golpe suave de 75 dB en tierra.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/X-59_QueSST_artist_concept_%28cropped%29.jpg/1200px-X-59_QueSST_artist_concept_%28cropped%29.jpg",
+    "img": "NASA_X-59_QueSST",
     "desc": "Demostrador de vuelo supersónico silencioso de la NASA para reabrir el espacio aéreo civil."
   },
   {
@@ -1294,7 +1294,7 @@
     "mtow": 40000,
     "arm": "Láseres de defensa, misiles de largo alcance, integración con drones escolta (CCA)",
     "trivia": "El primer prototipo a escala real voló en secreto en 2020, años antes de que se adjudicara el contrato de producción final.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/NGAD_Concept.jpg/1200px-NGAD_Concept.jpg",
+    "img": "Next_Generation_Air_Dominance",
     "desc": "Diseñado como sucesor del F-22, el F-47 se centra en el sigilo avanzado, la gestión térmica extrema y la capacidad de comandar enjambres de drones."
   },
   {
@@ -1312,7 +1312,7 @@
     "mtow": 30000,
     "arm": "Armas de energía dirigida, misiles modulares internos",
     "trivia": "Su cabina es 'wearable', lo que significa que el piloto usa un casco de realidad aumentada que proyecta todos los controles, eliminando las pantallas físicas tradicionales.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Tempest_mock-up.jpg/1200px-Tempest_mock-up.jpg",
+    "img": "Global_Combat_Air_Programme",
     "desc": "Un caza pesado de largo alcance diseñado para penetrar defensas aéreas densas y actuar como un centro de datos volador."
   },
   {
@@ -1330,7 +1330,7 @@
     "mtow": 35000,
     "arm": "Misiles PL-15, armas hipersónicas (proyectado)",
     "trivia": "Varios avistamientos de un prototipo sin estabilizadores verticales (tailless) en 2024 sugieren que China está adelantada en el desarrollo de fuselajes furtivos puros.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Concept_of_future_fighter.jpg/1200px-Concept_of_future_fighter.jpg",
+    "img": "Sixth-generation_fighter",
     "desc": "Proyecto de caza de nueva generación chino que prioriza la baja observabilidad mediante un diseño sin colas y motores con vectorización de empuje avanzada."
   },
   {
@@ -1348,7 +1348,7 @@
     "mtow": 10433,
     "arm": "1× cañón M230 30 mm, misiles AGM-114 Hellfire, cohetes Hydra 70",
     "trivia": "El casco del piloto (IHADSS) permite que el cañón de 30 mm apunte automáticamente hacia donde el piloto mira, permitiendo una respuesta de fuego instantánea.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/AH-64_Apache_in_flight.jpg/1200px-AH-64_Apache_in_flight.jpg",
+    "img": "Boeing_AH-64_Apache",
     "desc": "El helicóptero de ataque principal de muchos ejércitos. Su radar Longbow puede rastrear hasta 128 objetivos simultáneamente y disparar misiles tras obstáculos."
   },
   {
@@ -1366,7 +1366,7 @@
     "mtow": 12000,
     "arm": "Cañón rotativo Yak-B 12,7 mm, misiles 9K114 Shturm, cohetes S-8",
     "trivia": "A diferencia de los helicópteros de ataque occidentales, el 'Tanque Volador' soviético puede transportar hasta 8 soldados de infantería totalmente equipados en su compartimento interno.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Mil_Mi-24P_Rusia.jpg/1200px-Mil_Mi-24P_Rusia.jpg",
+    "img": "Mil_Mi-24",
     "desc": "Un híbrido único entre cañonero y transporte de tropas. Su silueta agresiva y su blindaje pesado lo convirtieron en un símbolo de la potencia militar soviética."
   },
   {
@@ -1384,7 +1384,7 @@
     "mtow": 4760,
     "arm": "4× misiles Hellfire, 2× bombas GBU-12 Paveway II",
     "trivia": "A pesar de ser operado remotamente, las tripulaciones suelen estar a miles de kilómetros de distancia, comunicándose mediante enlaces satelitales con una latencia de apenas segundos.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/MQ-9_Reaper_in_flight_%282007%29.jpg/1200px-MQ-9_Reaper_in_flight_%282007%29.jpg",
+    "img": "General_Atomics_MQ-9_Reaper",
     "desc": "La evolución del Predator, con mayor capacidad de carga y autonomía. Es la plataforma estándar para misiones de vigilancia persistente y ataques de precisión de larga duración."
   },
   {
@@ -1402,7 +1402,7 @@
     "mtow": 650,
     "arm": "4× municiones inteligentes MAM-C o MAM-L",
     "trivia": "Su éxito en conflictos recientes ha cambiado la doctrina militar global, demostrando que drones relativamente económicos pueden destruir sistemas antiaéreos y tanques de alta tecnología.",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Bayraktar_TB2_Ukraine.jpg/1200px-Bayraktar_TB2_Ukraine.jpg",
+    "img": "Bayraktar_TB2",
     "desc": "Dron táctico de altitud media y larga resistencia (MALE). Se ha hecho famoso por su efectividad operativa y por ser una opción de bajo coste comparada con los sistemas occidentales."
   }
 ]
