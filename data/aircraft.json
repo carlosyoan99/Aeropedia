@@ -241,7 +241,7 @@
   },
   {
     "id": "mig15",
-    "name": "Mikoyan-Gurevich MiG-15",
+    "name": "Mikoyan Gurevich MiG-15",
     "type": "Caza",
     "country": "URSS",
     "year": 1949,
@@ -295,7 +295,7 @@
   },
   {
     "id": "mig25",
-    "name": "Mikoyan-Gurevich MiG-25 Foxbat",
+    "name": "Mikoyan Gurevich MiG-25 Foxbat",
     "type": "Caza",
     "country": "URSS",
     "year": 1970,
