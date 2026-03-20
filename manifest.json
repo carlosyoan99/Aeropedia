@@ -1,7 +1,7 @@
 {
   "name": "AeroPedia: Archivo Global de Aviación",
   "short_name": "AeroPedia",
-  "description": "Enciclopedia interactiva de aviación militar con más de 70 aeronaves, comparador, teatro de operaciones y calculadora Mach.",
+  "description": "Enciclopedia interactiva de aviación militar con más de 150 aeronaves, comparador, teatro de operaciones y calculadora Mach.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
@@ -9,10 +9,7 @@
   "theme_color": "#0f172a",
   "background_color": "#0f172a",
   "lang": "es",
-  "categories": [
-    "education",
-    "reference"
-  ],
+  "categories": ["education", "reference"],
   "icons": [
     {
       "src": "icons/icon-72.svg",
@@ -47,19 +44,6 @@
   ],
   "shortcuts": [
     {
-      "name": "Archivo — Galería",
-      "short_name": "Galería",
-      "description": "Ver todas las aeronaves",
-      "url": "./index.html",
-      "icons": [
-        {
-          "src": "icons/icon-96.svg",
-          "sizes": "96x96",
-          "type": "image/svg+xml"
-        }
-      ]
-    },
-    {
       "name": "Teatro de Operaciones",
       "short_name": "Teatro",
       "description": "Explorar conflictos históricos y sus aeronaves",
@@ -90,6 +74,19 @@
       "short_name": "Mach",
       "description": "Calcular número Mach por velocidad y altitud",
       "url": "./mach.html",
+      "icons": [
+        {
+          "src": "icons/icon-96.svg",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Comparar",
+      "short_name": "Comparar",
+      "description": "Compara hasta 3 aeronaves segun sus stats",
+      "url": "./compare.html",
       "icons": [
         {
           "src": "icons/icon-96.svg",
