@@ -1770,3 +1770,209 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
   .theater-page-grid { grid-template-columns: 1fr; }
 }
 
+/* ════════════════════════════════════════════════════════════
+   FICHA TÉCNICA v2 — campos enriquecidos
+   ════════════════════════════════════════════════════════════ */
+
+/* Cabecera de la ficha */
+.detail-header-block { margin-bottom: 1rem; }
+.detail-badges-row {
+  display: flex; align-items: center; gap: .4rem;
+  flex-wrap: wrap; margin-bottom: .5rem;
+}
+.detail-caps-row {
+  display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: .25rem;
+}
+.cap-icon {
+  display: inline-flex; align-items: center; gap: .25rem;
+  font-family: var(--font-mono); font-size: .58rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em;
+  padding: 2px 8px; border-radius: 9999px;
+  background: rgba(37,99,235,.1); color: var(--primary); border: 1px solid var(--primary);
+}
+
+/* Badges de estado */
+.status-badge {
+  font-family: var(--font-mono); font-size: .55rem; font-weight: 700;
+  text-transform: uppercase; padding: 2px 7px;
+  border-radius: 9999px; border: 1.5px solid currentColor;
+  display: inline-flex; align-items: center; gap: .25rem;
+}
+.status-badge i { font-size: .45rem; }
+.status-badge.active  { color: #4ade80; background: rgba(74,222,128,.1); }
+.status-badge.retired { color: #94a3b8; background: rgba(148,163,184,.1); }
+.status-badge.proto   { color: #f59e0b; background: rgba(245,158,11,.1); }
+.status-badge.limited { color: #60a5fa; background: rgba(96,165,250,.1); }
+
+/* Stealth badge */
+.stealth-badge {
+  font-family: var(--font-mono); font-size: .55rem; font-weight: 700;
+  text-transform: uppercase; padding: 2px 7px;
+  border-radius: 9999px; border: 1.5px solid currentColor;
+}
+.stealth-badge.low    { color: #fbbf24; background: rgba(251,191,36,.1); }
+.stealth-badge.medium { color: #fb923c; background: rgba(251,146,60,.1); }
+.stealth-badge.high   { color: #f472b6; background: rgba(244,114,182,.15); box-shadow: 0 0 8px rgba(244,114,182,.3); }
+
+/* Radar badge */
+.radar-badge {
+  font-family: var(--font-mono); font-size: .52rem; font-weight: 900;
+  text-transform: uppercase; padding: 1px 6px;
+  border-radius: 9999px; border: 1.5px solid currentColor;
+}
+.radar-badge.aesa { color: #34d399; background: rgba(52,211,153,.12); }
+.radar-badge.pesa { color: #60a5fa; background: rgba(96,165,250,.12); }
+.radar-badge.mech { color: #94a3b8; background: rgba(148,163,184,.1); }
+.radar-badge.none { color: #475569; background: transparent; }
+
+/* Grid de especificaciones 4 columnas */
+.detail-specs-grid4 {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+}
+.spec-full { grid-column: 1 / -1; }
+.spec-avionics .spec-value { display:flex; align-items:center; gap:.4rem; flex-wrap:wrap; }
+
+/* Bloque de armamento */
+.armament-block { display:flex; flex-direction:column; gap:.5rem; }
+.arm-row {
+  display: flex; align-items: flex-start; gap: .5rem;
+  padding: .4rem .6rem; background: var(--bg-stat); border-radius: .5rem;
+  border-left: 2px solid var(--primary);
+}
+.arm-icon { color: var(--primary); font-size: .75rem; margin-top: .1rem; flex-shrink: 0; width: 1rem; text-align:center; }
+.arm-label { font-family: var(--font-mono); font-size: .58rem; font-weight: 700; text-transform: uppercase; color: var(--text-3); white-space: nowrap; }
+.arm-val { font-size: .72rem; line-height: 1.45; }
+
+/* Roles */
+.roles-row { display: flex; gap: .4rem; flex-wrap: wrap; }
+.role-tag {
+  font-family: var(--font-mono); font-size: .58rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .04em;
+  padding: 3px 9px; border-radius: 9999px;
+  background: rgba(37,99,235,.1); color: var(--primary);
+  border: 1px solid rgba(37,99,235,.25);
+}
+
+/* Variantes */
+.variants-row { display: flex; gap: .4rem; flex-wrap: wrap; }
+.variant-tag {
+  font-size: .65rem; font-weight: 700; padding: 3px 9px;
+  border-radius: 9999px; background: var(--bg-stat);
+  border: 1px solid var(--border); color: var(--text-2);
+}
+
+/* Historial operacional */
+.combat-history { display: flex; flex-direction: column; gap: .75rem; }
+.combat-entry {
+  padding: .75rem 1rem; background: var(--bg-stat);
+  border-radius: .75rem; border-left: 3px solid #f59e0b;
+}
+.combat-label    { font-family:var(--font-mono); font-size:.65rem; font-weight:700; text-transform:uppercase; color:#f59e0b; margin-bottom:.2rem; }
+.combat-missions { font-size:.7rem; color:var(--text-3); margin-bottom:.2rem; }
+.combat-notes    { font-size:.78rem; color:var(--text-2); line-height:1.55; }
+
+/* RCS */
+.rcs-value { font-size:.85rem; color:var(--primary); }
+
+/* Tags técnicos */
+.detail-tags { display:flex; gap:.35rem; flex-wrap:wrap; margin-top:.75rem; }
+.tech-tag {
+  font-family:var(--font-mono); font-size:.55rem; font-weight:700;
+  padding: 2px 7px; border-radius:9999px;
+  background: var(--bg-stat); border:1px solid var(--border);
+  color: var(--text-3);
+}
+
+/* Acciones al pie de la ficha */
+.detail-actions {
+  display: flex; align-items: center; gap: .6rem;
+  flex-wrap: wrap; margin-top: 1.25rem;
+  padding-top: 1rem; border-top: 1px solid var(--border);
+}
+.detail-action-btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .5rem 1rem; border: none; border-radius: .6rem;
+  font-family: var(--font-mono); font-size: .65rem; font-weight: 700;
+  text-transform: uppercase; cursor: pointer; transition: background .2s;
+}
+.detail-action-btn.compare-action { background: var(--primary); color: #fff; }
+.detail-action-btn.compare-action:hover { background: #1d4ed8; }
+.detail-action-btn.share-action { background: var(--bg-stat); color: var(--text); border:1px solid var(--border); }
+.detail-action-btn.share-action:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Related aircraft */
+.related-aircraft {
+  display: flex; align-items: center; gap: .4rem;
+  flex-wrap: wrap; margin-left: auto;
+}
+.related-label { font-size:.6rem; color:var(--text-3); }
+.related-btn {
+  font-family:var(--font-mono); font-size:.6rem; font-weight:700;
+  padding: 3px 9px; border-radius:9999px; cursor:pointer;
+  background:var(--bg-stat); border:1px solid var(--border);
+  color:var(--text-2); transition: border-color .15s, color .15s;
+}
+.related-btn:hover { border-color:var(--primary); color:var(--primary); }
+
+/* Teatro ext link */
+.theater-ext-link {
+  margin-left:.5rem; font-size:.65rem; color:var(--primary);
+  opacity:.7; transition: opacity .15s;
+}
+.theater-ext-link:hover { opacity:1; }
+
+/* Barra empuje/peso */
+.detail-tw-bar {
+  margin-top: 1rem; padding: .75rem 1rem;
+  background: rgba(0,0,0,.25); border-radius: .75rem;
+}
+.tw-bar-label {
+  display: flex; justify-content: space-between;
+  font-family:var(--font-mono); font-size:.62rem; color:#94a3b8;
+  margin-bottom: .4rem;
+}
+.tw-bar-val { font-weight: 900; color:#fff; }
+.tw-bar-track { height: 6px; background:#1e293b; border-radius:9999px; overflow:hidden; margin-bottom:.35rem; }
+.tw-bar-fill { height:100%; background:#60a5fa; border-radius:9999px; transition:width .5s ease; }
+.tw-bar-fill.over-unity { background: #4ade80; box-shadow: 0 0 8px rgba(74,222,128,.4); }
+.tw-note { font-size:.58rem; color:#475569; }
+
+/* Imagen con 4 stats */
+.detail-img-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: .5rem; margin-top: .75rem;
+}
+.img-stat {
+  padding: .5rem .6rem; background: rgba(0,0,0,.5);
+  backdrop-filter: blur(8px); border-radius: .6rem;
+  border: 1px solid rgba(255,255,255,.08);
+  text-align: center;
+}
+.img-stat-label { font-family:var(--font-mono); font-size:.5rem; font-weight:700; text-transform:uppercase; color:#475569; display:block; margin-bottom:.15rem; }
+.img-stat-val { font-size:.85rem; font-weight:900; color:#fff; }
+
+/* ════════════════════════════════════════════════════════════
+   COMPARADOR PÁGINAS — estilos de compare.html
+   ════════════════════════════════════════════════════════════ */
+.nav-link[data-page="compare"].active,
+.nav-link:has([class*="compare"]).active { background: var(--primary); }
+
+/* Tab panels del comparador */
+.cmp-tab-panel.hidden { display: none; }
+.cmp-table-wrap { overflow-x: auto; border-radius: .75rem; border: 1px solid var(--border); }
+.cmp-table { width: 100%; border-collapse: collapse; }
+.cmp-table th {
+  background: var(--dark); color: #94a3b8;
+  font-family: var(--font-mono); font-size: .6rem; font-weight: 700;
+  text-transform: uppercase; padding: .6rem .75rem; text-align: left;
+  position: sticky; top: 0; z-index: 2;
+}
+.cmp-row { border-bottom: 1px solid var(--border); transition: background .1s; }
+.cmp-row:hover { background: var(--bg-stat); }
+.cmp-param {
+  font-family: var(--font-mono); font-size: .62rem; font-weight: 700;
+  text-transform: uppercase; color: var(--text-3);
+  padding: .5rem .75rem; white-space: nowrap; min-width: 140px;
+}
+.cmp-stat-cell { padding: .5rem .75rem; }
+

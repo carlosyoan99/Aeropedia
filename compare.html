@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador — AeroPedia</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="description" content="Compara especificaciones técnicas de aeronaves militares en profundidad.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <script>if(localStorage.getItem('aeropedia_theme')==='dark')document.documentElement.classList.add('dark-preload');</script>
+</head>
+<body class="page-body">
+
+<div id="navContainer"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="page-hero-label">// Análisis técnico comparativo</p>
+    <h1 class="page-hero-title">Comparador <span>de Aeronaves</span></h1>
+    <p class="page-hero-sub">Selecciona hasta 3 aeronaves para comparar sus especificaciones técnicas, aviónica, armamento y rendimiento en profundidad.</p>
+  </div>
+</div>
+
+<main class="page-content">
+
+  <!-- Panel de selección -->
+  <div class="cmp-select-panel">
+    <div class="cmp-search-row">
+      <input type="text" id="cmpSearch" class="search-input"
+             placeholder="Buscar aeronave para añadir..."
+             oninput="filterCmpSearch()"
+             style="width:20rem">
+      <select id="cmpCatFilter" class="cat-select" onchange="filterCmpSearch()">
+        <option value="all">Todos los tipos</option>
+        <option value="Caza">Cazas</option>
+        <option value="Bombardero">Bombarderos</option>
+        <option value="Ataque">Ataque CAS</option>
+        <option value="Especial">Especial / ISR</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Experimental">Experimental</option>
+      </select>
+      <button class="nav-link" onclick="clearCmpSelection()" style="border-color:#ef4444;color:#ef4444">
+        <i class="fas fa-trash"></i> Limpiar
+      </button>
+    </div>
+
+    <!-- Slots activos -->
+    <div id="cmpActiveSlots" class="cmp-active-slots"></div>
+
+    <!-- Grid de búsqueda -->
+    <div id="cmpSearchGrid" class="cmp-search-grid"></div>
+
+    <!-- Botón comparar -->
+    <div class="cmp-action-row">
+      <button id="cmpGoBtn" class="btn-compare cmp-go-btn" onclick="runComparison()" disabled>
+        <i class="fas fa-balance-scale"></i> Comparar selección
+      </button>
+      <span id="cmpHint" class="compare-hint">Selecciona entre 2 y 3 aeronaves</span>
+    </div>
+  </div>
+
+  <!-- Resultado de comparación -->
+  <div id="cmpResult" class="cmp-result-area" style="display:none">
+
+    <!-- Cabecera con fotos -->
+    <div id="cmpResultHeader" class="cmp-result-header"></div>
+
+    <!-- Tabs -->
+    <div class="cmp-tabs">
+      <button class="cmp-tab active" id="tabTable" onclick="switchTab('table')">
+        <i class="fas fa-table"></i> Tabla completa
+      </button>
+      <button class="cmp-tab" id="tabRadar" onclick="switchTab('radar')">
+        <i class="fas fa-chart-line"></i> Radar
+      </button>
+      <button class="cmp-tab" id="tabAvionics" onclick="switchTab('avionics')">
+        <i class="fas fa-satellite-dish"></i> Aviónica
+      </button>
+      <button class="cmp-tab" id="tabProduction" onclick="switchTab('production')">
+        <i class="fas fa-industry"></i> Producción
+      </button>
+    </div>
+
+    <div id="tabTablePanel"     class="cmp-tab-panel"></div>
+    <div id="tabRadarPanel"     class="cmp-tab-panel hidden">
+      <div class="cmp-radar-grid">
+        <div class="radar-canvas-wrap"><canvas id="radarCanvas"></canvas></div>
+        <div id="cmpDomainList" class="cmp-domain-list"></div>
+      </div>
+    </div>
+    <div id="tabAvionicsPanel"  class="cmp-tab-panel hidden"></div>
+    <div id="tabProductionPanel"class="cmp-tab-panel hidden"></div>
+
+  </div>
+</main>
+
+<script src="js/state.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/pages.js"></script>
+<script>
+// ══ ESTADO LOCAL ═════════════════════════════════════════════
+const CMP_COLORS  = ['#3b82f6','#f59e0b','#10b981'];
+let   cmpList     = [];   // IDs seleccionados
+let   cmpPlanes   = [];   // objetos completos tras comparar
+let   radarInst   = null;
+
+// ══ INIT ══════════════════════════════════════════════════════
+async function initComparePage() {
+  initTheme();
+  document.getElementById('navContainer').innerHTML = buildNavBar('compare');
+  try {
+    await loadData();
+    // Recuperar selección de sessionStorage (viene de la ficha)
+    try {
+      var stored = sessionStorage.getItem('aeropedia_compare');
+      if (stored) { cmpList = JSON.parse(stored).filter(id => aircraftDB.find(p=>p.id===id)); sessionStorage.removeItem('aeropedia_compare'); }
+    } catch(e) {}
+    renderSearchGrid(aircraftDB);
+    renderActiveSlots();
+    if (cmpList.length >= 2) runComparison();
+  } catch(e) {
+    document.getElementById('cmpSearchGrid').innerHTML = '<p style="color:var(--text-3)">Error: ' + e.message + '</p>';
+  }
+}
+
+// ══ BÚSQUEDA ══════════════════════════════════════════════════
+function filterCmpSearch() {
+  var s   = (document.getElementById('cmpSearch').value || '').toLowerCase();
+  var cat = document.getElementById('cmpCatFilter').value;
+  var filtered = aircraftDB.filter(function(p) {
+    var ms = !s || p.name.toLowerCase().includes(s) || p.country.toLowerCase().includes(s) || p.type.toLowerCase().includes(s);
+    var mc = cat === 'all' || p.type === cat;
+    return ms && mc;
+  });
+  renderSearchGrid(filtered);
+}
+
+function renderSearchGrid(planes) {
+  var grid = document.getElementById('cmpSearchGrid');
+  if (!planes.length) { grid.innerHTML = '<p style="color:var(--text-3);font-size:.8rem">Sin resultados</p>'; return; }
+  grid.innerHTML = planes.map(function(p) {
+    var sel = cmpList.includes(p.id);
+    var dis = !sel && cmpList.length >= 3;
+    return '<button class="cmp-pick-btn ' + (sel ? 'selected' : '') + (dis ? ' disabled' : '') + '" ' +
+      'onclick="' + (dis ? '' : 'toggleCmpPick(\'' + p.id + '\')') + '" ' +
+      'id="pick-' + p.id + '">' +
+      '<img src="' + p.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-pick-img">' +
+      '<span class="cmp-pick-name header-font">' + p.name + '</span>' +
+      '<span class="cmp-pick-meta mono">' + p.country + ' · ' + p.year + '</span>' +
+      '<span class="cmp-pick-type">' + p.type + '</span>' +
+      (sel ? '<span class="cmp-pick-check"><i class="fas fa-check"></i></span>' : '') +
+    '</button>';
+  }).join('');
+}
+
+function toggleCmpPick(id) {
+  if (cmpList.includes(id)) {
+    cmpList = cmpList.filter(function(x) { return x !== id; });
+  } else {
+    if (cmpList.length >= 3) return;
+    cmpList.push(id);
+  }
+  renderActiveSlots();
+  filterCmpSearch();
+  updateCmpGoBtn();
+  // Si ya hay 2 o más, actualizar resultado
+  if (cmpList.length >= 2) runComparison();
+  else document.getElementById('cmpResult').style.display = 'none';
+}
+
+function renderActiveSlots() {
+  var container = document.getElementById('cmpActiveSlots');
+  if (!cmpList.length) { container.innerHTML = ''; return; }
+  container.innerHTML = cmpList.map(function(id, i) {
+    var p = aircraftDB.find(function(x) { return x.id === id; });
+    return '<div class="cmp-slot-active" style="border-color:' + CMP_COLORS[i] + '">' +
+      '<img src="' + p.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-slot-img">' +
+      '<div class="cmp-slot-info">' +
+        '<span class="cmp-slot-name header-font" style="color:' + CMP_COLORS[i] + '">' + p.name + '</span>' +
+        '<span class="cmp-slot-meta mono">' + p.country + ' · ' + p.year + '</span>' +
+      '</div>' +
+      '<button class="cmp-slot-remove" onclick="toggleCmpPick(\'' + id + '\')"><i class="fas fa-times"></i></button>' +
+    '</div>';
+  }).join('');
+}
+
+function updateCmpGoBtn() {
+  var btn  = document.getElementById('cmpGoBtn');
+  var hint = document.getElementById('cmpHint');
+  btn.disabled = cmpList.length < 2;
+  hint.textContent = cmpList.length < 2
+    ? 'Selecciona ' + (2 - cmpList.length) + ' aeronave' + (2 - cmpList.length > 1 ? 's más' : ' más')
+    : (3 - cmpList.length) > 0 ? 'Puedes añadir ' + (3 - cmpList.length) + ' más' : 'Máximo alcanzado (3)';
+}
+
+function clearCmpSelection() {
+  cmpList = [];
+  renderActiveSlots();
+  filterCmpSearch();
+  updateCmpGoBtn();
+  document.getElementById('cmpResult').style.display = 'none';
+}
+
+// ══ EJECUTAR COMPARACIÓN ═════════════════════════════════════
+function runComparison() {
+  if (cmpList.length < 2) return;
+  cmpPlanes = cmpList.map(function(id) { return aircraftDB.find(function(p) { return p.id === id; }); });
+  updateCmpGoBtn();
+  buildResultHeader();
+  buildTablePanel();
+  buildAvionicsPanel();
+  buildProductionPanel();
+  document.getElementById('cmpResult').style.display = 'block';
+  switchTab('table');
+  document.getElementById('cmpResult').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ══ CABECERA DEL RESULTADO ════════════════════════════════════
+function buildResultHeader() {
+  var cols = cmpPlanes.map(function(p, i) {
+    return '<div class="cmp-rh-col">' +
+      '<div class="cmp-rh-img-wrap" style="border-color:' + CMP_COLORS[i] + '">' +
+        '<img src="' + p.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-rh-img">' +
+      '</div>' +
+      '<p class="cmp-rh-name header-font" style="color:' + CMP_COLORS[i] + '">' + p.name + '</p>' +
+      '<p class="cmp-rh-meta mono">' + p.country + ' · ' + p.year + '</p>' +
+      '<div class="cmp-rh-badges">' +
+        '<span class="cmp-type-badge" style="background:' + CMP_COLORS[i] + '">' + p.type + '</span>' +
+        genBadgeHTML(p) +
+      '</div>' +
+    '</div>';
+  }).join('');
+  document.getElementById('cmpResultHeader').innerHTML =
+    '<div class="cmp-rh-grid" style="grid-template-columns:repeat(' + cmpPlanes.length + ',1fr)">' + cols + '</div>';
+}
+
+// ══ PANEL: TABLA COMPLETA ═════════════════════════════════════
+function buildTablePanel() {
+  var planes  = cmpPlanes;
+  var N       = planes.length;
+
+  // Secciones de la tabla
+  var sections = [
+    {
+      title: 'Rendimiento',
+      rows: [
+        { label:'Velocidad máxima', key:'speed',   fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' km/h — Mach ' + (v/1234.8).toFixed(2) : '—'; }, cmp:true },
+        { label:'Radio de combate', key:'combat_radius', fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' km' : '—'; }, cmp:true },
+        { label:'Alcance operativo', key:'range',  fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' km' : '—'; }, cmp:true },
+        { label:'Techo de servicio', key:'ceiling', fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' m' : '—'; }, cmp:true },
+        { label:'Empuje/Peso',       key:'thrust_to_weight', fmt: function(v) { return v ? v.toFixed(2) : '—'; }, cmp:true },
+        { label:'Carga alar',        key:'wing_loading', fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' kg/m²' : '—'; }, cmp:true },
+      ]
+    },
+    {
+      title: 'Planta motriz',
+      rows: [
+        { label:'Motor',           key:'engine',       fmt: function(v) { return v || '—'; } },
+        { label:'Empuje total',    key:'thrust_kn',    fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' kN' : '—'; }, cmp:true },
+        { label:'Combustible',     key:'fuel_capacity',fmt: function(v) { return v ? v.toLocaleString('es-ES') + ' L' : '—'; }, cmp:true },
+      ]
+    },
+    {
+      title: 'Dimensiones',
+      rows: [
+        { label:'Envergadura',  key:'wing_span',  fmt: function(v) { return v ? v.toFixed(2) + ' m' : '—'; } },
+        { label:'Longitud',     key:'length',     fmt: function(v) { return v ? v.toFixed(2) + ' m' : '—'; } },
+        { label:'Sup. alar',    key:'wing_area',  fmt: function(v) { return v ? v.toFixed(1) + ' m²' : '—'; } },
+        { label:'MTOW',         key:'mtow',       fmt: function(v) { return v ? (v/1000).toFixed(1) + ' T' : '—'; }, cmp:true },
+        { label:'Tripulación',  key:'crew',       fmt: function(v) { return v === 0 ? 'UAV' : String(v); } },
+      ]
+    },
+    {
+      title: 'Armamento',
+      rows: [
+        { label:'Cañón',           key:'armament', fmt: function(v) { return v && v.gun ? v.gun : '—'; } },
+        { label:'Puntos de carga', key:'armament', fmt: function(v) { return v && v.hardpoints ? String(v.hardpoints) : '—'; }, cmp:true },
+        { label:'Misiles',         key:'armament', fmt: function(v) { return v && v.missiles && v.missiles.length ? v.missiles.join(' · ') : '—'; } },
+      ]
+    },
+  ];
+
+  var thead = '<tr><th style="width:180px">Parámetro</th>' +
+    planes.map(function(p, i) { return '<th style="color:' + CMP_COLORS[i] + '">' + p.name + '</th>'; }).join('') +
+  '</tr>';
+
+  var tbody = sections.map(function(sec) {
+    var sectionRow = '<tr class="cmp-section-row"><td colspan="' + (N+1) + '">' + sec.title + '</td></tr>';
+    var dataRows = sec.rows.map(function(row) {
+      var vals = planes.map(function(p) { return p[row.key]; });
+      var maxV = null;
+      if (row.cmp) {
+        var nums = vals.map(function(v) {
+          if (row.key === 'armament') return typeof v === 'object' && v ? v.hardpoints : 0;
+          return typeof v === 'number' ? v : 0;
+        });
+        maxV = Math.max.apply(null, nums);
+      }
+      var cells = planes.map(function(p, i) {
+        var raw  = p[row.key];
+        var disp = row.fmt(raw);
+        var num  = row.cmp ? (row.key === 'armament' ? (raw && raw.hardpoints ? raw.hardpoints : 0) : (typeof raw === 'number' ? raw : 0)) : 0;
+        var lead = row.cmp && num === maxV && planes.filter(function(x) {
+          var xr = x[row.key];
+          return (row.key === 'armament' ? (xr && xr.hardpoints ? xr.hardpoints : 0) : (typeof xr === 'number' ? xr : 0)) === maxV;
+        }).length === 1;
+        return '<td class="cmp-stat-cell' + (lead ? ' cmp-lead-cell' : '') + '">' +
+          '<span class="mono" style="font-size:.78rem">' + disp + '</span>' +
+          (lead ? ' <span class="cmp-leader">▲</span>' : '') +
+        '</td>';
+      }).join('');
+      return '<tr class="cmp-row"><td class="cmp-param">' + row.label + '</td>' + cells + '</tr>';
+    }).join('');
+    return sectionRow + dataRows;
+  }).join('');
+
+  document.getElementById('tabTablePanel').innerHTML =
+    '<div class="cmp-table-wrap"><table class="cmp-table"><thead>' + thead + '</thead><tbody>' + tbody + '</tbody></table></div>';
+}
+
+// ══ PANEL: AVIÓNICA ═══════════════════════════════════════════
+function buildAvionicsPanel() {
+  var planes = cmpPlanes;
+  var radarBadge = function(t) {
+    var m = { AESA:'<span class="radar-badge aesa">AESA</span>', PESA:'<span class="radar-badge pesa">PESA</span>', mechanical:'<span class="radar-badge mech">Mecánico</span>', none:'<span class="radar-badge none">Sin radar</span>' };
+    return m[t] || '';
+  };
+  var yesNo = function(v) { return v ? '<span style="color:#4ade80">✔ Sí</span>' : '<span style="color:#f87171">✘ No</span>'; };
+  var stBadge = function(s) {
+    var m = { none:'—', low:'<span class="stealth-badge low">Bajo</span>', medium:'<span class="stealth-badge medium">Medio</span>', high:'<span class="stealth-badge high">✦ Alto</span>' };
+    return m[s] || s || '—';
+  };
+
+  var header = '<tr><th>Característica</th>' + planes.map(function(p,i){ return '<th style="color:' + CMP_COLORS[i] + '">' + p.name + '</th>'; }).join('') + '</tr>';
+  var rows = [
+    ['Tipo de radar', function(p){ return radarBadge(p.radar_type); }],
+    ['Radar', function(p){ return p.radar || '—'; }],
+    ['IRST', function(p){ return yesNo(p.irst); }],
+    ['Stealth', function(p){ return stBadge(p.stealth); }],
+    ['Guerra electrónica', function(p){ return p.ew_system && p.ew_system !== 'Ninguno' ? p.ew_system : '—'; }],
+    ['Enlace de datos', function(p){ return p.data_link || '—'; }],
+    ['Sistema de casco HMD', function(p){ return p.helmet_system || '—'; }],
+    ['Portaaviones', function(p){ return yesNo(p.carrier_capable); }],
+    ['VTOL', function(p){ return yesNo(p.vtol); }],
+    ['STOL', function(p){ return yesNo(p.stol); }],
+  ].map(function(r) {
+    return '<tr class="cmp-row"><td class="cmp-param">' + r[0] + '</td>' +
+      planes.map(function(p) { return '<td class="cmp-stat-cell" style="font-size:.75rem">' + r[1](p) + '</td>'; }).join('') +
+    '</tr>';
+  }).join('');
+
+  document.getElementById('tabAvionicsPanel').innerHTML =
+    '<div class="cmp-table-wrap"><table class="cmp-table"><thead>' + header + '</thead><tbody>' + rows + '</tbody></table></div>';
+}
+
+// ══ PANEL: PRODUCCIÓN ═════════════════════════════════════════
+function buildProductionPanel() {
+  var planes = cmpPlanes;
+  var header = '<tr><th>Dato</th>' + planes.map(function(p,i){ return '<th style="color:' + CMP_COLORS[i] + '">' + p.name + '</th>'; }).join('') + '</tr>';
+  var rows = [
+    ['Fabricante', function(p){ return p.manufacturer || '—'; }],
+    ['Estado',     function(p){
+      var m = { active:'<span style="color:#4ade80">Activo</span>', retired:'<span style="color:#94a3b8">Retirado</span>', prototype:'<span style="color:#f59e0b">Prototipo</span>', limited:'<span style="color:#60a5fa">Limitado</span>' };
+      return m[p.status] || p.status || '—';
+    }],
+    ['Unidades fabricadas', function(p){ return p.units_built ? p.units_built.toLocaleString('es-ES') : '—'; }],
+    ['Coste unitario',      function(p){ return p.unit_cost_m ? p.unit_cost_m + ' M$' : '—'; }],
+    ['Año de servicio',     function(p){ return String(p.year); }],
+    ['Año de retiro',       function(p){ return p.retired_year ? String(p.retired_year) : '—'; }],
+    ['Generación',          function(p){ return p.generation ? genBadgeHTML(p) : '—'; }],
+    ['Operadores',          function(p){ return p.operators ? p.operators.slice(0,3).join(', ') + (p.operators.length > 3 ? '…' : '') : '—'; }],
+  ].map(function(r) {
+    return '<tr class="cmp-row"><td class="cmp-param">' + r[0] + '</td>' +
+      planes.map(function(p) { return '<td class="cmp-stat-cell" style="font-size:.75rem">' + r[1](p) + '</td>'; }).join('') +
+    '</tr>';
+  }).join('');
+
+  document.getElementById('tabProductionPanel').innerHTML =
+    '<div class="cmp-table-wrap"><table class="cmp-table"><thead>' + header + '</thead><tbody>' + rows + '</tbody></table></div>';
+}
+
+// ══ RADAR CHART ═══════════════════════════════════════════════
+function buildRadarPanel() {
+  var planes = cmpPlanes;
+  var AXES = [
+    { key:'speed',            label:'Velocidad',     max:8000    },
+    { key:'range',            label:'Alcance',       max:15000   },
+    { key:'ceiling',          label:'Techo',         max:25000   },
+    { key:'mtow',             label:'Masa',          max:280000  },
+    { key:'thrust_to_weight', label:'Emp/Peso',      max:2.0     },
+    { key:'combat_radius',    label:'Radio combate', max:6500    },
+    { key:'wing_loading',     label:'Carga alar',    max:1200    },
+    { key:'thrust_kn',        label:'Empuje kN',     max:1000    },
+  ];
+
+  var datasets = planes.map(function(p, i) {
+    return {
+      label: p.name,
+      data: AXES.map(function(ax) {
+        var v = p[ax.key];
+        return v ? Math.round((v / ax.max) * 100) : 0;
+      }),
+      backgroundColor: CMP_COLORS[i] + '26',
+      borderColor: CMP_COLORS[i],
+      pointBackgroundColor: CMP_COLORS[i],
+      pointBorderColor: '#0f172a',
+      borderWidth: 2,
+      pointRadius: 4,
+    };
+  });
+
+  if (radarInst) { radarInst.destroy(); radarInst = null; }
+  var ctx = document.getElementById('radarCanvas').getContext('2d');
+  radarInst = new Chart(ctx, {
+    type: 'radar',
+    data: { labels: AXES.map(function(a) { return a.label; }), datasets: datasets },
+    options: {
+      responsive: true,
+      animation: { duration: 600 },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { color:'#94a3b8', font:{ family:'JetBrains Mono', size:11, weight:'bold' }, padding:16, boxWidth:12 }
+        },
+        tooltip: {
+          backgroundColor:'#0f172a', borderColor:'#334155', borderWidth:1,
+          callbacks: {
+            label: function(ctx) {
+              var ax  = AXES[ctx.dataIndex];
+              var raw = planes[ctx.datasetIndex][ax.key];
+              if (!raw) return ' ' + ctx.dataset.label + ': —';
+              var fmt = ax.key === 'mtow' ? (raw/1000).toFixed(1) + ' T' : raw.toLocaleString('es-ES');
+              return ' ' + ctx.dataset.label + ': ' + fmt;
+            }
+          }
+        }
+      },
+      scales: {
+        r: {
+          min:0, max:100,
+          ticks: { display:false },
+          grid:        { color:'rgba(51,65,85,.6)' },
+          angleLines:  { color:'rgba(51,65,85,.6)' },
+          pointLabels: { color:'#94a3b8', font:{ family:'Orbitron', size:9, weight:'700' } }
+        }
+      }
+    }
+  });
+
+  // Análisis de dominio
+  var maxVals = {};
+  AXES.forEach(function(ax) {
+    maxVals[ax.key] = Math.max.apply(null, planes.map(function(p) { return p[ax.key] || 0; }));
+  });
+  var domHtml = planes.map(function(p, i) {
+    var led = AXES.filter(function(ax) {
+      return p[ax.key] && p[ax.key] === maxVals[ax.key] &&
+        planes.filter(function(x) { return x[ax.key] === maxVals[ax.key]; }).length === 1;
+    });
+    return '<div class="cmp-domain-card" style="border-color:' + CMP_COLORS[i] + '">' +
+      '<p class="cmp-domain-name header-font" style="color:' + CMP_COLORS[i] + '">' + p.name + '</p>' +
+      '<p class="cmp-domain-meta mono">' + p.country + ' · ' + p.year + '</p>' +
+      (led.length
+        ? '<p class="cmp-domain-lead">▲ Líder en: ' + led.map(function(ax){return ax.label;}).join(', ') + '</p>'
+        : '<p class="cmp-domain-none">Sin liderazgo absoluto</p>') +
+    '</div>';
+  }).join('');
+  document.getElementById('cmpDomainList').innerHTML =
+    '<p class="cmp-domain-title mono">// Análisis de dominio</p>' + domHtml +
+    '<p class="cmp-radar-note">* Valores normalizados al máximo global de cada eje.</p>';
+}
+
+// ══ CAMBIO DE TAB ═════════════════════════════════════════════
+function switchTab(tab) {
+  var tabs   = ['table','radar','avionics','production'];
+  var panels = { table:'tabTablePanel', radar:'tabRadarPanel', avionics:'tabAvionicsPanel', production:'tabProductionPanel' };
+  tabs.forEach(function(t) {
+    var btn = document.getElementById('tab' + t.charAt(0).toUpperCase() + t.slice(1));
+    var panel = document.getElementById(panels[t]);
+    if (btn)   btn.classList.toggle('active', t === tab);
+    if (panel) panel.classList.toggle('hidden', t !== tab);
+  });
+  if (tab === 'radar') buildRadarPanel();
+}
+
+document.addEventListener('DOMContentLoaded', initComparePage);
+</script>
+
+<style>
+/* Estilos específicos del comparador independiente */
+.cmp-select-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card);
+}
+.cmp-search-row {
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin-bottom: 1.25rem;
+}
+.cmp-active-slots {
+  display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 1rem; min-height: 0;
+}
+.cmp-slot-active {
+  display: flex; align-items: center; gap: .6rem;
+  border: 2px solid transparent; border-radius: .75rem;
+  background: var(--bg-stat); padding: .4rem .75rem;
+  transition: border-color .2s;
+}
+.cmp-slot-img    { width: 40px; height: 28px; object-fit:cover; border-radius:.3rem; }
+.cmp-slot-info   { display:flex; flex-direction:column; gap:.1rem; }
+.cmp-slot-name   { font-size:.72rem; font-weight:900; font-style:italic; text-transform:uppercase; }
+.cmp-slot-meta   { font-size:.58rem; color:var(--text-3); }
+.cmp-slot-remove { background:none; border:none; color:var(--text-3); cursor:pointer; font-size:.8rem; padding:.1rem .3rem; transition:color .15s; }
+.cmp-slot-remove:hover { color:#ef4444; }
+
+.cmp-search-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: .6rem; max-height: 280px; overflow-y: auto;
+  padding: .25rem; margin-bottom: 1rem;
+}
+.cmp-pick-btn {
+  position:relative; display:flex; flex-direction:column; align-items:center; gap:.3rem;
+  border: 1.5px solid var(--border); border-radius: .75rem;
+  background: var(--bg-stat); padding: .5rem .4rem; cursor:pointer;
+  transition: border-color .2s, transform .15s;
+  text-align:center;
+}
+.cmp-pick-btn:hover  { border-color: var(--primary); transform: translateY(-2px); }
+.cmp-pick-btn.selected { border-color: #3b82f6; background: rgba(59,130,246,.08); }
+.cmp-pick-btn.disabled { opacity:.4; cursor:not-allowed; }
+.cmp-pick-img  { width:100%; height:55px; object-fit:cover; border-radius:.4rem; }
+.cmp-pick-name { font-size:.62rem; font-weight:900; font-style:italic; text-transform:uppercase; line-height:1.2; }
+.cmp-pick-meta { font-size:.55rem; color:var(--text-3); }
+.cmp-pick-type { font-size:.5rem; font-weight:700; text-transform:uppercase; color:var(--primary); }
+.cmp-pick-check {
+  position:absolute; top:.35rem; right:.35rem;
+  background:#3b82f6; color:#fff; border-radius:9999px;
+  width:16px; height:16px; display:flex; align-items:center; justify-content:center;
+  font-size:.55rem;
+}
+.cmp-action-row { display:flex; align-items:center; gap:.75rem; padding-top:.75rem; border-top:1px solid var(--border); }
+.cmp-go-btn { padding:.6rem 1.5rem; font-size:.7rem; }
+
+/* Resultado */
+.cmp-result-area { animation: fadeIn .3s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
+
+.cmp-rh-grid { display:grid; gap:1rem; margin-bottom:1.5rem; }
+.cmp-rh-col  { text-align:center; }
+.cmp-rh-img-wrap { border:2px solid transparent; border-radius:1rem; overflow:hidden; height:140px; margin-bottom:.5rem; }
+.cmp-rh-img  { width:100%; height:100%; object-fit:cover; }
+.cmp-rh-name { font-size:.95rem; font-weight:900; font-style:italic; text-transform:uppercase; margin-bottom:.2rem; }
+.cmp-rh-meta { font-size:.6rem; color:var(--text-3); margin-bottom:.4rem; }
+.cmp-rh-badges { display:flex; justify-content:center; gap:.3rem; flex-wrap:wrap; }
+
+.cmp-tab-panel { margin-top:1rem; }
+.cmp-section-row td {
+  background: var(--dark); color:#60a5fa;
+  font-family:var(--font-mono); font-size:.6rem; font-weight:900;
+  text-transform:uppercase; letter-spacing:.1em; padding:.5rem .75rem;
+}
+.cmp-lead-cell { background: rgba(59,130,246,.06); }
+.cmp-leader { color:#60a5fa; font-family:var(--font-mono); font-size:.6rem; font-weight:900; }
+.cmp-radar-note { font-size:.65rem; color:var(--text-3); margin-top:1rem; }
+</style>
+</body>
+</html>
