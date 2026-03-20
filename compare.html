@@ -154,7 +154,7 @@ function renderSearchGrid(planes) {
     return '<button class="cmp-pick-btn ' + (sel ? 'selected' : '') + (dis ? ' disabled' : '') + '" ' +
       'onclick="' + (dis ? '' : 'toggleCmpPick(\'' + p.id + '\')') + '" ' +
       'id="pick-' + p.id + '">' +
-      '<img src="' + p.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-pick-img">' +
+      '<img src=".\/public\/min\/' + p.img + '.webp" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-pick-img">' +
       '<span class="cmp-pick-name header-font">' + p.name + '</span>' +
       '<span class="cmp-pick-meta mono">' + p.country + ' · ' + p.year + '</span>' +
       '<span class="cmp-pick-type">' + p.type + '</span>' +
@@ -184,7 +184,7 @@ function renderActiveSlots() {
   container.innerHTML = cmpList.map(function(id, i) {
     var p = aircraftDB.find(function(x) { return x.id === id; });
     return '<div class="cmp-slot-active" style="border-color:' + CMP_COLORS[i] + '">' +
-      '<img src="' + p.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-slot-img">' +
+      '<img src=".\/public\/mid\/' + p.img + '.webp" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-slot-img">' +
       '<div class="cmp-slot-info">' +
         '<span class="cmp-slot-name header-font" style="color:' + CMP_COLORS[i] + '">' + p.name + '</span>' +
         '<span class="cmp-slot-meta mono">' + p.country + ' · ' + p.year + '</span>' +
@@ -230,7 +230,7 @@ function buildResultHeader() {
   var cols = cmpPlanes.map(function(p, i) {
     return '<div class="cmp-rh-col">' +
       '<div class="cmp-rh-img-wrap" style="border-color:' + CMP_COLORS[i] + '">' +
-        '<img src="' + p.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-rh-img">' +
+        '<img src=".\/public\/min\/' + p.img + '.webp" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="cmp-rh-img">' +
       '</div>' +
       '<p class="cmp-rh-name header-font" style="color:' + CMP_COLORS[i] + '">' + p.name + '</p>' +
       '<p class="cmp-rh-meta mono">' + p.country + ' · ' + p.year + '</p>' +

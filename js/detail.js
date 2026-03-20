@@ -262,7 +262,7 @@ function openDetail(id) {
     // Columna visual
     '<div class="detail-visual">' +
       '<div class="detail-img-glow"></div>' +
-      '<img src=".\/public\/' + plane.wiki + '.webp" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="detail-img" alt="' + plane.name + '">' +
+      '<img src=".\/public\/max\/' + plane.img + '.webp" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="detail-img" alt="' + plane.name + '">' +
       '<div class="detail-img-stats">' +
         '<div class="img-stat"><span class="img-stat-label">Vel. máx.</span><span class="img-stat-val header-font">' + _n(plane.speed) + ' km/h</span></div>' +
         '<div class="img-stat"><span class="img-stat-label">Techo</span><span class="img-stat-val header-font">' + _n(plane.ceiling / 1000, 1, 'km') + '</span></div>' +

@@ -26,13 +26,17 @@ async function loadData() {
 function goHome()    { location.href = './index.html'; }
 function goMach()    { location.href = './mach.html'; }
 function goTheater() { location.href = './theater.html'; }
-function goFavs()    { location.href = './favorites.html'; }
+function goFavs() { location.href = './favorites.html'; }
+function goKills()   { location.href = './kills.html'; }
+function goFleets()  { location.href = './fleets.html'; }
 function goCompare() { location.href = './compare.html'; }
 
 /* ── Barra de navegación compartida ────────────────────────── */
 function buildNavBar(activePage) {
   const pages = [
-    { id:'home',     label:'Archivo',  icon:'fa-fighter-jet',   fn:'goHome()' },
+    { id: 'home', label: 'Archivo', icon: 'fa-fighter-jet', fn: 'goHome()' },
+    { id:'kills',    label:'Combate',  icon:'fa-crosshairs',    fn:'goKills()' },
+    { id:'fleets',   label:'Flotas',   icon:'fa-globe',         fn:'goFleets()' },
     { id:'theater',  label:'Teatro',   icon:'fa-crosshairs',    fn:'goTheater()' },
     { id:'compare',  label:'Comparar', icon:'fa-balance-scale', fn:'goCompare()' },
     { id:'favorites',label:'Favoritos',icon:'fa-star',          fn:'goFavs()' },
@@ -76,7 +80,7 @@ function buildAircraftCard(plane) {
   var genBadge  = typeof genBadgeHTML === 'function' ? genBadgeHTML(plane) : '';
   return '<article class="mini-card" id="mini-' + plane.id + '">' +
     '<div class="mini-img-wrap">' +
-      '<img src="' + plane.img + '" alt="' + plane.name + '" loading="lazy" onerror="this.src=\'' + FALLBACK_IMG + '\'">' +
+      '<img src=".\/public\/mid\/' + plane.img + '.webp" alt="' + plane.name + '" loading="lazy" onerror="this.src=\'' + FALLBACK_IMG + '\'">' +
       '<span class="mini-badge-type">' + plane.type + '</span>' +
       '<span class="mini-badge-year mono">' + plane.year + '</span>' +
     '</div>' +

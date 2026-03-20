@@ -13,8 +13,9 @@ function getFilteredPlanes() {
     const matchCat      = cat === 'all'  || p.type === cat;
     const matchFav      = !onlyFavs      || isFav(p.id);
     const matchTimeline = !timelineActive || (p.year >= timelineMin && p.year <= timelineMax);
-    const matchConflict = activeConflict === 'all' || (p.conflicts || []).includes(activeConflict);
-    return matchSearch && matchCat && matchFav && matchTimeline && matchConflict;
+    // La opcion de conflictos activos fue removida, ver en su pagina 
+    // const matchConflict = activeConflict === 'all' || (p.conflicts || []).includes(activeConflict);
+    return matchSearch && matchCat && matchFav && matchTimeline;
   });
 }
 

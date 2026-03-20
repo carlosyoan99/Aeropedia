@@ -83,7 +83,7 @@ function createCard(plane) {
     <div id="card-${plane.id}" class="card${isSelected ? ' selected-for-compare' : ''}">
       ${selectedBar}
       <div class="card-img-wrap">
-        <img src="./public/${plane.wiki}.webp" alt="${plane.name}" loading="lazy" onerror="this.src='${FALLBACK_IMG}'">
+        <img src=".\/public\/min\/${plane.img}.webp" alt="${plane.name}" loading="lazy" onerror="this.src='${FALLBACK_IMG}'">
         <span class="card-badge-type">${plane.type}</span>
       </div>
 
@@ -160,7 +160,7 @@ function renderRanking(planes) {
         <td class="rank-pos mono">${medal[i] || (i + 1)}</td>
         <td class="rank-plane">
           <div class="rank-thumb-wrap">
-            <img src="./public/${p.wiki}.webp" class="rank-thumb" alt="${p.name}" onerror="this.src='${FALLBACK_IMG}'">
+            <img src=".\/public\/min\/${p.img}.webp" class="rank-thumb" alt="${p.name}" onerror="this.src='${FALLBACK_IMG}'">
           </div>
           <div>
             <p class="rank-name header-font">${p.name}</p>
