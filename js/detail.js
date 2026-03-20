@@ -60,8 +60,8 @@ function armamentBlock(p) {
   const arm = p.armament;
   if (!arm || typeof arm !== 'object') return '<p class="spec-value mono">' + (p.arm || '—') + '</p>';
   const rows = [];
-  if (arm.gun)               rows.push('<div class="arm-row"><span class="arm-icon"><i class="fas fa-crosshairs"></i></span><span class="arm-label">Cañón</span><span class="arm-val mono">' + arm.gun + '</span></div>');
-  if (arm.hardpoints)        rows.push('<div class="arm-row"><span class="arm-icon"><i class="fas fa-layer-group"></i></span><span class="arm-label">Puntos de carga</span><span class="arm-val mono">' + arm.hardpoints + '</span></div>');
+  if (arm.gun) rows.push('<div class="arm-row"><span class="arm-icon"><i class="fas fa-crosshairs"></i></span><span class="arm-label">Cañón</span><span class="arm-val mono">' + arm.gun + '</span></div>');
+  if (arm.hardpoints) rows.push('<div class="arm-row"><span class="arm-icon"><i class="fas fa-layer-group"></i></span><span class="arm-label">Puntos de carga</span><span class="arm-val mono">' + arm.hardpoints + '</span></div>');
   if (arm.missiles && arm.missiles.length)
     rows.push('<div class="arm-row"><span class="arm-icon"><i class="fas fa-bolt"></i></span><span class="arm-label">Misiles</span><span class="arm-val mono">' + arm.missiles.join(' · ') + '</span></div>');
   if (arm.bombs && arm.bombs.length)
@@ -262,7 +262,7 @@ function openDetail(id) {
     // Columna visual
     '<div class="detail-visual">' +
       '<div class="detail-img-glow"></div>' +
-      '<img src="' + plane.img + '" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="detail-img" alt="' + plane.name + '">' +
+      '<img src=".\/public\/' + plane.wiki + '.webp" onerror="this.src=\'' + FALLBACK_IMG + '\'" class="detail-img" alt="' + plane.name + '">' +
       '<div class="detail-img-stats">' +
         '<div class="img-stat"><span class="img-stat-label">Vel. máx.</span><span class="img-stat-val header-font">' + _n(plane.speed) + ' km/h</span></div>' +
         '<div class="img-stat"><span class="img-stat-label">Techo</span><span class="img-stat-val header-font">' + _n(plane.ceiling / 1000, 1, 'km') + '</span></div>' +
