@@ -3,10 +3,11 @@
  */
 
 // ── SKELETON LOADING ──────────────────────────────────────────
-function showSkeletons(count = 6) {
+function showSkeletons(count) {
+  count = count || 6;
   const gallery = document.getElementById('gallery');
   if (!gallery) return;
-  gallery.innerHTML = Array.from({ length: count }).map(() => `
+  gallery.innerHTML = Array.from({ length: count }).map(function() { return `
     <div class="skeleton-card">
       <div class="skeleton sk-img"></div>
       <div class="skeleton-body">
@@ -20,13 +21,13 @@ function showSkeletons(count = 6) {
         <div class="skeleton sk-bar"></div>
         <div class="skeleton sk-btn"></div>
       </div>
-    </div>`).join('');
+    </div>`; }).join('');
 }
 
 // ── ESTADO VACÍO ──────────────────────────────────────────────
 function buildEmptyState() {
   const msg = onlyFavs
-    ? 'No tienes aeronaves guardadas con este filtro. Usa ★ en las tarjetas para guardarlas.'
+    ? 'No tienes aeronaves guardadas. Usa ★ en las tarjetas para guardarlas.'
     : 'No hay resultados. Ajusta la búsqueda o los filtros.';
   return `
     <div class="empty-state">
@@ -38,106 +39,89 @@ function buildEmptyState() {
       <i class="fas fa-satellite-dish empty-icon"></i>
       <p class="empty-title">// 0 AERONAVES ENCONTRADAS</p>
       <p class="empty-msg">${msg}</p>
-      <div class="hud-lines">
-        <div class="hud-scan-line" style="animation-delay:.9s"></div>
-        <div class="hud-scan-line" style="animation-delay:1.2s"></div>
-      </div>
     </div>`;
 }
 
-// ── CARD ──────────────────────────────────────────────────────
+// ── CARD (versión limpia) ─────────────────────────────────────
 function createCard(plane) {
   const speedPct   = Math.min((plane.speed / 3600) * 100, 100);
   const rangePct   = Math.min((plane.range / 15000) * 100, 100);
+  const ceilingPct = Math.min((plane.ceiling / 25000) * 100, 100);
   const isSelected = compareList.includes(plane.id);
   const favActive  = isFav(plane.id);
 
-  // Badges extra de la DB enriquecida
-  const radarMap = { AESA: 'aesa', PESA: 'pesa', mechanical: 'mech', none: 'none' };
-  const radarBadge = plane.radar_type && plane.radar_type !== 'none'
-    ? `<span class="card-badge-radar ${radarMap[plane.radar_type] || ''}">${plane.radar_type}</span>` : '';
+  // ── Etiquetas: solo las 4 indicadas ──────────────────────────
+  // 1. País
+  const countryTag = `<span class="card-tag tag-country">${plane.country}</span>`;
 
-  const stealthMap = { high: '◈ Stealth', medium: '◆ Low-obs', low: '◇ Semi-obs' };
-  const stealthBadge = stealthMap[plane.stealth]
-    ? `<span class="card-badge-stealth ${plane.stealth}">${stealthMap[plane.stealth]}</span>` : '';
+  // 2. Rol principal (primer rol del array, o tipo si no hay roles)
+  const roleLabel = (plane.roles && plane.roles.length)
+    ? plane.roles[0]
+    : plane.type;
+  const roleTag = `<span class="card-tag tag-role">${roleLabel}</span>`;
 
-  const statusMap = { active: 'Activo', retired: 'Retirado', prototype: 'Prototipo', limited: 'Limitado' };
-  const statusBadge = plane.status
-    ? `<span class="card-badge-status ${plane.status}">${statusMap[plane.status] || plane.status}</span>` : '';
+  // 3. Estado activo (solo si está activo o es prototipo)
+  const statusMap = { active: 'Activo', prototype: 'Prototipo', limited: 'Limitado', retired: null };
+  const statusLabel = statusMap[plane.status] || null;
+  const statusTag = statusLabel
+    ? `<span class="card-tag tag-status ${plane.status}">${statusLabel}</span>`
+    : '';
 
-  // Iconos de capacidad rápidos
-  const caps = [];
-  if (plane.carrier_capable) caps.push('<i class="fas fa-ship" title="Portaaviones"></i>');
-  if (plane.vtol)            caps.push('<i class="fas fa-arrows-alt-v" title="VTOL"></i>');
-  else if (plane.stol)       caps.push('<i class="fas fa-compress-alt" title="STOL"></i>');
-  if (plane.irst)            caps.push('<i class="fas fa-eye" title="IRST"></i>');
-  if (plane.crew === 0)      caps.push('<i class="fas fa-robot" title="UAV"></i>');
-  const capsRow = caps.length ? `<div class="card-caps">${caps.join('')}</div>` : '';
+  // 4. Año
+  const yearTag = `<span class="card-tag tag-year mono">${plane.year}</span>`;
+
+  // 5. Generación — SOLO para cazas
+  const genTag = (plane.type === 'Caza' && plane.generation)
+    ? genBadgeHTML(plane)
+    : '';
+
+  // ── Barra de comparación seleccionada ────────────────────────
+  const selectedBar = isSelected
+    ? '<div class="card-selected-bar"></div>'
+    : '';
 
   return `
     <div id="card-${plane.id}" class="card${isSelected ? ' selected-for-compare' : ''}">
+      ${selectedBar}
       <div class="card-img-wrap">
         <img src="${plane.img}" alt="${plane.name}" loading="lazy"
              onerror="this.src='${FALLBACK_IMG}'">
         <span class="card-badge-type">${plane.type}</span>
-        <span class="card-badge-year mono">${plane.year}</span>
-        <span class="card-badge-mach mono">M ${(plane.speed / 1234.8).toFixed(1)}</span>
-        ${stealthBadge}
       </div>
 
       <div class="card-body">
-        <div class="card-header">
-          <h2 class="card-name header-font">${plane.name}</h2>
-          <div class="card-meta">
-            <span class="card-country mono">${plane.country}</span>
-            ${genBadgeHTML(plane)}
-            ${radarBadge}
-            ${statusBadge}
-          </div>
+        <h2 class="card-name header-font">${plane.name}</h2>
+
+        <div class="card-tags">
+          ${countryTag}${roleTag}${statusTag}${yearTag}${genTag}
         </div>
 
-        ${capsRow}
-
-        <div class="card-stats">
-          <div class="stat-badge">
-            <span class="stat-label">Techo Máx</span>
-            <span class="stat-value mono">${plane.ceiling.toLocaleString('es-ES')} m</span>
+        <div class="card-stats-clean">
+          <div class="stat-clean">
+            <span class="stat-clean-label">Velocidad</span>
+            <span class="stat-clean-value mono">${plane.speed.toLocaleString('es-ES')} km/h</span>
+            <div class="stat-bar-track"><div class="stat-bar-fill sp" style="width:${speedPct}%"></div></div>
           </div>
-          <div class="stat-badge">
-            <span class="stat-label">MTOW</span>
-            <span class="stat-value mono">${(plane.mtow / 1000).toFixed(1)} T</span>
+          <div class="stat-clean">
+            <span class="stat-clean-label">Techo</span>
+            <span class="stat-clean-value mono">${plane.ceiling.toLocaleString('es-ES')} m</span>
+            <div class="stat-bar-track"><div class="stat-bar-fill ce" style="width:${ceilingPct}%"></div></div>
           </div>
-          ${plane.thrust_to_weight ? `<div class="stat-badge">
-            <span class="stat-label">Emp/Peso</span>
-            <span class="stat-value mono${plane.thrust_to_weight >= 1 ? ' tw-positive' : ''}">${plane.thrust_to_weight.toFixed(2)}</span>
-          </div>` : ''}
-        </div>
-
-        <div class="card-bars">
-          <div class="bar-row">
-            <div class="bar-labels">
-              <span>Velocidad</span>
-              <span class="mono bar-val" style="color:var(--primary)">${plane.speed.toLocaleString('es-ES')} km/h</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:${speedPct}%;background:var(--primary)"></div></div>
-          </div>
-          <div class="bar-row">
-            <div class="bar-labels">
-              <span>Alcance</span>
-              <span class="mono bar-val" style="color:#8b5cf6">${plane.range.toLocaleString('es-ES')} km</span>
-            </div>
-            <div class="bar-track"><div class="bar-fill" style="width:${rangePct}%;background:#8b5cf6"></div></div>
+          <div class="stat-clean">
+            <span class="stat-clean-label">Alcance</span>
+            <span class="stat-clean-value mono">${plane.range.toLocaleString('es-ES')} km</span>
+            <div class="stat-bar-track"><div class="stat-bar-fill ra" style="width:${rangePct}%"></div></div>
           </div>
         </div>
 
         <div class="card-actions">
           <button class="btn-detail" onclick="openDetail('${plane.id}')">
-            <i class="fas fa-file-invoice"></i> Ficha técnica
+            <i class="fas fa-file-invoice"></i> Ficha
           </button>
           <button id="favBtn-${plane.id}"
                   class="btn-icon fav-btn${favActive ? ' active' : ''}"
                   onclick="toggleFav('${plane.id}')"
-                  title="${favActive ? 'Quitar de favoritos' : 'Añadir a favoritos'}">
+                  title="${favActive ? 'Quitar de favoritos' : 'Guardar en favoritos'}">
             <i class="fas fa-star"></i>
           </button>
           <button id="cmpBtn-${plane.id}"
@@ -162,15 +146,13 @@ function renderGallery(planes) {
 
 // ── RANKING ───────────────────────────────────────────────────
 function renderRanking(planes) {
-  const sorted  = [...planes].sort((a, b) =>
+  const sorted = [...planes].sort((a, b) =>
     sortAsc ? a[sortStat] - b[sortStat] : b[sortStat] - a[sortStat]
   );
-  const maxVal  = sorted.length ? Math.max(...sorted.map(p => p[sortStat])) : 1;
-  const meta    = STAT_META[sortStat];
-
-  const COLORS  = { speed:'#3b82f6', range:'#8b5cf6', ceiling:'#06b6d4', mtow:'#f59e0b', year:'#10b981' };
-  const color   = COLORS[sortStat] || '#3b82f6';
-  const medal   = ['🥇','🥈','🥉'];
+  const maxVal = sorted.length ? Math.max(...sorted.map(p => p[sortStat])) : 1;
+  const COLORS = { speed:'#3b82f6', range:'#8b5cf6', ceiling:'#06b6d4', mtow:'#f59e0b', year:'#10b981' };
+  const color  = COLORS[sortStat] || '#3b82f6';
+  const medal  = ['🥇','🥈','🥉'];
 
   const rows = sorted.map((p, i) => {
     const pct = (p[sortStat] / maxVal) * 100;
@@ -205,7 +187,6 @@ function renderRanking(planes) {
   document.getElementById('rankingBody').innerHTML =
     rows || `<tr><td colspan="8" class="rank-empty">Sin resultados</td></tr>`;
 
-  // Actualizar indicadores de ordenación
   document.querySelectorAll('.sort-th').forEach(th => {
     const active = th.dataset.col === sortStat;
     th.classList.toggle('sorted', active);
@@ -218,18 +199,15 @@ function renderRanking(planes) {
 function setView(view) {
   currentView = view;
   const isGallery = view === 'gallery';
-
   document.getElementById('galleryView')?.classList.toggle('hidden', !isGallery);
   document.getElementById('rankingView')?.classList.toggle('hidden',  isGallery);
   document.getElementById('viewGalleryBtn')?.classList.toggle('active',  isGallery);
   document.getElementById('viewRankingBtn')?.classList.toggle('active', !isGallery);
-
   renderAll();
 }
 
-// ── LISTENERS RANKING ─────────────────────────────────────────
+// ── LISTENERS ────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  // Pills de stat
   document.querySelectorAll('.rank-stat-pill').forEach(btn => {
     btn.addEventListener('click', () => {
       sortAsc  = btn.dataset.stat === sortStat ? !sortAsc : false;
@@ -240,8 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
       renderAll();
     });
   });
-
-  // Cabeceras de columna
   document.querySelectorAll('.sort-th').forEach(th => {
     th.addEventListener('click', () => {
       sortAsc  = th.dataset.col === sortStat ? !sortAsc : false;

@@ -429,7 +429,6 @@ kbd {
   opacity: 0;
   cursor: pointer;
   -webkit-appearance: none;
-  appearance: none;
 }
 .timeline-thumb {
   position: absolute;
@@ -510,7 +509,6 @@ kbd {
 .mach-range-wrap { margin-top: .75rem; }
 .mach-range {
   -webkit-appearance: none;
-  appearance: none;
   width: 100%;
   height: 4px;
   background: #334155;
@@ -694,9 +692,9 @@ kbd {
 .stat-value { font-size: .7rem; font-weight: 900; }
 
 .card-bars { display: flex; flex-direction: column; gap: .6rem; margin-bottom: 1rem; }
-
+.bar-row   {}
 .bar-labels { display: flex; justify-content: space-between; font-size: .55rem; font-weight: 900; text-transform: uppercase; margin-bottom: .25rem; }
-
+.bar-val    {}
 .bar-track  { height: 4px; background: var(--border); border-radius: 9999px; overflow: hidden; }
 .bar-fill   { height: 100%; border-radius: 9999px; transition: width .5s ease; }
 
@@ -879,6 +877,7 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
 .rank-name       { font-size: .8rem; font-weight: 900; text-transform: uppercase; line-height: 1; }
 .rank-sub        { font-size: .6rem; color: var(--text-3); margin-top: .1rem; }
 
+.rank-stat-cell  {}
 .rank-stat-val   { font-weight: 700; font-size: .85rem; display: block; margin-bottom: .25rem; }
 .rank-bar-track  { height: 4px; background: var(--border); border-radius: 9999px; overflow: hidden; width: 8rem; }
 .rank-bar-fill   { height: 100%; border-radius: 9999px; }
@@ -1132,7 +1131,7 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
   gap: 1rem 2rem;
 }
 @media (max-width: 480px) { .detail-specs { grid-template-columns: 1fr; } }
-
+.spec-item   {}
 .spec-label  { display: block; font-family: var(--font-mono); font-size: .55rem; font-weight: 700; text-transform: uppercase; color: #60a5fa; margin-bottom: .2rem; }
 .spec-value  { font-size: .85rem; color: #e2e8f0; }
 
@@ -1254,6 +1253,7 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
 }
 .cmp-tab.active { background: #1e293b; color: #fff; border-color: var(--primary); }
 
+.cmp-panel { }
 .cmp-panel.hidden { display: none; }
 
 /* Tabla de comparación */
@@ -1322,7 +1322,7 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
 .cf-flag      { font-size: 1.1rem; }
 .cf-years     { font-size: .55rem; font-weight: 700; color: #64748b; }
 .cf-label     { font-size: .65rem; font-weight: 900; text-transform: uppercase; line-height: 1.2; color: var(--cf-color, #fff); margin-bottom: .35rem; }
-.cf-desc      { font-size: .6rem; color: #64748b; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.cf-desc      { font-size: .6rem; color: #64748b; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .cf-count     { display: flex; align-items: baseline; gap: .25rem; margin-top: .5rem; }
 .cf-count-num { font-size: .8rem; font-weight: 900; color: var(--cf-color, #fff); }
 .cf-count-txt { font-size: .6rem; color: #64748b; }
@@ -1580,6 +1580,7 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
   font-size: .55rem; padding: 2px 7px; border-radius: 9999px;
 }
 .mini-body { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: .6rem; flex: 1; }
+.mini-header {}
 .mini-name {
   font-size: 1.05rem; font-weight: 900;
   font-style: italic; text-transform: uppercase;
@@ -2024,4 +2025,93 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
 .card-meta {
   display: flex; align-items: center;
   gap: .3rem; flex-wrap: wrap; margin-top: .15rem;
+}
+
+/* ════════════════════════════════════════════════════════════
+   CARD v3 — diseño limpio
+   ════════════════════════════════════════════════════════════ */
+
+/* Tags de la card */
+.card-tags {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  flex-wrap: wrap;
+  margin: .45rem 0 .65rem;
+}
+.card-tag {
+  font-family: var(--font-mono);
+  font-size: .55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+.tag-country { background: var(--bg-stat); border: 1px solid var(--border); color: var(--text-2); }
+.tag-role    { background: rgba(37,99,235,.1); border: 1px solid rgba(37,99,235,.2); color: var(--primary); }
+.tag-year    { background: transparent; border: 1px solid var(--border); color: var(--text-3); }
+
+.tag-status.active    { background: rgba(74,222,128,.1);  border: 1px solid rgba(74,222,128,.3);  color: #4ade80; }
+.tag-status.prototype { background: rgba(245,158,11,.1);  border: 1px solid rgba(245,158,11,.3);  color: #f59e0b; }
+.tag-status.limited   { background: rgba(96,165,250,.1);  border: 1px solid rgba(96,165,250,.3);  color: #60a5fa; }
+
+/* Stats limpios con minibar */
+.card-stats-clean {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin-bottom: .75rem;
+}
+.stat-clean {
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+  align-items: center;
+  gap: .4rem;
+}
+.stat-clean-label {
+  font-family: var(--font-mono);
+  font-size: .55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+.stat-clean-value {
+  font-size: .72rem;
+  font-weight: 700;
+  text-align: right;
+  white-space: nowrap;
+}
+.stat-bar-track {
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 9999px;
+  overflow: hidden;
+  grid-column: 1 / -1;
+  margin-top: -.2rem;
+}
+.stat-bar-fill    { height: 100%; border-radius: 9999px; }
+.stat-bar-fill.sp { background: var(--primary); }
+.stat-bar-fill.ce { background: #06b6d4; }
+.stat-bar-fill.ra { background: #8b5cf6; }
+
+/* Borde top coloreado cuando está seleccionado para comparar */
+.card-selected-bar {
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  flex-shrink: 0;
+}
+
+/* Nombre más prominente sin metadatos extra */
+.card-name {
+  font-size: 1.05rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: -.02em;
+  line-height: 1.1;
+  margin-bottom: 0;
 }

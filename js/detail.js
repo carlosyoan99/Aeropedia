@@ -99,7 +99,7 @@ function openDetail(id) {
     .filter(function(c) { return conflictsDB[c]; })
     .map(function(c) {
       var cf = conflictsDB[c];
-      return '<button class="conflict-chip" onclick="selectConflictAndClose(\'' + c + '\')" title="Filtrar: ' + cf.label + '" style="--chip-color:' + cf.color + '">' + cf.flag + ' ' + cf.label + '</button>';
+      return '<a class="conflict-chip" href="theater.html#' + c + '" title="Ver en Teatro: ' + cf.label + '" style="--chip-color:' + cf.color + ';text-decoration:none">' + cf.flag + ' ' + cf.label + '</a>';
     }).join('');
 
   var roleTags    = (plane.roles    || []).map(function(r) { return '<span class="role-tag">' + r + '</span>'; }).join('');
@@ -125,7 +125,7 @@ function openDetail(id) {
     relatedHtml = '<div class="related-aircraft"><span class="related-label mono">Ver también:</span>' +
       plane.related_aircraft.slice(0, 4).map(function(rid) {
         var rel = aircraftDB.find(function(p) { return p.id === rid; });
-        return rel ? '<button class="related-btn" onclick="closeDetail(); setTimeout(function(){openDetail(\'' + rid + '\')},300)">' + rel.name + '</button>' : '';
+        return rel ? '<button class="related-btn" onclick="openDetail(\'' + rid + '\')">' + rel.name + '</button>' : '';
       }).join('') + '</div>';
   }
 
@@ -230,14 +230,16 @@ function openDetail(id) {
       // Variantes
       (variantTags ? '<section class="detail-section"><h3 class="detail-section-title"><i class="fas fa-code-branch"></i> Variantes</h3><div class="variants-row">' + variantTags + '</div></section>' : '') +
 
-      // Teatro
+      // Teatro de Operaciones + Historial (sección unificada)
       '<section class="detail-section detail-theater">' +
-        '<h3 class="detail-section-title"><i class="fas fa-crosshairs"></i> Teatro de Operaciones <a href="theater.html" class="theater-ext-link" title="Página de Teatro"><i class="fas fa-external-link-alt"></i></a></h3>' +
-        (conflictChips ? '<div class="conflict-chips-wrap">' + conflictChips + '</div>' : '<p class="detail-section-sub no-conflicts">Sin despliegues registrados.</p>') +
+        '<h3 class="detail-section-title"><i class="fas fa-crosshairs"></i> Teatro de Operaciones</h3>' +
+        (conflictChips
+          ? '<div class="conflict-chips-wrap">' + conflictChips + '</div>'
+          : '<p class="detail-section-sub no-conflicts">Sin despliegues registrados.</p>') +
+        (plane.combat_history && plane.combat_history.length
+          ? '<div style="margin-top:1rem"><h4 class="detail-section-title" style="font-size:.75rem"><i class="fas fa-scroll"></i> Historial Operacional</h4><div class="combat-history">' + combatHistoryBlock(plane.combat_history) + '</div></div>'
+          : '') +
       '</section>' +
-
-      // Historial operacional
-      (plane.combat_history && plane.combat_history.length ? '<section class="detail-section"><h3 class="detail-section-title"><i class="fas fa-scroll"></i> Historial Operacional</h3><div class="combat-history">' + combatHistoryBlock(plane.combat_history) + '</div></section>' : '') +
 
       // RCS
       (plane.radar_cross_section ? '<section class="detail-section"><h3 class="detail-section-title"><i class="fas fa-broadcast-tower"></i> Firma de Radar (RCS)</h3><p class="spec-value mono rcs-value">' + plane.radar_cross_section + '</p></section>' : '') +
