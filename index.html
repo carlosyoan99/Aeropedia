@@ -36,16 +36,14 @@
           <option value="Experimental">Experimental</option>
         </select>
         <button id="favFilterBtn" class="header-btn" onclick="toggleFavFilter()" title="Favoritos (F)"><i class="fas fa-star"></i> Favoritos</button>
-        <a class="header-btn" href="favorites.html" title="Página de Favoritos" style="text-decoration:none"><i class="fas fa-external-link-alt"></i></a>
         <div class="view-toggle">
           <button id="viewGalleryBtn" class="view-btn active" onclick="setView('gallery')" title="Galería (G)"><i class="fas fa-th-large"></i></button>
           <button id="viewRankingBtn" class="view-btn" onclick="setView('ranking')" title="Ranking (R)"><i class="fas fa-list-ol"></i></button>
         </div>
-        <button id="theaterBtn" class="header-btn" onclick="toggleTheater()" title="Teatro de Operaciones (W)"><i class="fas fa-crosshairs"></i> Teatro</button>
-        <a class="header-btn" href="theater.html" title="Página de Teatro" style="text-decoration:none"><i class="fas fa-external-link-alt"></i></a>
         <button id="timelineBtn" class="header-btn" onclick="toggleTimeline()" title="Línea de tiempo (T)"><i class="fas fa-timeline"></i> Timeline</button>
-        <button class="header-btn dark-btn" onclick="toggleMachCalc()" title="Calculadora Mach (M)"><i class="fas fa-tachometer-alt"></i> Mach</button>
-        <a class="header-btn dark-btn" href="mach.html" title="Calculadora Mach completa" style="text-decoration:none"><i class="fas fa-external-link-alt"></i></a>
+        <a class="header-btn" href="theater.html" title="Teatro de Operaciones" style="text-decoration:none"><i class="fas fa-crosshairs"></i> Teatro</a>
+        <a class="header-btn" href="compare.html" title="Comparador de aeronaves" style="text-decoration:none"><i class="fas fa-balance-scale"></i> Comparar</a>
+        <a class="header-btn dark-btn" href="mach.html" title="Calculadora Mach" style="text-decoration:none"><i class="fas fa-tachometer-alt"></i> Mach</a>
         <div class="theme-toggle-wrap" title="Cambiar tema (D)">
           <i class="theme-icon fas fa-sun" style="color:#eab308"></i>
           <button id="themeToggle" onclick="toggleTheme()" aria-label="Cambiar tema"></button>
@@ -59,99 +57,13 @@
             <div class="shortcut-row"><span>Cerrar overlay</span><kbd>ESC</kbd></div>
             <div class="shortcut-row"><span>Vista galería</span><kbd>G</kbd></div>
             <div class="shortcut-row"><span>Vista ranking</span><kbd>R</kbd></div>
-            <div class="shortcut-row"><span>Favoritos</span><kbd>F</kbd></div>
-            <div class="shortcut-row"><span>Teatro de Ops.</span><kbd>W</kbd></div>
+            <div class="shortcut-row"><span>Favoritos (filtro)</span><kbd>F</kbd></div>
             <div class="shortcut-row"><span>Timeline</span><kbd>T</kbd></div>
-            <div class="shortcut-row"><span>Calculadora Mach</span><kbd>M</kbd></div>
             <div class="shortcut-row"><span>Cambiar tema</span><kbd>D</kbd></div>
             <div class="shortcut-row"><span>Instalar app</span><kbd>I</kbd></div>
             <div class="shortcut-row"><span>Compartir ficha</span><kbd>S</kbd></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Teatro de Operaciones -->
-    <div id="theaterSection" class="collapsible-panel">
-      <div class="panel-dark">
-        <div class="panel-head">
-          <div class="panel-head-left">
-            <i class="fas fa-crosshairs" style="color:#f87171"></i>
-            <span class="panel-title">Teatro de Operaciones</span>
-            <span id="theaterConflictLabel" class="panel-subtitle"></span>
-          </div>
-          <button id="theaterResetBtn" class="panel-reset-btn" onclick="resetConflictFilter()" disabled><i class="fas fa-times"></i> Reset</button>
-        </div>
-        <p class="theater-hint">Selecciona un conflicto para filtrar las aeronaves participantes. Desde la ficha técnica puedes clicar los chips para ir directamente.</p>
-        <div id="theaterGrid" class="theater-grid"></div>
-      </div>
-    </div>
-
-    <!-- Timeline -->
-    <div id="timelineSection" class="collapsible-panel">
-      <div class="panel-dark">
-        <div class="panel-head">
-          <div class="panel-head-left">
-            <i class="fas fa-timeline" style="color:#60a5fa"></i>
-            <span class="panel-title">Línea de Tiempo</span>
-            <span id="timelineRangeLabel" class="panel-subtitle">TODAS LAS ÉPOCAS</span>
-          </div>
-          <button id="timelineResetBtn" class="panel-reset-btn" onclick="resetTimeline()" disabled><i class="fas fa-times"></i> Reset</button>
-        </div>
-        <div id="decadeMarks" class="decade-marks"></div>
-        <div class="timeline-sliders">
-          <div class="timeline-track-bg"><div id="timelineTrackFill"></div></div>
-          <input type="range" id="timelineMin" class="timeline-input" min="1940" max="2024" step="10" value="1940" oninput="onTimelineChange()" style="z-index:3">
-          <input type="range" id="timelineMax" class="timeline-input" min="1940" max="2024" step="10" value="2024" oninput="onTimelineChange()" style="z-index:4">
-          <div id="thumbMin" class="timeline-thumb"></div>
-          <div id="thumbMax" class="timeline-thumb" style="transform:translate(-50%,-50%)"></div>
-        </div>
-        <div class="timeline-ticks"><span>1940</span><span>1960</span><span>1980</span><span>2000</span><span>2024</span></div>
-        <p class="timeline-hint">Arrastra los extremos para filtrar por rango de años de entrada en servicio</p>
-      </div>
-    </div>
-
-    <!-- Calculadora Mach -->
-    <div id="machCalc" class="panel-dark" style="border-radius:1rem;overflow:hidden">
-      <div class="panel-head" style="margin-bottom:.75rem">
-        <div class="panel-head-left">
-          <i class="fas fa-tachometer-alt" style="color:#60a5fa"></i>
-          <span class="panel-title">Calculadora de Número Mach</span>
-        </div>
-      </div>
-      <div class="mach-grid">
-        <div>
-          <label class="mach-label">Velocidad</label>
-          <div class="mach-input-row">
-            <input type="number" id="machSpeedInput" class="mach-input" placeholder="Valor..." oninput="calcMach()">
-            <select id="machUnit" class="mach-select" onchange="calcMach()">
-              <option value="kmh">KM/H</option>
-              <option value="knots">KNOTS</option>
-              <option value="mph">MPH</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <label class="mach-label">Altitud: <span id="altLabel">0 m (nivel del mar)</span></label>
-          <div class="mach-range-wrap">
-            <input type="range" id="altSlider" class="mach-range" min="0" max="20000" step="500" value="0" oninput="updateAltLabel();calcMach()">
-          </div>
-          <div class="timeline-ticks" style="margin-top:.3rem"><span>0</span><span>5k</span><span>10k</span><span>15k</span><span>20k m</span></div>
-        </div>
-        <div>
-          <label class="mach-label">Resultado</label>
-          <div class="mach-result-box">
-            <p id="machResult" class="mach-result header-font">—</p>
-            <p class="mach-result-label">Número Mach</p>
-            <p id="machCategory" class="mach-category">Introduce una velocidad</p>
-          </div>
-        </div>
-      </div>
-      <div class="mach-ref">
-        <div class="mach-ref-item"><p class="mach-ref-label">Nivel del mar</p><p class="mach-ref-val mono">1.234,8 km/h</p></div>
-        <div class="mach-ref-item"><p class="mach-ref-label">5.000 m</p><p class="mach-ref-val mono">1.183,0 km/h</p></div>
-        <div class="mach-ref-item"><p class="mach-ref-label">10.000 m</p><p class="mach-ref-val mono">1.084,6 km/h</p></div>
-        <div class="mach-ref-item"><p class="mach-ref-label">20.000 m</p><p class="mach-ref-val mono">1.062,5 km/h</p></div>
       </div>
     </div>
 
@@ -279,7 +191,6 @@
 <script src="js/detail.js"></script>
 <script src="js/theater.js"></script>
 <script src="js/compare.js"></script>
-<script src="js/mach.js"></script>
 <script src="js/timeline.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/shortcuts.js"></script>
