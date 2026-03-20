@@ -383,7 +383,7 @@ function showConflictDetail(idx) {
   const p = r.plane;
 
   // Marcar fila activa
-  document.querySelectorAll('#killsBody tr').forEach(function(tr, i) {
+  document.querySelectorAll('#killsBody tr').forEach((tr, i) => {
     tr.classList.toggle('active-row', i === idx);
   });
 
@@ -391,7 +391,7 @@ function showConflictDetail(idx) {
   document.getElementById('cdMeta').textContent  = p.country + ' · ' + p.year + ' · ' + p.type;
 
   // Conflictos detallados
-  const cfHtml = (r.conflicts || []).map(function(c) {
+  const cfHtml = (r.conflicts || []).map(c => {
     const cf = conflictsDB[c.id];
     const label = cf ? cf.flag + ' ' + cf.label + ' (' + cf.years + ')' : c.id;
     return '<div class="cd-conflict-entry">' +
@@ -416,7 +416,7 @@ function showConflictDetail(idx) {
 
 function closeConflictDetail() {
   document.getElementById('conflictDetail').classList.add('hidden');
-  document.querySelectorAll('#killsBody tr').forEach(function(tr) { tr.classList.remove('active-row'); });
+  document.querySelectorAll('#killsBody tr').forEach(tr => tr.classList.remove('active-row'));
 }
 
 /* ── Init ────────────────────────────────────────────── */
