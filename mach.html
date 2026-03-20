@@ -38,9 +38,7 @@
 
         <label class="mach-label">Velocidad</label>
         <div class="mach-input-row" style="margin-bottom:1.25rem">
-          <input type="number" id="machSpeedInput" class="mach-input"
-                 placeholder="Introduce la velocidad..." min="0"
-                 oninput="calcMachPage()">
+          <input type="number" id="machSpeedInput" class="mach-input" placeholder="Introduce la velocidad..." min="0" oninput="calcMachPage()">
           <select id="machUnit" class="mach-select" onchange="calcMachPage()">
             <option value="kmh">KM/H</option>
             <option value="knots">KNOTS</option>
@@ -51,9 +49,7 @@
 
         <label class="mach-label">Altitud: <span id="altLabel">0 m (nivel del mar)</span></label>
         <div class="mach-range-wrap" style="margin-bottom:.4rem">
-          <input type="range" id="altSlider" class="mach-range"
-                 min="0" max="30000" step="500" value="0"
-                 oninput="updateAltLabelPage(); calcMachPage()">
+          <input type="range" id="altSlider" class="mach-range" min="0" max="30000" step="500" value="0" oninput="updateAltLabelPage(); calcMachPage()">
         </div>
         <div class="timeline-ticks" style="margin-bottom:1.25rem">
           <span>0</span><span>7.500</span><span>15.000</span><span>22.500</span><span>30.000 m</span>

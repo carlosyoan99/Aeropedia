@@ -25,7 +25,7 @@
         <span class="logo-text">AERO<span>PEDIA</span></span>
       </a>
       <div class="header-controls">
-        <input type="text" id="mainSearch" class="search-input" placeholder="Buscar avión, país...">
+        <input type="search" id="mainSearch" class="search-input" placeholder="Buscar avión, país...">
         <select id="catFilter" class="cat-select">
           <option value="all">Todos los modelos</option>
           <option value="Caza">Cazas</option>
@@ -87,8 +87,8 @@
       <div id="decadeMarks" class="decade-marks"></div>
       <div class="timeline-sliders">
         <div class="timeline-track-bg"><div id="timelineTrackFill"></div></div>
-        <input type="range" id="timelineMin" class="timeline-input" min="1940" max="2024" step="10" value="1940" oninput="onTimelineChange()" style="z-index:3">
-        <input type="range" id="timelineMax" class="timeline-input" min="1940" max="2024" step="10" value="2024" oninput="onTimelineChange()" style="z-index:4">
+        <input type="range" id="timelineMin" class="timeline-input" min="1940" max="2020" step="10" value="1940" oninput="onTimelineChange()" style="z-index:3">
+        <input type="range" id="timelineMax" class="timeline-input" min="1950" max="2030" step="10" value="2030" oninput="onTimelineChange()" style="z-index:4">
         <div id="thumbMin"  class="timeline-thumb"></div>
         <div id="thumbMax"  class="timeline-thumb" style="transform:translate(-50%,-50%)"></div>
       </div>

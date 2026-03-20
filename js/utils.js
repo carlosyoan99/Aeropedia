@@ -55,3 +55,25 @@ function saveFavs(favs) {
 function isFav(id) {
   return getFavs().includes(id);
 }
+
+function debounce(fn, delay, inmediate = false) {
+  const debounced = (...args) => {
+    const context = this
+
+    const later = () => {
+      timeoutID - null
+      if (!inmediate) fn.apply(context, args)
+    }
+
+    const callNow = inmediate && !timeoutID
+
+    clearTimeout(timeoutID)
+
+    timeoutID = setTimeout(later, delay)
+
+    if (callNow) fn.apply(context, delay)
+    
+  }
+
+  return debounced
+}

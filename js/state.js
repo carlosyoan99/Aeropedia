@@ -14,7 +14,7 @@ let currentView    = 'gallery';   // 'gallery' | 'ranking'
 
 // ── Estado de la línea de tiempo ──────────────────────────────
 const TIMELINE_MIN_YEAR = 1940;
-const TIMELINE_MAX_YEAR = 2024;
+const TIMELINE_MAX_YEAR = 2030;
 const TIMELINE_STEP     = 10;
 let timelineMin    = TIMELINE_MIN_YEAR;
 let timelineMax    = TIMELINE_MAX_YEAR;
