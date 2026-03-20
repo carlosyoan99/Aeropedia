@@ -55,11 +55,12 @@ function createCard(plane) {
   const countryTag = `<span class="card-tag tag-country">${plane.country}</span>`;
 
   // 2. Rol principal (primer rol del array, o tipo si no hay roles)
+  /*
   const roleLabel = (plane.roles && plane.roles.length)
     ? plane.roles[0]
     : plane.type;
   const roleTag = `<span class="card-tag tag-role">${roleLabel}</span>`;
-
+*/
   // 3. Estado activo (solo si está activo o es prototipo)
   const statusMap = { active: 'Activo', prototype: 'Prototipo', limited: 'Limitado', retired: null };
   const statusLabel = statusMap[plane.status] || null;
@@ -71,9 +72,7 @@ function createCard(plane) {
   const yearTag = `<span class="card-tag tag-year mono">${plane.year}</span>`;
 
   // 5. Generación — SOLO para cazas
-  const genTag = (plane.type === 'Caza' && plane.generation)
-    ? genBadgeHTML(plane)
-    : '';
+  const genTag = plane.generation ? genBadgeHTML(plane) : '';
 
   // ── Barra de comparación seleccionada ────────────────────────
   const selectedBar = isSelected
@@ -92,7 +91,7 @@ function createCard(plane) {
         <h2 class="card-name header-font">${plane.name}</h2>
 
         <div class="card-tags">
-          ${countryTag}${roleTag}${statusTag}${yearTag}${genTag}
+          ${countryTag}${statusTag}${yearTag}${genTag}
         </div>
 
         <div class="card-stats-clean">
