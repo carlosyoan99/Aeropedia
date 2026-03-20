@@ -7,12 +7,19 @@ function applyTheme(theme) {
   document.documentElement.classList.remove('dark-preload');
   localStorage.setItem(THEME_KEY, theme);
 
-  // Actualizar theme-color del meta tag
   const meta = document.getElementById('themeColorMeta');
   if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a0f1e' : '#ffffff');
 
-  // Si el radar está abierto, redibujarlo con nuevos colores de fondo
-  if (radarChartInst) drawRadarChart();
+  // Redibujar radar solo si la función existe (compare.js puede no estar cargado)
+  if (typeof radarChartInst !== 'undefined' && radarChartInst &&
+      typeof drawRadarChart === 'function') {
+    drawRadarChart();
+  }
+  // Redibujar radar de compare.html si está activo
+  if (typeof radarInst !== 'undefined' && radarInst &&
+      typeof buildRadarPanel === 'function') {
+    buildRadarPanel();
+  }
 }
 
 function toggleTheme() {

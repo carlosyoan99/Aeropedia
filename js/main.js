@@ -66,6 +66,20 @@ async function init() {
     if (sel) { sel.value = catParam; renderAll(); }
   }
   if (viewParam === 'ranking') setView('ranking');
+
+  // 8. Filtro de conflicto desde URL (viene de theater.html)
+  resolveConflictFromURL();
+  if (activeConflict !== 'all') renderAll();
+
+  // 9. Navegación con botón Atrás del navegador
+  window.addEventListener('popstate', () => {
+    const overlay = document.getElementById('detailOverlay');
+    if (overlay && !overlay.classList.contains('hidden')) {
+      overlay.classList.remove('active');
+      setTimeout(() => { overlay.classList.add('hidden'); document.body.style.overflow = ''; }, 500);
+      currentDetailId = null;
+    }
+  });
 }
 
 // Arrancar cuando el DOM esté listo
