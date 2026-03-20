@@ -52,7 +52,7 @@ function createCard(plane) {
 
   // ── Etiquetas: solo las 4 indicadas ──────────────────────────
   // 1. País
-  const countryTag = `<span class="card-country mono">${plane.country}</span>`;
+  const countryTag = `<span class="card-tag tag-country">${plane.country}</span>`;
 
   // 2. Rol principal (primer rol del array, o tipo si no hay roles)
   const roleLabel = (plane.roles && plane.roles.length)
