@@ -30,17 +30,14 @@
 
   <!-- Toolbar -->
   <div id="favsToolbar" style="display:none;align-items:center;gap:.75rem;margin-bottom:1.5rem;flex-wrap:wrap">
-
     <div id="favsCountBadge" class="favs-count-badge">
       <i class="fas fa-star"></i>
       <span id="favsCountText">0 favoritos</span>
     </div>
-
     <input type="text" id="favsSearch" class="search-input"
            placeholder="Filtrar favoritos..."
            oninput="filterFavs()"
            style="width:16rem">
-
     <select id="favsSortSelect" class="cat-select" onchange="filterFavs()">
       <option value="default">Orden guardado</option>
       <option value="name">Nombre A–Z</option>
@@ -49,23 +46,19 @@
       <option value="speed">Velocidad ↓</option>
       <option value="type">Tipo</option>
     </select>
-
-    <button class="nav-link" onclick="confirmClearAll()" id="clearAllBtn"
-            style="margin-left:auto;border-color:#ef4444;color:#ef4444"
-            title="Eliminar todos los favoritos">
+    <button class="nav-link" onclick="confirmClearAll()"
+            style="margin-left:auto;border-color:#ef4444;color:#ef4444">
       <i class="fas fa-trash"></i> Limpiar todo
     </button>
   </div>
 
-  <!-- Grid de favoritos -->
-  <div id="favsGrid" class="mini-grid">
-    <p style="color:var(--text-3)">Cargando...</p>
-  </div>
+  <!-- Grid -->
+  <div id="favsGrid" class="mini-grid"></div>
 
-  <!-- Toast de confirmación de borrado -->
+  <!-- Toast -->
   <div id="favsToast" style="
     position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(20px);
-    opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease;
+    opacity:0;pointer-events:none;transition:opacity .3s,transform .3s;
     background:var(--dark);color:#fff;padding:.7rem 1.25rem;border-radius:9999px;
     border:1px solid rgba(37,99,235,.4);font-family:var(--font-mono);font-size:.65rem;
     font-weight:700;z-index:99;white-space:nowrap;display:flex;align-items:center;gap:.5rem">
@@ -80,110 +73,101 @@
 <script src="js/theme.js"></script>
 <script src="js/pages.js"></script>
 <script>
+'use strict';
 let allFavPlanes = [];
 
-/* ── Renderizar favoritos ─────────────────────────────────── */
+/* ── Renderizar ─────────────────────────────────────── */
 function renderFavs(planes) {
   const grid    = document.getElementById('favsGrid');
   const toolbar = document.getElementById('favsToolbar');
-  const count   = document.getElementById('favsCountText');
+  const countEl = document.getElementById('favsCountText');
+  const total   = getFavs().length;
 
-  if (!planes.length && !getFavs().length) {
+  if (total === 0) {
     toolbar.style.display = 'none';
-    grid.innerHTML = `
-      <div class="favs-empty">
-        <i class="fas fa-star"></i>
-        <p class="favs-empty-title">// Sin aeronaves guardadas</p>
-        <p class="favs-empty-sub">
-          Usa el botón ★ en las tarjetas de la galería principal
-          para guardar tus aeronaves favoritas aquí.
-        </p>
-        <button class="mini-btn-home" onclick="goHome()"
-                style="margin-top:1.5rem;display:inline-flex;width:auto;padding:.6rem 1.5rem">
-          <i class="fas fa-fighter-jet"></i> Ir a la galería
-        </button>
-      </div>`;
+    grid.innerHTML =
+      '<div class="favs-empty">' +
+        '<i class="fas fa-star"></i>' +
+        '<p class="favs-empty-title">// Sin aeronaves guardadas</p>' +
+        '<p class="favs-empty-sub">Usa el botón ★ en las tarjetas de la galería para guardar tus favoritas aquí.</p>' +
+        '<button class="mini-btn-home" onclick="goHome()" style="margin-top:1.5rem;display:inline-flex;width:auto;padding:.6rem 1.5rem">' +
+          '<i class="fas fa-fighter-jet"></i> Ir a la galería' +
+        '</button>' +
+      '</div>';
     return;
   }
 
   toolbar.style.display = 'flex';
-  if (count) count.textContent = `${getFavs().length} favorito${getFavs().length !== 1 ? 's' : ''}`;
+  if (countEl) countEl.textContent = total + ' favorito' + (total !== 1 ? 's' : '');
 
   if (!planes.length) {
-    grid.innerHTML = `
-      <div class="favs-empty">
-        <i class="fas fa-search"></i>
-        <p class="favs-empty-title">// Sin resultados</p>
-        <p class="favs-empty-sub">Ningún favorito coincide con el filtro actual.</p>
-      </div>`;
+    grid.innerHTML =
+      '<div class="favs-empty">' +
+        '<i class="fas fa-search"></i>' +
+        '<p class="favs-empty-title">// Sin resultados</p>' +
+        '<p class="favs-empty-sub">Ningún favorito coincide con el filtro actual.</p>' +
+      '</div>';
     return;
   }
 
-  grid.innerHTML = planes.map(p => {
-    const card = buildAircraftCard(p);
-    // Añadir botón "quitar de favoritos" más visible
-    return card.replace(
-      `id="favBtn-${p.id}"`,
-      `id="favBtn-${p.id}" data-fav-remove="true"`
-    );
-  }).join('');
+  grid.innerHTML = planes.map(function(p) { return buildAircraftCard(p); }).join('');
 }
 
-/* ── Filtrar y ordenar ────────────────────────────────────── */
+/* ── Filtrar y ordenar ──────────────────────────────── */
 function filterFavs() {
-  const s    = (document.getElementById('favsSearch')?.value || '').toLowerCase();
-  const sort = document.getElementById('favsSortSelect')?.value || 'default';
+  const s      = (document.getElementById('favsSearch').value || '').toLowerCase();
+  const sort   = document.getElementById('favsSortSelect').value;
   const favIds = getFavs();
 
-  let planes = allFavPlanes.filter(p => favIds.includes(p.id));
+  let planes = allFavPlanes.filter(function(p) { return favIds.includes(p.id); });
 
   if (s) {
-    planes = planes.filter(p =>
-      p.name.toLowerCase().includes(s)    ||
-      p.country.toLowerCase().includes(s) ||
-      p.type.toLowerCase().includes(s));
+    planes = planes.filter(function(p) {
+      return p.name.toLowerCase().includes(s) ||
+             p.country.toLowerCase().includes(s) ||
+             p.type.toLowerCase().includes(s);
+    });
   }
 
   switch (sort) {
-    case 'name':       planes.sort((a,b) => a.name.localeCompare(b.name)); break;
-    case 'year_asc':   planes.sort((a,b) => a.year  - b.year); break;
-    case 'year_desc':  planes.sort((a,b) => b.year  - a.year); break;
-    case 'speed':      planes.sort((a,b) => b.speed - a.speed); break;
-    case 'type':       planes.sort((a,b) => a.type.localeCompare(b.type)); break;
-    default:           planes.sort((a,b) => favIds.indexOf(a.id) - favIds.indexOf(b.id));
+    case 'name':      planes.sort(function(a,b){ return a.name.localeCompare(b.name); }); break;
+    case 'year_asc':  planes.sort(function(a,b){ return a.year  - b.year; });  break;
+    case 'year_desc': planes.sort(function(a,b){ return b.year  - a.year; });  break;
+    case 'speed':     planes.sort(function(a,b){ return b.speed - a.speed; }); break;
+    case 'type':      planes.sort(function(a,b){ return a.type.localeCompare(b.type); }); break;
+    default:          planes.sort(function(a,b){ return favIds.indexOf(a.id) - favIds.indexOf(b.id); });
   }
 
   renderFavs(planes);
 }
 
-/* ── Override de toggleFavPage para actualizar la vista ───── */
+/* ── Override toggleFavPage para esta página ─────────── */
 const _origToggleFavPage = toggleFavPage;
-// eslint-disable-next-line no-global-assign
-toggleFavPage = function(id) {
+// Sobrescribir para actualizar la vista al quitar favorito
+window.toggleFavPage = function(id) {
   _origToggleFavPage(id);
-  showFavsToast(isFav(id) ? '★ Añadido a favoritos' : '★ Quitado de favoritos');
-
-  // Si se quitó un favorito, recargar la lista
-  if (!isFav(id)) {
-    const card = document.getElementById(`mini-${id}`);
+  const removed = !isFav(id);
+  showFavsToast(removed ? '★ Quitado de favoritos' : '★ Añadido a favoritos');
+  if (removed) {
+    const card = document.getElementById('mini-' + id);
     if (card) {
       card.style.transition = 'opacity .3s, transform .3s';
       card.style.opacity    = '0';
       card.style.transform  = 'scale(.95)';
-      setTimeout(() => filterFavs(), 320);
+      setTimeout(filterFavs, 320);
     }
   }
 };
 
-/* ── Limpiar todos ────────────────────────────────────────── */
+/* ── Limpiar todos ──────────────────────────────────── */
 function confirmClearAll() {
-  if (!confirm('¿Eliminar todos los favoritos? Esta acción no se puede deshacer.')) return;
+  if (!confirm('¿Eliminar todos los favoritos? No se puede deshacer.')) return;
   saveFavs([]);
   filterFavs();
   showFavsToast('Todos los favoritos eliminados');
 }
 
-/* ── Toast ────────────────────────────────────────────────── */
+/* ── Toast ──────────────────────────────────────────── */
 function showFavsToast(msg) {
   const toast = document.getElementById('favsToast');
   const msgEl = document.getElementById('favsToastMsg');
@@ -191,26 +175,23 @@ function showFavsToast(msg) {
   if (msgEl) msgEl.textContent = msg;
   toast.style.opacity   = '1';
   toast.style.transform = 'translateX(-50%) translateY(0)';
-  toast.style.pointerEvents = 'none';
   clearTimeout(toast._t);
-  toast._t = setTimeout(() => {
+  toast._t = setTimeout(function() {
     toast.style.opacity   = '0';
     toast.style.transform = 'translateX(-50%) translateY(20px)';
   }, 2500);
 }
 
-/* ── Init ────────────────────────────────────────────────── */
+/* ── Init ────────────────────────────────────────────── */
 async function initFavoritesPage() {
   initTheme();
   document.getElementById('navContainer').innerHTML = buildNavBar('favorites');
   try {
     await loadData();
-    const favIds = getFavs();
-    allFavPlanes = aircraftDB.filter(p => favIds.includes(p.id));
+    allFavPlanes = aircraftDB.filter(function(p) { return getFavs().includes(p.id); });
     filterFavs();
-  } catch(e) {
-    document.getElementById('favsGrid').innerHTML =
-      `<p style="color:var(--text-3)">Error al cargar datos: ${e.message}</p>`;
+  } catch (e) {
+    showLoadError('favsGrid', e);
   }
 }
 
@@ -218,4 +199,3 @@ document.addEventListener('DOMContentLoaded', initFavoritesPage);
 </script>
 </body>
 </html>
-

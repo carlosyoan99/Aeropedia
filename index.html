@@ -68,6 +68,34 @@
     </div>
 
   </div>
+
+  <!-- Timeline (panel colapsable — Teatro eliminado, ahora es página independiente) -->
+  <div id="timelineSection" class="collapsible-panel">
+    <div class="panel-dark">
+      <div class="panel-head">
+        <div class="panel-head-left">
+          <i class="fas fa-timeline" style="color:#60a5fa"></i>
+          <span class="panel-title">Línea de Tiempo</span>
+          <span id="timelineRangeLabel" class="panel-subtitle">TODAS LAS ÉPOCAS</span>
+        </div>
+        <button id="timelineResetBtn" class="panel-reset-btn" onclick="resetTimeline()" disabled>
+          <i class="fas fa-times"></i> Reset
+        </button>
+      </div>
+      <div id="decadeMarks" class="decade-marks"></div>
+      <div class="timeline-sliders">
+        <div class="timeline-track-bg"><div id="timelineTrackFill"></div></div>
+        <input type="range" id="timelineMin" class="timeline-input" min="1940" max="2024" step="10" value="1940" oninput="onTimelineChange()" style="z-index:3">
+        <input type="range" id="timelineMax" class="timeline-input" min="1940" max="2024" step="10" value="2024" oninput="onTimelineChange()" style="z-index:4">
+        <div id="thumbMin"  class="timeline-thumb"></div>
+        <div id="thumbMax"  class="timeline-thumb" style="transform:translate(-50%,-50%)"></div>
+      </div>
+      <div class="timeline-ticks"><span>1940</span><span>1960</span><span>1980</span><span>2000</span><span>2024</span></div>
+      <p class="timeline-hint">Arrastra los extremos para filtrar por año de entrada en servicio</p>
+    </div>
+  </div>
+
+</div>
 </header>
 
 <main class="site-main">

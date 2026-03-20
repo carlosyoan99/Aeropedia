@@ -114,16 +114,22 @@ async function initComparePage() {
   document.getElementById('navContainer').innerHTML = buildNavBar('compare');
   try {
     await loadData();
-    // Recuperar selección de sessionStorage (viene de la ficha)
+    // Recuperar selección de sessionStorage (viene de la ficha técnica)
     try {
       var stored = sessionStorage.getItem('aeropedia_compare');
-      if (stored) { cmpList = JSON.parse(stored).filter(id => aircraftDB.find(p=>p.id===id)); sessionStorage.removeItem('aeropedia_compare'); }
+      if (stored) {
+        cmpList = JSON.parse(stored).filter(function(id) {
+          return aircraftDB.find(function(p) { return p.id === id; });
+        });
+        sessionStorage.removeItem('aeropedia_compare');
+      }
     } catch(e) {}
     renderSearchGrid(aircraftDB);
     renderActiveSlots();
+    updateCmpGoBtn();
     if (cmpList.length >= 2) runComparison();
   } catch(e) {
-    document.getElementById('cmpSearchGrid').innerHTML = '<p style="color:var(--text-3)">Error: ' + e.message + '</p>';
+    showLoadError('cmpSearchGrid', e);
   }
 }
 

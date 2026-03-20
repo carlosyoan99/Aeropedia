@@ -52,14 +52,37 @@ function createCard(plane) {
   const isSelected = compareList.includes(plane.id);
   const favActive  = isFav(plane.id);
 
+  // Badges extra de la DB enriquecida
+  const radarMap = { AESA: 'aesa', PESA: 'pesa', mechanical: 'mech', none: 'none' };
+  const radarBadge = plane.radar_type && plane.radar_type !== 'none'
+    ? `<span class="card-badge-radar ${radarMap[plane.radar_type] || ''}">${plane.radar_type}</span>` : '';
+
+  const stealthMap = { high: '◈ Stealth', medium: '◆ Low-obs', low: '◇ Semi-obs' };
+  const stealthBadge = stealthMap[plane.stealth]
+    ? `<span class="card-badge-stealth ${plane.stealth}">${stealthMap[plane.stealth]}</span>` : '';
+
+  const statusMap = { active: 'Activo', retired: 'Retirado', prototype: 'Prototipo', limited: 'Limitado' };
+  const statusBadge = plane.status
+    ? `<span class="card-badge-status ${plane.status}">${statusMap[plane.status] || plane.status}</span>` : '';
+
+  // Iconos de capacidad rápidos
+  const caps = [];
+  if (plane.carrier_capable) caps.push('<i class="fas fa-ship" title="Portaaviones"></i>');
+  if (plane.vtol)            caps.push('<i class="fas fa-arrows-alt-v" title="VTOL"></i>');
+  else if (plane.stol)       caps.push('<i class="fas fa-compress-alt" title="STOL"></i>');
+  if (plane.irst)            caps.push('<i class="fas fa-eye" title="IRST"></i>');
+  if (plane.crew === 0)      caps.push('<i class="fas fa-robot" title="UAV"></i>');
+  const capsRow = caps.length ? `<div class="card-caps">${caps.join('')}</div>` : '';
+
   return `
     <div id="card-${plane.id}" class="card${isSelected ? ' selected-for-compare' : ''}">
       <div class="card-img-wrap">
-        <img src="./public/${plane.img}.webp" alt="${plane.name}" loading="lazy"
+        <img src="${plane.img}" alt="${plane.name}" loading="lazy"
              onerror="this.src='${FALLBACK_IMG}'">
         <span class="card-badge-type">${plane.type}</span>
         <span class="card-badge-year mono">${plane.year}</span>
-        <span class="card-badge-mach mono">MACH ${(plane.speed / 1234.8).toFixed(1)}</span>
+        <span class="card-badge-mach mono">M ${(plane.speed / 1234.8).toFixed(1)}</span>
+        ${stealthBadge}
       </div>
 
       <div class="card-body">
@@ -68,8 +91,12 @@ function createCard(plane) {
           <div class="card-meta">
             <span class="card-country mono">${plane.country}</span>
             ${genBadgeHTML(plane)}
+            ${radarBadge}
+            ${statusBadge}
           </div>
         </div>
+
+        ${capsRow}
 
         <div class="card-stats">
           <div class="stat-badge">
@@ -80,20 +107,24 @@ function createCard(plane) {
             <span class="stat-label">MTOW</span>
             <span class="stat-value mono">${(plane.mtow / 1000).toFixed(1)} T</span>
           </div>
+          ${plane.thrust_to_weight ? `<div class="stat-badge">
+            <span class="stat-label">Emp/Peso</span>
+            <span class="stat-value mono${plane.thrust_to_weight >= 1 ? ' tw-positive' : ''}">${plane.thrust_to_weight.toFixed(2)}</span>
+          </div>` : ''}
         </div>
 
         <div class="card-bars">
           <div class="bar-row">
             <div class="bar-labels">
               <span>Velocidad</span>
-              <span class="mono bar-val" style="color:var(--primary)">${plane.speed} km/h</span>
+              <span class="mono bar-val" style="color:var(--primary)">${plane.speed.toLocaleString('es-ES')} km/h</span>
             </div>
             <div class="bar-track"><div class="bar-fill" style="width:${speedPct}%;background:var(--primary)"></div></div>
           </div>
           <div class="bar-row">
             <div class="bar-labels">
               <span>Alcance</span>
-              <span class="mono bar-val" style="color:#8b5cf6">${plane.range} km</span>
+              <span class="mono bar-val" style="color:#8b5cf6">${plane.range.toLocaleString('es-ES')} km</span>
             </div>
             <div class="bar-track"><div class="bar-fill" style="width:${rangePct}%;background:#8b5cf6"></div></div>
           </div>
@@ -149,7 +180,7 @@ function renderRanking(planes) {
         <td class="rank-pos mono">${medal[i] || (i + 1)}</td>
         <td class="rank-plane">
           <div class="rank-thumb-wrap">
-            <img src="./public/${p.img}.webp" class="rank-thumb" alt="${p.name}"
+            <img src="${p.img}" class="rank-thumb" alt="${p.name}"
                  onerror="this.src='${FALLBACK_IMG}'">
           </div>
           <div>
