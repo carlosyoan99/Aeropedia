@@ -8,7 +8,6 @@
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
   <meta name="description" content="Tabla de victorias y pérdidas en combate aéreo de los principales cazas de la historia.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="./styles/kills.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script>if(localStorage.getItem('aeropedia_theme')==='dark')document.documentElement.classList.add('dark-preload');</script>
 </head>
@@ -32,7 +31,9 @@
 
   <!-- Filtros -->
   <div class="kills-filters">
-    <input type="search" id="killsSearch" class="search-input" placeholder="Buscar por nombre de avión..." oninput="renderKills()" style="width:18rem">
+    <input type="text" id="killsSearch" class="search-input"
+           placeholder="Buscar por nombre de avión..."
+           oninput="renderKills()" style="width:18rem">
     <select id="killsEra" class="cat-select" onchange="renderKills()">
       <option value="all">Todas las épocas</option>
       <option value="wwii">Segunda Guerra Mundial</option>
@@ -113,10 +114,325 @@
 
 </main>
 
+<style>
+/* ── Filtros ── */
+.kills-filters {
+  display: flex; align-items: center; gap: .75rem; flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.kills-count { font-size:.65rem; color:var(--text-3); margin-left:auto; }
+
+/* ── Leyenda ── */
+.kills-legend {
+  display: flex; gap: 1.25rem; flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.legend-item { display:flex; align-items:center; gap:.4rem; font-size:.68rem; color:var(--text-2); }
+.legend-dot  { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+
+/* ── Tabla ── */
+.kills-table-wrap { overflow-x:auto; border-radius:1rem; border:1px solid var(--border); margin-bottom:1.5rem; }
+.kills-table { width:100%; border-collapse:collapse; }
+.kills-table thead tr { background:var(--dark); }
+.kills-table th {
+  padding:.65rem .9rem; text-align:left;
+  font-family:var(--font-mono); font-size:.6rem; font-weight:700;
+  text-transform:uppercase; letter-spacing:.06em; color:#64748b;
+  white-space:nowrap; position:sticky; top:0; z-index:2;
+  background:var(--dark);
+}
+.kills-table td {
+  padding:.6rem .9rem; border-bottom:1px solid var(--border);
+  vertical-align:middle;
+}
+.kills-table tbody tr { transition:background .1s; cursor:pointer; }
+.kills-table tbody tr:hover { background:var(--bg-stat); }
+
+.col-plane      { min-width:200px; }
+.col-num        { width:120px; text-align:right; }
+.col-ratio      { width:90px; text-align:center; }
+.col-bar        { min-width:160px; }
+.col-conflicts  { min-width:180px; }
+.kills-th       { color:#4ade80 !important; }
+.losses-th      { color:#f87171 !important; }
+
+/* Celda avión */
+.kt-plane-cell { display:flex; align-items:center; gap:.75rem; }
+.kt-thumb { width:52px; height:36px; object-fit:cover; border-radius:.4rem; flex-shrink:0; }
+.kt-name  { font-family:var(--font-head); font-size:.82rem; font-weight:900; font-style:italic; text-transform:uppercase; line-height:1.2; }
+.kt-meta  { font-size:.6rem; color:var(--text-3); margin-top:.1rem; }
+
+/* Celdas numéricas */
+.kt-kills  { font-family:var(--font-mono); font-size:.9rem; font-weight:900; color:#4ade80; text-align:right; }
+.kt-losses { font-family:var(--font-mono); font-size:.9rem; font-weight:900; color:#f87171; text-align:right; }
+.kt-kills-nd, .kt-losses-nd { color:var(--text-3); font-size:.8rem; text-align:right; font-family:var(--font-mono); }
+
+/* Badge ratio */
+.kt-ratio-badge {
+  display:inline-block; padding:3px 10px; border-radius:9999px;
+  font-family:var(--font-mono); font-size:.75rem; font-weight:900;
+  text-align:center; min-width:52px;
+}
+.kt-ratio-badge.dominant { background:rgba(74,222,128,.15); color:#4ade80; border:1px solid rgba(74,222,128,.3); }
+.kt-ratio-badge.positive { background:rgba(250,204,21,.12); color:#facc15; border:1px solid rgba(250,204,21,.3); }
+.kt-ratio-badge.negative { background:rgba(248,113,113,.12); color:#f87171; border:1px solid rgba(248,113,113,.3); }
+.kt-ratio-badge.nodata   { background:var(--bg-stat); color:var(--text-3); border:1px solid var(--border); font-size:.65rem; }
+
+/* Barra de rendimiento dual */
+.kt-bar-wrap { display:flex; flex-direction:column; gap:.25rem; }
+.kt-bar-row  { display:flex; align-items:center; gap:.4rem; }
+.kt-bar-label{ font-family:var(--font-mono); font-size:.52rem; color:var(--text-3); width:42px; text-align:right; }
+.kt-bar-track{ flex:1; height:5px; background:var(--border); border-radius:9999px; overflow:hidden; }
+.kt-bar-fill { height:100%; border-radius:9999px; transition:width .5s ease; }
+.kt-bar-fill.k { background:#4ade80; }
+.kt-bar-fill.l { background:#f87171; }
+
+/* Chips de conflicto en la tabla */
+.kt-conflict-chips { display:flex; gap:.25rem; flex-wrap:wrap; }
+.kt-cf-chip {
+  font-family:var(--font-mono); font-size:.52rem; font-weight:700;
+  padding:2px 6px; border-radius:9999px;
+  background:var(--bg-stat); border:1px solid var(--border);
+  color:var(--text-2); white-space:nowrap;
+}
+
+/* ── Panel de detalle ── */
+.conflict-detail-panel {
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:1.25rem; padding:1.5rem;
+  box-shadow:var(--shadow-hover); margin-bottom:1.5rem;
+  animation:fadeIn .3s ease;
+}
+.conflict-detail-panel.hidden { display:none; }
+.conflict-detail-header {
+  display:flex; justify-content:space-between; align-items:flex-start;
+  margin-bottom:1.25rem; gap:1rem;
+}
+.conflict-detail-title { font-size:1.3rem; font-weight:900; font-style:italic; text-transform:uppercase; }
+.conflict-detail-meta  { font-size:.65rem; color:var(--text-3); margin-top:.25rem; }
+.cd-close {
+  display:flex; align-items:center; gap:.35rem;
+  padding:.4rem .9rem; border:1px solid var(--border); border-radius:9999px;
+  font-family:var(--font-mono); font-size:.62rem; font-weight:700; text-transform:uppercase;
+  background:var(--bg-stat); color:var(--text-2); cursor:pointer; flex-shrink:0;
+  transition:border-color .15s, color .15s;
+}
+.cd-close:hover { border-color:#ef4444; color:#ef4444; }
+
+.cd-conflicts-list { display:flex; flex-direction:column; gap:.75rem; margin-bottom:1rem; }
+.cd-conflict-entry {
+  padding:.75rem 1rem; background:var(--bg-stat);
+  border-radius:.75rem; border-left:3px solid var(--primary);
+}
+.cd-cf-title { font-family:var(--font-mono); font-size:.65rem; font-weight:700; text-transform:uppercase; color:var(--primary); margin-bottom:.4rem; }
+.cd-cf-stats { display:flex; gap:1.5rem; flex-wrap:wrap; margin-bottom:.35rem; }
+.cd-cf-stat  { font-size:.75rem; }
+.cd-cf-stat span { font-family:var(--font-mono); font-weight:900; margin-left:.3rem; }
+.cd-cf-stat .green { color:#4ade80; }
+.cd-cf-stat .red   { color:#f87171; }
+.cd-cf-notes { font-size:.75rem; color:var(--text-2); line-height:1.55; font-style:italic; }
+
+.cd-notes {
+  padding:.75rem 1rem; background:rgba(37,99,235,.06);
+  border-radius:.75rem; border-left:3px solid #60a5fa;
+  font-size:.8rem; color:var(--text-2); line-height:1.6; margin-bottom:.75rem;
+}
+.cd-source { font-size:.62rem; color:var(--text-3); font-style:italic; }
+
+/* Aviso ── */
+.kills-disclaimer {
+  display:flex; gap:.75rem; padding:1rem 1.25rem;
+  background:rgba(245,158,11,.08); border:1px solid rgba(245,158,11,.2);
+  border-radius:.75rem; font-size:.75rem; color:var(--text-2); line-height:1.6;
+}
+.kills-disclaimer i { color:#f59e0b; flex-shrink:0; margin-top:.15rem; }
+
+@media(max-width:768px) {
+  .hidden-sm  { display:none; }
+  .hidden-md  { display:none; }
+}
+@media(max-width:1024px) {
+  .hidden-md  { display:none; }
+}
+@keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+</style>
+
 <script src="js/state.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/pages.js"></script>
-<script src="js/kills.js"></script>
+<script>
+'use strict';
+let killsDB  = [];
+let activeKillRow = null;
+
+const ERA_MAP = {
+  wwii:    ['wwii_europe','wwii_pacific','wwii_east','wwii_africa'],
+  korea:   ['korea'],
+  coldwar: ['vietnam','sixday','yom_kippur','iran_iraq','coldwar_patrols','falklands','gulf_war'],
+  modern:  ['desert_storm','gwot','iraq','syria','ukraine','india_pakistan','mali','libya','chechnya','yugoslavia','kosovo']
+};
+
+async function loadKillsData() {
+  const r = await fetch('./data/kills.json');
+  if (!r.ok) throw new Error('No se pudo cargar kills.json');
+  return r.json();
+}
+
+/* ── Renderizar tabla ────────────────────────────────── */
+function renderKills() {
+  const search = (document.getElementById('killsSearch').value || '').toLowerCase();
+  const era    = document.getElementById('killsEra').value;
+  const sort   = document.getElementById('killsSort').value;
+  const body   = document.getElementById('killsBody');
+  const count  = document.getElementById('killsCount');
+
+  // Joinear con aircraftDB
+  let rows = killsDB.map(k => {
+    const plane = aircraftDB.find(p =>  p.id === k.id);
+    return { ...k, plane };
+  }).filter(r => r.plane);
+
+  // Filtro de búsqueda
+  if (search) {
+    rows = rows.filter(function(r) {
+      return r.plane.name.toLowerCase().includes(search) ||
+             r.plane.country.toLowerCase().includes(search);
+    });
+  }
+
+  // Filtro de era
+  if (era !== 'all') {
+    const eraConflicts = ERA_MAP[era] || [];
+    rows = rows.filter(r => 
+      (r.conflicts || []).some(c => eraConflicts.includes(c.id))
+    );
+  }
+
+  // Ordenar
+  rows.sort((a, b) => {
+    switch(sort) {
+      case 'kills_asc':  return a.kills_total - b.kills_total;
+      case 'kills_desc': return b.kills_total - a.kills_total;
+      case 'ratio_desc': return (b.kill_ratio || 0) - (a.kill_ratio || 0);
+      case 'losses_asc': return (a.losses_combat || 0) - (b.losses_combat || 0);
+      case 'year':       return a.plane.year - b.plane.year;
+      default:           return b.kills_total - a.kills_total;
+    }
+  });
+
+  if (count) count.textContent = rows.length + ' aeronaves';
+
+  // Máximos para las barras
+  const maxKills  = Math.max.apply(null, rows.map(r =>r.kills_total || 0)) || 1;
+  const maxLosses = Math.max.apply(null, rows.map(r => r.losses_combat || 0)) || 1;
+
+  if (!rows.length) {
+    body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--text-3)">Sin resultados para los filtros seleccionados.</td></tr>';
+    return;
+  }
+
+  body.innerHTML = rows.map((r, i) => {
+    const p         = r.plane;
+    const kPct      = ((r.kills_total || 0)  / maxKills)  * 100;
+    const lPct      = ((r.losses_combat || 0) / maxLosses) * 100;
+    const ratio     = r.kill_ratio;
+    const ratioCls  = !ratio ? 'nodata' : ratio >= 3 ? 'dominant' : ratio >= 1 ? 'positive' : 'negative';
+    const ratioTxt  = ratio ? ratio.toFixed(2) : 'N/D';
+
+    // Chips de conflictos
+    const cfChips = (r.conflicts || []).slice(0, 3).map(c => {
+      const cf = conflictsDB[c.id];
+      return cf ? '<span class="kt-cf-chip">' + cf.flag + ' ' + cf.id?.toUpperCase().replace(/_/g,' ') + '</span>' : '';
+    }).join('');
+
+    return '<tr onclick="showConflictDetail(' + i + ')" data-idx="' + i + '">' +
+      '<td class="col-plane">' +
+        '<div class="kt-plane-cell">' +
+          '<img src="' + p.img + '" class="kt-thumb" alt="' + p.name + '" onerror="this.src=\'' + FALLBACK_IMG + '\'">' +
+          '<div>' +
+            '<p class="kt-name">' + p.name + '</p>' +
+            '<p class="kt-meta mono">' + p.country + ' · ' + p.year + (p.generation ? ' · Gen ' + p.generation : '') + '</p>' +
+          '</div>' +
+        '</div>' +
+      '</td>' +
+      '<td class="col-num">' + (r.kills_total ? '<span class="kt-kills">' + r.kills_total.toLocaleString('es-ES') + '</span>' : '<span class="kt-kills-nd">—</span>') + '</td>' +
+      '<td class="col-num">' + (r.losses_combat !== null && r.losses_combat !== undefined ? '<span class="kt-losses">' + r.losses_combat.toLocaleString('es-ES') + '</span>' : '<span class="kt-losses-nd">—</span>') + '</td>' +
+      '<td class="col-ratio"><span class="kt-ratio-badge ' + ratioCls + '">' + ratioTxt + '</span></td>' +
+      '<td class="col-bar hidden-sm">' +
+        '<div class="kt-bar-wrap">' +
+          '<div class="kt-bar-row"><span class="kt-bar-label">Vict.</span><div class="kt-bar-track"><div class="kt-bar-fill k" style="width:' + kPct + '%"></div></div></div>' +
+          '<div class="kt-bar-row"><span class="kt-bar-label">Derrb.</span><div class="kt-bar-track"><div class="kt-bar-fill l" style="width:' + lPct + '%"></div></div></div>' +
+        '</div>' +
+      '</td>' +
+      '<td class="col-conflicts hidden-md"><div class="kt-conflict-chips">' + cfChips + '</div></td>' +
+    '</tr>';
+  }).join('');
+
+  // Guardar los rows renderizados para el detalle
+  body._rows = rows;
+}
+
+/* ── Panel de detalle de conflictos ──────────────────── */
+function showConflictDetail(idx) {
+  const body  = document.getElementById('killsBody');
+  const rows  = body._rows;
+  if (!rows || !rows[idx]) return;
+
+  const r = rows[idx];
+  const p = r.plane;
+
+  // Marcar fila activa
+  document.querySelectorAll('#killsBody tr').forEach((tr, i) => {
+    tr.classList.toggle('active-row', i === idx);
+  });
+
+  document.getElementById('cdPlane').textContent = p.name;
+  document.getElementById('cdMeta').textContent  = p.country + ' · ' + p.year + ' · ' + p.type;
+
+  // Conflictos detallados
+  const cfHtml = (r.conflicts || []).map(c => {
+    const cf = conflictsDB[c.id];
+    const label = cf ? cf.flag + ' ' + cf.label + ' (' + cf.years + ')' : c.id;
+    return '<div class="cd-conflict-entry">' +
+      '<p class="cd-cf-title">' + label + '</p>' +
+      '<div class="cd-cf-stats">' +
+        '<div class="cd-cf-stat">Victorias A-A: <span class="green">' + (c.kills || 0).toLocaleString('es-ES') + '</span></div>' +
+        '<div class="cd-cf-stat">Derribados A-A: <span class="red">' + (c.losses_aa || 0).toLocaleString('es-ES') + '</span></div>' +
+        (c.losses_other ? '<div class="cd-cf-stat">Otras pérdidas: <span class="red">' + c.losses_other.toLocaleString('es-ES') + '</span></div>' : '') +
+      '</div>' +
+      '<p class="cd-cf-notes">' + (c.notes || '') + '</p>' +
+    '</div>';
+  }).join('');
+
+  document.getElementById('cdConflicts').innerHTML = cfHtml || '<p style="color:var(--text-3);font-size:.8rem">Sin detalle por conflicto disponible.</p>';
+  document.getElementById('cdNotes').textContent   = r.notes || '';
+  document.getElementById('cdSource').textContent  = 'Fuente: ' + (r.source_note || 'Datos históricos generales.');
+
+  const panel = document.getElementById('conflictDetail');
+  panel.classList.remove('hidden');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function closeConflictDetail() {
+  document.getElementById('conflictDetail').classList.add('hidden');
+  document.querySelectorAll('#killsBody tr').forEach(tr => tr.classList.remove('active-row'));
+}
+
+/* ── Init ────────────────────────────────────────────── */
+async function initKillsPage() {
+  initTheme();
+  document.getElementById('navContainer').innerHTML = buildNavBar('kills');
+  try {
+    await loadData();
+    killsDB = await loadKillsData();
+    renderKills();
+  } catch(e) {
+    showLoadError('killsBody', e);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initKillsPage);
+</script>
 </body>
 </html>

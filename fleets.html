@@ -8,7 +8,6 @@
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
   <meta name="description" content="Inventario de flota aérea militar activa por país. Cazas, bombarderos y aviones de combate en servicio en 2024.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="/styles/fleets.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script>if(localStorage.getItem('aeropedia_theme')==='dark')document.documentElement.classList.add('dark-preload');</script>
 </head>
@@ -31,7 +30,9 @@
 
   <!-- Filtros y búsqueda -->
   <div class="fleets-toolbar">
-    <input type="text" id="fleetsSearch" class="search-input" placeholder="Buscar país o avión..." oninput="renderFleets()" style="width:16rem">
+    <input type="text" id="fleetsSearch" class="search-input"
+           placeholder="Buscar país o avión..."
+           oninput="renderFleets()" style="width:16rem">
     <select id="fleetsRegion" class="cat-select" onchange="renderFleets()">
       <option value="all">Todas las regiones</option>
       <option value="Norteamérica">Norteamérica</option>
@@ -71,11 +72,290 @@
 
 </main>
 
+<style>
+/* ── Toolbar ── */
+.fleets-toolbar {
+  display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; margin-bottom:1.25rem;
+}
+
+/* ── Barra de resumen global ── */
+.fleets-summary-bar {
+  display:flex; gap:.75rem; flex-wrap:wrap; margin-bottom:1.75rem;
+}
+.flt-summary-card {
+  flex:1; min-width:140px; padding:.75rem 1rem;
+  background:var(--bg-card); border:1px solid var(--border-card);
+  border-radius:.9rem; text-align:center;
+}
+.flt-summary-num  { font-family:var(--font-head); font-size:1.4rem; font-weight:900; color:var(--primary); }
+.flt-summary-label{ font-family:var(--font-mono); font-size:.55rem; font-weight:700; text-transform:uppercase; color:var(--text-3); margin-top:.2rem; }
+
+/* ── Grid de países ── */
+.fleets-grid {
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(380px,1fr));
+  gap:1.5rem;
+}
+
+/* ── Tarjeta de país ── */
+.fleet-card {
+  background:var(--bg-card); border:1px solid var(--border-card);
+  border-radius:1.25rem; overflow:hidden;
+  box-shadow:var(--shadow-card);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.fleet-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+
+.fleet-card-header {
+  display:flex; align-items:center; gap:.9rem;
+  padding:1rem 1.1rem .75rem;
+  border-bottom:1px solid var(--border);
+  background:linear-gradient(135deg, var(--bg-stat) 0%, transparent 100%);
+}
+.fleet-flag   { font-size:2rem; line-height:1; flex-shrink:0; }
+.fleet-name   { font-family:var(--font-head); font-size:.95rem; font-weight:900; text-transform:uppercase; font-style:italic; line-height:1.2; }
+.fleet-af     { font-size:.62rem; color:var(--text-3); margin-top:.15rem; line-height:1.3; }
+.fleet-rank-badge {
+  margin-left:auto; flex-shrink:0;
+  font-family:var(--font-mono); font-size:.65rem; font-weight:900;
+  padding:3px 9px; border-radius:9999px;
+  background:rgba(37,99,235,.12); color:var(--primary);
+  border:1px solid rgba(37,99,235,.25);
+}
+
+/* ── Stats rápidos de la cabecera ── */
+.fleet-quick-stats {
+  display:flex; gap:0; border-bottom:1px solid var(--border);
+}
+.fleet-qs {
+  flex:1; padding:.55rem .6rem; text-align:center;
+  border-right:1px solid var(--border);
+}
+.fleet-qs:last-child { border-right:none; }
+.fleet-qs-num   { font-family:var(--font-mono); font-size:.9rem; font-weight:900; color:var(--primary); }
+.fleet-qs-label { font-family:var(--font-mono); font-size:.5rem; text-transform:uppercase; color:var(--text-3); margin-top:.1rem; }
+
+/* ── Tabla de aeronaves ── */
+.fleet-aircraft-table { width:100%; border-collapse:collapse; }
+.fleet-aircraft-table td { padding:.45rem .8rem; border-bottom:1px solid var(--border); vertical-align:middle; }
+.fleet-aircraft-table tr:last-child td { border-bottom:none; }
+.fleet-aircraft-table tr:hover td { background:var(--bg-stat); cursor:pointer; }
+
+.fat-img  { width:44px; height:30px; object-fit:cover; border-radius:.3rem; }
+.fat-name { font-family:var(--font-head); font-size:.72rem; font-weight:900; font-style:italic; text-transform:uppercase; line-height:1.2; }
+.fat-role { font-size:.58rem; color:var(--text-3); margin-top:.1rem; }
+.fat-qty  { font-family:var(--font-mono); font-size:.85rem; font-weight:900; color:var(--primary); text-align:right; white-space:nowrap; }
+.fat-note { font-size:.62rem; color:var(--text-2); font-style:italic; line-height:1.4; }
+
+/* Barra de distribución de tipos ── */
+.fleet-type-bar {
+  padding:.6rem .9rem; display:flex; gap:.3rem; align-items:center;
+  border-top:1px solid var(--border);
+}
+.fleet-type-bar-label { font-family:var(--font-mono); font-size:.52rem; color:var(--text-3); width:40px; flex-shrink:0; }
+.fleet-type-bar-track { flex:1; height:6px; background:var(--border); border-radius:9999px; overflow:hidden; display:flex; }
+.fleet-type-segment   { height:100%; }
+
+/* Nota del país */
+.fleet-notes {
+  padding:.6rem .9rem .75rem; font-size:.72rem;
+  color:var(--text-2); line-height:1.55; border-top:1px solid var(--border);
+  font-style:italic;
+}
+
+@media(max-width:600px) {
+  .fleets-grid { grid-template-columns:1fr; }
+  .fat-note    { display:none; }
+}
+
+/* Fila activa */
+.fleet-aircraft-table tr.active-aircraft td { background:rgba(37,99,235,.08); }
+</style>
+
 <script src="js/state.js"></script>
 <script src="js/utils.js"></script>
 <script src="js/theme.js"></script>
 <script src="js/pages.js"></script>
-<script src="js/fleets.js" type="module"></script>
-<script></script>
+<script>
+'use strict';
+let fleetsDB = [];
+
+const ROLE_COLORS = {
+  'Caza':           '#3b82f6',
+  'Ataque':         '#f59e0b',
+  'Bombardero':     '#ef4444',
+  'Transporte':     '#8b5cf6',
+  'AWACS':          '#06b6d4',
+  'Reabastecimiento':'#10b981',
+  'ISR':            '#f472b6',
+  'default':        '#64748b'
+};
+
+async function loadFleetsData() {
+  const r = await fetch('./data/fleets.json');
+  if (!r.ok) throw new Error('No se pudo cargar fleets.json');
+  return r.json();
+}
+
+/* ── Resumen global ──────────────────────────────────── */
+function buildSummary() {
+  const totalCountries = fleetsDB.length;
+  const totalCombat    = fleetsDB.reduce(function(s, c) { return s + (c.total_combat || 0); }, 0);
+  const gen5Count      = fleetsDB.reduce(function(s, c) {
+    return s + c.aircraft.reduce(function(ss, a) {
+      const p = aircraftDB.find(function(p) { return p.id === a.id; });
+      return ss + (p && p.generation === '5' && a.qty > 0 ? a.qty : 0);
+    }, 0);
+  }, 0);
+  const f35Total = fleetsDB.reduce(function(s, c) {
+    return s + c.aircraft.reduce(function(ss, a) { return ss + (a.id === 'f35' ? a.qty : 0); }, 0);
+  }, 0);
+
+  document.getElementById('fleetsSummary').innerHTML = [
+    { num: totalCountries,                 label: 'países analizados' },
+    { num: totalCombat.toLocaleString('es-ES'), label: 'aviones de combate activos' },
+    { num: gen5Count.toLocaleString('es-ES'),   label: 'cazas de 5ª gen activos' },
+    { num: f35Total.toLocaleString('es-ES'),    label: 'F-35 en servicio mundial' },
+  ].map(function(s) {
+    return '<div class="flt-summary-card">' +
+      '<p class="flt-summary-num header-font">' + s.num + '</p>' +
+      '<p class="flt-summary-label">' + s.label + '</p>' +
+    '</div>';
+  }).join('');
+}
+
+/* ── Renderizar grid ─────────────────────────────────── */
+function renderFleets() {
+  const search = (document.getElementById('fleetsSearch').value || '').toLowerCase();
+  const region = document.getElementById('fleetsRegion').value;
+  const sort   = document.getElementById('fleetsSort').value;
+  const grid   = document.getElementById('fleetsGrid');
+  const countEl= document.getElementById('fleetsCount');
+
+  let data = fleetsDB.filter(function(c) {
+    const matchSearch = !search || c.country.toLowerCase().includes(search) ||
+      c.aircraft.some(function(a) { return a.name.toLowerCase().includes(search); });
+    const matchRegion = region === 'all' || c.region === region;
+    return matchSearch && matchRegion;
+  });
+
+  data.sort(function(a, b) {
+    if (sort === 'total_desc') return (b.total_combat || 0) - (a.total_combat || 0);
+    if (sort === 'name')       return a.country.localeCompare(b.country);
+    // rank
+    const ra = a.strength_rank || 99;
+    const rb = b.strength_rank || 99;
+    return ra - rb;
+  });
+
+  if (countEl) countEl.textContent = data.length + ' países';
+
+  if (!data.length) {
+    grid.innerHTML = '<p style="color:var(--text-3);grid-column:1/-1">Sin resultados para los filtros seleccionados.</p>';
+    return;
+  }
+
+  grid.innerHTML = data.map(function(country) {
+    return buildFleetCard(country);
+  }).join('');
+}
+
+/* ── Tarjeta de un país ──────────────────────────────── */
+function buildFleetCard(country) {
+  // Quick stats
+  const totalAircraft = country.aircraft.reduce(function(s, a) { return s + (a.qty || 0); }, 0);
+  const fighterCount  = country.aircraft.reduce(function(s, a) {
+    const p = aircraftDB.find(function(p) { return p.id === a.id; });
+    return s + (p && p.type === 'Caza' ? (a.qty || 0) : 0);
+  }, 0);
+  const gen5Count = country.aircraft.reduce(function(s, a) {
+    const p = aircraftDB.find(function(p) { return p.id === a.id; });
+    return s + (p && p.generation === '5ª' ? (a.qty || 0) : 0);
+  }, 0);
+
+  const rankBadge = country.strength_rank
+    ? '<span class="fleet-rank-badge"># ' + country.strength_rank + ' mundial</span>'
+    : '';
+
+  // Tabla de aeronaves
+  const rows = country.aircraft.map(function(a) {
+    const p = aircraftDB.find(function(x) { return x.id === a.id; });
+    const img  = p ? '.\/public\/min\/' + p.img + '.webp' : FALLBACK_IMG;
+    const gen5badge = (p && p.generation === '5ª') ? ' <span style="color:#f472b6;font-size:.55rem">◈5ª</span>' : '';
+    const qtyColor = a.qty === 0 ? 'var(--text-3)' : 'var(--primary)';
+    return '<tr onclick="viewPlaneFromFleet(\'' + a.id + '\')" title="Ver ficha de ' + a.name + '">' +
+      '<td style="width:50px"><img src="' + img + '" class="fat-img" onerror="this.src=\'' + FALLBACK_IMG + '\'"></td>' +
+      '<td><p class="fat-name">' + a.name + gen5badge + '</p><p class="fat-role">' + a.role + '</p></td>' +
+      '<td style="text-align:right;padding-left:.3rem"><span class="fat-qty" style="color:' + qtyColor + '">' + (a.qty || '—') + '</span></td>' +
+      '<td class="fat-note hidden-sm">' + a.notes + '</td>' +
+    '</tr>';
+  }).join('');
+
+  // Barra de tipos
+  const typeGroups = {};
+  country.aircraft.forEach(function(a) {
+    const p = aircraftDB.find(function(x) { return x.id === a.id; });
+    const type = p ? p.type : 'default';
+    typeGroups[type] = (typeGroups[type] || 0) + (a.qty || 0);
+  });
+  const totalForBar = Object.values(typeGroups).reduce(function(s,v) { return s+v; }, 0) || 1;
+  const typeBarSegs = Object.entries(typeGroups).map(function(entry) {
+    const type = entry[0], qty = entry[1];
+    const color = ROLE_COLORS[type] || ROLE_COLORS.default;
+    const pct   = (qty / totalForBar) * 100;
+    return '<div class="fleet-type-segment" style="width:' + pct + '%;background:' + color + '" title="' + type + ': ' + qty + '"></div>';
+  }).join('');
+
+  return '<div class="fleet-card">' +
+    // Header
+    '<div class="fleet-card-header">' +
+      '<span class="fleet-flag">' + country.flag + '</span>' +
+      '<div>' +
+        '<p class="fleet-name">' + country.country + '</p>' +
+        '<p class="fleet-af">' + country.air_force + '</p>' +
+      '</div>' +
+      rankBadge +
+    '</div>' +
+    // Quick stats
+    '<div class="fleet-quick-stats">' +
+      '<div class="fleet-qs"><p class="fleet-qs-num header-font">' + (country.total_combat || '?') + '</p><p class="fleet-qs-label">Combate</p></div>' +
+      '<div class="fleet-qs"><p class="fleet-qs-num header-font">' + fighterCount + '</p><p class="fleet-qs-label">Cazas</p></div>' +
+      '<div class="fleet-qs"><p class="fleet-qs-num header-font" style="color:' + (gen5Count > 0 ? '#f472b6' : 'var(--text-3)') + '">' + gen5Count + '</p><p class="fleet-qs-label">Gen 5ª</p></div>' +
+      (country.budget_bn_usd ? '<div class="fleet-qs"><p class="fleet-qs-num header-font" style="font-size:.8rem">' + country.budget_bn_usd + ' B$</p><p class="fleet-qs-label">Presupuesto</p></div>' : '') +
+    '</div>' +
+    // Tabla
+    '<table class="fleet-aircraft-table"><tbody>' + rows + '</tbody></table>' +
+    // Barra de tipos
+    '<div class="fleet-type-bar">' +
+      '<span class="fleet-type-bar-label">Mix</span>' +
+      '<div class="fleet-type-bar-track">' + typeBarSegs + '</div>' +
+    '</div>' +
+    // Notas
+    (country.notes ? '<p class="fleet-notes">' + country.notes + '</p>' : '') +
+  '</div>';
+}
+
+/* ── Ver ficha del avión ─────────────────────────────── */
+function viewPlaneFromFleet(id) {
+  if (id && id !== 'undefined') {
+    location.href = './index.html#' + id;
+  }
+}
+
+/* ── Init ────────────────────────────────────────────── */
+async function initFleetsPage() {
+  initTheme();
+  document.getElementById('navContainer').innerHTML = buildNavBar('fleets');
+  try {
+    await loadData();
+    fleetsDB = await loadFleetsData();
+    buildSummary();
+    renderFleets();
+  } catch(e) {
+    showLoadError('fleetsGrid', e);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initFleetsPage);
+</script>
 </body>
 </html>

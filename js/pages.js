@@ -4,7 +4,7 @@
  */
 
 /* ── Carga de datos ─────────────────────────────────────────── */
-export async function loadData() {
+async function loadData() {
   const base = './';
   let aRes, cRes;
   try {
@@ -23,24 +23,24 @@ export async function loadData() {
 }
 
 /* ── Navegación entre páginas ───────────────────────────────── */
-export function goHome()    { location.href = './index.html'; }
-export function goMach()    { location.href = './mach.html'; }
-export function goTheater() { location.href = './theater.html'; }
-export function goFavs()    { location.href = './favorites.html'; }
-export function goKills()   { location.href = './kills.html'; }
-export function goFleets()  { location.href = './fleets.html'; }
-export function goCompare() { location.href = './compare.html'; }
+function goHome()    { location.href = './index.html'; }
+function goMach()    { location.href = './mach.html'; }
+function goTheater() { location.href = './theater.html'; }
+function goFavs() { location.href = './favorites.html'; }
+function goKills()   { location.href = './kills.html'; }
+function goFleets()  { location.href = './fleets.html'; }
+function goCompare() { location.href = './compare.html'; }
 
 /* ── Barra de navegación compartida ────────────────────────── */
-export function buildNavBar(activePage) {
+function buildNavBar(activePage) {
   const pages = [
-    { id: 'home',     label: 'Archivo',  icon: 'fa-fighter-jet',   fn: 'goHome()' },
-    { id: 'kills',    label: 'Combate',  icon: 'fa-crosshairs',    fn: 'goKills()' },
-    { id: 'fleets',   label: 'Flotas',   icon: 'fa-globe',         fn: 'goFleets()' },
-    { id: 'theater',  label: 'Teatro',   icon: 'fa-crosshairs',    fn: 'goTheater()' },
-    { id: 'compare',  label: 'Comparar', icon: 'fa-balance-scale', fn: 'goCompare()' },
-    { id: 'favorites',label: 'Favoritos',icon: 'fa-star',          fn: 'goFavs()' },
-    { id: 'mach',     label: 'Mach',     icon: 'fa-tachometer-alt',fn: 'goMach()' },
+    { id: 'home', label: 'Archivo', icon: 'fa-fighter-jet', fn: 'goHome()' },
+    { id:'kills',    label:'Combate',  icon:'fa-crosshairs',    fn:'goKills()' },
+    { id:'fleets',   label:'Flotas',   icon:'fa-globe',         fn:'goFleets()' },
+    { id:'theater',  label:'Teatro',   icon:'fa-crosshairs',    fn:'goTheater()' },
+    { id:'compare',  label:'Comparar', icon:'fa-balance-scale', fn:'goCompare()' },
+    { id:'favorites',label:'Favoritos',icon:'fa-star',          fn:'goFavs()' },
+    { id:'mach',     label:'Mach',     icon:'fa-tachometer-alt',fn:'goMach()' },
   ];
   return '<nav class="page-nav">' +
     '<a class="logo" onclick="goHome();return false;" href="#">' +
@@ -63,7 +63,7 @@ export function buildNavBar(activePage) {
 }
 
 /* ── Mensaje de error de carga ──────────────────────────────── */
-export function showLoadError(containerId, err) {
+function showLoadError(containerId, err) {
   var el = document.getElementById(containerId);
   if (!el) return;
   el.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:4rem 1rem;color:var(--text-3)">' +
@@ -116,14 +116,14 @@ function buildAircraftCard(plane) {
 }
 
 /* ── Navegación a la galería principal con hash ─────────────── */
-export function viewInGallery(id) {
+function viewInGallery(id) {
   location.href = './index.html#' + id;
 }
 
 /* ── Toggle favorito en páginas independientes ───────────────── */
-export function toggleFavPage(id) {
+function toggleFavPage(id) {
   var favs = getFavs();
-  favs = favs.includes(id) ? favs.filter(f => f !== id) : favs.concat([id]);
+  favs = favs.includes(id) ? favs.filter(function(f) { return f !== id; }) : favs.concat([id]);
   saveFavs(favs);
   var btn = document.getElementById('favBtn-' + id);
   if (btn) {
@@ -134,7 +134,7 @@ export function toggleFavPage(id) {
 }
 
 /* ── Atajo de teclado: tema ──────────────────────────────────── */
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', function(e) {
   var tag    = document.activeElement && document.activeElement.tagName.toLowerCase();
   var typing = ['input','select','textarea'].includes(tag);
   if (typing) return;
