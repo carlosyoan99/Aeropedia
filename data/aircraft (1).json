@@ -1,0 +1,7083 @@
+[
+  {
+    "id": "p51d",
+    "name": "P-51D Mustang",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1944,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_europe",
+      "wwii_pacific",
+      "korea"
+    ],
+    "wiki": "North_American_P-51_Mustang",
+    "speed": 703,
+    "range": 3540,
+    "ceiling": 12771,
+    "mtow": 5490,
+    "arm": "6× ametralladoras M2 de 12,7 mm, 2× bombas de 227 kg",
+    "trivia": "Diseñado en solo 117 días. Con depósitos externos podía escoltar bombarderos de Inglaterra a Berlín y volver, algo considerado imposible.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/North_American_P-51D_Mustang.jpg/1200px-North_American_P-51D_Mustang.jpg",
+    "desc": "El mejor caza de escolta aliado de la Segunda Guerra Mundial. Su motor Merlin y sus depósitos externos le dieron un alcance sin rival que salvó las campañas de bombardeo estratégico sobre Alemania.",
+    "engine": "Packard V-1650-7 Merlin (pistón V-12)",
+    "thrust_kn": null,
+    "wing_span": 11.28,
+    "length": 9.83,
+    "height": 4.16,
+    "wing_area": 21.65,
+    "fuel_capacity": 1521,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1250,
+    "thrust_to_weight": 0.41,
+    "wing_loading": 253,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio VHF",
+    "helmet_system": null,
+    "roles": [
+      "escolta",
+      "caza superioridad aérea",
+      "ataque a tierra"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "6x M2 Browning 12,7 mm",
+      "hardpoints": 6,
+      "missiles": [],
+      "bombs": [
+        "227 kg",
+        "cohetes HVAR"
+      ]
+    },
+    "status": "retired",
+    "units_built": 15586,
+    "retired_year": 1957,
+    "operators": [
+      "EE.UU.",
+      "Reino Unido",
+      "Australia",
+      "Sudáfrica",
+      "China Nacionalista"
+    ],
+    "unit_cost_m": 0.051,
+    "manufacturer": "North American Aviation",
+    "derived_from": null,
+    "related_aircraft": [
+      "spitfire",
+      "fw190a",
+      "bf109g"
+    ],
+    "variants": [
+      "P-51A",
+      "P-51B",
+      "P-51C",
+      "P-51D",
+      "P-51H"
+    ],
+    "tags": [
+      "wwii",
+      "pistón",
+      "escolta",
+      "legendario"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": 213873,
+        "notes": "Principal escolta de los bombarderos del 8o Ejército Aéreo. Destruyó más de 4.950 aviones en combate aéreo."
+      }
+    ]
+  },
+  {
+    "id": "spitfire",
+    "name": "Supermarine Spitfire Mk IX",
+    "type": "Caza",
+    "country": "Reino Unido",
+    "year": 1942,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_europe",
+      "wwii_africa"
+    ],
+    "wiki": "Supermarine_Spitfire",
+    "speed": 664,
+    "range": 1576,
+    "ceiling": 13106,
+    "mtow": 3397,
+    "arm": "2× cañones Hispano 20 mm, 4× ametralladoras Browning .303",
+    "trivia": "Fue el único avión aliado producido ininterrumpidamente durante toda la Segunda Guerra Mundial, con más de 20.000 unidades en 24 variantes distintas.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Supermarine_Spitfire_%28IXT%29_EN398_6.jpg/1200px-Supermarine_Spitfire_%28IXT%29_EN398_6.jpg",
+    "desc": "El símbolo de la Batalla de Inglaterra. Su ala elíptica y motor Merlin lo convirtieron en un caza excepcional que evolucionó constantemente para mantenerse al día frente a cada nuevo diseño alemán.",
+    "engine": "Rolls-Royce Merlin 61 (pistón V-12)",
+    "thrust_kn": null,
+    "wing_span": 11.23,
+    "length": 9.47,
+    "height": 3.86,
+    "wing_area": 22.48,
+    "fuel_capacity": 386,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 756,
+    "thrust_to_weight": 0.57,
+    "wing_loading": 151,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio HF/VHF",
+    "helmet_system": null,
+    "roles": [
+      "caza superioridad aérea",
+      "interceptor",
+      "reconocimiento"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x Hispano 20 mm + 4x Browning 7,7 mm",
+      "hardpoints": 2,
+      "missiles": [],
+      "bombs": [
+        "227 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 20351,
+    "retired_year": 1954,
+    "operators": [
+      "Reino Unido",
+      "Australia",
+      "Canadá",
+      "Polonia",
+      "Francia",
+      "URSS"
+    ],
+    "unit_cost_m": 0.012,
+    "manufacturer": "Supermarine Aviation Works (Vickers)",
+    "derived_from": null,
+    "related_aircraft": [
+      "p51d",
+      "bf109g",
+      "fw190a"
+    ],
+    "variants": [
+      "Mk I",
+      "Mk V",
+      "Mk VIII",
+      "Mk IX",
+      "Mk XIV",
+      "Mk XIX",
+      "Seafire"
+    ],
+    "tags": [
+      "wwii",
+      "pistón",
+      "ícono",
+      "Batalla de Inglaterra",
+      "RAF"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": null,
+        "notes": "Protagonista de la Batalla de Inglaterra (1940). 20.351 unidades construidas."
+      }
+    ]
+  },
+  {
+    "id": "bf109g",
+    "name": "Messerschmitt Bf 109G",
+    "type": "Caza",
+    "country": "Alemania Nazi",
+    "year": 1942,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_europe",
+      "wwii_africa",
+      "wwii_east"
+    ],
+    "wiki": "Messerschmitt_Bf_109",
+    "speed": 640,
+    "range": 720,
+    "ceiling": 12500,
+    "mtow": 3400,
+    "arm": "1× cañón MK 108 30 mm, 2× ametralladoras MG 131 13 mm",
+    "trivia": "Con más de 33.984 unidades construidas, es el caza más producido de la historia. Sus pilotos más destacados acumularon más de 300 victorias aéreas individuales.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Messerschmitt_Bf_109G-6.jpg/1200px-Messerschmitt_Bf_109G-6.jpg",
+    "desc": "La columna vertebral de la Luftwaffe desde 1937 hasta el final de la guerra. El Bf 109G fue la versión más producida, aunque su tren de aterrizaje estrecho seguía causando accidentes.",
+    "engine": "Daimler-Benz DB 605A (pistón V-12)",
+    "thrust_kn": null,
+    "wing_span": 9.92,
+    "length": 8.95,
+    "height": 2.6,
+    "wing_area": 16.16,
+    "fuel_capacity": 400,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 450,
+    "thrust_to_weight": 0.6,
+    "wing_loading": 210,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio FuG 16ZY",
+    "helmet_system": null,
+    "roles": [
+      "caza superioridad aérea",
+      "interceptor",
+      "ataque a tierra"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x MK 108 30 mm + 2x MG 131 13 mm",
+      "hardpoints": 3,
+      "missiles": [],
+      "bombs": [
+        "250 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 33984,
+    "retired_year": 1945,
+    "operators": [
+      "Alemania Nazi",
+      "Finlandia",
+      "Hungría",
+      "Rumania",
+      "España",
+      "Bulgaria"
+    ],
+    "unit_cost_m": 0.018,
+    "manufacturer": "Messerschmitt AG",
+    "derived_from": null,
+    "related_aircraft": [
+      "fw190a",
+      "spitfire",
+      "p51d"
+    ],
+    "variants": [
+      "Bf 109B",
+      "Bf 109E",
+      "Bf 109F",
+      "Bf 109G",
+      "Bf 109K"
+    ],
+    "tags": [
+      "wwii",
+      "pistón",
+      "Luftwaffe",
+      "más producido en su tipo",
+      "eje"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": null,
+        "notes": "Caza más producido de la historia (33.984 u.). Erich Hartmann logró 352 victorias con él."
+      }
+    ]
+  },
+  {
+    "id": "fw190a",
+    "name": "Focke-Wulf Fw 190A",
+    "type": "Caza",
+    "country": "Alemania Nazi",
+    "year": 1941,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_europe",
+      "wwii_east"
+    ],
+    "wiki": "Focke-Wulf_Fw_190",
+    "speed": 654,
+    "range": 800,
+    "ceiling": 11400,
+    "mtow": 4417,
+    "arm": "4× cañones MG 151 20 mm, 2× ametralladoras MG 17",
+    "trivia": "Cuando el Fw 190 apareció sobre el Canal de la Mancha en 1941, era superior a todo lo que tenía la RAF. Los británicos capturaron uno aterrizando por error en un aeródromo inglés para estudiar sus secretos.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Focke-Wulf_Fw_190_A-8_Airshow_Duxford_2013.jpg/1200px-Focke-Wulf_Fw_190_A-8_Airshow_Duxford_2013.jpg",
+    "desc": "El gran rival del Spitfire, considerado por muchos el mejor caza alemán de la guerra. Su diseño robusto y versátil permitió múltiples variantes de ataque y caza.",
+    "engine": "BMW 801D-2 (radial 14 cilindros)",
+    "thrust_kn": null,
+    "wing_span": 10.51,
+    "length": 8.84,
+    "height": 3.96,
+    "wing_area": 18.3,
+    "fuel_capacity": 524,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 560,
+    "thrust_to_weight": 0.56,
+    "wing_loading": 241,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio FuG 16",
+    "helmet_system": null,
+    "roles": [
+      "caza superioridad aérea",
+      "ataque a tierra",
+      "interceptor",
+      "caza nocturno"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "4x MG 151/20 20 mm + 2x MG 17 7,92 mm",
+      "hardpoints": 5,
+      "missiles": [],
+      "bombs": [
+        "500 kg",
+        "250 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 20000,
+    "retired_year": 1945,
+    "operators": [
+      "Alemania Nazi"
+    ],
+    "unit_cost_m": 0.02,
+    "manufacturer": "Focke-Wulf Flugzeugbau",
+    "derived_from": null,
+    "related_aircraft": [
+      "bf109g",
+      "spitfire",
+      "p51d"
+    ],
+    "variants": [
+      "Fw 190A",
+      "Fw 190D",
+      "Fw 190F",
+      "Ta 152"
+    ],
+    "tags": [
+      "wwii",
+      "pistón",
+      "radial",
+      "Luftwaffe",
+      "versátil"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": null,
+        "notes": "Introdujo la superioridad aérea alemana sobre el Canal de la Mancha en 1941."
+      }
+    ]
+  },
+  {
+    "id": "a6m_zero",
+    "name": "Mitsubishi A6M Zero",
+    "type": "Caza",
+    "country": "Japón",
+    "year": 1940,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_pacific"
+    ],
+    "wiki": "Mitsubishi_A6M_Zero",
+    "speed": 533,
+    "range": 3104,
+    "ceiling": 10000,
+    "mtow": 2796,
+    "arm": "2× cañones Type 99 20 mm, 2× ametralladoras Type 97 7,7 mm",
+    "trivia": "En los primeros meses de la guerra, el Zero era tan superior a cualquier avión aliado que los pilotos enemigos recibieron órdenes de no enfrentarse a él en combate directo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/A6M3_Zero_0224.jpg/1200px-A6M3_Zero_0224.jpg",
+    "desc": "El caza japonés que dominó el Pacífico en 1941-42. Su extraordinario alcance y maniobrabilidad fueron posibles gracias a un diseño que sacrificó totalmente la protección del piloto.",
+    "engine": "Nakajima NK1C Sakae-12 (radial 14 cil.)",
+    "thrust_kn": null,
+    "wing_span": 12.0,
+    "length": 9.06,
+    "height": 3.05,
+    "wing_area": 22.44,
+    "fuel_capacity": 518,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1670,
+    "thrust_to_weight": 0.4,
+    "wing_loading": 107,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "caza naval",
+      "superioridad aérea",
+      "escolta"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x Type 99 20 mm + 2x Type 97 7,7 mm",
+      "hardpoints": 2,
+      "missiles": [],
+      "bombs": [
+        "60 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 10939,
+    "retired_year": 1945,
+    "operators": [
+      "Japón Imperial"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Mitsubishi Heavy Industries",
+    "derived_from": null,
+    "related_aircraft": [
+      "p51d",
+      "spitfire"
+    ],
+    "variants": [
+      "A6M2",
+      "A6M3",
+      "A6M5",
+      "A6M7",
+      "A6M8"
+    ],
+    "tags": [
+      "wwii",
+      "pistón",
+      "naval",
+      "Pacífico",
+      "portaviones",
+      "japón"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_pacific",
+        "missions": null,
+        "notes": "Dominó el Pacífico en 1941-42. Usado como kamikaze en la fase final."
+      }
+    ]
+  },
+  {
+    "id": "b17f",
+    "name": "Boeing B-17 Flying Fortress",
+    "type": "Bombardero",
+    "country": "EE.UU.",
+    "year": 1941,
+    "generation": null,
+    "conflicts": [
+      "wwii_europe",
+      "wwii_pacific"
+    ],
+    "wiki": "Boeing_B-17_Flying_Fortress",
+    "speed": 462,
+    "range": 3219,
+    "ceiling": 10850,
+    "mtow": 29710,
+    "arm": "13× ametralladoras M2 .50 cal, 2.724 kg de bombas",
+    "trivia": "El B-17 fue tan difícil de derribar que los alemanes le pusieron el apodo de 'la fortaleza volante'. Hay constancia de B-17 que volvieron a base con la nariz arrancada, sin cola o con dos motores.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/B-17_Flying_Fortress.jpg/1200px-B-17_Flying_Fortress.jpg",
+    "desc": "El bombardero estratégico que llevó la guerra a suelo alemán de día. La campaña de bombardeo del 8.º Ejército Aéreo desde Inglaterra fue uno de los esfuerzos bélicos más costosos de la historia.",
+    "engine": "4x Wright R-1820-97 Cyclone (radial)",
+    "thrust_kn": null,
+    "wing_span": 31.62,
+    "length": 22.78,
+    "height": 5.82,
+    "wing_area": 131.92,
+    "fuel_capacity": 11212,
+    "crew": 10,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Bombardero",
+      "Navegante",
+      "Ingeniero",
+      "Radio",
+      "Artillero x4"
+    ],
+    "combat_radius": 2898,
+    "thrust_to_weight": 0.25,
+    "wing_loading": 225,
+    "radar": "Norden bombsight (óptico)",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico diurno"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "13x M2 Browning 12,7 mm",
+      "hardpoints": 8,
+      "missiles": [],
+      "bombs": [
+        "2.724 kg max"
+      ]
+    },
+    "status": "retired",
+    "units_built": 12731,
+    "retired_year": 1960,
+    "operators": [
+      "EE.UU.",
+      "Reino Unido",
+      "Brasil"
+    ],
+    "unit_cost_m": 0.238,
+    "manufacturer": "Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "lancaster",
+      "b29"
+    ],
+    "variants": [
+      "B-17C",
+      "B-17D",
+      "B-17E",
+      "B-17F",
+      "B-17G"
+    ],
+    "tags": [
+      "wwii",
+      "4 motores",
+      "bombardeo estratégico",
+      "8th Air Force"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": 291508,
+        "notes": "8th Air Force lanzó 640.000 t de bombas. Más del 26% de las tripulaciones murieron en combate."
+      }
+    ]
+  },
+  {
+    "id": "lancaster",
+    "name": "Avro Lancaster",
+    "type": "Bombardero",
+    "country": "Reino Unido",
+    "year": 1942,
+    "generation": null,
+    "conflicts": [
+      "wwii_europe"
+    ],
+    "wiki": "Avro_Lancaster",
+    "speed": 462,
+    "range": 4072,
+    "ceiling": 7467,
+    "mtow": 31751,
+    "arm": "10× ametralladoras .303, 6.350 kg de bombas (o Tallboy/Grand Slam)",
+    "trivia": "El Lancaster fue el único avión capaz de transportar la bomba 'Grand Slam' de 10 toneladas, la mayor bomba convencional usada en la guerra, que podía destruir un viaducto desde dentro del suelo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Lancaster_BI%28FE%29_PA474_STC_1.jpg/1200px-Lancaster_BI%28FE%29_PA474_STC_1.jpg",
+    "desc": "El bombardero nocturno por excelencia del Mando de Bombarderos de la RAF. Protagonizó la Operación Chastise (los Dambusters) y fue el que más toneladas de bombas lanzó de cualquier avión aliado.",
+    "engine": "4x Rolls-Royce Merlin XX (pistón V-12)",
+    "thrust_kn": null,
+    "wing_span": 31.09,
+    "length": 21.18,
+    "height": 6.1,
+    "wing_area": 120.49,
+    "fuel_capacity": 16556,
+    "crew": 7,
+    "crew_roles": [
+      "Piloto",
+      "Bombardero",
+      "Navegante",
+      "Ingeniero",
+      "Radio",
+      "Artillero dorsal",
+      "Artillero cola"
+    ],
+    "combat_radius": 2671,
+    "thrust_to_weight": 0.27,
+    "wing_loading": 264,
+    "radar": "H2S (radar de navegación)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Tinsel, ABC (jamming)",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico nocturno"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "10x Browning 7,7 mm",
+      "hardpoints": 1,
+      "missiles": [],
+      "bombs": [
+        "Tallboy 5.443 kg",
+        "Grand Slam 9.979 kg",
+        "4.000 lb Cookie"
+      ]
+    },
+    "status": "retired",
+    "units_built": 7377,
+    "retired_year": 1954,
+    "operators": [
+      "Reino Unido",
+      "Canadá",
+      "Australia",
+      "Nueva Zelanda"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Avro / A.V. Roe and Company",
+    "derived_from": null,
+    "related_aircraft": [
+      "b17f",
+      "b29"
+    ],
+    "variants": [
+      "Lancaster Mk I",
+      "Mk II",
+      "Mk III",
+      "Mk X",
+      "Lincoln"
+    ],
+    "tags": [
+      "wwii",
+      "nocturno",
+      "4 motores",
+      "Dambusters",
+      "bombardeo estratégico"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": 156000,
+        "notes": "608.612 t de bombas. Operación Chastise (Dambusters) el 16 mayo 1943."
+      }
+    ]
+  },
+  {
+    "id": "il2",
+    "name": "Ilyushin Il-2 Shturmovik",
+    "type": "Ataque",
+    "country": "URSS",
+    "year": 1941,
+    "generation": null,
+    "conflicts": [
+      "wwii_east"
+    ],
+    "wiki": "Ilyushin_Il-2",
+    "speed": 404,
+    "range": 765,
+    "ceiling": 5500,
+    "mtow": 6360,
+    "arm": "2× cañones VYa 23 mm, 2× ametralladoras ShKAS, 8× cohetes RS-82, 600 kg de bombas",
+    "trivia": "Con 36.183 unidades fabricadas, es el avión militar más producido de la historia. Stalin lo llamó 'tan necesario para el Ejército Rojo como el aire y el pan'.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Ilyushin_Il-2_in_flight.jpg/1200px-Ilyushin_Il-2_in_flight.jpg",
+    "desc": "El avión de ataque más producido de la historia y el terror de los acorazados alemanes en el Frente Oriental. Su fuselaje de acero blindado lo hacía excepcionalmente resistente al fuego antiaéreo.",
+    "engine": "Mikulin AM-38F (pistón V-12)",
+    "thrust_kn": null,
+    "wing_span": 14.6,
+    "length": 11.65,
+    "height": 3.4,
+    "wing_area": 38.5,
+    "fuel_capacity": 730,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Artillero trasero"
+    ],
+    "combat_radius": 765,
+    "thrust_to_weight": 0.35,
+    "wing_loading": 165,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "CAS",
+      "antitanque",
+      "ataque a tierra"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x VYa 23 mm + 2x ShKAS 7,62 mm",
+      "hardpoints": 8,
+      "missiles": [
+        "RS-82",
+        "RS-132"
+      ],
+      "bombs": [
+        "600 kg mix",
+        "PTAB antitanque"
+      ]
+    },
+    "status": "retired",
+    "units_built": 36183,
+    "retired_year": 1956,
+    "operators": [
+      "URSS",
+      "Polonia",
+      "Checoslovaquia",
+      "Yugoslavia"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Ilyushin",
+    "derived_from": null,
+    "related_aircraft": [
+      "a10",
+      "su25"
+    ],
+    "variants": [
+      "Il-2 monoplaza",
+      "Il-2 biplaza",
+      "Il-2M3",
+      "Il-10"
+    ],
+    "tags": [
+      "wwii",
+      "blindado",
+      "CAS",
+      "más producido de todos",
+      "Frente Oriental"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_east",
+        "missions": null,
+        "notes": "Más de 36.183 unidades. Stalin: 'tan necesario como el aire y el pan'."
+      }
+    ]
+  },
+  {
+    "id": "me262",
+    "name": "Messerschmitt Me 262",
+    "type": "Caza",
+    "country": "Alemania Nazi",
+    "year": 1944,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_europe"
+    ],
+    "wiki": "Messerschmitt_Me_262",
+    "speed": 900,
+    "range": 1050,
+    "ceiling": 11450,
+    "mtow": 6775,
+    "arm": "4× cañones MK 108 30 mm, 24× cohetes R4M",
+    "trivia": "El primer caza a reacción operativo de la historia era tan rápido que los pilotos aliados apenas podían verlo pasar. Su talón de Aquiles era que solo era vulnerable durante el despegue y aterrizaje.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Me_262_color.jpg/1200px-Me_262_color.jpg",
+    "desc": "El primer avión a reacción de combate de la historia. Llegó demasiado tarde para cambiar el resultado de la guerra, pero su diseño de ala en flecha influyó en todos los cazas de la posguerra.",
+    "engine": "2x Junkers Jumo 004B (turborreactor)",
+    "thrust_kn": 17.65,
+    "wing_span": 12.51,
+    "length": 10.6,
+    "height": 3.83,
+    "wing_area": 21.73,
+    "fuel_capacity": 2570,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 526,
+    "thrust_to_weight": 0.36,
+    "wing_loading": 312,
+    "radar": "FuG 218 Neptun (caza nocturno)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "interceptor",
+      "caza de superioridad aérea"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "4x MK 108 30 mm",
+      "hardpoints": 12,
+      "missiles": [],
+      "bombs": [
+        "250 kg (Sturmvogel)"
+      ]
+    },
+    "status": "retired",
+    "units_built": 1430,
+    "retired_year": 1945,
+    "operators": [
+      "Alemania Nazi"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Messerschmitt AG",
+    "derived_from": null,
+    "related_aircraft": [
+      "f86sabre",
+      "mig15"
+    ],
+    "variants": [
+      "Me 262A-1a Schwalbe",
+      "Me 262A-2a Sturmvogel",
+      "Me 262B nocturno"
+    ],
+    "tags": [
+      "wwii",
+      "primer jet operativo",
+      "turborreactor",
+      "revolucionario"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": null,
+        "notes": "Primer caza a reacción operativo de la historia. Retrasado por órdenes de Hitler."
+      }
+    ]
+  },
+  {
+    "id": "p47d",
+    "name": "Republic P-47D Thunderbolt",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1943,
+    "generation": "2ª",
+    "conflicts": [
+      "wwii_europe",
+      "wwii_pacific"
+    ],
+    "wiki": "Republic_P-47_Thunderbolt",
+    "speed": 689,
+    "range": 3782,
+    "ceiling": 13100,
+    "mtow": 9185,
+    "arm": "8× ametralladoras M2 .50 cal, 1.134 kg de bombas o cohetes",
+    "trivia": "El P-47 era tan robusto que sobrevivía a golpes que habrían derribado a cualquier otro caza. Un piloto regresó a base con 150 impactos de bala, el motor en llamas y sin instrumentos.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Republic_P-47D_Thunderbolt_USAF.jpg/1200px-Republic_P-47D_Thunderbolt_USAF.jpg",
+    "desc": "El mayor y más pesado caza de la guerra. Llamado 'el Jug' por sus tripulaciones, fue extraordinariamente efectivo en misiones de ataque a tierra y escolta de bombarderos en los últimos años de la guerra.",
+    "engine": "P&W R-2800-59 Double Wasp (radial 18 cil.)",
+    "thrust_kn": null,
+    "wing_span": 12.42,
+    "length": 11.02,
+    "height": 4.47,
+    "wing_area": 27.87,
+    "fuel_capacity": 1383,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1328,
+    "thrust_to_weight": 0.45,
+    "wing_loading": 329,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio VHF",
+    "helmet_system": null,
+    "roles": [
+      "escolta",
+      "ataque a tierra",
+      "CAS",
+      "caza"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "8x M2 Browning 12,7 mm",
+      "hardpoints": 3,
+      "missiles": [],
+      "bombs": [
+        "1.134 kg max",
+        "cohetes HVAR"
+      ]
+    },
+    "status": "retired",
+    "units_built": 15636,
+    "retired_year": 1955,
+    "operators": [
+      "EE.UU.",
+      "Reino Unido",
+      "Francia",
+      "Brasil",
+      "URSS"
+    ],
+    "unit_cost_m": 0.083,
+    "manufacturer": "Republic Aviation",
+    "derived_from": null,
+    "related_aircraft": [
+      "p51d",
+      "fw190a"
+    ],
+    "variants": [
+      "P-47B",
+      "P-47C",
+      "P-47D",
+      "P-47M",
+      "P-47N"
+    ],
+    "tags": [
+      "wwii",
+      "pistón",
+      "radial",
+      "resistente",
+      "ataque a tierra"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": 423435,
+        "notes": "Destruyó 3.752 aviones, 9.000 locomotoras, 86.000 vagones, 6.000 tanques."
+      }
+    ]
+  },
+  {
+    "id": "b29",
+    "name": "Boeing B-29 Superfortress",
+    "type": "Bombardero",
+    "country": "EE.UU.",
+    "year": 1944,
+    "generation": null,
+    "conflicts": [
+      "wwii_pacific",
+      "korea"
+    ],
+    "wiki": "Boeing_B-29_Superfortress",
+    "speed": 574,
+    "range": 9382,
+    "ceiling": 9710,
+    "mtow": 63503,
+    "arm": "12× ametralladoras M2 .50 cal, 9.072 kg de bombas",
+    "trivia": "Fue el proyecto más caro de la Segunda Guerra Mundial, superando incluso al Proyecto Manhattan. Sus dos misiones finales sobre Hiroshima y Nagasaki cambiaron la historia para siempre.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/B-29_Superfortress.jpg/1200px-B-29_Superfortress.jpg",
+    "desc": "El bombardero estratégico más avanzado de su época. Fue el primero con cabina presurizada y torreta de control remoto, y el único en usar armas nucleares en combate.",
+    "engine": "4x Wright R-3350-57 Duplex Cyclone (radial)",
+    "thrust_kn": null,
+    "wing_span": 43.05,
+    "length": 30.18,
+    "height": 8.46,
+    "wing_area": 161.27,
+    "fuel_capacity": 29110,
+    "crew": 11,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Bombardero",
+      "Navegante",
+      "Ingeniero",
+      "Radio",
+      "Artillero x5"
+    ],
+    "combat_radius": 5230,
+    "thrust_to_weight": 0.31,
+    "wing_loading": 394,
+    "radar": "AN/APQ-7 Eagle (bombardeo)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Contramedidas Würzburg",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico",
+      "nuclear (1945)"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "12x M2 12,7 mm + 1x M2 20 mm cola",
+      "hardpoints": 2,
+      "missiles": [],
+      "bombs": [
+        "Fat Man",
+        "Little Boy",
+        "9.072 kg convencional"
+      ]
+    },
+    "status": "retired",
+    "units_built": 3970,
+    "retired_year": 1960,
+    "operators": [
+      "EE.UU.",
+      "Reino Unido"
+    ],
+    "unit_cost_m": 0.639,
+    "manufacturer": "Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "b52",
+      "b17f",
+      "tu95"
+    ],
+    "variants": [
+      "B-29",
+      "B-29A",
+      "B-29B",
+      "KB-29",
+      "WB-29"
+    ],
+    "tags": [
+      "wwii",
+      "nuclear",
+      "presurizado",
+      "histórico",
+      "Hiroshima",
+      "Nagasaki"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_pacific",
+        "missions": null,
+        "notes": "Lanzó las bombas atómicas sobre Hiroshima (6 ago) y Nagasaki (9 ago 1945)."
+      }
+    ]
+  },
+  {
+    "id": "c47",
+    "name": "Douglas C-47 Skytrain",
+    "type": "Transporte",
+    "country": "EE.UU.",
+    "year": 1941,
+    "generation": null,
+    "conflicts": [
+      "wwii_europe",
+      "wwii_pacific",
+      "wwii_africa",
+      "korea",
+      "vietnam"
+    ],
+    "wiki": "Douglas_C-47_Skytrain",
+    "speed": 370,
+    "range": 5490,
+    "ceiling": 7315,
+    "mtow": 14061,
+    "arm": "Hasta 6.800 kg de carga o 28 paracaidistas",
+    "trivia": "Eisenhower lo consideró uno de los instrumentos más decisivos de la victoria aliada. La versión AC-47 'Spooky' siguió en combate en Vietnam 25 años después.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Douglas_C-47_Skytrain_USAF.jpg/1200px-Douglas_C-47_Skytrain_USAF.jpg",
+    "desc": "El transporte militar más importante de la Segunda Guerra Mundial. Versátil hasta lo imposible: soltó paracaidistas en Normandía, abasteció Berlín durante el bloqueo soviético y combatió en Vietnam.",
+    "engine": "2x P&W R-1830-90D Twin Wasp",
+    "thrust_kn": null,
+    "wing_span": 28.96,
+    "length": 19.43,
+    "height": 5.18,
+    "wing_area": 91.69,
+    "fuel_capacity": 4080,
+    "crew": 3,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Operador de carga"
+    ],
+    "combat_radius": 2400,
+    "thrust_to_weight": 0.27,
+    "wing_loading": 153,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno (AC-47 con miniguns)",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "transporte táctico",
+      "paracaidismo",
+      "evacuación médica",
+      "CAS (AC-47)"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno (AC-47: 3x minigun 7,62 mm)",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "retired",
+    "units_built": 10926,
+    "retired_year": 1990,
+    "operators": [
+      "EE.UU.",
+      "Reino Unido",
+      "URSS",
+      "Australia",
+      "y 30+ países"
+    ],
+    "unit_cost_m": 0.138,
+    "manufacturer": "Douglas Aircraft Company",
+    "derived_from": null,
+    "related_aircraft": [
+      "c130"
+    ],
+    "variants": [
+      "C-47A",
+      "C-47B",
+      "AC-47 Spooky",
+      "EC-47 SIGINT"
+    ],
+    "tags": [
+      "wwii",
+      "transporte",
+      "paracaidismo",
+      "Normandía",
+      "DC-3 militar"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "wwii_europe",
+        "missions": null,
+        "notes": "13.000 paracaidistas en Normandía. Puente aéreo de Berlín 1948-49."
+      },
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": "Como AC-47 Spooky, apoyo de fuego nocturno a posiciones asediadas."
+      }
+    ]
+  },
+  {
+    "id": "f86sabre",
+    "name": "North American F-86 Sabre",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1949,
+    "generation": "1ª",
+    "conflicts": [
+      "korea"
+    ],
+    "wiki": "North_American_F-86_Sabre",
+    "speed": 1106,
+    "range": 2454,
+    "ceiling": 15240,
+    "mtow": 8234,
+    "arm": "6× ametralladoras M3 de 12,7 mm o 4× cañones M24A1 de 20 mm",
+    "trivia": "El Sabre logró una proporción de victorias de 10:1 contra el MiG-15 en Corea, aunque muchos pilotos norcoreanos eran en realidad pilotos soviéticos que combatían de incógnito.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/F-86D_Sabre_of_the_325th_FIS.jpg/1200px-F-86D_Sabre_of_the_325th_FIS.jpg",
+    "desc": "El primer caza de ala en flecha occidental. Sus combates con el MiG-15 sobre el 'Callejón de los MiGs' en Corea definieron los parámetros del combate aéreo a reacción durante décadas.",
+    "engine": "General Electric J47-GE-27 (turborreactor)",
+    "thrust_kn": 27.24,
+    "wing_span": 11.31,
+    "length": 11.43,
+    "height": 4.47,
+    "wing_area": 26.75,
+    "fuel_capacity": 2183,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 853,
+    "thrust_to_weight": 0.46,
+    "wing_loading": 308,
+    "radar": "AN/APG-30 (radar de distancia)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio UHF",
+    "helmet_system": null,
+    "roles": [
+      "caza de superioridad aérea",
+      "interceptor"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "6x M3 12,7 mm",
+      "hardpoints": 4,
+      "missiles": [
+        "AIM-9 Sidewinder"
+      ],
+      "bombs": [
+        "907 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 9860,
+    "retired_year": 1994,
+    "operators": [
+      "EE.UU.",
+      "Canadá",
+      "Australia",
+      "Japón",
+      "Alemania Occ.",
+      "y 20+ países"
+    ],
+    "unit_cost_m": 0.219,
+    "manufacturer": "North American Aviation",
+    "derived_from": null,
+    "related_aircraft": [
+      "mig15",
+      "f100"
+    ],
+    "variants": [
+      "F-86A",
+      "F-86D",
+      "F-86E",
+      "F-86F",
+      "F-86H",
+      "Canadair Sabre"
+    ],
+    "tags": [
+      "primera gen jet",
+      "Corea",
+      "ala en flecha",
+      "MiG Alley"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "korea",
+        "missions": 87177,
+        "notes": "792 victorias aéreas confirmadas. Proporción 10:1 contra MiG-15."
+      }
+    ]
+  },
+  {
+    "id": "mig15",
+    "name": "Mikoyan-Gurevich MiG-15",
+    "type": "Caza",
+    "country": "URSS",
+    "year": 1949,
+    "generation": "1ª",
+    "conflicts": [
+      "korea"
+    ],
+    "wiki": "Mikoyan-Gurevich_MiG-15",
+    "speed": 1076,
+    "range": 2520,
+    "ceiling": 15500,
+    "mtow": 6105,
+    "arm": "1× cañón N-37 de 37 mm, 2× cañones NR-23 de 23 mm",
+    "trivia": "Cuando el MiG-15 apareció sobre Corea, era superior a todos los aviones de la ONU excepto el F-86. La CIA pagó 100.000 dólares a un piloto norcoreano para que desertara con uno.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mig-15_Leeuwarden.jpg/1200px-Mig-15_Leeuwarden.jpg",
+    "desc": "El caza soviético que sorprendió a las fuerzas de la ONU en Corea. Diseñado con tecnología del motor alemán Heinkel y el perfil de ala de Focke-Wulf capturados al final de la Segunda Guerra Mundial.",
+    "engine": "Klimov VK-1 (copia del Rolls-Royce Nene)",
+    "thrust_kn": 26.48,
+    "wing_span": 10.08,
+    "length": 10.1,
+    "height": 3.7,
+    "wing_area": 20.6,
+    "fuel_capacity": 1450,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 580,
+    "thrust_to_weight": 0.54,
+    "wing_loading": 296,
+    "radar": null,
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "caza de superioridad aérea",
+      "interceptor de bombarderos"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x N-37 37 mm + 2x NR-23 23 mm",
+      "hardpoints": 2,
+      "missiles": [],
+      "bombs": [
+        "200 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 18000,
+    "retired_year": 1990,
+    "operators": [
+      "URSS",
+      "China",
+      "Corea del Norte",
+      "Polonia",
+      "y 30+ países"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Mikoyan-Gurevich",
+    "derived_from": null,
+    "related_aircraft": [
+      "f86sabre",
+      "mig17",
+      "mig21"
+    ],
+    "variants": [
+      "MiG-15",
+      "MiG-15bis",
+      "MiG-15UTI entrenamiento"
+    ],
+    "tags": [
+      "primera gen jet",
+      "Corea",
+      "soviético",
+      "ala en flecha"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "korea",
+        "missions": null,
+        "notes": "Causó crisis en la ONU en nov 1950. Pilotos soviéticos volaron bajo banderas norcoreanas."
+      }
+    ]
+  },
+  {
+    "id": "f104",
+    "name": "Lockheed F-104 Starfighter",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1958,
+    "generation": "3ª",
+    "conflicts": [
+      "coldwar_patrols",
+      "vietnam"
+    ],
+    "wiki": "Lockheed_F-104_Starfighter",
+    "speed": 2333,
+    "range": 2920,
+    "ceiling": 17680,
+    "mtow": 13054,
+    "arm": "1× cañón M61A1 20 mm, AIM-9 Sidewinder, bombas",
+    "trivia": "La Luftwaffe alemana perdió 292 de sus 916 F-104s en accidentes. El apodo del avión era 'el ataúd volador' o 'el misil tripulado'. Su piloto de pruebas lo llamó 'la mano de Dios a alta velocidad'.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/F-104_Starfighter_2.jpg/1200px-F-104_Starfighter_2.jpg",
+    "desc": "El interceptor diseñado para volar más rápido y más alto que cualquier amenaza. Sus alas delta de solo 2,45 metros eran tan afiladas que los mecánicos debían usar protecciones para no cortarse.",
+    "engine": "General Electric J79-GE-11A (turborreactor con postquemador)",
+    "thrust_kn": 70.28,
+    "wing_span": 6.68,
+    "length": 16.69,
+    "height": 4.11,
+    "wing_area": 18.22,
+    "fuel_capacity": 3398,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 740,
+    "thrust_to_weight": 0.54,
+    "wing_loading": 717,
+    "radar": "AN/ASG-14T-1",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-40",
+    "data_link": "Radio UHF",
+    "helmet_system": null,
+    "roles": [
+      "interceptor",
+      "superioridad aérea",
+      "ataque nuclear OTAN"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 7,
+      "missiles": [
+        "AIM-9B"
+      ],
+      "bombs": [
+        "nuclear B28",
+        "B43",
+        "227 kg"
+      ]
+    },
+    "status": "retired",
+    "units_built": 2578,
+    "retired_year": 2004,
+    "operators": [
+      "EE.UU.",
+      "Alemania Occ.",
+      "Italia",
+      "Japón",
+      "Canadá",
+      "España",
+      "y 10 países más"
+    ],
+    "unit_cost_m": 1.42,
+    "manufacturer": "Lockheed Corporation",
+    "derived_from": null,
+    "related_aircraft": [
+      "f4phantom",
+      "mig21"
+    ],
+    "variants": [
+      "F-104A",
+      "F-104C",
+      "F-104G",
+      "F-104J",
+      "CF-104",
+      "TF-104G"
+    ],
+    "tags": [
+      "tercera gen",
+      "interceptor",
+      "alta velocidad",
+      "Luftwaffe",
+      "OTAN",
+      "accidentado"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": "USAF lo retiró rápidamente al ver sus limitaciones en combate de baja velocidad."
+      }
+    ]
+  },
+  {
+    "id": "f4phantom",
+    "name": "McDonnell Douglas F-4 Phantom II",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1961,
+    "generation": "3ª",
+    "conflicts": [
+      "vietnam",
+      "desert_storm",
+      "coldwar_patrols"
+    ],
+    "wiki": "McDonnell_Douglas_F-4_Phantom_II",
+    "speed": 2370,
+    "range": 2960,
+    "ceiling": 18300,
+    "mtow": 28030,
+    "arm": "AIM-7 Sparrow, AIM-9 Sidewinder, 8.480 kg de bombas (sin cañón original)",
+    "trivia": "El F-4 fue diseñado originalmente sin cañón porque se creía que los misiles hacían el combate cercano obsoleto. Vietnam demostró lo contrario: perdió dogfights contra MiGs más lentos.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/F-4_Phantom_II_VF-74_1985.JPEG/1200px-F-4_Phantom_II_VF-74_1985.JPEG",
+    "desc": "El avión multirol más importante de la posguerra fría temprana. Batió 16 récords mundiales de velocidad y altitud, y voló con las fuerzas aéreas de 11 países.",
+    "engine": "2x GE J79-GE-17 (turborreactor con postquemador)",
+    "thrust_kn": 111.2,
+    "wing_span": 11.71,
+    "length": 19.2,
+    "height": 5.02,
+    "wing_area": 49.23,
+    "fuel_capacity": 7549,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "WSO"
+    ],
+    "combat_radius": 680,
+    "thrust_to_weight": 0.58,
+    "wing_loading": 569,
+    "radar": "AN/APQ-120 (Doppler multirol)",
+    "radar_type": "mechanical",
+    "irst": true,
+    "ew_system": "AN/ALQ-119 ECM",
+    "data_link": "Radio UHF",
+    "helmet_system": null,
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra",
+      "reconocimiento",
+      "SEAD"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm (gondola)",
+      "hardpoints": 9,
+      "missiles": [
+        "AIM-7 Sparrow",
+        "AIM-9",
+        "AGM-65"
+      ],
+      "bombs": [
+        "8.480 kg mix"
+      ]
+    },
+    "status": "retired",
+    "units_built": 5195,
+    "retired_year": 2021,
+    "operators": [
+      "EE.UU.",
+      "Israel",
+      "Irán",
+      "Alemania",
+      "Japón",
+      "Grecia",
+      "Turquía",
+      "Corea del Sur"
+    ],
+    "unit_cost_m": 3.0,
+    "manufacturer": "McDonnell Douglas",
+    "derived_from": null,
+    "related_aircraft": [
+      "f14tomcat",
+      "f15",
+      "mig21"
+    ],
+    "variants": [
+      "F-4B",
+      "F-4C",
+      "F-4D",
+      "F-4E",
+      "F-4EJ Kai",
+      "F-4G Wild Weasel",
+      "RF-4C"
+    ],
+    "tags": [
+      "tercera gen",
+      "Vietnam",
+      "naval",
+      "multirol",
+      "16 récords mundiales"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": 163000,
+        "notes": "107 victorias a cambio de 33 bajas. Lección: el cañón es necesario."
+      },
+      {
+        "conflict": "desert_storm",
+        "missions": 2200,
+        "notes": "F-4G Wild Weasel clave en supresión de defensas aéreas iraquíes."
+      }
+    ]
+  },
+  {
+    "id": "mig25",
+    "name": "Mikoyan-Gurevich MiG-25 Foxbat",
+    "type": "Caza",
+    "country": "URSS",
+    "year": 1970,
+    "generation": "3ª",
+    "conflicts": [
+      "coldwar_patrols",
+      "yom_kippur",
+      "iraq"
+    ],
+    "wiki": "Mikoyan-Gurevich_MiG-25",
+    "speed": 3395,
+    "range": 1730,
+    "ceiling": 20700,
+    "mtow": 36720,
+    "arm": "4× misiles R-40 (aire-aire)",
+    "trivia": "Cuando un piloto soviético desertó con un MiG-25 a Japón en 1976, los expertos occidentales descubrieron que el avión que tanto temían estaba construido principalmente con acero inoxidable de soldadura, no con titanio.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Mig-25.jpg/1200px-Mig-25.jpg",
+    "desc": "El interceptor diseñado para cazar el B-70 americano que nunca entró en servicio. Su velocidad extrema (Mach 2,8 en operativo) lo hizo tan valioso para el reconocimiento como para la intercepción.",
+    "engine": "2x Tumansky R-15B-300 (turborreactor con postquemador)",
+    "thrust_kn": 220.0,
+    "wing_span": 14.02,
+    "length": 19.75,
+    "height": 6.1,
+    "wing_area": 56.83,
+    "fuel_capacity": 17820,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 900,
+    "thrust_to_weight": 0.41,
+    "wing_loading": 646,
+    "radar": "Saphir-25 Foxfire",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "SPO-10 RWR",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "interceptor de alta altitud",
+      "reconocimiento estratégico"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 4,
+      "missiles": [
+        "R-40T",
+        "R-40R",
+        "R-60"
+      ],
+      "bombs": []
+    },
+    "status": "retired",
+    "units_built": 1186,
+    "retired_year": 2013,
+    "operators": [
+      "URSS",
+      "Rusia",
+      "Kazajistán",
+      "Argelia",
+      "Libia",
+      "India",
+      "Iraq",
+      "Siria"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Mikoyan-Gurevich",
+    "derived_from": null,
+    "related_aircraft": [
+      "mig31",
+      "sr71"
+    ],
+    "variants": [
+      "MiG-25P",
+      "MiG-25R",
+      "MiG-25RB",
+      "MiG-25PU entrenamiento"
+    ],
+    "tags": [
+      "interceptor",
+      "Mach 3",
+      "alta altitud",
+      "acero inoxidable",
+      "Guerra Fría"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "yom_kippur",
+        "missions": null,
+        "notes": "Los MiG-25 iraquíes volaron sobre Israel sin que los F-15 pudieran interceptarlos."
+      }
+    ]
+  },
+  {
+    "id": "f111",
+    "name": "General Dynamics F-111",
+    "type": "Ataque",
+    "country": "EE.UU.",
+    "year": 1967,
+    "generation": null,
+    "conflicts": [
+      "vietnam",
+      "desert_storm",
+      "libya"
+    ],
+    "wiki": "General_Dynamics_F-111_Aardvark",
+    "speed": 2655,
+    "range": 4707,
+    "ceiling": 20100,
+    "mtow": 45360,
+    "arm": "1× cañón M61A1 20 mm, 14.288 kg de bombas, misiles AGM-69",
+    "trivia": "El F-111 fue el primer avión de producción con geometría variable de alas. Volando a baja altitud en la oscuridad, podía penetrar las defensas soviéticas antes de que los radares lo detectaran.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/F-111_Aardvark.jpg/1200px-F-111_Aardvark.jpg",
+    "desc": "El primer avión de geometría variable en entrar en servicio, concebido para misiones de penetración nocturna a baja altitud. Fue muy efectivo en el bombardeo de Libia en 1986.",
+    "engine": "2x P&W TF30-P-100 (turbofan con postquemador)",
+    "thrust_kn": 222.4,
+    "wing_span": 19.2,
+    "length": 22.4,
+    "height": 5.22,
+    "wing_area": 61.07,
+    "fuel_capacity": 21360,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "WSO"
+    ],
+    "combat_radius": 2140,
+    "thrust_to_weight": 0.47,
+    "wing_loading": 742,
+    "radar": "AN/APQ-144 (terreno siguiendo)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-137 ECM",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "ataque a tierra",
+      "penetración baja altitud",
+      "bombardeo estratégico",
+      "nuclear táctico"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 9,
+      "missiles": [
+        "AGM-69 SRAM"
+      ],
+      "bombs": [
+        "GBU-10",
+        "Mk-82",
+        "GBU-15",
+        "B61 nuclear"
+      ]
+    },
+    "status": "retired",
+    "units_built": 563,
+    "retired_year": 1996,
+    "operators": [
+      "EE.UU.",
+      "Australia"
+    ],
+    "unit_cost_m": 6.5,
+    "manufacturer": "General Dynamics",
+    "derived_from": null,
+    "related_aircraft": [
+      "b1b",
+      "tornado",
+      "su24"
+    ],
+    "variants": [
+      "F-111A",
+      "F-111C",
+      "F-111D",
+      "F-111E",
+      "F-111F",
+      "FB-111A",
+      "EF-111 Raven"
+    ],
+    "tags": [
+      "ala variable",
+      "baja altitud",
+      "nocturno",
+      "Vietnam",
+      "Libia"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": 4000,
+        "notes": "Volvió con éxito en 1972 (Linebacker II) como plataforma de precisión nocturna."
+      },
+      {
+        "conflict": "libya",
+        "missions": 24,
+        "notes": "Operación El Dorado Canyon (1986): 18 F-111F atacaron Trípoli y Bengasi."
+      }
+    ]
+  },
+  {
+    "id": "a7corsair",
+    "name": "LTV A-7 Corsair II",
+    "type": "Ataque",
+    "country": "EE.UU.",
+    "year": 1967,
+    "generation": null,
+    "conflicts": [
+      "vietnam",
+      "desert_storm"
+    ],
+    "wiki": "LTV_A-7_Corsair_II",
+    "speed": 1112,
+    "range": 4600,
+    "ceiling": 12496,
+    "mtow": 19050,
+    "arm": "1× cañón M61A1 20 mm, 6.804 kg de bombas y misiles",
+    "trivia": "El A-7 fue el primer avión de combate con HUD (pantalla frontal) de navegación y ataque digital, y el primero con un sistema de dirección de armas por computadora totalmente integrado.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/A-7E_Corsair_II_VA-105_1988.jpg/1200px-A-7E_Corsair_II_VA-105_1988.jpg",
+    "desc": "El sucesor del F8U Crusader en roles de ataque naval. Su aviónica avanzada sentó precedentes para los sistemas de armas digitales de las décadas siguientes.",
+    "engine": "Allison TF41-A-2 (turbofan sin postquemador)",
+    "thrust_kn": 66.7,
+    "wing_span": 11.81,
+    "length": 14.06,
+    "height": 4.9,
+    "wing_area": 34.83,
+    "fuel_capacity": 6827,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1127,
+    "thrust_to_weight": 0.51,
+    "wing_loading": 547,
+    "radar": "AN/APQ-126 (multirol)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-126 DECM",
+    "data_link": "Link-4",
+    "helmet_system": null,
+    "roles": [
+      "ataque a tierra",
+      "ataque naval",
+      "CAS",
+      "SEAD"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 8,
+      "missiles": [
+        "AGM-65 Maverick",
+        "AGM-84 Harpoon"
+      ],
+      "bombs": [
+        "Mk-82",
+        "GBU-12",
+        "CBU-59"
+      ]
+    },
+    "status": "retired",
+    "units_built": 1545,
+    "retired_year": 1991,
+    "operators": [
+      "EE.UU.",
+      "Grecia",
+      "Portugal"
+    ],
+    "unit_cost_m": 2.9,
+    "manufacturer": "Ling-Temco-Vought",
+    "derived_from": null,
+    "related_aircraft": [
+      "fa18hornet",
+      "a10"
+    ],
+    "variants": [
+      "A-7A",
+      "A-7B",
+      "A-7C",
+      "A-7D USAF",
+      "A-7E",
+      "A-7K"
+    ],
+    "tags": [
+      "ataque naval",
+      "Vietnam",
+      "portaviones",
+      "HUD pionero",
+      "retirado"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": "Más de 120.000 salidas. Primer avión con HUD digital de combate."
+      }
+    ]
+  },
+  {
+    "id": "mig29",
+    "name": "Mikoyan MiG-29 Fulcrum",
+    "type": "Caza",
+    "country": "URSS",
+    "year": 1983,
+    "generation": "4ª",
+    "conflicts": [
+      "coldwar_patrols",
+      "gulf_war",
+      "kosovo",
+      "ukraine"
+    ],
+    "wiki": "Mikoyan_MiG-29",
+    "speed": 2445,
+    "range": 1500,
+    "ceiling": 18013,
+    "mtow": 20000,
+    "arm": "1× cañón GSh-30-1 30 mm, R-60, R-73, R-27",
+    "trivia": "El MiG-29 puede detectar aviones enemigos con su sensor de búsqueda y seguimiento infrarrojo (IRST) sin encender el radar, manteniéndose completamente invisible para los sistemas de alerta de misiles.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mikoyan_MiG-29_%281%29.jpg/1200px-Mikoyan_MiG-29_%281%29.jpg",
+    "desc": "El caza ligero de superioridad aérea soviético que se convirtió en rival del F-16. Sus motores de alta potencia y el casco IRST le dan capacidades únicas que aún operan en más de 25 países.",
+    "engine": "2x Klimov RD-33 (turbofan con postquemador)",
+    "thrust_kn": 162.8,
+    "wing_span": 11.36,
+    "length": 17.32,
+    "height": 4.73,
+    "wing_area": 38.06,
+    "fuel_capacity": 4300,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 700,
+    "thrust_to_weight": 1.09,
+    "wing_loading": 416,
+    "radar": "Phazotron N019 Rubin (PESA)",
+    "radar_type": "PESA",
+    "irst": true,
+    "ew_system": "SPO-15 Beryoza, Gardeniya",
+    "data_link": "Link soviético",
+    "helmet_system": "Shchel-3UM HMCS",
+    "roles": [
+      "superioridad aérea",
+      "interceptor",
+      "ataque a tierra limitado"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-1 30 mm",
+      "hardpoints": 7,
+      "missiles": [
+        "R-60",
+        "R-73",
+        "R-27E",
+        "R-77"
+      ],
+      "bombs": [
+        "1.000 kg mix"
+      ]
+    },
+    "status": "active",
+    "units_built": 1600,
+    "retired_year": null,
+    "operators": [
+      "Rusia",
+      "Ucrania",
+      "India",
+      "Bielorrusia",
+      "Cuba",
+      "Siria",
+      "Iran",
+      "y 20+ países"
+    ],
+    "unit_cost_m": 29.0,
+    "manufacturer": "Mikoyan",
+    "derived_from": null,
+    "related_aircraft": [
+      "f16",
+      "su27",
+      "mig35"
+    ],
+    "variants": [
+      "MiG-29A",
+      "MiG-29S",
+      "MiG-29K naval",
+      "MiG-29M",
+      "MiG-35"
+    ],
+    "tags": [
+      "cuarta gen",
+      "IRST",
+      "soviético",
+      "HMD",
+      "exportado",
+      "activo"
+    ],
+    "radar_cross_section": "Media-Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Ucrania recibió MiG-29 polacos y eslovacos en 2023."
+      }
+    ]
+  },
+  {
+    "id": "f14tomcat",
+    "name": "Grumman F-14 Tomcat",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1974,
+    "generation": "4ª",
+    "conflicts": [
+      "coldwar_patrols",
+      "iran_iraq",
+      "gulf_war"
+    ],
+    "wiki": "Grumman_F-14_Tomcat",
+    "speed": 2485,
+    "range": 2960,
+    "ceiling": 17070,
+    "mtow": 33724,
+    "arm": "1× cañón M61A1 20 mm, AIM-54 Phoenix, AIM-7, AIM-9",
+    "trivia": "El F-14 es el único caza occidental capaz de disparar el misil Phoenix, con alcance de 200 km. La película Top Gun (1986) causó tal aumento de solicitudes de alistamiento en la Marina que el Pentágono la llamó 'anuncio de reclutamiento más efectivo de la historia'.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/F-14A_Tomcat_of_VF-84_in_1978.jpg/1200px-F-14A_Tomcat_of_VF-84_in_1978.jpg",
+    "desc": "El caza de ala variable de la Marina americana, diseñado para defender flotas de ataques de misiles soviéticos a larga distancia. Su radar AWG-9 podía rastrear 24 objetivos simultáneamente.",
+    "engine": "2x P&W TF30-P-414A o GE F110-GE-400 (turbofan con postquemador)",
+    "thrust_kn": 270.0,
+    "wing_span": 19.55,
+    "length": 19.1,
+    "height": 4.88,
+    "wing_area": 52.49,
+    "fuel_capacity": 9029,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "RIO (Oficial de Intercepción)"
+    ],
+    "combat_radius": 926,
+    "thrust_to_weight": 0.56,
+    "wing_loading": 643,
+    "radar": "AN/AWG-9 (rango 200+ km, rastrea 24)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALR-67 RWR, AN/ALE-39",
+    "data_link": "Link-4A",
+    "helmet_system": null,
+    "roles": [
+      "defensa de flota",
+      "superioridad aérea",
+      "reconocimiento TARPS",
+      "ataque tardío"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 10,
+      "missiles": [
+        "AIM-54 Phoenix",
+        "AIM-7 Sparrow",
+        "AIM-9"
+      ],
+      "bombs": [
+        "GBU-10",
+        "GBU-16"
+      ]
+    },
+    "status": "retired",
+    "units_built": 712,
+    "retired_year": 2006,
+    "operators": [
+      "EE.UU.",
+      "Irán"
+    ],
+    "unit_cost_m": 38.0,
+    "manufacturer": "Grumman Aerospace",
+    "derived_from": null,
+    "related_aircraft": [
+      "fa18hornet",
+      "f15",
+      "mig25"
+    ],
+    "variants": [
+      "F-14A",
+      "F-14B",
+      "F-14D",
+      "F-14AM Irán"
+    ],
+    "tags": [
+      "cuarta gen",
+      "naval",
+      "ala variable",
+      "Top Gun",
+      "AIM-54 Phoenix"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": "Irán usó el AIM-54 para derribar más de 80 aviones iraquíes (cifra disputada)."
+      }
+    ]
+  },
+  {
+    "id": "tornado",
+    "name": "Panavia Tornado IDS",
+    "type": "Ataque",
+    "country": "Europa",
+    "year": 1980,
+    "generation": null,
+    "conflicts": [
+      "gulf_war",
+      "desert_storm",
+      "iraq",
+      "libya"
+    ],
+    "wiki": "Panavia_Tornado",
+    "speed": 2336,
+    "range": 3890,
+    "ceiling": 15240,
+    "mtow": 28000,
+    "arm": "2× cañones Mauser BK-27 27 mm, JP.233, ALARM, Storm Shadow, 9.000 kg total",
+    "trivia": "El Tornado fue el primer avión de la OTAN diseñado específicamente para atacar aeródromos enemigos con las bombas dispersoras JP.233, siendo las misiones más peligrosas del Golfo Pérsico de 1991.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Tornado_gr1.jpg/1200px-Tornado_gr1.jpg",
+    "desc": "El avión de ala variable desarrollado conjuntamente por Reino Unido, Alemania Occidental e Italia para penetración a baja altitud y ataque al suelo en el teatro europeo.",
+    "engine": "2x Turbo-Union RB199-34R (turbofan con postquemador)",
+    "thrust_kn": 158.0,
+    "wing_span": 13.91,
+    "length": 16.72,
+    "height": 5.95,
+    "wing_area": 30.0,
+    "fuel_capacity": 6600,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "WSO"
+    ],
+    "combat_radius": 1390,
+    "thrust_to_weight": 0.76,
+    "wing_loading": 933,
+    "radar": "Texas Instruments AN/APQ-161",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "BOZ-107 chaff, Sky Shadow ECM",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "ataque a tierra",
+      "penetración baja altitud",
+      "SEAD",
+      "nuclear táctico"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x Mauser BK-27 27 mm",
+      "hardpoints": 9,
+      "missiles": [
+        "Storm Shadow",
+        "ALARM SEAD",
+        "Brimstone",
+        "Taurus"
+      ],
+      "bombs": [
+        "JP.233",
+        "Paveway IV",
+        "9.000 kg mix"
+      ]
+    },
+    "status": "retired",
+    "units_built": 992,
+    "retired_year": 2019,
+    "operators": [
+      "Reino Unido",
+      "Alemania",
+      "Italia",
+      "Arabia Saudita"
+    ],
+    "unit_cost_m": 35.0,
+    "manufacturer": "Panavia Aircraft GmbH",
+    "derived_from": null,
+    "related_aircraft": [
+      "f111",
+      "b1b",
+      "su24"
+    ],
+    "variants": [
+      "Tornado IDS",
+      "Tornado ADV interceptor",
+      "Tornado ECR SEAD",
+      "Tornado GR4"
+    ],
+    "tags": [
+      "ala variable",
+      "OTAN",
+      "baja altitud",
+      "europeo",
+      "retirado"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": 1500,
+        "notes": "Las misiones con JP.233 fueron las más peligrosas. RU perdió 6 Tornados."
+      }
+    ]
+  },
+  {
+    "id": "fa18hornet",
+    "name": "F/A-18C Hornet",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1983,
+    "generation": "4ª",
+    "conflicts": [
+      "libya",
+      "gulf_war",
+      "desert_storm",
+      "gwot",
+      "iraq",
+      "syria"
+    ],
+    "wiki": "McDonnell_Douglas_F/A-18_Hornet",
+    "speed": 1915,
+    "range": 2537,
+    "ceiling": 15240,
+    "mtow": 25401,
+    "arm": "1× cañón M61A1 20 mm, AIM-9, AIM-7, AIM-120, JDAM, HARM, Harpoon",
+    "trivia": "El F/A-18 es el único avión diseñado desde el inicio para ser tanto caza de superioridad aérea como atacante de precisión, sin comprometer ninguno de los dos roles.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/F-A-18C_Hornet_VFA-82.jpg/1200px-F-A-18C_Hornet_VFA-82.jpg",
+    "desc": "El caballo de batalla de la aviación naval americana durante 40 años. Diseñado para operar desde portaviones en misiones de superioridad aérea y ataque con la misma eficacia.",
+    "engine": "2x GE F404-GE-402 (turbofan con postquemador)",
+    "thrust_kn": 160.0,
+    "wing_span": 11.43,
+    "length": 17.07,
+    "height": 4.66,
+    "wing_area": 37.16,
+    "fuel_capacity": 6532,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 740,
+    "thrust_to_weight": 0.93,
+    "wing_loading": 683,
+    "radar": "AN/APG-73 (Doppler multirol)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-165 ASPJ, AN/ALE-47",
+    "data_link": "Link-16",
+    "helmet_system": "JHMCS",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra",
+      "SEAD",
+      "reconocimiento",
+      "CAS"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 9,
+      "missiles": [
+        "AIM-9M",
+        "AIM-7M",
+        "AIM-120",
+        "AGM-88 HARM",
+        "AGM-84"
+      ],
+      "bombs": [
+        "JDAM",
+        "Mk-82",
+        "GBU-16",
+        "GBU-31"
+      ]
+    },
+    "status": "retired",
+    "units_built": 1480,
+    "retired_year": 2019,
+    "operators": [
+      "EE.UU.",
+      "Australia",
+      "Canadá",
+      "Finlandia",
+      "Kuwait",
+      "España",
+      "Suiza"
+    ],
+    "unit_cost_m": 29.0,
+    "manufacturer": "McDonnell Douglas / Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "fa18super",
+      "f16",
+      "av8b"
+    ],
+    "variants": [
+      "F/A-18A",
+      "F/A-18B",
+      "F/A-18C",
+      "F/A-18D",
+      "CF-18"
+    ],
+    "tags": [
+      "cuarta gen",
+      "naval",
+      "multirol",
+      "USMC",
+      "portaviones"
+    ],
+    "radar_cross_section": "Media-Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": 4551,
+        "notes": "Primeros dos derribos de la guerra el primer día (MiG-21 iraquíes)."
+      }
+    ]
+  },
+  {
+    "id": "fa18super",
+    "name": "F/A-18E/F Super Hornet",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1999,
+    "generation": "4.5ª",
+    "conflicts": [
+      "gwot",
+      "iraq",
+      "syria",
+      "humanitarian"
+    ],
+    "wiki": "Boeing_F/A-18E/F_Super_Hornet",
+    "speed": 1915,
+    "range": 2346,
+    "ceiling": 15941,
+    "mtow": 29937,
+    "arm": "1× cañón M61A2 20 mm, AIM-9X, AIM-120D, JDAM, AGM-84, SLAM-ER",
+    "trivia": "El Super Hornet no es una versión mejorada del Hornet sino un avión completamente nuevo: comparte solo el 10% de sus piezas con el modelo original.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/F-A-18F_Super_Hornet_VFA-102.jpg/1200px-F-A-18F_Super_Hornet_VFA-102.jpg",
+    "desc": "El sucesor del F-14 Tomcat y el F/A-18 Hornet en la Marina americana. La versión F de dos plazas sirve también como plataforma de guerra electrónica en la variante EA-18G Growler.",
+    "engine": "2x GE F414-GE-400 (turbofan con postquemador)",
+    "thrust_kn": 196.0,
+    "wing_span": 13.62,
+    "length": 18.31,
+    "height": 4.88,
+    "wing_area": 46.45,
+    "fuel_capacity": 7967,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 722,
+    "thrust_to_weight": 0.93,
+    "wing_loading": 644,
+    "radar": "AN/APG-79 AESA",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "AN/ALQ-214 IDECM, AN/ALE-47",
+    "data_link": "Link-16",
+    "helmet_system": "JHMCS",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra",
+      "SEAD/DEAD",
+      "antinaval",
+      "buddy tanker"
+    ],
+    "stealth": "low",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A2 20 mm",
+      "hardpoints": 11,
+      "missiles": [
+        "AIM-9X",
+        "AIM-120D",
+        "AGM-84",
+        "AGM-88 HARM",
+        "SLAM-ER"
+      ],
+      "bombs": [
+        "JDAM",
+        "GBU-31",
+        "GBU-10",
+        "GBU-24"
+      ]
+    },
+    "status": "active",
+    "units_built": 608,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "Australia",
+      "Kuwait"
+    ],
+    "unit_cost_m": 67.4,
+    "manufacturer": "Boeing",
+    "derived_from": "fa18hornet",
+    "related_aircraft": [
+      "fa18hornet",
+      "f35"
+    ],
+    "variants": [
+      "F/A-18E monoplaza",
+      "F/A-18F biplaza",
+      "EA-18G Growler EW"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "naval",
+      "AESA",
+      "portaviones",
+      "activo",
+      "IRST"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": "Principal caza-atacante de la Marina y el USMC desde 2002."
+      }
+    ]
+  },
+  {
+    "id": "f117",
+    "name": "F-117A Nighthawk",
+    "type": "Especial",
+    "country": "EE.UU.",
+    "year": 1983,
+    "generation": null,
+    "conflicts": [
+      "desert_storm",
+      "gulf_war",
+      "kosovo",
+      "iraq"
+    ],
+    "wiki": "Lockheed_F-117_Nighthawk",
+    "speed": 993,
+    "range": 2100,
+    "ceiling": 13716,
+    "mtow": 23814,
+    "arm": "2× bahías internas: GBU-27, JDAM, bombas guiadas láser (2.268 kg total)",
+    "trivia": "El F-117 fue tan secreto que los pilotos que lo volaban no podían decirle a sus familias qué avión pilotaban. Estuvo activo 10 años antes de ser reconocido oficialmente por el gobierno de EE.UU.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/F-117_Nighthawk_Front.jpg/1200px-F-117_Nighthawk_Front.jpg",
+    "desc": "El primer avión furtivo operativo de la historia, diseñado aplicando matemáticas de dispersión de radar calculadas a mano por un matemático soviético. Su geometría angular era el precio del sigilo.",
+    "engine": "2x GE F404-GE-F1D2 (turbofan sin postquemador)",
+    "thrust_kn": 97.9,
+    "wing_span": 13.2,
+    "length": 20.08,
+    "height": 3.78,
+    "wing_area": 105.9,
+    "fuel_capacity": 8206,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1056,
+    "thrust_to_weight": 0.4,
+    "wing_loading": 225,
+    "radar": "DLIR (Downward Looking IR), FLIR",
+    "radar_type": "none",
+    "irst": true,
+    "ew_system": "AN/ALQ-171, AN/APR-47",
+    "data_link": "Radio encriptado",
+    "helmet_system": null,
+    "roles": [
+      "ataque de precisión furtivo",
+      "neutralización de C2",
+      "defensa aérea"
+    ],
+    "stealth": "high",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 2,
+      "missiles": [
+        "GBU-27 LGB"
+      ],
+      "bombs": [
+        "B61 nuclear",
+        "GBU-31 JDAM"
+      ]
+    },
+    "status": "retired",
+    "units_built": 64,
+    "retired_year": 2008,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 111.2,
+    "manufacturer": "Lockheed Skunk Works",
+    "derived_from": null,
+    "related_aircraft": [
+      "b2",
+      "f22"
+    ],
+    "variants": [
+      "F-117A"
+    ],
+    "tags": [
+      "furtivo",
+      "primer stealth",
+      "Skunk Works",
+      "secreto",
+      "facetas"
+    ],
+    "radar_cross_section": "0,001 m2 (pelota de golf)",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": 1271,
+        "notes": "40% de los objetivos estratégicos con solo 2,5% de aviones. Cero bajas en combate."
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": "Derribado por SA-3 Pechora el 27/3/1999 usando radar de baja frecuencia."
+      }
+    ]
+  },
+  {
+    "id": "gripen",
+    "name": "Saab JAS 39 Gripen",
+    "type": "Caza",
+    "country": "Suecia",
+    "year": 1997,
+    "generation": "4.5ª",
+    "conflicts": [
+      "libya"
+    ],
+    "wiki": "Saab_JAS_39_Gripen",
+    "speed": 2204,
+    "range": 3200,
+    "ceiling": 15240,
+    "mtow": 14000,
+    "arm": "1× cañón Mauser BK-27 27 mm, IRIS-T, Meteor, JDAM",
+    "trivia": "El Gripen puede operar desde autopistas suecas en caso de guerra. Sus tripulaciones de tierra son tan reducidas que un técnico con un equipo básico puede repostarlo y rearmarlo en 10 minutos.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/JAS39_Gripen_-_RIAT_2009_%28cropped%29.jpg/1200px-JAS39_Gripen_-_RIAT_2009_%28cropped%29.jpg",
+    "desc": "El caza sueco diseñado para ser barato, flexible y difícil de detectar. Su relación coste-prestaciones es la mejor de su generación y ha sido exportado a 10 países.",
+    "engine": "Volvo RM12 (GE F404 sueco) (turbofan con postquemador)",
+    "thrust_kn": 80.5,
+    "wing_span": 8.4,
+    "length": 14.1,
+    "height": 4.5,
+    "wing_area": 30.0,
+    "fuel_capacity": 2900,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 800,
+    "thrust_to_weight": 0.97,
+    "wing_loading": 467,
+    "radar": "Ericsson PS-05/A AESA (Gripen E)",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "Saab EWS 39 integrado",
+    "data_link": "Link-16",
+    "helmet_system": "Cobra HMD",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra",
+      "reconocimiento",
+      "SEAD"
+    ],
+    "stealth": "low",
+    "carrier_capable": false,
+    "stol": true,
+    "vtol": false,
+    "armament": {
+      "gun": "1x Mauser BK-27 27 mm",
+      "hardpoints": 8,
+      "missiles": [
+        "IRIS-T",
+        "Meteor",
+        "AIM-120",
+        "RBS-15"
+      ],
+      "bombs": [
+        "JDAM",
+        "DWS 39"
+      ]
+    },
+    "status": "active",
+    "units_built": 327,
+    "retired_year": null,
+    "operators": [
+      "Suecia",
+      "Sudáfrica",
+      "Hungría",
+      "República Checa",
+      "Brasil",
+      "Tailandia"
+    ],
+    "unit_cost_m": 69.0,
+    "manufacturer": "Saab AB",
+    "derived_from": null,
+    "related_aircraft": [
+      "ef2000",
+      "rafale",
+      "f16"
+    ],
+    "variants": [
+      "JAS 39A/B",
+      "JAS 39C/D",
+      "JAS 39E/F Gripen E"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "AESA",
+      "bajo coste",
+      "carretera",
+      "exportado",
+      "activo"
+    ],
+    "radar_cross_section": "Baja-Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "libya",
+        "missions": null,
+        "notes": "Primera misión de combate del Gripen en 2011. Suecia contribuyó 8 Gripen C."
+      }
+    ]
+  },
+  {
+    "id": "su30",
+    "name": "Sukhoi Su-30MKI",
+    "type": "Caza",
+    "country": "Rusia / India",
+    "year": 2002,
+    "generation": "4.5ª",
+    "conflicts": [
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-30",
+    "speed": 2120,
+    "range": 3000,
+    "ceiling": 17300,
+    "mtow": 38800,
+    "arm": "1× cañón GSh-30-1 30 mm, R-77, BrahMos, Kh-29, 8.000 kg total",
+    "trivia": "El Su-30MKI de la Fuerza Aérea India tiene vectorización de empuje tridimensional, lo que le permite realizar la maniobra 'Cobra de Pugachev' —detenerse en el aire durante un segundo— de forma rutinaria.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Su-30MKI_Aero_India_2013.jpg/1200px-Su-30MKI_Aero_India_2013.jpg",
+    "desc": "La versión de exportación más avanzada del Flanker, cofabricada con India. Con más de 370 unidades en servicio en la India, es el caza más numeroso de ese país.",
+    "engine": "2x Saturn AL-31FP (turbofan con TVC y postquemador)",
+    "thrust_kn": 294.0,
+    "wing_span": 14.7,
+    "length": 21.94,
+    "height": 6.36,
+    "wing_area": 62.04,
+    "fuel_capacity": 9640,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Piloto trasero/WSO"
+    ],
+    "combat_radius": 1500,
+    "thrust_to_weight": 1.0,
+    "wing_loading": 626,
+    "radar": "Phazotron N011M Bars (PESA)",
+    "radar_type": "PESA",
+    "irst": true,
+    "ew_system": "Khibiny ECM, SPO-15",
+    "data_link": "Link-16 versión india",
+    "helmet_system": "Shchel-3UM",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra pesado",
+      "antinaval",
+      "SEAD"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-1 30 mm",
+      "hardpoints": 12,
+      "missiles": [
+        "R-77",
+        "R-73",
+        "BrahMos",
+        "Kh-29",
+        "Kh-59"
+      ],
+      "bombs": [
+        "KAB-500",
+        "KAB-1500",
+        "FAB-500"
+      ]
+    },
+    "status": "active",
+    "units_built": 470,
+    "retired_year": null,
+    "operators": [
+      "India",
+      "Rusia",
+      "China (Su-30MKK)",
+      "Vietnam",
+      "Indonesia",
+      "Malasia",
+      "Argelia"
+    ],
+    "unit_cost_m": 37.0,
+    "manufacturer": "Sukhoi / HAL India",
+    "derived_from": "su27",
+    "related_aircraft": [
+      "su27",
+      "su35",
+      "f15"
+    ],
+    "variants": [
+      "Su-30MK",
+      "Su-30MKI India",
+      "Su-30MKK China",
+      "Su-30SM Rusia"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "TVC",
+      "PESA",
+      "biplaza",
+      "exportado",
+      "activo"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "india_pakistan",
+        "missions": null,
+        "notes": "Incidente de Balakot 2019 — primer combate India-Pakistán en la era nuclear."
+      }
+    ]
+  },
+  {
+    "id": "su35",
+    "name": "Sukhoi Su-35S",
+    "type": "Caza",
+    "country": "Rusia",
+    "year": 2014,
+    "generation": "4.5ª",
+    "conflicts": [
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-35",
+    "speed": 2500,
+    "range": 3600,
+    "ceiling": 18000,
+    "mtow": 34500,
+    "arm": "1× cañón GSh-30-1 30 mm, R-77-1, R-74, Kh-31, 8.000 kg total",
+    "trivia": "El Su-35S puede realizar la maniobra 'Kulbit' —un salto mortal completo en el aire— gracias a sus motores con vectorización de empuje. Ningún caza occidental puede replicarlo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Sukhoi_Su-35S_%28Россия%2C_2015%29_%28cropped%29.jpg/1200px-Sukhoi_Su-35S_%28Россия%2C_2015%29_%28cropped%29.jpg",
+    "desc": "El caza más avanzado de cuarta generación rusa, sin tecnología furtiva pero con sensores pasivos IRST, radar Irbis-E y vectorización de empuje que lo convierten en un adversario formidable.",
+    "engine": "2x Saturn AL-41F1S (turbofan con TVC y postquemador)",
+    "thrust_kn": 310.8,
+    "wing_span": 15.3,
+    "length": 21.9,
+    "height": 5.9,
+    "wing_area": 62.04,
+    "fuel_capacity": 11500,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1600,
+    "thrust_to_weight": 1.13,
+    "wing_loading": 556,
+    "radar": "Tikhomirov Irbis-E PESA (400 km, 30 blancos)",
+    "radar_type": "PESA",
+    "irst": true,
+    "ew_system": "Khibiny-M ECM, L150 Pastel",
+    "data_link": "Sistema ruso",
+    "helmet_system": "NSC-1 Scorpion",
+    "roles": [
+      "superioridad aérea",
+      "interceptor largo alcance",
+      "ataque a tierra"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-1 30 mm",
+      "hardpoints": 14,
+      "missiles": [
+        "R-77-1",
+        "R-74",
+        "R-37M",
+        "Kh-31P",
+        "Kh-35"
+      ],
+      "bombs": [
+        "KAB-500",
+        "KAB-1500"
+      ]
+    },
+    "status": "active",
+    "units_built": 140,
+    "retired_year": null,
+    "operators": [
+      "Rusia",
+      "China",
+      "Egipto",
+      "Indonesia"
+    ],
+    "unit_cost_m": 85.0,
+    "manufacturer": "Sukhoi",
+    "derived_from": "su27",
+    "related_aircraft": [
+      "su30",
+      "su57",
+      "f15"
+    ],
+    "variants": [
+      "Su-35S"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "TVC",
+      "PESA",
+      "IRST",
+      "Rusia",
+      "activo"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Ha sufrido bajas por sistemas MANPADS y SAM ucranianos al operar dentro del rango de amenaza."
+      }
+    ]
+  },
+  {
+    "id": "mig31",
+    "name": "Mikoyan MiG-31 Foxhound",
+    "type": "Caza",
+    "country": "URSS / Rusia",
+    "year": 1981,
+    "generation": "4ª",
+    "conflicts": [
+      "coldwar_patrols",
+      "ukraine"
+    ],
+    "wiki": "Mikoyan_MiG-31",
+    "speed": 3000,
+    "range": 3300,
+    "ceiling": 20600,
+    "mtow": 46200,
+    "arm": "1× cañón GSh-6-23 23 mm, R-33, R-37M (alcance 400 km)",
+    "trivia": "El MiG-31 es el único avión de combate diseñado desde el principio para derribar misiles de crucero a baja altitud y satélites en órbita baja, con el misil Kinzhal hipersónico como complemento.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/MiG-31_%28RAF_photo%29.jpg/1200px-MiG-31_%28RAF_photo%29.jpg",
+    "desc": "Interceptor pesado diseñado para proteger el inmenso espacio aéreo soviético. Opera en grupos de cuatro aviones que crean una barrera radar de 1.100 km de ancho, y actualmente porta el misil hipersónico Kinzhal.",
+    "engine": "2x Soloviev D-30F6 (turbofan con postquemador)",
+    "thrust_kn": 304.0,
+    "wing_span": 13.46,
+    "length": 22.69,
+    "height": 6.15,
+    "wing_area": 61.6,
+    "fuel_capacity": 16350,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "WSO"
+    ],
+    "combat_radius": 1450,
+    "thrust_to_weight": 0.85,
+    "wing_loading": 749,
+    "radar": "Zaslon S-800 (primer PESA del mundo)",
+    "radar_type": "PESA",
+    "irst": true,
+    "ew_system": "Beryoza SPO-15",
+    "data_link": "APD-518 (coord. entre 4 aviones)",
+    "helmet_system": null,
+    "roles": [
+      "interceptor largo alcance",
+      "defensa aérea",
+      "portador Kinzhal"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-6-23 23 mm",
+      "hardpoints": 6,
+      "missiles": [
+        "R-33",
+        "R-37M",
+        "Kh-47M2 Kinzhal hipersónico",
+        "R-60"
+      ],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 519,
+    "retired_year": null,
+    "operators": [
+      "Rusia",
+      "Kazajistán"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Mikoyan",
+    "derived_from": "mig25",
+    "related_aircraft": [
+      "mig25",
+      "f14tomcat"
+    ],
+    "variants": [
+      "MiG-31B",
+      "MiG-31BS",
+      "MiG-31BM",
+      "MiG-31K Kinzhal"
+    ],
+    "tags": [
+      "interceptor",
+      "primer PESA",
+      "hipersónico Kinzhal",
+      "Mach 2.8",
+      "Rusia",
+      "activo"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Variante MiG-31K lanza misiles hipersónicos Kinzhal (Mach 10+) desde 2022."
+      }
+    ]
+  },
+  {
+    "id": "mirage2000",
+    "name": "Dassault Mirage 2000",
+    "type": "Caza",
+    "country": "Francia",
+    "year": 1984,
+    "generation": "4ª",
+    "conflicts": [
+      "gulf_war",
+      "yugoslavia",
+      "mali",
+      "india_pakistan"
+    ],
+    "wiki": "Dassault_Mirage_2000",
+    "speed": 2336,
+    "range": 1550,
+    "ceiling": 17060,
+    "mtow": 17000,
+    "arm": "2× cañones DEFA 554 30 mm, Magic 2, MICA, ASMP nuclear",
+    "trivia": "El Mirage 2000 fue el único caza francés en servicio activo durante más de 40 años. India lo usó contra cazas F-16 paquistaníes en 2019, en el primer combate aéreo entre naciones nucleares.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Dassault_Mirage_2000C.jpg/1200px-Dassault_Mirage_2000C.jpg",
+    "desc": "El regreso de Francia al ala delta con tecnología fly-by-wire. Su diseño simple y fiable lo hizo muy popular en exportaciones, con 9 países operándolo aún hoy.",
+    "engine": "SNECMA M53-P2 (turbofan con postquemador)",
+    "thrust_kn": 95.1,
+    "wing_span": 9.13,
+    "length": 14.36,
+    "height": 5.2,
+    "wing_area": 41.0,
+    "fuel_capacity": 4000,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1480,
+    "thrust_to_weight": 0.91,
+    "wing_loading": 415,
+    "radar": "Thomson-CSF RDI (Doppler pulse)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Serval RWR, Spirale chaff",
+    "data_link": "Link-16 tardío",
+    "helmet_system": null,
+    "roles": [
+      "superioridad aérea",
+      "interceptor",
+      "nuclear táctico ASMP",
+      "ataque a tierra"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x DEFA 554 30 mm",
+      "hardpoints": 9,
+      "missiles": [
+        "Magic 2",
+        "MICA",
+        "ASMP nuclear"
+      ],
+      "bombs": [
+        "BLU-107",
+        "1.000 kg mix"
+      ]
+    },
+    "status": "active",
+    "units_built": 601,
+    "retired_year": null,
+    "operators": [
+      "Francia",
+      "India",
+      "Egipto",
+      "Grecia",
+      "Brasil",
+      "Qatar",
+      "Emiratos",
+      "Perú",
+      "Taiwan"
+    ],
+    "unit_cost_m": 23.0,
+    "manufacturer": "Dassault Aviation",
+    "derived_from": null,
+    "related_aircraft": [
+      "rafale",
+      "gripen",
+      "f16"
+    ],
+    "variants": [
+      "Mirage 2000C",
+      "2000B",
+      "2000D",
+      "2000N nuclear",
+      "2000-5",
+      "2000-9"
+    ],
+    "tags": [
+      "cuarta gen",
+      "ala delta",
+      "nuclear táctico",
+      "Francia",
+      "exportado",
+      "activo"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "india_pakistan",
+        "missions": null,
+        "notes": "Ataque de Balakot 26 feb 2019, primera misión de combate india del modelo."
+      }
+    ]
+  },
+  {
+    "id": "su24",
+    "name": "Sukhoi Su-24 Fencer",
+    "type": "Ataque",
+    "country": "URSS / Rusia",
+    "year": 1974,
+    "generation": null,
+    "conflicts": [
+      "afghanistan",
+      "chechnya",
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-24",
+    "speed": 1700,
+    "range": 2850,
+    "ceiling": 11000,
+    "mtow": 39700,
+    "arm": "1× cañón GSh-6-23M 23 mm, Kh-23, Kh-25, Kh-29, 8.000 kg total",
+    "trivia": "En 2015, un Su-24 ruso fue derribado por un F-16 turco en la frontera sirio-turca, el primer derribo de un avión de combate ruso por un miembro de la OTAN desde la Guerra de Corea.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Sukhoi_Su-24.jpg/1200px-Sukhoi_Su-24.jpg",
+    "desc": "El bombardero táctico soviético equivalente al F-111 americano. Con alas de geometría variable y sistema de vuelo por instrumentos, fue el primer avión soviético con capacidad de ataque todo tiempo.",
+    "engine": "2x Saturn AL-21F-3A (turborreactor con postquemador)",
+    "thrust_kn": 220.0,
+    "wing_span": 17.64,
+    "length": 22.53,
+    "height": 6.19,
+    "wing_area": 55.16,
+    "fuel_capacity": 11860,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Navegante/Operador"
+    ],
+    "combat_radius": 560,
+    "thrust_to_weight": 0.6,
+    "wing_loading": 719,
+    "radar": "Orion-A (terreno siguiendo), Reljef (navegación)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Fasol ECM, SPO-15",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "ataque a tierra todo tiempo",
+      "penetración baja altitud",
+      "bombardeo táctico"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-6-23M 23 mm",
+      "hardpoints": 9,
+      "missiles": [
+        "Kh-23",
+        "Kh-25",
+        "Kh-29",
+        "Kh-58 SEAD"
+      ],
+      "bombs": [
+        "FAB-500",
+        "FAB-1500",
+        "KAB-500",
+        "8.000 kg max"
+      ]
+    },
+    "status": "retired",
+    "units_built": 1400,
+    "retired_year": 2023,
+    "operators": [
+      "Rusia (retirado)",
+      "Ucrania",
+      "Kazajistán",
+      "Argelia",
+      "Irán",
+      "Siria"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Sukhoi",
+    "derived_from": null,
+    "related_aircraft": [
+      "f111",
+      "su34",
+      "tornado"
+    ],
+    "variants": [
+      "Su-24M",
+      "Su-24M2",
+      "Su-24MK",
+      "Su-24MP EW",
+      "Su-24MR reconocimiento"
+    ],
+    "tags": [
+      "ala variable",
+      "baja altitud",
+      "soviético",
+      "retirado 2023"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": "Un Su-24M2 fue derribado por F-16C turco el 24/11/2015. Primer derribo ruso por la OTAN desde Corea."
+      }
+    ]
+  },
+  {
+    "id": "f15ex",
+    "name": "Boeing F-15EX Eagle II",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 2021,
+    "generation": "4.5ª",
+    "conflicts": [
+      "gwot"
+    ],
+    "wiki": "Boeing_F-15EX_Eagle_II",
+    "speed": 2655,
+    "range": 3900,
+    "ceiling": 20000,
+    "mtow": 36741,
+    "arm": "1× cañón M61A1 20 mm, AIM-120D, AIM-9X, GBU-28, JASSM, 13.381 kg total",
+    "trivia": "El F-15EX puede portar hasta 22 misiles aire-aire simultáneamente, más que cualquier otro caza en servicio. Con su arquitectura digital abierta, puede integrar sistemas aún no inventados.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/F-15EX_first_flight_%281%29.jpg/1200px-F-15EX_first_flight_%281%29.jpg",
+    "desc": "La versión más moderna del legendario Eagle, con fuselaje nuevo, cockpit totalmente digital y arquitectura abierta. Es la apuesta de la USAF para mantener capacidades mientras el F-35 madura.",
+    "engine": "2x GE F110-GE-129 (turbofan con postquemador)",
+    "thrust_kn": 267.0,
+    "wing_span": 13.05,
+    "length": 19.43,
+    "height": 5.63,
+    "wing_area": 56.5,
+    "fuel_capacity": 8968,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1900,
+    "thrust_to_weight": 1.04,
+    "wing_loading": 650,
+    "radar": "AN/APG-82(V)1 AESA",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "EPAWSS",
+    "data_link": "Link-16",
+    "helmet_system": "JHMCS II",
+    "roles": [
+      "superioridad aérea",
+      "ataque pesado",
+      "SEAD/DEAD",
+      "nuclear"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A2 20 mm",
+      "hardpoints": 19,
+      "missiles": [
+        "AIM-120D",
+        "AIM-9X",
+        "AIM-174B SM-6"
+      ],
+      "bombs": [
+        "GBU-28",
+        "JASSM",
+        "GBU-31",
+        "B61-12"
+      ]
+    },
+    "status": "active",
+    "units_built": null,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "Singapore"
+    ],
+    "unit_cost_m": 87.7,
+    "manufacturer": "Boeing",
+    "derived_from": "f15",
+    "related_aircraft": [
+      "f15",
+      "f22",
+      "f35"
+    ],
+    "variants": [
+      "F-15EX Eagle II"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "AESA",
+      "22 misiles max",
+      "activo",
+      "open architecture"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "kf21",
+    "name": "KAI KF-21 Boramae",
+    "type": "Caza",
+    "country": "Corea del Sur",
+    "year": 2026,
+    "generation": "4.5ª",
+    "conflicts": [],
+    "wiki": "KAI_KF-21_Boramae",
+    "speed": 1900,
+    "range": 2900,
+    "ceiling": 16770,
+    "mtow": 25600,
+    "arm": "1× cañón M61A1 20 mm, IRIS-T, AIM-120, Meteor, JDAM",
+    "trivia": "El KF-21 es el primer caza de diseño propio de Corea del Sur. Para su desarrollo, el país tuvo que negociar el acceso a tecnología estadounidense con restricciones: no puede exportarse sin permiso de EE.UU.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/KF-21_Boramae_prototype_1_%28KF-21_001%29_first_flight_%28cropped%29.jpg/1200px-KF-21_Boramae_prototype_1_%28KF-21_001%29_first_flight_%28cropped%29.jpg",
+    "desc": "El primer caza de diseño coreano, desarrollado para reemplazar al F-4E y F-5 en servicio. Alcanzará capacidad operacional inicial en 2026 con tecnología furtiva parcial.",
+    "engine": "2x GE F414-GE-400K (turbofan con postquemador)",
+    "thrust_kn": 196.0,
+    "wing_span": 11.2,
+    "length": 16.9,
+    "height": 4.7,
+    "wing_area": 46.0,
+    "fuel_capacity": null,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1000,
+    "thrust_to_weight": 1.1,
+    "wing_loading": 557,
+    "radar": "Hanwha Systems AESA (en desarrollo)",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "Hanwha DASS",
+    "data_link": "Link-16",
+    "helmet_system": "HMD coreano",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra"
+    ],
+    "stealth": "low",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 10,
+      "missiles": [
+        "IRIS-T",
+        "AIM-120",
+        "Meteor"
+      ],
+      "bombs": [
+        "JDAM",
+        "KGGB"
+      ]
+    },
+    "status": "prototype",
+    "units_built": 6,
+    "retired_year": null,
+    "operators": [
+      "Corea del Sur"
+    ],
+    "unit_cost_m": 65.0,
+    "manufacturer": "Korea Aerospace Industries KAI",
+    "derived_from": null,
+    "related_aircraft": [
+      "f16",
+      "f35"
+    ],
+    "variants": [
+      "KF-21 Bloque I",
+      "KF-21 Bloque II stealth",
+      "KF-21N naval futuro"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "AESA",
+      "korea",
+      "primer caza nacional",
+      "prototipo"
+    ],
+    "radar_cross_section": "Media-Baja",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "j10",
+    "name": "Chengdu J-10",
+    "type": "Caza",
+    "country": "China",
+    "year": 2006,
+    "generation": "4ª",
+    "conflicts": [],
+    "wiki": "Chengdu_J-10",
+    "speed": 2200,
+    "range": 1850,
+    "ceiling": 18000,
+    "mtow": 19277,
+    "arm": "1× cañón 23 mm, PL-5, PL-8, PL-12, SD-10, bombas guiadas",
+    "trivia": "El J-10 fue desarrollado con la asistencia técnica de Israel, que compartió tecnología del caza Lavi que EE.UU. había obligado a cancelar. Luego China y EE.UU. se acusaron mutuamente de robo de secretos.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/J-10_fighter_jet.jpg/1200px-J-10_fighter_jet.jpg",
+    "desc": "El primer caza de diseño chino completamente moderno. Su configuración delta-canard y motor ruso lo convierten en un competidor directo del F-16 y el Gripen en el mercado de exportación.",
+    "engine": "Saturn AL-31FN (turbofan con postquemador)",
+    "thrust_kn": 122.6,
+    "wing_span": 9.75,
+    "length": 16.43,
+    "height": 5.43,
+    "wing_area": 33.0,
+    "fuel_capacity": 4500,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1100,
+    "thrust_to_weight": 1.07,
+    "wing_loading": 585,
+    "radar": "KLJ-3A AESA (J-10C)",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "CAEW integrado",
+    "data_link": "Link nacional chino",
+    "helmet_system": "HMD chino",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra multirol"
+    ],
+    "stealth": "low",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x cañón 23 mm",
+      "hardpoints": 11,
+      "missiles": [
+        "PL-5",
+        "PL-8",
+        "PL-10",
+        "PL-12",
+        "PL-15 J-10C"
+      ],
+      "bombs": [
+        "LS-6",
+        "LT-2 LGB"
+      ]
+    },
+    "status": "active",
+    "units_built": 280,
+    "retired_year": null,
+    "operators": [
+      "China",
+      "Pakistán J-10C"
+    ],
+    "unit_cost_m": 27.8,
+    "manufacturer": "Chengdu Aircraft Corporation CAC",
+    "derived_from": null,
+    "related_aircraft": [
+      "j20",
+      "f16",
+      "gripen"
+    ],
+    "variants": [
+      "J-10A",
+      "J-10B",
+      "J-10C AESA",
+      "J-10S biplaza"
+    ],
+    "tags": [
+      "cuarta gen",
+      "AESA",
+      "china",
+      "delta-canard",
+      "activo",
+      "exportado"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "j16",
+    "name": "Shenyang J-16",
+    "type": "Ataque",
+    "country": "China",
+    "year": 2013,
+    "generation": "4.5ª",
+    "conflicts": [],
+    "wiki": "Shenyang_J-16",
+    "speed": 2200,
+    "range": 4000,
+    "ceiling": 18000,
+    "mtow": 33000,
+    "arm": "1× cañón 30 mm, PL-12, PL-15, YJ-12, YJ-91, 12.000 kg total",
+    "trivia": "El J-16 es básicamente un clon no autorizado del Su-30MKK ruso. Rusia protestó, pero China argumentó que había comprado los derechos de producción de la familia Su-27.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Shenyang_J-16_at_Airshow_China_2018.jpg/1200px-Shenyang_J-16_at_Airshow_China_2018.jpg",
+    "desc": "El equivalente chino del F-15E Strike Eagle. Muy numeroso en la PLAAF con más de 200 unidades, sirve como principal plataforma de ataque pesado y cuenta con una variante de guerra electrónica J-16D.",
+    "engine": "2x WS-10B Taihang (turbofan con postquemador)",
+    "thrust_kn": 298.0,
+    "wing_span": 14.7,
+    "length": 21.9,
+    "height": 5.92,
+    "wing_area": 62.04,
+    "fuel_capacity": 9640,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "WSO"
+    ],
+    "combat_radius": 2000,
+    "thrust_to_weight": 1.07,
+    "wing_loading": 532,
+    "radar": "NRIET AESA KLJ-7A",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "CAEW + pod EW J-16D",
+    "data_link": "Link nacional chino",
+    "helmet_system": "HMD chino",
+    "roles": [
+      "ataque a tierra pesado",
+      "superioridad aérea",
+      "SEAD/EW J-16D"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x cañón 30 mm",
+      "hardpoints": 12,
+      "missiles": [
+        "PL-10",
+        "PL-15",
+        "YJ-12 antinaval",
+        "YJ-91 SEAD"
+      ],
+      "bombs": [
+        "LS-6",
+        "500-1500 kg LGB"
+      ]
+    },
+    "status": "active",
+    "units_built": 200,
+    "retired_year": null,
+    "operators": [
+      "China"
+    ],
+    "unit_cost_m": 70.0,
+    "manufacturer": "Shenyang Aircraft Corporation SAC",
+    "derived_from": "su30",
+    "related_aircraft": [
+      "su30",
+      "f15",
+      "j11b"
+    ],
+    "variants": [
+      "J-16",
+      "J-16D EW"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "AESA",
+      "china",
+      "ataque pesado",
+      "activo",
+      "biplaza"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "j35",
+    "name": "Shenyang J-35A",
+    "type": "Caza",
+    "country": "China",
+    "year": 2024,
+    "generation": "5ª",
+    "conflicts": [],
+    "wiki": "Shenyang_FC-31",
+    "speed": 1900,
+    "range": 2500,
+    "ceiling": 16000,
+    "mtow": 28000,
+    "arm": "1× cañón interno, PL-15E, PL-10, bombas guiadas (estimado)",
+    "trivia": "China se convirtió en 2024 en el segundo país del mundo, tras EE.UU., en operar simultáneamente dos cazas de quinta generación diferentes en servicio activo: el J-20 y el J-35A.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/J-35A_airshow_China_2024.jpg/1200px-J-35A_airshow_China_2024.jpg",
+    "desc": "El segundo caza furtivo chino de quinta generación, diseñado para operar desde los portaviones de la Marina china. Más pequeño que el J-20, prioriza el sigilo sobre la velocidad.",
+    "engine": "2x WS-19 (turbofan con postquemador)",
+    "thrust_kn": 196.0,
+    "wing_span": 11.5,
+    "length": 17.3,
+    "height": 4.6,
+    "wing_area": null,
+    "fuel_capacity": null,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1250,
+    "thrust_to_weight": 1.05,
+    "wing_loading": null,
+    "radar": "AESA desconocido",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "CAEW integrado estimado",
+    "data_link": "Link nacional chino",
+    "helmet_system": "HMD chino",
+    "roles": [
+      "superioridad aérea",
+      "ataque de precisión",
+      "operaciones navales"
+    ],
+    "stealth": "high",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x cañón interno estimado",
+      "hardpoints": 8,
+      "missiles": [
+        "PL-10",
+        "PL-15E"
+      ],
+      "bombs": [
+        "GBU equiv. chino"
+      ]
+    },
+    "status": "active",
+    "units_built": null,
+    "retired_year": null,
+    "operators": [
+      "China PLAAF y PLAN"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Shenyang Aircraft Corporation SAC",
+    "derived_from": null,
+    "related_aircraft": [
+      "j20",
+      "f35"
+    ],
+    "variants": [
+      "J-35 naval",
+      "J-35A PLAAF terrestre"
+    ],
+    "tags": [
+      "quinta gen",
+      "stealth",
+      "china",
+      "naval",
+      "portaviones",
+      "activo 2024"
+    ],
+    "radar_cross_section": "Muy baja estimada",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "emb314",
+    "name": "Embraer A-29 Super Tucano",
+    "type": "Ataque",
+    "country": "Brasil",
+    "year": 2003,
+    "generation": null,
+    "conflicts": [
+      "gwot",
+      "mali",
+      "sierra_leone"
+    ],
+    "wiki": "Embraer_EMB_314_Super_Tucano",
+    "speed": 590,
+    "range": 1330,
+    "ceiling": 10668,
+    "mtow": 5400,
+    "arm": "2× ametralladoras .50 M3P, cohetes, 1.500 kg de bombas y misiles",
+    "trivia": "El Super Tucano es turbohélice y cuesta 15 millones de dólares, contra 80 del F-16. EE.UU. lo seleccionó para el programa Light Air Support tras años de intentar imponer el F-16 como plataforma COIN.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/EMB_314_Super_Tucano_in_flight.jpg/1200px-EMB_314_Super_Tucano_in_flight.jpg",
+    "desc": "El avión de contrainsurgencia más exitoso del mercado. Turbohélice, barato, fiable y letal en el combate de baja intensidad; operado por más de 15 países en cuatro continentes.",
+    "engine": "P&W Canada PT6A-68C (turbohélice)",
+    "thrust_kn": null,
+    "wing_span": 11.14,
+    "length": 11.33,
+    "height": 3.97,
+    "wing_area": 19.4,
+    "fuel_capacity": 1500,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Piloto trasero / instructor"
+    ],
+    "combat_radius": 550,
+    "thrust_to_weight": 0.69,
+    "wing_loading": 278,
+    "radar": "Ninguno (EO/IR pods externos)",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "AN/ALR-69A RWR, AN/ALE-47",
+    "data_link": "Radio VHF/UHF",
+    "helmet_system": null,
+    "roles": [
+      "COIN contrainsurgencia",
+      "CAS ligero",
+      "entrenamiento avanzado",
+      "vigilancia"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x FN HMP 400 12,7 mm",
+      "hardpoints": 8,
+      "missiles": [
+        "AGM-65 Maverick"
+      ],
+      "bombs": [
+        "Mk-82",
+        "GBU-12",
+        "cohetes APKWS"
+      ]
+    },
+    "status": "active",
+    "units_built": 260,
+    "retired_year": null,
+    "operators": [
+      "Brasil",
+      "EE.UU.",
+      "Colombia",
+      "Ecuador",
+      "Mali",
+      "Mauritania",
+      "Senegal",
+      "Nigeria",
+      "y 10+ países"
+    ],
+    "unit_cost_m": 14.0,
+    "manufacturer": "Embraer",
+    "derived_from": null,
+    "related_aircraft": [
+      "a10",
+      "ov10"
+    ],
+    "variants": [
+      "EMB 314 monoplaza",
+      "EMB 314 biplaza",
+      "A-29A",
+      "A-29B"
+    ],
+    "tags": [
+      "COIN",
+      "turbohélice",
+      "bajo coste",
+      "activo",
+      "exportado",
+      "CAS ligero"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": "Seleccionado por la USAF en 2012 para el Afghan Air Force como Light Air Support (LAS)."
+      }
+    ]
+  },
+  {
+    "id": "f2",
+    "name": "Mitsubishi F-2",
+    "type": "Caza",
+    "country": "Japón",
+    "year": 2000,
+    "generation": "4ª",
+    "conflicts": [],
+    "wiki": "Mitsubishi_F-2",
+    "speed": 2124,
+    "range": 2900,
+    "ceiling": 18000,
+    "mtow": 22100,
+    "arm": "1× cañón JM61A1 20 mm, AAM-3, AAM-4, ASM-2, JDAM",
+    "trivia": "El F-2 es un F-16 japonés 25% más grande, con ala compuesta de fibra de carbono y un radar AESA diseñado enteramente en Japón. EE.UU. obstaculizó el desarrollo de su tecnología propia para forzar la compra de su tecnología.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Mitsubishi_F-2_Japan_Air_Self-Defense_Force.jpg/1200px-Mitsubishi_F-2_Japan_Air_Self-Defense_Force.jpg",
+    "desc": "El caza polivalente de la Fuerza de Autodefensa Aérea de Japón. Desarrollado en colaboración forzada con EE.UU., su rol principal es el ataque antibuque para defender las costas japonesas.",
+    "engine": "GE F110-GE-129 (turbofan con postquemador)",
+    "thrust_kn": 131.7,
+    "wing_span": 11.13,
+    "length": 15.52,
+    "height": 4.96,
+    "wing_area": 34.84,
+    "fuel_capacity": 4750,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 834,
+    "thrust_to_weight": 0.95,
+    "wing_loading": 635,
+    "radar": "Mitsubishi Electric J/APG-2 AESA",
+    "radar_type": "AESA",
+    "irst": false,
+    "ew_system": "J/ALQ-8 ECM",
+    "data_link": "Link-16",
+    "helmet_system": "HMD japonés",
+    "roles": [
+      "superioridad aérea",
+      "ataque antinaval",
+      "ataque a tierra"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x JM61A1 20 mm",
+      "hardpoints": 13,
+      "missiles": [
+        "AAM-3",
+        "AAM-4",
+        "ASM-2 antinaval",
+        "AAM-5"
+      ],
+      "bombs": [
+        "JDAM",
+        "GCS-1"
+      ]
+    },
+    "status": "active",
+    "units_built": 98,
+    "retired_year": null,
+    "operators": [
+      "Japón"
+    ],
+    "unit_cost_m": 127.0,
+    "manufacturer": "Mitsubishi Heavy Industries con Lockheed",
+    "derived_from": "f16",
+    "related_aircraft": [
+      "f16",
+      "f35",
+      "f15"
+    ],
+    "variants": [
+      "F-2A monoplaza",
+      "F-2B biplaza entrenamiento"
+    ],
+    "tags": [
+      "cuarta gen",
+      "AESA",
+      "Japón",
+      "antinaval",
+      "activo",
+      "costoso"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "hal_tejas",
+    "name": "HAL Tejas Mk1A",
+    "type": "Caza",
+    "country": "India",
+    "year": 2016,
+    "generation": "4ª",
+    "conflicts": [],
+    "wiki": "HAL_Tejas",
+    "speed": 1920,
+    "range": 850,
+    "ceiling": 15240,
+    "mtow": 13500,
+    "arm": "1× cañón GSh-23 23 mm, R-73, Derby, MICA, ASTRA, 4.000 kg total",
+    "trivia": "El Tejas tardó 33 años desde su inicio de diseño hasta su entrega inicial, un récord negativo que India atribuyó a los embargos occidentales de tecnología tras sus pruebas nucleares de 1998.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/HAL_Tejas_single_seat.jpg/1200px-HAL_Tejas_single_seat.jpg",
+    "desc": "El primer caza diseñado y fabricado íntegramente en India. Su desarrollo fortaleció la industria aeronáutica india y sentó las bases para el futuro AMCA de quinta generación.",
+    "engine": "GE F404-GE-IN20 (turbofan con postquemador)",
+    "thrust_kn": 89.0,
+    "wing_span": 8.2,
+    "length": 13.2,
+    "height": 4.4,
+    "wing_area": 38.4,
+    "fuel_capacity": 2458,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 500,
+    "thrust_to_weight": 0.92,
+    "wing_loading": 352,
+    "radar": "Elta EL/M-2052 AESA Israel",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "Tarangini RWR, ASPJ ECM",
+    "data_link": "Link-16",
+    "helmet_system": "HMD indio",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra",
+      "defensa de puntos"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-23 23 mm",
+      "hardpoints": 8,
+      "missiles": [
+        "R-73",
+        "Derby",
+        "MICA",
+        "ASTRA Mk1"
+      ],
+      "bombs": [
+        "Spice 250",
+        "DRDO LGB"
+      ]
+    },
+    "status": "active",
+    "units_built": 40,
+    "retired_year": null,
+    "operators": [
+      "India"
+    ],
+    "unit_cost_m": 46.0,
+    "manufacturer": "Hindustan Aeronautics Limited HAL",
+    "derived_from": null,
+    "related_aircraft": [
+      "gripen",
+      "mirage2000",
+      "jf17"
+    ],
+    "variants": [
+      "Tejas Mk1",
+      "Tejas Mk1A AESA",
+      "Tejas Mk2 futuro",
+      "TEJAS NP1 naval"
+    ],
+    "tags": [
+      "cuarta gen",
+      "india",
+      "AESA",
+      "nacional",
+      "activo",
+      "33 años desarrollo"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "f22",
+    "name": "F-22 Raptor",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 2005,
+    "generation": "5ª",
+    "conflicts": [
+      "gwot",
+      "syria"
+    ],
+    "wiki": "Lockheed_Martin_F-22_Raptor",
+    "speed": 2410,
+    "range": 2960,
+    "ceiling": 20000,
+    "mtow": 38000,
+    "arm": "AIM-120D, AIM-9X, Cañón M61A2 20mm",
+    "trivia": "Su firma de radar es del tamaño de una canica metálica, a pesar de medir 19 metros de largo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/F-22_Raptor_edit1_%28cropped%29.jpg/1200px-F-22_Raptor_edit1_%28cropped%29.jpg",
+    "desc": "Primer caza de quinta generación del mundo, diseñado para la superioridad aérea total mediante el sigilo, la supercrucero y la agilidad extrema.",
+    "engine": "2x P&W F119-PW-100 (turbofan con TVC y postquemador)",
+    "thrust_kn": 311.4,
+    "wing_span": 13.56,
+    "length": 18.92,
+    "height": 5.09,
+    "wing_area": 78.04,
+    "fuel_capacity": 8200,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 759,
+    "thrust_to_weight": 1.08,
+    "wing_loading": 487,
+    "radar": "AN/APG-77 AESA LPI",
+    "radar_type": "AESA",
+    "irst": false,
+    "ew_system": "AN/ALR-94 pasivo RWR",
+    "data_link": "IFDL (no Link-16)",
+    "helmet_system": "HMD integrado",
+    "roles": [
+      "superioridad aérea",
+      "supresión defensas",
+      "ataque precisión limitado"
+    ],
+    "stealth": "high",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A2 20 mm",
+      "hardpoints": 6,
+      "missiles": [
+        "AIM-120D",
+        "AIM-9X"
+      ],
+      "bombs": [
+        "GBU-32 JDAM",
+        "GBU-39 SDB"
+      ]
+    },
+    "status": "active",
+    "units_built": 187,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 150.0,
+    "manufacturer": "Lockheed Martin / Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "f35",
+      "su57",
+      "j20"
+    ],
+    "variants": [
+      "F-22A"
+    ],
+    "tags": [
+      "quinta gen",
+      "supercrucero",
+      "TVC",
+      "stealth",
+      "AESA LPI",
+      "solo EE.UU."
+    ],
+    "radar_cross_section": "0,0001 m2 (ping-pong)",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": "Primer uso en combate el 22/9/2014 contra el Daesh. Derribó globo chino en 2023."
+      }
+    ]
+  },
+  {
+    "id": "su57",
+    "name": "Su-57 Felon",
+    "type": "Caza",
+    "country": "Rusia",
+    "year": 2020,
+    "generation": "5ª",
+    "conflicts": [
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-57",
+    "speed": 2600,
+    "range": 3500,
+    "ceiling": 20000,
+    "mtow": 35000,
+    "arm": "R-77M, R-73, Kh-59MK2, Cañón 30mm GSh-30-1",
+    "trivia": "Utiliza un sistema de radar distribuido por toda la superficie de sus alas, sin precedentes en la aviación.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sukhoi_Su-57_at_the_MAKS-2019_airshow_%285%29.jpg/1200px-Sukhoi_Su-57_at_the_MAKS-2019_airshow_%285%29.jpg",
+    "desc": "Respuesta rusa al F-22, destacando por su vectorización de empuje 3D y su potente conjunto de sensores distribuidos.",
+    "engine": "2x Saturn AL-41F1 (turbofan con TVC y postquemador)",
+    "thrust_kn": 330.0,
+    "wing_span": 14.1,
+    "length": 20.1,
+    "height": 4.74,
+    "wing_area": 78.8,
+    "fuel_capacity": 10600,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1500,
+    "thrust_to_weight": 1.12,
+    "wing_loading": 444,
+    "radar": "N036 Byelka AESA + 4 radares L-band en alas",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "L402 Himalayas ECM",
+    "data_link": "Sistema ruso",
+    "helmet_system": "NSC-1 Scorpion HMD",
+    "roles": [
+      "superioridad aérea",
+      "ataque precisión",
+      "SEAD"
+    ],
+    "stealth": "medium",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-1 30 mm",
+      "hardpoints": 10,
+      "missiles": [
+        "R-77M",
+        "R-74M",
+        "R-37M",
+        "Kh-59MK2"
+      ],
+      "bombs": [
+        "KAB-500S",
+        "KAB-1500"
+      ]
+    },
+    "status": "active",
+    "units_built": 30,
+    "retired_year": null,
+    "operators": [
+      "Rusia"
+    ],
+    "unit_cost_m": 35.0,
+    "manufacturer": "Sukhoi",
+    "derived_from": "su27",
+    "related_aircraft": [
+      "f22",
+      "j20",
+      "su35"
+    ],
+    "variants": [
+      "Su-57",
+      "Su-57M motor Izdeliye 30"
+    ],
+    "tags": [
+      "quinta gen",
+      "TVC",
+      "AESA distribuido",
+      "stealth parcial",
+      "Rusia",
+      "activo"
+    ],
+    "radar_cross_section": "0,1 m2 estimado",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Usa misiles de largo alcance fuera del alcance de los SAM ucranianos."
+      }
+    ]
+  },
+  {
+    "id": "f35",
+    "name": "F-35 Lightning II",
+    "type": "Caza",
+    "country": "EE.UU. / Aliados",
+    "year": 2015,
+    "generation": "5ª",
+    "conflicts": [
+      "syria",
+      "gwot"
+    ],
+    "wiki": "Lockheed_Martin_F-35_Lightning_II",
+    "speed": 1930,
+    "range": 2220,
+    "ceiling": 15000,
+    "mtow": 31800,
+    "arm": "AIM-120C, AIM-9X, JDAM, Cañón 25mm GAU-22/A",
+    "trivia": "El casco del piloto integra seis cámaras que le permiten ver a través del fuselaje en tiempo real.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/F-35A_flight_%28cropped%29.jpg/1200px-F-35A_flight_%28cropped%29.jpg",
+    "desc": "La computadora voladora más avanzada del mundo, centrada en la fusión de sensores y el combate en red multidomain.",
+    "engine": "P&W F135-PW-100 (turbofan con postquemador)",
+    "thrust_kn": 191.3,
+    "wing_span": 10.67,
+    "length": 15.67,
+    "height": 4.36,
+    "wing_area": 42.74,
+    "fuel_capacity": 8382,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1093,
+    "thrust_to_weight": 0.87,
+    "wing_loading": 744,
+    "radar": "AN/APG-81 AESA mayor apertura de su clase",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "AN/ASQ-239 Barracuda",
+    "data_link": "Link-16 + MADL",
+    "helmet_system": "Gen III HMDS (6 cámaras EO distribuidas)",
+    "roles": [
+      "ataque furtivo",
+      "superioridad aérea",
+      "SEAD/DEAD",
+      "ISR",
+      "EW"
+    ],
+    "stealth": "high",
+    "carrier_capable": true,
+    "stol": true,
+    "vtol": true,
+    "armament": {
+      "gun": "1x GAU-22/A 25 mm",
+      "hardpoints": 8,
+      "missiles": [
+        "AIM-120D",
+        "AIM-9X",
+        "JASSM",
+        "JSOW"
+      ],
+      "bombs": [
+        "GBU-31 JDAM",
+        "GBU-39 SDB",
+        "B61-12 nuclear"
+      ]
+    },
+    "status": "active",
+    "units_built": 1000,
+    "retired_year": null,
+    "operators": [
+      "EE.UU. y 16 países aliados"
+    ],
+    "unit_cost_m": 82.5,
+    "manufacturer": "Lockheed Martin / Northrop Grumman / BAE Systems",
+    "derived_from": null,
+    "related_aircraft": [
+      "f22",
+      "fa18super",
+      "ef2000"
+    ],
+    "variants": [
+      "F-35A CTOL",
+      "F-35B STOVL",
+      "F-35C CV naval"
+    ],
+    "tags": [
+      "quinta gen",
+      "AESA",
+      "VTOL",
+      "STOVL",
+      "stealth",
+      "fusión sensores",
+      "HMDS",
+      "activo",
+      "17 países"
+    ],
+    "radar_cross_section": "0,001 m2 (pelota golf)",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": "Primer uso en combate por Israel en 2018. EE.UU. usó F-35A contra ISIS en 2019."
+      }
+    ]
+  },
+  {
+    "id": "ef2000",
+    "name": "Eurofighter Typhoon",
+    "type": "Caza",
+    "country": "Europa",
+    "year": 2003,
+    "generation": "4.5ª",
+    "conflicts": [
+      "libya",
+      "syria"
+    ],
+    "wiki": "Eurofighter_Typhoon",
+    "speed": 2495,
+    "range": 2900,
+    "ceiling": 19800,
+    "mtow": 23500,
+    "arm": "Meteor, IRIS-T, Brimstone, Cañón Mauser BK-27",
+    "trivia": "Su diseño canard-delta es inestable por diseño: sin el fly-by-wire, el avión sería incontrolable.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Eurofighter_Typhoon_of_the_Royal_Air_Force_MOD_45156521.jpg/1200px-Eurofighter_Typhoon_of_the_Royal_Air_Force_MOD_45156521.jpg",
+    "desc": "Caza polivalente de cuarta generación plus desarrollado por Reino Unido, Alemania, Italia y España.",
+    "engine": "2x Eurojet EJ200 (turbofan con postquemador)",
+    "thrust_kn": 180.0,
+    "wing_span": 10.95,
+    "length": 15.96,
+    "height": 5.28,
+    "wing_area": 50.0,
+    "fuel_capacity": 5000,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1390,
+    "thrust_to_weight": 1.07,
+    "wing_loading": 470,
+    "radar": "Euroradar CAPTOR-E AESA",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "DASS integrado",
+    "data_link": "Link-16",
+    "helmet_system": "Striker II HMD",
+    "roles": [
+      "superioridad aérea",
+      "defensa de punto",
+      "SEAD",
+      "ataque a tierra"
+    ],
+    "stealth": "low",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x Mauser BK-27 27 mm",
+      "hardpoints": 13,
+      "missiles": [
+        "Meteor",
+        "IRIS-T",
+        "AIM-120C",
+        "Storm Shadow",
+        "Brimstone"
+      ],
+      "bombs": [
+        "Paveway IV",
+        "JDAM-ER"
+      ]
+    },
+    "status": "active",
+    "units_built": 623,
+    "retired_year": null,
+    "operators": [
+      "RU",
+      "Alemania",
+      "Italia",
+      "España",
+      "Austria",
+      "Arabia Saudita",
+      "Kuwait",
+      "Qatar",
+      "Omán"
+    ],
+    "unit_cost_m": 120.0,
+    "manufacturer": "Eurofighter GmbH BAE/Airbus/Leonardo",
+    "derived_from": null,
+    "related_aircraft": [
+      "rafale",
+      "gripen",
+      "f22"
+    ],
+    "variants": [
+      "Tranche 1",
+      "Tranche 2",
+      "Tranche 3",
+      "Tranche 3B AESA"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "AESA",
+      "Meteor",
+      "canard-delta",
+      "europeo",
+      "activo"
+    ],
+    "radar_cross_section": "Baja-Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "libya",
+        "missions": 3200,
+        "notes": "Primera misión de combate del Typhoon en marzo 2011. Supresión de defensas aéreas libias."
+      }
+    ]
+  },
+  {
+    "id": "mig21",
+    "name": "MiG-21 Fishbed",
+    "type": "Caza",
+    "country": "URSS",
+    "year": 1959,
+    "generation": "3ª",
+    "conflicts": [
+      "vietnam",
+      "sixday",
+      "yom_kippur",
+      "falklands"
+    ],
+    "wiki": "Mikoyan-Gurevich_MiG-21",
+    "speed": 2175,
+    "range": 1225,
+    "ceiling": 19000,
+    "mtow": 10400,
+    "arm": "K-13, R-60, Cañón GSh-23L 23mm",
+    "trivia": "Con más de 11.000 unidades fabricadas, es el caza supersónico más producido de la historia.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/MiG-21_%28Fishbed%29_2.jpg/1200px-MiG-21_%28Fishbed%29_2.jpg",
+    "desc": "Símbolo de la aviación soviética de la Guerra Fría, exportado a más de 50 países.",
+    "engine": "Tumansky R-25-300 (turborreactor con postquemador)",
+    "thrust_kn": 97.1,
+    "wing_span": 7.15,
+    "length": 15.76,
+    "height": 4.12,
+    "wing_area": 23.0,
+    "fuel_capacity": 2800,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 370,
+    "thrust_to_weight": 0.76,
+    "wing_loading": 452,
+    "radar": "RP-22 Sapfir (PESA básico)",
+    "radar_type": "mechanical",
+    "irst": true,
+    "ew_system": "SPO-10 Sirena-2",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "interceptor",
+      "superioridad aérea",
+      "ataque a tierra limitado"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-23L 23 mm",
+      "hardpoints": 5,
+      "missiles": [
+        "K-13",
+        "R-60",
+        "R-73 tardío"
+      ],
+      "bombs": [
+        "500 kg mix"
+      ]
+    },
+    "status": "active",
+    "units_built": 11496,
+    "retired_year": null,
+    "operators": [
+      "India",
+      "Croacia",
+      "Rumanía",
+      "Eritrea",
+      "y 30+ países"
+    ],
+    "unit_cost_m": 0.75,
+    "manufacturer": "Mikoyan-Gurevich",
+    "derived_from": null,
+    "related_aircraft": [
+      "f104",
+      "f86sabre",
+      "mig29"
+    ],
+    "variants": [
+      "MiG-21F",
+      "MiG-21PF",
+      "MiG-21MF",
+      "MiG-21bis",
+      "MiG-21-93"
+    ],
+    "tags": [
+      "tercera gen",
+      "más producido supersónico",
+      "delta",
+      "activo 30+ países",
+      "Vietnam"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": "Muy efectivo contra B-52 con R-3S. Inferior al F-4 en maniobra pero efectivo en táctica soviética."
+      },
+      {
+        "conflict": "sixday",
+        "missions": null,
+        "notes": "Israel destruyó 300+ MiG-21 en tierra en pocas horas (Operación Moked, 5 jun 1967)."
+      }
+    ]
+  },
+  {
+    "id": "f16",
+    "name": "F-16 Fighting Falcon",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1978,
+    "generation": "4ª",
+    "conflicts": [
+      "gulf_war",
+      "desert_storm",
+      "gwot",
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "General_Dynamics_F-16_Fighting_Falcon",
+    "speed": 2120,
+    "range": 3200,
+    "ceiling": 15240,
+    "mtow": 19187,
+    "arm": "AIM-9, AIM-120, Cañón M61A1 20mm, JDAM",
+    "trivia": "Primer caza de producción con inestabilidad aerodinámica deliberada para maximizar la maniobrabilidad.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/F-16_June_2008.jpg/1200px-F-16_June_2008.jpg",
+    "desc": "El caza multirol más exportado del mundo, con más de 4.600 unidades para 25 países.",
+    "engine": "GE F110-GE-129 o P&W F100-PW-229 (turbofan con postquemador)",
+    "thrust_kn": 131.7,
+    "wing_span": 9.45,
+    "length": 15.06,
+    "height": 5.09,
+    "wing_area": 27.87,
+    "fuel_capacity": 3900,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 550,
+    "thrust_to_weight": 1.09,
+    "wing_loading": 688,
+    "radar": "AN/APG-83 AESA (F-16V) o APG-68",
+    "radar_type": "AESA",
+    "irst": false,
+    "ew_system": "AN/ALQ-211, AN/ALE-47",
+    "data_link": "Link-16",
+    "helmet_system": "JHMCS",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra",
+      "SEAD",
+      "CAS",
+      "reconocimiento"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 11,
+      "missiles": [
+        "AIM-9X",
+        "AIM-120D",
+        "AGM-88 HARM",
+        "AGM-65"
+      ],
+      "bombs": [
+        "JDAM",
+        "GBU-12",
+        "CBU-97"
+      ]
+    },
+    "status": "active",
+    "units_built": 4604,
+    "retired_year": null,
+    "operators": [
+      "EE.UU. y 25+ países"
+    ],
+    "unit_cost_m": 30.0,
+    "manufacturer": "General Dynamics / Lockheed Martin",
+    "derived_from": null,
+    "related_aircraft": [
+      "f15",
+      "fa18hornet",
+      "mig29"
+    ],
+    "variants": [
+      "F-16A/B",
+      "F-16C/D",
+      "F-16E/F Block 60",
+      "F-16V Viper",
+      "F-16I Israel"
+    ],
+    "tags": [
+      "cuarta gen",
+      "más exportado",
+      "AESA V",
+      "activo",
+      "25 países",
+      "versátil"
+    ],
+    "radar_cross_section": "Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": 13450,
+        "notes": "El caza más activo de la coalición. 1 derribo aéreo y cientos de ataques a tierra."
+      },
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Ucrania recibió F-16 holandeses y belgas en 2024. Primera vez contra adversario con S-400."
+      }
+    ]
+  },
+  {
+    "id": "f15",
+    "name": "F-15 Eagle",
+    "type": "Caza",
+    "country": "EE.UU.",
+    "year": 1976,
+    "generation": "4ª",
+    "conflicts": [
+      "desert_storm",
+      "gwot",
+      "iraq",
+      "syria"
+    ],
+    "wiki": "McDonnell_Douglas_F-15_Eagle",
+    "speed": 2655,
+    "range": 3450,
+    "ceiling": 20000,
+    "mtow": 30845,
+    "arm": "AIM-7, AIM-9, AIM-120, Cañón M61A1 20mm",
+    "trivia": "El F-15 tiene un récord de combate de más de 100 victorias aéreas con cero derrotas confirmadas.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/F-15_MSIP_II.jpg/1200px-F-15_MSIP_II.jpg",
+    "desc": "Caza de superioridad aérea por excelencia de la USAF durante tres décadas.",
+    "engine": "2x P&W F100-PW-220 (turbofan con postquemador)",
+    "thrust_kn": 211.4,
+    "wing_span": 13.05,
+    "length": 19.43,
+    "height": 5.63,
+    "wing_area": 56.5,
+    "fuel_capacity": 6100,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1060,
+    "thrust_to_weight": 1.04,
+    "wing_loading": 546,
+    "radar": "AN/APG-70 Doppler pulse o APG-82 F-15EX",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-128 EWWS",
+    "data_link": "Link-16",
+    "helmet_system": "JHMCS",
+    "roles": [
+      "superioridad aérea",
+      "ataque a tierra F-15E"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x M61A1 20 mm",
+      "hardpoints": 11,
+      "missiles": [
+        "AIM-7",
+        "AIM-9",
+        "AIM-120"
+      ],
+      "bombs": [
+        "GBU-28",
+        "GBU-31 JDAM"
+      ]
+    },
+    "status": "active",
+    "units_built": 1198,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "Israel",
+      "Arabia Saudita",
+      "Japón",
+      "Corea del Sur",
+      "Qatar",
+      "Singapur"
+    ],
+    "unit_cost_m": 27.9,
+    "manufacturer": "McDonnell Douglas / Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "f22",
+      "f16",
+      "su27"
+    ],
+    "variants": [
+      "F-15A/B",
+      "F-15C/D",
+      "F-15E Strike Eagle",
+      "F-15I Israel",
+      "F-15EX"
+    ],
+    "tags": [
+      "cuarta gen",
+      "100-0 victorias",
+      "USAF",
+      "activo",
+      "Israel",
+      "Oriente Medio"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": null,
+        "notes": "El F-15C logró 34 de las 39 victorias aéreas de la coalición. Récord 100+ victorias sin derrota."
+      }
+    ]
+  },
+  {
+    "id": "rafale",
+    "name": "Dassault Rafale",
+    "type": "Caza",
+    "country": "Francia",
+    "year": 2001,
+    "generation": "4.5ª",
+    "conflicts": [
+      "libya",
+      "mali",
+      "syria"
+    ],
+    "wiki": "Dassault_Rafale",
+    "speed": 1912,
+    "range": 3700,
+    "ceiling": 15240,
+    "mtow": 24500,
+    "arm": "MICA, Meteor, AASM, Cañón DEFA 791B 30mm",
+    "trivia": "El Rafale fue el primer avión en combinar capacidades nucleares tácticas y estratégicas simultáneamente.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Dassault_Rafale_%28cropped%29.jpg/1200px-Dassault_Rafale_%28cropped%29.jpg",
+    "desc": "Caza omnirrol francés para operar desde portaviones y tierra, cubriendo todas las misiones sin compromisos.",
+    "engine": "2x SNECMA M88-2 (turbofan con postquemador)",
+    "thrust_kn": 150.0,
+    "wing_span": 10.9,
+    "length": 15.27,
+    "height": 5.34,
+    "wing_area": 45.7,
+    "fuel_capacity": 6560,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1850,
+    "thrust_to_weight": 0.97,
+    "wing_loading": 536,
+    "radar": "Thales RBE2-AA AESA",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "SPECTRA suite EW",
+    "data_link": "Link-16",
+    "helmet_system": "Topsight-E HMD",
+    "roles": [
+      "superioridad aérea",
+      "ataque precisión",
+      "nuclear ASMP-A",
+      "reconocimiento",
+      "antinaval",
+      "SEAD"
+    ],
+    "stealth": "low",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x DEFA 791B 30 mm",
+      "hardpoints": 14,
+      "missiles": [
+        "MICA IR/EM",
+        "Meteor",
+        "ASMP-A nuclear",
+        "Exocet"
+      ],
+      "bombs": [
+        "SCALP-EG",
+        "AASM Hammer",
+        "GBU-24"
+      ]
+    },
+    "status": "active",
+    "units_built": 230,
+    "retired_year": null,
+    "operators": [
+      "Francia",
+      "India",
+      "Egipto",
+      "Qatar",
+      "Grecia",
+      "Croacia",
+      "Emiratos",
+      "Indonesia",
+      "Serbia"
+    ],
+    "unit_cost_m": 115.0,
+    "manufacturer": "Dassault Aviation",
+    "derived_from": null,
+    "related_aircraft": [
+      "ef2000",
+      "gripen",
+      "mirage2000"
+    ],
+    "variants": [
+      "Rafale C monoplaza",
+      "Rafale B biplaza",
+      "Rafale M naval",
+      "Rafale F4"
+    ],
+    "tags": [
+      "cuarta gen plus",
+      "AESA",
+      "nuclear",
+      "naval",
+      "omnirrol",
+      "exportado",
+      "activo"
+    ],
+    "radar_cross_section": "Baja-Media",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "mali",
+        "missions": null,
+        "notes": "Operación Serval: Rafale operó a 4.500 km desde Francia sin escala, demostrando alcance excepcional."
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": "Misiles de crucero SCALP-EG contra el Daesh desde 2015."
+      }
+    ]
+  },
+  {
+    "id": "j20",
+    "name": "Chengdu J-20",
+    "type": "Caza",
+    "country": "China",
+    "year": 2017,
+    "generation": "5ª",
+    "conflicts": [],
+    "wiki": "Chengdu_J-20",
+    "speed": 2100,
+    "range": 2700,
+    "ceiling": 20000,
+    "mtow": 37000,
+    "arm": "PL-15, PL-10, Cañón interno en pruebas",
+    "trivia": "China reveló el J-20 durante la visita oficial del Secretario de Defensa de EE.UU.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Chengdu_J-20_at_Airshow_China_2016_%28cropped%29.jpg/1200px-Chengdu_J-20_at_Airshow_China_2016_%28cropped%29.jpg",
+    "desc": "Primer caza furtivo de quinta generación de China, diseñado para combate BVR de largo alcance.",
+    "engine": "2x WS-15 o AL-31 provisional (turbofan con postquemador)",
+    "thrust_kn": 320.0,
+    "wing_span": 12.88,
+    "length": 20.3,
+    "height": 4.69,
+    "wing_area": 73.0,
+    "fuel_capacity": null,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1200,
+    "thrust_to_weight": 1.09,
+    "wing_loading": 507,
+    "radar": "PLAAF AESA KLJ-7A estimado",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "EODAS (Electro-Optical DAS)",
+    "data_link": "Link nacional chino",
+    "helmet_system": "HMD integrado",
+    "roles": [
+      "superioridad aérea largo alcance",
+      "ataque precisión",
+      "SEAD"
+    ],
+    "stealth": "high",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Cañón interno pendiente confirmación",
+      "hardpoints": 8,
+      "missiles": [
+        "PL-15",
+        "PL-10",
+        "PL-21 VLRAAM desarrollo"
+      ],
+      "bombs": [
+        "Bombas guiadas chinas"
+      ]
+    },
+    "status": "active",
+    "units_built": 200,
+    "retired_year": null,
+    "operators": [
+      "China"
+    ],
+    "unit_cost_m": 110.0,
+    "manufacturer": "Chengdu Aircraft Corporation CAC",
+    "derived_from": null,
+    "related_aircraft": [
+      "f22",
+      "su57",
+      "j35"
+    ],
+    "variants": [
+      "J-20A",
+      "J-20B TVC",
+      "J-20S biplaza"
+    ],
+    "tags": [
+      "quinta gen",
+      "stealth",
+      "china",
+      "PL-15",
+      "EODAS",
+      "activo"
+    ],
+    "radar_cross_section": "Muy baja frontal estimada 0,01 m2",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "su27",
+    "name": "Su-27 Flanker",
+    "type": "Caza",
+    "country": "URSS / Rusia",
+    "year": 1985,
+    "generation": "4ª",
+    "conflicts": [
+      "chechnya",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-27",
+    "speed": 2500,
+    "range": 3530,
+    "ceiling": 18500,
+    "mtow": 33000,
+    "arm": "R-27, R-73, Cañón GSh-30-1 30mm",
+    "trivia": "La maniobra Pugachev Cobra deja el avión suspendido en el aire a 90° durante un segundo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Su-27_inflight_2005.jpg/1200px-Su-27_inflight_2005.jpg",
+    "desc": "Caza de superioridad aérea soviético diseñado para superar al F-15, base de toda la familia Flanker.",
+    "engine": "2x Saturn AL-31F (turbofan con postquemador)",
+    "thrust_kn": 245.2,
+    "wing_span": 14.7,
+    "length": 21.94,
+    "height": 5.93,
+    "wing_area": 62.04,
+    "fuel_capacity": 9400,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 1500,
+    "thrust_to_weight": 1.09,
+    "wing_loading": 532,
+    "radar": "RLPK-27 Myech PESA",
+    "radar_type": "PESA",
+    "irst": true,
+    "ew_system": "SPO-15 Beryoza",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "superioridad aérea largo alcance"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-1 30 mm",
+      "hardpoints": 10,
+      "missiles": [
+        "R-27",
+        "R-73",
+        "R-60"
+      ],
+      "bombs": [
+        "FAB-500"
+      ]
+    },
+    "status": "active",
+    "units_built": 809,
+    "retired_year": null,
+    "operators": [
+      "Rusia",
+      "Ucrania",
+      "China",
+      "Uzbekistán",
+      "Vietnam",
+      "Angola",
+      "Indonesia",
+      "Kazajistán"
+    ],
+    "unit_cost_m": 30.0,
+    "manufacturer": "Sukhoi",
+    "derived_from": null,
+    "related_aircraft": [
+      "su30",
+      "su35",
+      "mig29"
+    ],
+    "variants": [
+      "Su-27P",
+      "Su-27SK exportación",
+      "Su-27SM",
+      "Su-33 naval",
+      "Su-27UB biplaza"
+    ],
+    "tags": [
+      "cuarta gen",
+      "PESA",
+      "IRST",
+      "familia Flanker",
+      "base para toda la línea",
+      "activo"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "chechnya",
+        "missions": null,
+        "notes": "Misiones de escolta y superioridad. Sufrió pérdidas por MANPADS portátiles."
+      }
+    ]
+  },
+  {
+    "id": "b2",
+    "name": "B-2 Spirit",
+    "type": "Bombardero",
+    "country": "EE.UU.",
+    "year": 1997,
+    "generation": null,
+    "conflicts": [
+      "kosovo",
+      "gwot",
+      "iraq",
+      "libya"
+    ],
+    "wiki": "Northrop_Grumman_B-2_Spirit",
+    "speed": 1010,
+    "range": 11100,
+    "ceiling": 15200,
+    "mtow": 170600,
+    "arm": "80× JDAM 227kg, B61/B83 nuclear, MOP 14.000kg",
+    "trivia": "Con un coste de 2.100 millones de dólares por unidad, es el avión más caro jamás fabricado.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/B-2_Spirit_Spirit_of_Mississippi.jpg/1200px-B-2_Spirit_Spirit_of_Mississippi.jpg",
+    "desc": "Bombardero estratégico invisible al radar, capaz de penetrar las defensas aéreas más densas del mundo.",
+    "engine": "4x GE F118-GE-100 (turbofan sin postquemador)",
+    "thrust_kn": 334.5,
+    "wing_span": 52.43,
+    "length": 21.03,
+    "height": 5.18,
+    "wing_area": 464.52,
+    "fuel_capacity": 75750,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Mission Commander"
+    ],
+    "combat_radius": 5556,
+    "thrust_to_weight": 0.27,
+    "wing_loading": 368,
+    "radar": "AN/APQ-181 AESA oculto",
+    "radar_type": "AESA",
+    "irst": false,
+    "ew_system": "AN/ZSR-63 suite avanzada",
+    "data_link": "Link-16 + satélite",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico furtivo",
+      "ataque nuclear",
+      "penetración defensa aérea"
+    ],
+    "stealth": "high",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 80,
+      "missiles": [
+        "AGM-158 JASSM"
+      ],
+      "bombs": [
+        "GBU-57 MOP 14t",
+        "B61-12",
+        "GBU-38 JDAM",
+        "B83"
+      ]
+    },
+    "status": "active",
+    "units_built": 21,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 2100.0,
+    "manufacturer": "Northrop Grumman",
+    "derived_from": null,
+    "related_aircraft": [
+      "b21",
+      "b1b",
+      "b52"
+    ],
+    "variants": [
+      "B-2A Block 10/20/30"
+    ],
+    "tags": [
+      "furtivo",
+      "estratégico",
+      "nuclear",
+      "ala volante",
+      "21 unidades",
+      "más caro",
+      "activo"
+    ],
+    "radar_cross_section": "0,001 m2",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "kosovo",
+        "missions": 49,
+        "notes": "Primera misión de combate (24/3/1999). Destruyó 33% objetivos serbios en las primeras dos noches."
+      }
+    ]
+  },
+  {
+    "id": "tu160",
+    "name": "Tu-160 Blackjack",
+    "type": "Bombardero",
+    "country": "Rusia",
+    "year": 1987,
+    "generation": null,
+    "conflicts": [
+      "chechnya",
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Tupolev_Tu-160",
+    "speed": 2220,
+    "range": 12300,
+    "ceiling": 16000,
+    "mtow": 275000,
+    "arm": "Kh-101, Kh-555, Kh-55 (12 misiles de crucero)",
+    "trivia": "Es el avión de combate más grande, pesado y rápido del mundo, apodado 'el cisne blanco'.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Russian_Air_Force_Tupolev_Tu-160.jpg/1200px-Russian_Air_Force_Tupolev_Tu-160.jpg",
+    "desc": "Bombardero estratégico supersónico de alas variables para lanzar misiles de crucero intercontinentales.",
+    "engine": "4x Kuznetsov NK-321 (turbofan con postquemador, más potente en servicio)",
+    "thrust_kn": 981.6,
+    "wing_span": 55.7,
+    "length": 54.1,
+    "height": 13.1,
+    "wing_area": 360.0,
+    "fuel_capacity": 171000,
+    "crew": 4,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Navegante",
+      "Operador de armas"
+    ],
+    "combat_radius": 6000,
+    "thrust_to_weight": 0.37,
+    "wing_loading": 764,
+    "radar": "Obzor-K navegación y terreno",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Gespard ECM",
+    "data_link": "Sistema ruso",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico",
+      "ataque nuclear",
+      "lanzador misiles de crucero"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 12,
+      "missiles": [
+        "Kh-101 nuclear/convencional",
+        "Kh-555",
+        "Kh-55"
+      ],
+      "bombs": [
+        "FAB-9000"
+      ]
+    },
+    "status": "active",
+    "units_built": 35,
+    "retired_year": null,
+    "operators": [
+      "Rusia"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Tupolev",
+    "derived_from": null,
+    "related_aircraft": [
+      "b1b",
+      "b52",
+      "tu95"
+    ],
+    "variants": [
+      "Tu-160",
+      "Tu-160M modernizado",
+      "Tu-160M2 nuevo"
+    ],
+    "tags": [
+      "más grande bombardero",
+      "ala variable",
+      "nuclear",
+      "supersónico",
+      "activo",
+      "cisne blanco"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": "Tu-160 lanzaron Kh-101 contra objetivos sirios desde espacio aéreo ruso en 2015."
+      }
+    ]
+  },
+  {
+    "id": "b52",
+    "name": "B-52 Stratofortress",
+    "type": "Bombardero",
+    "country": "EE.UU.",
+    "year": 1955,
+    "generation": null,
+    "conflicts": [
+      "vietnam",
+      "gulf_war",
+      "desert_storm",
+      "gwot",
+      "iraq"
+    ],
+    "wiki": "Boeing_B-52_Stratofortress",
+    "speed": 1047,
+    "range": 14200,
+    "ceiling": 15000,
+    "mtow": 220000,
+    "arm": "31.500 kg: JDAM, ALCM, bombas convencionales y nucleares",
+    "trivia": "Se espera que el B-52 vuele hasta 2050, con casi 100 años de operación activa.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/B-52_Stratofortress_side_view.jpg/1200px-B-52_Stratofortress_side_view.jpg",
+    "desc": "El pilar del mando estratégico estadounidense durante siete décadas, en constante actualización.",
+    "engine": "8x P&W TF33-PW-103 (turbofan) — actualizando a 8x RR F130",
+    "thrust_kn": 474.4,
+    "wing_span": 56.39,
+    "length": 49.05,
+    "height": 12.4,
+    "wing_area": 371.6,
+    "fuel_capacity": 181000,
+    "crew": 5,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Navegante",
+      "Operador radar",
+      "Operador EW"
+    ],
+    "combat_radius": 7210,
+    "thrust_to_weight": 0.29,
+    "wing_loading": 592,
+    "radar": "AN/APQ-166 navegación y ataque",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-172 Pave Mint, AN/ALR-46",
+    "data_link": "Link-16",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico",
+      "nuclear",
+      "ISR con pods",
+      "minado"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno (M61 retirado)",
+      "hardpoints": 20,
+      "missiles": [
+        "AGM-86 ALCM",
+        "AGM-158 JASSM",
+        "LRASM"
+      ],
+      "bombs": [
+        "GBU-31 JDAM",
+        "B61",
+        "B83"
+      ]
+    },
+    "status": "active",
+    "units_built": 744,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 53.4,
+    "manufacturer": "Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "b1b",
+      "b2",
+      "tu95"
+    ],
+    "variants": [
+      "B-52D",
+      "B-52F",
+      "B-52G",
+      "B-52H único en servicio"
+    ],
+    "tags": [
+      "estratégico",
+      "nuclear",
+      "7 décadas",
+      "BUFF",
+      "activo",
+      "8 motores",
+      "histórico"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": 124532,
+        "notes": "Operación Linebacker II: 11 días de bombardeo de Hanói. 15 B-52 derribados por SA-2."
+      },
+      {
+        "conflict": "desert_storm",
+        "missions": 1624,
+        "notes": "1.624 salidas, 27.000 t de bombas, 40% del total de la coalición."
+      }
+    ]
+  },
+  {
+    "id": "b1b",
+    "name": "B-1B Lancer",
+    "type": "Bombardero",
+    "country": "EE.UU.",
+    "year": 1986,
+    "generation": null,
+    "conflicts": [
+      "desert_storm",
+      "gwot",
+      "iraq",
+      "syria"
+    ],
+    "wiki": "Rockwell_B-1_Lancer",
+    "speed": 1340,
+    "range": 9400,
+    "ceiling": 18000,
+    "mtow": 216400,
+    "arm": "56.700 kg: JASSM, JSOW, JDAM, minas Mk-62",
+    "trivia": "Puede llevar 24 misiles JASSM-ER internamente, la mayor carga de precisión del mundo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/B-1B_Lancer_040316-F-0000S-001.jpg/1200px-B-1B_Lancer_040316-F-0000S-001.jpg",
+    "desc": "Bombardero supersónico de ala variable, el más rápido de la tríada nuclear americana.",
+    "engine": "4x GE F101-GE-102 (turbofan con postquemador)",
+    "thrust_kn": 540.0,
+    "wing_span": 41.67,
+    "length": 44.81,
+    "height": 10.36,
+    "wing_area": 181.16,
+    "fuel_capacity": 95000,
+    "crew": 4,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Oficial de sistemas ofensivos",
+      "Oficial de sistemas defensivos"
+    ],
+    "combat_radius": 4970,
+    "thrust_to_weight": 0.39,
+    "wing_loading": 1195,
+    "radar": "AN/APQ-164 AESA terreno siguiendo",
+    "radar_type": "AESA",
+    "irst": false,
+    "ew_system": "AN/ALQ-161A suite completa",
+    "data_link": "Link-16",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico convencional",
+      "ataque de saturación",
+      "lanzador JASSM/LRASM"
+    ],
+    "stealth": "low",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno (nuclear retirado START I)",
+      "hardpoints": 24,
+      "missiles": [
+        "AGM-158 JASSM-ER",
+        "LRASM",
+        "AGM-154 JSOW"
+      ],
+      "bombs": [
+        "GBU-31 JDAM",
+        "Mk-82",
+        "MK-62 minas"
+      ]
+    },
+    "status": "active",
+    "units_built": 100,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 283.1,
+    "manufacturer": "Rockwell International / Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "b2",
+      "b52",
+      "tu160"
+    ],
+    "variants": [
+      "B-1B Lancer"
+    ],
+    "tags": [
+      "estratégico",
+      "JASSM",
+      "ala variable",
+      "supersónico",
+      "activo",
+      "100 unidades"
+    ],
+    "radar_cross_section": "Media-Baja",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": "Lanzó 40% de municiones de precisión en Afganistán con solo 5% de las salidas."
+      }
+    ]
+  },
+  {
+    "id": "tu95",
+    "name": "Tu-95 Bear",
+    "type": "Bombardero",
+    "country": "URSS / Rusia",
+    "year": 1956,
+    "generation": null,
+    "conflicts": [
+      "coldwar_patrols",
+      "chechnya",
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Tupolev_Tu-95",
+    "speed": 920,
+    "range": 15000,
+    "ceiling": 12000,
+    "mtow": 188000,
+    "arm": "Kh-101, Kh-55, Kh-20 (hasta 15 misiles de crucero)",
+    "trivia": "El avión de turbohélice más rápido del mundo y el único bombardero estratégico a hélice en activo.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Tupolev_Tu-95.jpg/1200px-Tupolev_Tu-95.jpg",
+    "desc": "Bombardero estratégico soviético modernizado para misiles de crucero de última generación.",
+    "engine": "4x Kuznetsov NK-12MV (turbohélice coaxial, más potente del mundo a hélice)",
+    "thrust_kn": null,
+    "wing_span": 51.1,
+    "length": 46.2,
+    "height": 12.12,
+    "wing_area": 295.0,
+    "fuel_capacity": 84000,
+    "crew": 7,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Navegante",
+      "Radio",
+      "Artillero cola",
+      "Operador armas",
+      "Ingeniero"
+    ],
+    "combat_radius": 6400,
+    "thrust_to_weight": 0.27,
+    "wing_loading": 637,
+    "radar": "Rubin navegación",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Fantasmagóriya ECM",
+    "data_link": "Sistema ruso",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico",
+      "lanzador misiles de crucero",
+      "patrullas disuasión nuclear"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "2x AM-23 23 mm cola",
+      "hardpoints": 15,
+      "missiles": [
+        "Kh-101",
+        "Kh-55",
+        "Kh-20"
+      ],
+      "bombs": [
+        "FAB-9000"
+      ]
+    },
+    "status": "active",
+    "units_built": 500,
+    "retired_year": null,
+    "operators": [
+      "Rusia"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "Tupolev",
+    "derived_from": null,
+    "related_aircraft": [
+      "b52",
+      "tu160",
+      "b29"
+    ],
+    "variants": [
+      "Tu-95MS misiles de crucero",
+      "Tu-95MS6",
+      "Tu-95MS16",
+      "Tu-142 antisubmarino"
+    ],
+    "tags": [
+      "turbohélice",
+      "más rápido a hélice",
+      "nuclear",
+      "activo",
+      "70 años servicio"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": "Tu-95MS lanzaron Kh-101 contra Siria en 2015, primera misión de combate real con armamento."
+      }
+    ]
+  },
+  {
+    "id": "a10",
+    "name": "A-10 Thunderbolt II",
+    "type": "Ataque",
+    "country": "EE.UU.",
+    "year": 1977,
+    "generation": null,
+    "conflicts": [
+      "gulf_war",
+      "desert_storm",
+      "gwot",
+      "iraq"
+    ],
+    "wiki": "Fairchild_Republic_A-10_Thunderbolt_II",
+    "speed": 706,
+    "range": 4150,
+    "ceiling": 13700,
+    "mtow": 23000,
+    "arm": "Cañón GAU-8/A 30mm, AGM-65 Maverick, Mk-82",
+    "trivia": "El avión fue diseñado alrededor del cañón: el GAU-8 no cabría en ningún otro fuselaje.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/A-10_Thunderbolt_II_In-flight-2009.jpg/1200px-A-10_Thunderbolt_II_In-flight-2009.jpg",
+    "desc": "Diseñado para destruir tanques, famoso por su resistencia extrema y el rugido BRRRT de su cañón.",
+    "engine": "2x GE TF34-GE-100A (turbofan sin postquemador)",
+    "thrust_kn": 80.6,
+    "wing_span": 17.53,
+    "length": 16.26,
+    "height": 4.47,
+    "wing_area": 47.01,
+    "fuel_capacity": 5016,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 460,
+    "thrust_to_weight": 0.54,
+    "wing_loading": 490,
+    "radar": "AN/AAS-35 Pave Penny designador láser — sin radar de combate",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "AN/ALQ-131 ECM, AN/ALE-40",
+    "data_link": "Link-16",
+    "helmet_system": null,
+    "roles": [
+      "CAS",
+      "antitanque",
+      "CSAR",
+      "SEAD limitado"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": true,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GAU-8/A Avenger 30 mm (1.174 proyectiles)",
+      "hardpoints": 11,
+      "missiles": [
+        "AGM-65 Maverick",
+        "AIM-9"
+      ],
+      "bombs": [
+        "Mk-82",
+        "GBU-12",
+        "GBU-31",
+        "CBU-105"
+      ]
+    },
+    "status": "active",
+    "units_built": 716,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 11.8,
+    "manufacturer": "Fairchild Republic",
+    "derived_from": null,
+    "related_aircraft": [
+      "su25",
+      "il2",
+      "emb314"
+    ],
+    "variants": [
+      "A-10A",
+      "A-10C SLEP modernizado",
+      "OA-10A reconocimiento"
+    ],
+    "tags": [
+      "CAS",
+      "antitanque",
+      "GAU-8",
+      "BRRRT",
+      "blindado",
+      "activo",
+      "legendario"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": 8100,
+        "notes": "Destruyó 987 tanques, 926 piezas artillería, 1.355 vehículos militares. Más efectivo por misión."
+      }
+    ]
+  },
+  {
+    "id": "su25",
+    "name": "Su-25 Grach",
+    "type": "Ataque",
+    "country": "URSS / Rusia",
+    "year": 1981,
+    "generation": null,
+    "conflicts": [
+      "afghanistan",
+      "chechnya",
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-25",
+    "speed": 975,
+    "range": 1000,
+    "ceiling": 7000,
+    "mtow": 19300,
+    "arm": "Cañón GSh-30-2 30mm, Cohetes S-25, FAB-500",
+    "trivia": "Sus motores pueden funcionar con queroseno, gasolina de automoción o aceite vegetal en emergencias.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Sukhoi_Su-25SM%2C_Russia_-_Air_Force_AN2149479.jpg/1200px-Sukhoi_Su-25SM%2C_Russia_-_Air_Force_AN2149479.jpg",
+    "desc": "El equivalente soviético del A-10, con blindaje extensivo para apoyo cercano a las tropas.",
+    "engine": "2x Soyuz/Gavrilov R-195 (turborreactor sin postquemador)",
+    "thrust_kn": 88.3,
+    "wing_span": 14.36,
+    "length": 15.53,
+    "height": 4.8,
+    "wing_area": 30.1,
+    "fuel_capacity": 3000,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 375,
+    "thrust_to_weight": 0.44,
+    "wing_loading": 641,
+    "radar": "Klyon-PS designador láser",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "L-166V-11E UV, SPO-15",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "CAS",
+      "ataque a tierra",
+      "COIN"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": true,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-2 30 mm",
+      "hardpoints": 10,
+      "missiles": [
+        "R-60",
+        "Kh-25",
+        "Kh-29"
+      ],
+      "bombs": [
+        "FAB-500",
+        "FAB-250",
+        "RBK-500"
+      ]
+    },
+    "status": "active",
+    "units_built": 1024,
+    "retired_year": null,
+    "operators": [
+      "Rusia",
+      "Ucrania",
+      "Irán",
+      "Iraq",
+      "y 15+ países"
+    ],
+    "unit_cost_m": 11.0,
+    "manufacturer": "Sukhoi",
+    "derived_from": null,
+    "related_aircraft": [
+      "a10",
+      "il2"
+    ],
+    "variants": [
+      "Su-25",
+      "Su-25K",
+      "Su-25SM",
+      "Su-25SM3",
+      "Su-25UB biplaza",
+      "Su-39"
+    ],
+    "tags": [
+      "CAS",
+      "blindado",
+      "soviético",
+      "activo",
+      "bajo coste"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "afghanistan",
+        "missions": null,
+        "notes": "Bautismo de fuego en Afganistán (1980). Pérdidas ante Stinger suministrados por EE.UU."
+      },
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Mayores pérdidas de la guerra por operar dentro del rango de MANPADS y S-300."
+      }
+    ]
+  },
+  {
+    "id": "su34",
+    "name": "Su-34 Fullback",
+    "type": "Ataque",
+    "country": "Rusia",
+    "year": 2014,
+    "generation": null,
+    "conflicts": [
+      "syria",
+      "ukraine"
+    ],
+    "wiki": "Sukhoi_Su-34",
+    "speed": 1900,
+    "range": 4000,
+    "ceiling": 17000,
+    "mtow": 45100,
+    "arm": "Kh-29, Kh-31, KAB-500, Cañón GSh-30-1 30mm",
+    "trivia": "La cabina tiene espacio para caminar y una cocinilla eléctrica para misiones de larga duración.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sukhoi_Su-34_in_2010.jpg/1200px-Sukhoi_Su-34_in_2010.jpg",
+    "desc": "Bombardero táctico de largo alcance basado en el Flanker, con capacidades nucleares y aviónica avanzada.",
+    "engine": "2x Saturn AL-31FM1 (turbofan con postquemador)",
+    "thrust_kn": 274.6,
+    "wing_span": 14.7,
+    "length": 23.34,
+    "height": 6.09,
+    "wing_area": 62.04,
+    "fuel_capacity": 12100,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Navegante en asiento trasero lado a lado"
+    ],
+    "combat_radius": 1100,
+    "thrust_to_weight": 0.68,
+    "wing_loading": 727,
+    "radar": "Leninets V004 PESA frontal y trasero",
+    "radar_type": "PESA",
+    "irst": true,
+    "ew_system": "Khibiny-M ECM, L150 Pastel",
+    "data_link": "Sistema ruso",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo táctico",
+      "ataque a tierra todo tiempo",
+      "SEAD",
+      "nuclear táctico"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "1x GSh-30-1 30 mm",
+      "hardpoints": 12,
+      "missiles": [
+        "Kh-29",
+        "Kh-31P",
+        "Kh-35",
+        "Kh-59MK",
+        "Kh-101"
+      ],
+      "bombs": [
+        "KAB-500S",
+        "KAB-1500L",
+        "FAB-500"
+      ]
+    },
+    "status": "active",
+    "units_built": 147,
+    "retired_year": null,
+    "operators": [
+      "Rusia"
+    ],
+    "unit_cost_m": 36.0,
+    "manufacturer": "Sukhoi",
+    "derived_from": "su27",
+    "related_aircraft": [
+      "su24",
+      "su30",
+      "f15e"
+    ],
+    "variants": [
+      "Su-34",
+      "Su-34M en actualización"
+    ],
+    "tags": [
+      "bombardeo táctico",
+      "PESA",
+      "biplaza lado a lado",
+      "Flanker",
+      "activo",
+      "Rusia"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": "Ha sufrido pérdidas significativas por S-300 y NASAMS ucranianos."
+      }
+    ]
+  },
+  {
+    "id": "av8b",
+    "name": "AV-8B Harrier II",
+    "type": "Ataque",
+    "country": "EE.UU. / Reino Unido",
+    "year": 1985,
+    "generation": null,
+    "conflicts": [
+      "falklands",
+      "gulf_war",
+      "gwot"
+    ],
+    "wiki": "McDonnell_Douglas_AV-8B_Harrier_II",
+    "speed": 1065,
+    "range": 3200,
+    "ceiling": 15200,
+    "mtow": 14100,
+    "arm": "GAU-12 25mm, AIM-9, Mk-82, AGM-65",
+    "trivia": "El único avión de combate de ala fija occidental capaz de despegue y aterrizaje vertical (VTOL).",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/AV-8B_Harrier_VMA-231.jpg/1200px-AV-8B_Harrier_VMA-231.jpg",
+    "desc": "Avión de ataque STOVL para portaaviones de cubierta corta y bases improvisadas en tierra.",
+    "engine": "Rolls-Royce Pegasus F402-RR-408 (turbofan vectorizado)",
+    "thrust_kn": 105.9,
+    "wing_span": 9.25,
+    "length": 14.55,
+    "height": 3.55,
+    "wing_area": 21.37,
+    "fuel_capacity": 3290,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto"
+    ],
+    "combat_radius": 556,
+    "thrust_to_weight": 0.93,
+    "wing_loading": 660,
+    "radar": "AN/APG-65 Harrier II+",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/ALQ-164 DECM",
+    "data_link": "Link-16",
+    "helmet_system": null,
+    "roles": [
+      "CAS",
+      "ataque a tierra",
+      "STOVL naval"
+    ],
+    "stealth": "none",
+    "carrier_capable": true,
+    "stol": true,
+    "vtol": true,
+    "armament": {
+      "gun": "1x GAU-12/U 25 mm",
+      "hardpoints": 6,
+      "missiles": [
+        "AIM-9M",
+        "AGM-65",
+        "AGM-84 Harpoon"
+      ],
+      "bombs": [
+        "Mk-82",
+        "GBU-12",
+        "CBU-99"
+      ]
+    },
+    "status": "retired",
+    "units_built": 349,
+    "retired_year": 2021,
+    "operators": [
+      "EE.UU. retirado",
+      "Italia",
+      "España"
+    ],
+    "unit_cost_m": 30.0,
+    "manufacturer": "McDonnell Douglas / BAE Systems",
+    "derived_from": null,
+    "related_aircraft": [
+      "fa18hornet",
+      "f35"
+    ],
+    "variants": [
+      "AV-8B",
+      "AV-8B Night Attack",
+      "AV-8B Harrier II+",
+      "TAV-8B entrenamiento"
+    ],
+    "tags": [
+      "VTOL",
+      "STOVL",
+      "CAS",
+      "Harrier",
+      "naval",
+      "vectorizado",
+      "retirado"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "falklands",
+        "missions": null,
+        "notes": "Sea Harrier británico: 20 victorias aéreas sin perder uno en combate aire-aire."
+      },
+      {
+        "conflict": "gulf_war",
+        "missions": 3380,
+        "notes": "USMC usó el AV-8B desde playas del Golfo sin aeródromo."
+      }
+    ]
+  },
+  {
+    "id": "sr71",
+    "name": "SR-71 Blackbird",
+    "type": "Especial",
+    "country": "EE.UU.",
+    "year": 1966,
+    "generation": null,
+    "conflicts": [
+      "vietnam",
+      "coldwar_patrols"
+    ],
+    "wiki": "Lockheed_SR-71_Blackbird",
+    "speed": 3540,
+    "range": 5400,
+    "ceiling": 25900,
+    "mtow": 78000,
+    "arm": "Sistemas de inteligencia óptica y SIGINT",
+    "trivia": "El fuselaje goteaba combustible en tierra porque las planchas de titanio solo encajaban al dilatarse por el calor.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/SR-71_Blackbird.jpg/1200px-SR-71_Blackbird.jpg",
+    "desc": "El avión de reconocimiento tripulado más rápido de la historia: ningún misil logró alcanzarlo.",
+    "engine": "2x P&W J58 (turborreactor-ramjet combinado)",
+    "thrust_kn": 302.5,
+    "wing_span": 16.94,
+    "length": 32.74,
+    "height": 5.64,
+    "wing_area": 149.1,
+    "fuel_capacity": 46180,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Oficial de reconocimiento RSO"
+    ],
+    "combat_radius": 2900,
+    "thrust_to_weight": 0.4,
+    "wing_loading": 523,
+    "radar": "Ninguno — cámaras TEOCs, SLAR, SIGINT",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Sistema defensivo pasivo",
+    "data_link": "Satélite",
+    "helmet_system": "Traje presurización astronauta",
+    "roles": [
+      "reconocimiento estratégico alta altitud y velocidad"
+    ],
+    "stealth": "medium",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "retired",
+    "units_built": 32,
+    "retired_year": 1998,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 34.0,
+    "manufacturer": "Lockheed Skunk Works",
+    "derived_from": "a12",
+    "related_aircraft": [
+      "u2",
+      "rq4"
+    ],
+    "variants": [
+      "SR-71A",
+      "SR-71B entrenamiento biplaza"
+    ],
+    "tags": [
+      "más rápido tripulado",
+      "Mach 3+",
+      "reconocimiento",
+      "Skunk Works",
+      "retirado",
+      "récord"
+    ],
+    "radar_cross_section": "10 m2 aprox (no furtivo por velocidad)",
+    "endurance_h": 1.5,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": "Fotografiaba 260.000 km2 por hora. Disparado más de 4.000 veces sin éxito."
+      }
+    ]
+  },
+  {
+    "id": "e3",
+    "name": "E-3 Sentry (AWACS)",
+    "type": "Especial",
+    "country": "EE.UU.",
+    "year": 1977,
+    "generation": null,
+    "conflicts": [
+      "gulf_war",
+      "desert_storm",
+      "gwot",
+      "iraq",
+      "syria"
+    ],
+    "wiki": "Boeing_E-3_Sentry",
+    "speed": 855,
+    "range": 9250,
+    "ceiling": 12500,
+    "mtow": 156000,
+    "arm": "Radar rotativo AN/APY-2 (detección a +400 km)",
+    "trivia": "Su radar detecta 600 blancos aéreos y coordina más de 100 interceptaciones simultáneamente.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/E-3_Sentry_over_the_Pacific_Ocean.jpg/1200px-E-3_Sentry_over_the_Pacific_Ocean.jpg",
+    "desc": "Plataforma de mando aerotransportado que actúa como cuartel general volante coordinando operaciones.",
+    "engine": "4x P&W TF33-PW-100A (turbofan)",
+    "thrust_kn": 222.4,
+    "wing_span": 44.42,
+    "length": 46.61,
+    "height": 12.73,
+    "wing_area": 283.35,
+    "fuel_capacity": 68000,
+    "crew": 21,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Navegante",
+      "Técnico de vuelo",
+      "17x Controladores y operadores de batalla"
+    ],
+    "combat_radius": 1930,
+    "thrust_to_weight": 0.19,
+    "wing_loading": 551,
+    "radar": "AN/APY-2 rotatorio (400+ km, multi-objetivo)",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Suites de análisis de amenazas",
+    "data_link": "Link-16, JTIDS",
+    "helmet_system": null,
+    "roles": [
+      "C2 aerotransportado",
+      "AWACS",
+      "intercepción aérea",
+      "coordinación de batalla"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 68,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "OTAN",
+      "RU",
+      "Francia",
+      "Arabia Saudita"
+    ],
+    "unit_cost_m": 270.0,
+    "manufacturer": "Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "e7",
+      "a50"
+    ],
+    "variants": [
+      "E-3A",
+      "E-3B",
+      "E-3C",
+      "E-3D RAF",
+      "E-3F Francia",
+      "E-3G"
+    ],
+    "tags": [
+      "AWACS",
+      "C2",
+      "rotodome",
+      "activo",
+      "coordinación de batalla",
+      "OTAN"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": 11,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": null,
+        "notes": "Los E-3 coordinaron más de 65.000 salidas. Sin su control la coalición hubiera pagado precio mucho mayor."
+      }
+    ]
+  },
+  {
+    "id": "u2",
+    "name": "U-2 Dragon Lady",
+    "type": "Especial",
+    "country": "EE.UU.",
+    "year": 1956,
+    "generation": null,
+    "conflicts": [
+      "coldwar_patrols",
+      "vietnam",
+      "gwot"
+    ],
+    "wiki": "Lockheed_U-2",
+    "speed": 805,
+    "range": 10300,
+    "ceiling": 21300,
+    "mtow": 18600,
+    "arm": "Cámaras de alta resolución, sensores SIGINT/IMINT",
+    "trivia": "Los pilotos llevan trajes de astronauta. El avión vuela tan alto que ven la curvatura de la Tierra.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/U-2_high_altitude_aircraft.jpg/1200px-U-2_high_altitude_aircraft.jpg",
+    "desc": "Avión de reconocimiento de altísima cota, aún en servicio. Sus imágenes desencadenaron la Crisis de los Misiles de Cuba.",
+    "engine": "GE F118-GE-101 (turbofan sin postquemador)",
+    "thrust_kn": 84.5,
+    "wing_span": 31.39,
+    "length": 19.13,
+    "height": 4.88,
+    "wing_area": 92.9,
+    "fuel_capacity": 8165,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto con traje presurizador"
+    ],
+    "combat_radius": 5000,
+    "thrust_to_weight": 0.37,
+    "wing_loading": 200,
+    "radar": "ASARS-2 radar de apertura sintética",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "SYERS-2C sensores IR multibanda",
+    "data_link": "Satélite CDLSS",
+    "helmet_system": "Casco presurización CS/FPS-2",
+    "roles": [
+      "reconocimiento gran altitud",
+      "SIGINT",
+      "IMINT"
+    ],
+    "stealth": "low",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 104,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 32.0,
+    "manufacturer": "Lockheed Skunk Works",
+    "derived_from": null,
+    "related_aircraft": [
+      "sr71",
+      "rq4"
+    ],
+    "variants": [
+      "U-2A",
+      "U-2C",
+      "U-2R",
+      "U-2S actual",
+      "TR-1A"
+    ],
+    "tags": [
+      "reconocimiento",
+      "alta altitud",
+      "traje astronauta",
+      "activo",
+      "Cuba",
+      "Skunk Works"
+    ],
+    "radar_cross_section": "Media-Baja",
+    "endurance_h": 12,
+    "combat_history": [
+      {
+        "conflict": "coldwar_patrols",
+        "missions": null,
+        "notes": "U-2 de Gary Powers derribado sobre URSS en 1960. Mayor crisis diplomática de la Guerra Fría hasta Cuba."
+      }
+    ]
+  },
+  {
+    "id": "rq4",
+    "name": "RQ-4 Global Hawk",
+    "type": "Especial",
+    "country": "EE.UU.",
+    "year": 2001,
+    "generation": null,
+    "conflicts": [
+      "gwot",
+      "iraq",
+      "syria"
+    ],
+    "wiki": "Northrop_Grumman_RQ-4_Global_Hawk",
+    "speed": 629,
+    "range": 22780,
+    "ceiling": 18288,
+    "mtow": 14628,
+    "arm": "Sensores SAR, EO/IR, SIGINT; sin armamento",
+    "trivia": "Puede sobrevolar un área del tamaño de Corea del Sur en 24 horas con resolución para leer matrículas.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/RQ-4A_Global_Hawk.jpg/1200px-RQ-4A_Global_Hawk.jpg",
+    "desc": "UAV estratégico de reconocimiento persistente, el ISR no tripulado de mayor alcance del mundo.",
+    "engine": "Rolls-Royce AE 3007H (turbofan)",
+    "thrust_kn": 31.4,
+    "wing_span": 39.89,
+    "length": 14.5,
+    "height": 4.62,
+    "wing_area": 50.18,
+    "fuel_capacity": 7257,
+    "crew": 0,
+    "crew_roles": [
+      "Operador en tierra GCS remoto"
+    ],
+    "combat_radius": 5520,
+    "thrust_to_weight": 0.34,
+    "wing_loading": 291,
+    "radar": "AN/ZPY-2 MP-RTIP AESA (SAR/GMTI)",
+    "radar_type": "AESA",
+    "irst": true,
+    "ew_system": "EO/IR/SIGINT multisensor",
+    "data_link": "Satélite Ku-band + LOS",
+    "helmet_system": null,
+    "roles": [
+      "ISR estratégico",
+      "SIGINT",
+      "IMINT",
+      "vigilancia marítima"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 49,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "Alemania",
+      "Japón",
+      "Corea del Sur",
+      "Australia"
+    ],
+    "unit_cost_m": 131.4,
+    "manufacturer": "Northrop Grumman",
+    "derived_from": null,
+    "related_aircraft": [
+      "u2",
+      "sr71",
+      "mq9"
+    ],
+    "variants": [
+      "RQ-4A",
+      "RQ-4B Block 20/30/40",
+      "MQ-4C Triton naval"
+    ],
+    "tags": [
+      "UAV",
+      "ISR",
+      "AESA",
+      "estratégico",
+      "32h autonomía",
+      "activo",
+      "no tripulado"
+    ],
+    "radar_cross_section": "Alta",
+    "endurance_h": 32,
+    "combat_history": [
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": "ISR persistente sobre áreas de conflicto con imágenes en tiempo real para comandantes."
+      }
+    ]
+  },
+  {
+    "id": "c17",
+    "name": "C-17 Globemaster III",
+    "type": "Transporte",
+    "country": "EE.UU.",
+    "year": 1995,
+    "generation": null,
+    "conflicts": [
+      "gwot",
+      "iraq",
+      "humanitarian"
+    ],
+    "wiki": "Boeing_C-17_Globemaster_III",
+    "speed": 830,
+    "range": 4480,
+    "ceiling": 13700,
+    "mtow": 265350,
+    "arm": "1 tanque M1 Abrams, 102 paracaidistas o 36 pacientes",
+    "trivia": "Puede aterrizar en pistas de tierra de 900 m y dar marcha atrás con carga completa por empuje inverso.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/C-17_Globemaster_III.jpg/1200px-C-17_Globemaster_III.jpg",
+    "desc": "Avión de transporte estratégico-táctico capaz de llevar cargas pesadas a cualquier punto del planeta.",
+    "engine": "4x P&W F117-PW-100 (turbofan)",
+    "thrust_kn": 718.4,
+    "wing_span": 51.74,
+    "length": 53.04,
+    "height": 16.79,
+    "wing_area": 353.03,
+    "fuel_capacity": 102600,
+    "crew": 3,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Loadmaster"
+    ],
+    "combat_radius": 4482,
+    "thrust_to_weight": 0.28,
+    "wing_loading": 752,
+    "radar": "AN/APN-169C navegación de terreno",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/AAR-47 MAWS, AN/ALE-47",
+    "data_link": "Link-16",
+    "helmet_system": null,
+    "roles": [
+      "transporte estratégico-táctico",
+      "evacuación médica",
+      "paracaidismo",
+      "airdrop"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": true,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 279,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "RU",
+      "Australia",
+      "Canadá",
+      "Qatar",
+      "UAE",
+      "India",
+      "Kuwait",
+      "OTAN pooling"
+    ],
+    "unit_cost_m": 218.0,
+    "manufacturer": "Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "c130",
+      "an124",
+      "c5"
+    ],
+    "variants": [
+      "C-17A Globemaster III"
+    ],
+    "tags": [
+      "transporte estratégico",
+      "STOL",
+      "paracaidistas",
+      "médico",
+      "activo",
+      "versátil"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": "Más de 500.000 h de vuelo en operaciones desde 2001. Pieza clave del puente aéreo a Afganistán."
+      }
+    ]
+  },
+  {
+    "id": "c130",
+    "name": "C-130 Hercules",
+    "type": "Transporte",
+    "country": "EE.UU.",
+    "year": 1956,
+    "generation": null,
+    "conflicts": [
+      "vietnam",
+      "falklands",
+      "gulf_war",
+      "gwot",
+      "iraq",
+      "humanitarian"
+    ],
+    "wiki": "Lockheed_C-130_Hercules",
+    "speed": 643,
+    "range": 6850,
+    "ceiling": 10060,
+    "mtow": 79380,
+    "arm": "92 tropas, 74 camillas o 20.000 kg de carga",
+    "trivia": "El único avión de ala fija que aterrizó en un portaviones sin catapultas (1963).",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Lockheed_C-130_Hercules_%28modified%29.jpg/1200px-Lockheed_C-130_Hercules_%28modified%29.jpg",
+    "desc": "El caballo de batalla del transporte táctico militar, con más de 70 variantes y 2.500 unidades para 63 países.",
+    "engine": "4x Allison T56-A-15 (turbohélice)",
+    "thrust_kn": null,
+    "wing_span": 40.41,
+    "length": 29.79,
+    "height": 11.66,
+    "wing_area": 162.12,
+    "fuel_capacity": 25703,
+    "crew": 5,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Navegante",
+      "Ingeniero de vuelo",
+      "Loadmaster"
+    ],
+    "combat_radius": 3791,
+    "thrust_to_weight": 0.29,
+    "wing_loading": 490,
+    "radar": "AN/APN-59 navegación",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "AN/AAR-47, AN/ALE-40 versiones combat",
+    "data_link": "Link-16 J",
+    "helmet_system": null,
+    "roles": [
+      "transporte táctico",
+      "airdrop",
+      "reabastecimiento",
+      "MAFFS incendios",
+      "gunship AC-130",
+      "tanquero"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": true,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno base (AC-130: 105mm, 40mm, 25mm)",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 2500,
+    "retired_year": null,
+    "operators": [
+      "63 países — más exportado en su clase"
+    ],
+    "unit_cost_m": 30.0,
+    "manufacturer": "Lockheed Martin",
+    "derived_from": null,
+    "related_aircraft": [
+      "c17",
+      "c47",
+      "an12"
+    ],
+    "variants": [
+      "C-130A/B/E/H",
+      "C-130J Super",
+      "AC-130 gunship",
+      "HC-130J SAR",
+      "KC-130 tanquero",
+      "MC-130J ops especiales"
+    ],
+    "tags": [
+      "transporte táctico",
+      "turbohélice",
+      "70 variantes",
+      "63 países",
+      "activo",
+      "STOL",
+      "gunship"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": "AC-130 Spectre devastador en misiones nocturnas de interdicción en la Ruta Ho Chi Minh."
+      }
+    ]
+  },
+  {
+    "id": "an124",
+    "name": "An-124 Ruslan",
+    "type": "Transporte",
+    "country": "URSS / Ucrania",
+    "year": 1986,
+    "generation": null,
+    "conflicts": [
+      "humanitarian"
+    ],
+    "wiki": "Antonov_An-124_Ruslan",
+    "speed": 865,
+    "range": 5400,
+    "ceiling": 12000,
+    "mtow": 405000,
+    "arm": "Carga útil: 150.000 kg (doble que el C-17)",
+    "trivia": "Su morro abatible y rampa trasera permiten cargar por ambos extremos simultáneamente.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Antonov_An-124_Ruslan%2C_Volga-Dnepr_Airlines_AN1895955.jpg/1200px-Antonov_An-124_Ruslan%2C_Volga-Dnepr_Airlines_AN1895955.jpg",
+    "desc": "El mayor avión de transporte en producción, capaz de transportar locomotoras, turbinas o helicópteros completos.",
+    "engine": "4x ZMKB Progress D-18T (turbofan)",
+    "thrust_kn": 922.0,
+    "wing_span": 73.3,
+    "length": 68.96,
+    "height": 21.08,
+    "wing_area": 628.0,
+    "fuel_capacity": 213740,
+    "crew": 6,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Ingeniero de vuelo",
+      "Navegante",
+      "Radio",
+      "Operador de carga x2"
+    ],
+    "combat_radius": 5400,
+    "thrust_to_weight": 0.29,
+    "wing_loading": 645,
+    "radar": "Météo radar de navegación",
+    "radar_type": "mechanical",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Radio",
+    "helmet_system": null,
+    "roles": [
+      "transporte estratégico de carga sobredimensionada"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "limited",
+    "units_built": 55,
+    "retired_year": null,
+    "operators": [
+      "Rusia",
+      "Ucrania limitado por guerra"
+    ],
+    "unit_cost_m": 100.0,
+    "manufacturer": "Antonov",
+    "derived_from": null,
+    "related_aircraft": [
+      "c17",
+      "c5",
+      "an22"
+    ],
+    "variants": [
+      "An-124-100",
+      "An-124-100M",
+      "An-124-150 en desarrollo"
+    ],
+    "tags": [
+      "transporte pesado",
+      "colosal",
+      "carga sobredimensionada",
+      "civil/militar",
+      "morro abatible"
+    ],
+    "radar_cross_section": "Extremadamente alta",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "kc135",
+    "name": "KC-135 Stratotanker",
+    "type": "Transporte",
+    "country": "EE.UU.",
+    "year": 1957,
+    "generation": null,
+    "conflicts": [
+      "vietnam",
+      "gulf_war",
+      "desert_storm",
+      "gwot",
+      "iraq",
+      "syria"
+    ],
+    "wiki": "Boeing_KC-135_Stratotanker",
+    "speed": 933,
+    "range": 14800,
+    "ceiling": 15200,
+    "mtow": 134717,
+    "arm": "Barra extensible de repostaje, 90.700 kg de combustible transferible",
+    "trivia": "Ha repostado en vuelo a más de un millón de aviones, multiplicando el alcance de la flota de la USAF.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/KC-135_Stratotanker_Refuels_B-2_Spirit_%28cropped%29.jpg/1200px-KC-135_Stratotanker_Refuels_B-2_Spirit_%28cropped%29.jpg",
+    "desc": "El repostador aéreo que hizo posible el poder global americano.",
+    "engine": "4x CFM International F108-CF-100 (turbofan)",
+    "thrust_kn": 395.6,
+    "wing_span": 39.88,
+    "length": 41.53,
+    "height": 12.7,
+    "wing_area": 226.03,
+    "fuel_capacity": 118110,
+    "crew": 3,
+    "crew_roles": [
+      "Piloto",
+      "Copiloto",
+      "Boom Operator"
+    ],
+    "combat_radius": null,
+    "thrust_to_weight": 0.38,
+    "wing_loading": 596,
+    "radar": "AN/APN-59 navegación",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "AN/ALR-46 RWR limitado",
+    "data_link": "Link-16 modernizado",
+    "helmet_system": null,
+    "roles": [
+      "reabastecimiento aéreo",
+      "transporte personal",
+      "transporte carga"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "active",
+    "units_built": 820,
+    "retired_year": null,
+    "operators": [
+      "EE.UU.",
+      "Francia",
+      "Turquía",
+      "Chile",
+      "Singapur"
+    ],
+    "unit_cost_m": 39.8,
+    "manufacturer": "Boeing",
+    "derived_from": null,
+    "related_aircraft": [
+      "c17",
+      "kc46",
+      "a330mrtt"
+    ],
+    "variants": [
+      "KC-135A",
+      "KC-135E",
+      "KC-135R",
+      "KC-135T",
+      "EC-135 mando",
+      "RC-135 reconocimiento"
+    ],
+    "tags": [
+      "reabastecimiento aéreo",
+      "multiplicador de fuerza",
+      "activo",
+      "60 años servicio"
+    ],
+    "radar_cross_section": "Muy alta",
+    "endurance_h": null,
+    "combat_history": [
+      {
+        "conflict": "desert_storm",
+        "missions": null,
+        "notes": "51.700 salidas de reabastecimiento; 374.000 t de combustible transferidas durante la Tormenta del Desierto."
+      }
+    ]
+  },
+  {
+    "id": "x15",
+    "name": "North American X-15",
+    "type": "Experimental",
+    "country": "EE.UU.",
+    "year": 1959,
+    "generation": null,
+    "conflicts": [],
+    "wiki": "North_American_X-15",
+    "speed": 7274,
+    "range": 450,
+    "ceiling": 107960,
+    "mtow": 15420,
+    "arm": "Instrumentación científica",
+    "trivia": "Cruzó la línea de Kármán (100 km), convirtiendo a sus pilotos en astronautas.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/North_American_X-15.jpg/1200px-North_American_X-15.jpg",
+    "desc": "Avión-cohete experimental cuyos datos nutrieron directamente los programas Mercury, Gemini y Apollo.",
+    "engine": "Thiokol XLR99-RM-2 (motor cohete propelente líquido)",
+    "thrust_kn": 253.5,
+    "wing_span": 6.7,
+    "length": 15.45,
+    "height": 3.96,
+    "wing_area": 18.6,
+    "fuel_capacity": 6800,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto de investigación"
+    ],
+    "combat_radius": null,
+    "thrust_to_weight": 1.64,
+    "wing_loading": 829,
+    "radar": "Instrumentación científica NASA",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Telemetría NASA",
+    "helmet_system": "Casco tipo astronauta completo",
+    "roles": [
+      "investigación aeroespacial hipersónica",
+      "datos atmosféricos"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "retired",
+    "units_built": 3,
+    "retired_year": 1970,
+    "operators": [
+      "EE.UU. NASA / USAF"
+    ],
+    "unit_cost_m": null,
+    "manufacturer": "North American Aviation",
+    "derived_from": null,
+    "related_aircraft": [
+      "x47b",
+      "sr71"
+    ],
+    "variants": [
+      "X-15-1",
+      "X-15-2 Modified",
+      "X-15-3"
+    ],
+    "tags": [
+      "hipersónico",
+      "cohete",
+      "Mach 6,7",
+      "astronauta",
+      "récord altitud",
+      "histórico"
+    ],
+    "radar_cross_section": "N/A",
+    "endurance_h": 0.17,
+    "combat_history": []
+  },
+  {
+    "id": "x47b",
+    "name": "Northrop Grumman X-47B",
+    "type": "Experimental",
+    "country": "EE.UU.",
+    "year": 2011,
+    "generation": null,
+    "conflicts": [],
+    "wiki": "Northrop_Grumman_X-47B",
+    "speed": 1000,
+    "range": 3900,
+    "ceiling": 12190,
+    "mtow": 20215,
+    "arm": "Dos bahías de armamento (demostradora)",
+    "trivia": "Primer UAV de combate en despegar y aterrizar autónomamente en un portaviones en mar abierto.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/X-47B_CVN77.jpg/1200px-X-47B_CVN77.jpg",
+    "desc": "UCAV demostrativo que validó la operación autónoma en portaviones.",
+    "engine": "P&W F100-PW-220U (turbofan)",
+    "thrust_kn": 64.9,
+    "wing_span": 18.92,
+    "length": 11.63,
+    "height": 3.1,
+    "wing_area": 99.9,
+    "fuel_capacity": 4990,
+    "crew": 0,
+    "crew_roles": [
+      "Autónomo / control en tierra"
+    ],
+    "combat_radius": 1950,
+    "thrust_to_weight": 0.35,
+    "wing_loading": 202,
+    "radar": "Sensores EO/IR demostrativo",
+    "radar_type": "none",
+    "irst": true,
+    "ew_system": "Ninguno",
+    "data_link": "Satélite + LOS",
+    "helmet_system": null,
+    "roles": [
+      "demostración UCAV",
+      "pruebas portaviones autónomo"
+    ],
+    "stealth": "medium",
+    "carrier_capable": true,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 2,
+      "missiles": [],
+      "bombs": [
+        "Capacidad demostrativa no real"
+      ]
+    },
+    "status": "retired",
+    "units_built": 2,
+    "retired_year": 2015,
+    "operators": [
+      "EE.UU. DARPA / Northrop"
+    ],
+    "unit_cost_m": 813.0,
+    "manufacturer": "Northrop Grumman",
+    "derived_from": null,
+    "related_aircraft": [
+      "rq4",
+      "b2",
+      "mq9"
+    ],
+    "variants": [
+      "X-47A Pegasus prototipo",
+      "X-47B demostrador"
+    ],
+    "tags": [
+      "UAV",
+      "UCAV",
+      "ala volante",
+      "portaviones",
+      "autónomo",
+      "furtivo",
+      "experimental"
+    ],
+    "radar_cross_section": "Baja diseño furtivo",
+    "endurance_h": 6,
+    "combat_history": []
+  },
+  {
+    "id": "b21",
+    "name": "B-21 Raider",
+    "type": "Experimental",
+    "country": "EE.UU.",
+    "year": 2023,
+    "generation": null,
+    "conflicts": [],
+    "wiki": "Northrop_Grumman_B-21_Raider",
+    "speed": 1000,
+    "range": 13000,
+    "ceiling": 15000,
+    "mtow": 90000,
+    "arm": "JDAM, B61-12 nuclear, GBU-57 MOP (estimado)",
+    "trivia": "Northrop Grumman creó un lenguaje de programación propio para proteger el código fuente del avión.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/B-21_Raider_first_flight.jpg/1200px-B-21_Raider_first_flight.jpg",
+    "desc": "Sucesor del B-2 con arquitectura digital abierta para actualizar capacidades furtivas según evolucionen las amenazas.",
+    "engine": "2x P&W PW9000 estimado (turbofan sin postquemador)",
+    "thrust_kn": null,
+    "wing_span": 40.0,
+    "length": 21.0,
+    "height": 5.0,
+    "wing_area": null,
+    "fuel_capacity": null,
+    "crew": 2,
+    "crew_roles": [
+      "Piloto",
+      "Mission Commander"
+    ],
+    "combat_radius": 6500,
+    "thrust_to_weight": null,
+    "wing_loading": null,
+    "radar": "AESA desclasificado parcialmente",
+    "radar_type": "AESA",
+    "irst": false,
+    "ew_system": "Suite EW avanzada clasificado",
+    "data_link": "Satélite + Link-16 + MADL",
+    "helmet_system": null,
+    "roles": [
+      "bombardeo estratégico furtivo",
+      "ataque nuclear penetración",
+      "ataque convencional precisión"
+    ],
+    "stealth": "high",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": null,
+      "missiles": [
+        "JASSM-ER",
+        "AGM-158"
+      ],
+      "bombs": [
+        "B61-12 nuclear",
+        "GBU-57 MOP",
+        "GBU-31 JDAM"
+      ]
+    },
+    "status": "prototype",
+    "units_built": 6,
+    "retired_year": null,
+    "operators": [
+      "EE.UU."
+    ],
+    "unit_cost_m": 692.0,
+    "manufacturer": "Northrop Grumman",
+    "derived_from": null,
+    "related_aircraft": [
+      "b2",
+      "b52",
+      "b1b"
+    ],
+    "variants": [
+      "B-21A"
+    ],
+    "tags": [
+      "bombardero sexta gen",
+      "furtivo",
+      "open architecture",
+      "digital",
+      "activo 2025",
+      "nuclear"
+    ],
+    "radar_cross_section": "Extremadamente baja clasificado",
+    "endurance_h": null,
+    "combat_history": []
+  },
+  {
+    "id": "x59",
+    "name": "NASA X-59 QueSST",
+    "type": "Experimental",
+    "country": "EE.UU.",
+    "year": 2024,
+    "generation": null,
+    "conflicts": [],
+    "wiki": "NASA_X-59_QueSST",
+    "speed": 1510,
+    "range": 1900,
+    "ceiling": 16800,
+    "mtow": 14700,
+    "arm": "Sensores acústicos y de vuelo",
+    "trivia": "Diseñado para que su estruendo supersónico suene como un golpe suave de 75 dB en tierra.",
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/X-59_QueSST_artist_concept_%28cropped%29.jpg/1200px-X-59_QueSST_artist_concept_%28cropped%29.jpg",
+    "desc": "Demostrador de vuelo supersónico silencioso de la NASA para reabrir el espacio aéreo civil.",
+    "engine": "GE F414-GE-100 (turbofan con postquemador)",
+    "thrust_kn": 97.9,
+    "wing_span": 9.0,
+    "length": 29.5,
+    "height": 4.5,
+    "wing_area": null,
+    "fuel_capacity": null,
+    "crew": 1,
+    "crew_roles": [
+      "Piloto de investigación"
+    ],
+    "combat_radius": null,
+    "thrust_to_weight": 0.87,
+    "wing_loading": null,
+    "radar": "Sensores acústicos especializados NASA",
+    "radar_type": "none",
+    "irst": false,
+    "ew_system": "Ninguno",
+    "data_link": "Telemetría NASA",
+    "helmet_system": null,
+    "roles": [
+      "investigación acústica supersónica",
+      "demostración tecnológica civil"
+    ],
+    "stealth": "none",
+    "carrier_capable": false,
+    "stol": false,
+    "vtol": false,
+    "armament": {
+      "gun": "Ninguno",
+      "hardpoints": 0,
+      "missiles": [],
+      "bombs": []
+    },
+    "status": "prototype",
+    "units_built": 1,
+    "retired_year": null,
+    "operators": [
+      "EE.UU. NASA / Lockheed Skunk Works"
+    ],
+    "unit_cost_m": 247.5,
+    "manufacturer": "Lockheed Martin Skunk Works",
+    "derived_from": null,
+    "related_aircraft": [
+      "x15"
+    ],
+    "variants": [
+      "X-59 QueSST"
+    ],
+    "tags": [
+      "supersónico silencioso",
+      "NASA",
+      "civil",
+      "experimental",
+      "prototipo",
+      "Skunk Works"
+    ],
+    "radar_cross_section": "N/A",
+    "endurance_h": null,
+    "combat_history": []
+  }
+]
