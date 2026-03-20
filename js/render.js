@@ -52,7 +52,7 @@ function createCard(plane) {
 
   // ── Etiquetas: solo las 4 indicadas ──────────────────────────
   // 1. País
-  const countryTag = `<span class="card-tag tag-country">${plane.country}</span>`;
+  const countryTag = `<span class="card-country mono">${plane.country}</span>`;
 
   // 2. Rol principal (primer rol del array, o tipo si no hay roles)
   const roleLabel = (plane.roles && plane.roles.length)
@@ -84,8 +84,7 @@ function createCard(plane) {
     <div id="card-${plane.id}" class="card${isSelected ? ' selected-for-compare' : ''}">
       ${selectedBar}
       <div class="card-img-wrap">
-        <img src="${plane.img}" alt="${plane.name}" loading="lazy"
-             onerror="this.src='${FALLBACK_IMG}'">
+        <img src="${plane.img}" alt="${plane.name}" loading="lazy" onerror="this.src='${FALLBACK_IMG}'">
         <span class="card-badge-type">${plane.type}</span>
       </div>
 
@@ -162,8 +161,7 @@ function renderRanking(planes) {
         <td class="rank-pos mono">${medal[i] || (i + 1)}</td>
         <td class="rank-plane">
           <div class="rank-thumb-wrap">
-            <img src="${p.img}" class="rank-thumb" alt="${p.name}"
-                 onerror="this.src='${FALLBACK_IMG}'">
+            <img src="${p.img}" class="rank-thumb" alt="${p.name}" onerror="this.src='${FALLBACK_IMG}'">
           </div>
           <div>
             <p class="rank-name header-font">${p.name}</p>
