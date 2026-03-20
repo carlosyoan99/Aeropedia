@@ -180,5 +180,47 @@
     "flag": "🕊️",
     "color": "#0891b2",
     "desc": "Evacuaciones, entregas de ayuda y apoyo en desastres naturales."
+  },
+  "suez": {
+    "label": "Crisis de Suez",
+    "years": "1956",
+    "flag": "🇪🇬",
+    "color": "#b91c1c",
+    "desc": "Intervención militar anglo-francesa-israelí en Egipto; única ocasión en que los bombarderos V entraron en combate."
+  },
+  "cuba_missile": {
+    "label": "Crisis de los misiles en Cuba",
+    "years": "1962",
+    "flag": "🇨🇺",
+    "color": "#b45309",
+    "desc": "Momento más tenso de la Guerra Fría; los F-8 Crusader realizaron misiones de reconocimiento de bajo nivel sobre la isla."
+  },
+  "lebanon": {
+    "label": "Líbano",
+    "years": "1982",
+    "flag": "🇱🇧",
+    "color": "#1f2937",
+    "desc": "Invasión israelí de Líbano; el Kfir israelí derribó varios MiG-21 y MiG-23 sirios."
+  },
+  "nagorno_karabakh": {
+    "label": "Nagorno Karabaj",
+    "years": "2020",
+    "flag": "🇦🇿",
+    "color": "#b91c1c",
+    "desc": "Conflicto entre Armenia y Azerbaiyán; el TB2 demostró la efectividad de los drones MALE en combate moderno."
+  },
+  "yemen": {
+    "label": "Yemen",
+    "years": "2015–pres.",
+    "flag": "🇾🇪",
+    "color": "#92400e",
+    "desc": "Guerra civil con intervención saudí; uso intensivo de drones MQ-9, Shahed y aviones de ataque."
+  },
+  "panama": {
+    "label": "Invasión de Panamá",
+    "years": "1989",
+    "flag": "🇵🇦",
+    "color": "#047857",
+    "desc": "Operación Just Cause; los AH-1 Cobra apoyaron a las tropas terrestres en misiones de CAS nocturno."
   }
 }
