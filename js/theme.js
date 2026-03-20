@@ -2,7 +2,7 @@
  * theme.js — Dark / Light mode
  */
 
-function applyTheme(theme) {
+export function applyTheme(theme) {
   document.body.classList.toggle('dark', theme === 'dark');
   document.documentElement.classList.remove('dark-preload');
   localStorage.setItem(THEME_KEY, theme);
@@ -22,11 +22,11 @@ function applyTheme(theme) {
   }
 }
 
-function toggleTheme() {
+export function toggleTheme() {
   applyTheme(document.body.classList.contains('dark') ? 'light' : 'dark');
 }
 
-function initTheme() {
+export function initTheme() {
   const saved = localStorage.getItem(THEME_KEY) || 'light';
   applyTheme(saved);
 }

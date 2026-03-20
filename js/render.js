@@ -54,13 +54,6 @@ function createCard(plane) {
   // 1. País
   const countryTag = `<span class="card-tag tag-country">${plane.country}</span>`;
 
-  // 2. Rol principal (primer rol del array, o tipo si no hay roles)
-  /*
-  const roleLabel = (plane.roles && plane.roles.length)
-    ? plane.roles[0]
-    : plane.type;
-  const roleTag = `<span class="card-tag tag-role">${roleLabel}</span>`;
-*/
   // 3. Estado activo (solo si está activo o es prototipo)
   const statusMap = { active: 'Activo', prototype: 'Prototipo', limited: 'Limitado', retired: null };
   const statusLabel = statusMap[plane.status] || null;
