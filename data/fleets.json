@@ -947,5 +947,841 @@
       }
     ],
     "notes": "Brasil es la fuerza aérea más poderosa de Latinoamérica. El Gripen E cofabricado con Embraer es su apuesta estratégica de independencia aeronáutica."
+  },
+  {
+    "country": "Grecia",
+    "flag": "🇬🇷",
+    "region": "Europa Occidental",
+    "total_combat": 318,
+    "air_force": "Πολεμική Αεροπορία (HAF — Hellenic Air Force)",
+    "budget_bn_usd": 5.2,
+    "strength_rank": 22,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16C/D Block 52+/55 Viper",
+        "qty": 153,
+        "role": "Caza multirol",
+        "notes": "La mayor flota F-16 de Europa. 84 en actualización al Bloque 72 (Viper). Tensión constante con Turquía sobre el Egeo."
+      },
+      {
+        "id": "f4phantom",
+        "name": "F-4E Phantom II AUP",
+        "qty": 38,
+        "role": "Interceptor / ataque",
+        "notes": "Los últimos Phantom operativos de Europa. Modernizados por DASA. Previsión de retiro en 2026 al llegar los F-35A."
+      },
+      {
+        "id": "mirage2000",
+        "name": "Mirage 2000-5EG/-BG",
+        "qty": 26,
+        "role": "Caza superioridad aérea",
+        "notes": "26 activos. Vectores con MICA IR/EM y R550 Magic 2. Capaces de nuclear táctico con ASMP-A (en evaluación)."
+      },
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 0,
+        "role": "Caza furtivo (pedido)",
+        "notes": "18 F-35A pedidos en 2023 para reemplazar Phantom y parte de los F-16. Entrega prevista 2027-2030."
+      },
+      {
+        "id": "c130",
+        "name": "C-130B/H Hercules",
+        "qty": 12,
+        "role": "Transporte táctico",
+        "notes": "12 unidades. Usadas en despliegues de la OTAN y operaciones humanitarias."
+      }
+    ],
+    "notes": "Grecia tiene la mayor flota de combate de la Europa mediterránea en proporción al PIB. La rivalidad constante con Turquía en el espacio aéreo del Egeo mantiene su aviación en estado de alerta permanente. La llegada de F-35A modernizará radicalmente sus capacidades furtivas."
+  },
+  {
+    "country": "Países Bajos",
+    "flag": "🇳🇱",
+    "region": "Europa Occidental",
+    "total_combat": 63,
+    "air_force": "Koninklijke Luchtmacht (RNLAF)",
+    "budget_bn_usd": 8.7,
+    "strength_rank": 27,
+    "aircraft": [
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 52,
+        "role": "Caza furtivo multirol",
+        "notes": "52 de 52 entregados (2024). Los Países Bajos fueron de los primeros operadores europeos del F-35. Donaron F-16 a Ucrania."
+      },
+      {
+        "id": "f16",
+        "name": "F-16AM/BM",
+        "qty": 0,
+        "role": "Retirado (donados a Ucrania)",
+        "notes": "Los F-16AM/BM fueron donados a Ucrania en 2024 y 2025. Reemplazados íntegramente por F-35A."
+      },
+      {
+        "id": "c130",
+        "name": "C-130H Hercules",
+        "qty": 4,
+        "role": "Transporte táctico",
+        "notes": "4 unidades residuales. En proceso de reemplazo por el C-390 Millennium de Embraer."
+      }
+    ],
+    "notes": "Los Países Bajos han completado su transición al F-35A, siendo la primera fuerza aérea europea en operar exclusivamente un caza de 5ª generación como combatiente principal. Su donación de F-16 a Ucrania fue estratégicamente significativa."
+  },
+  {
+    "country": "Noruega",
+    "flag": "🇳🇴",
+    "region": "Europa Occidental",
+    "total_combat": 57,
+    "air_force": "Kongelige Norske Luftforsvaret (RNoAF)",
+    "budget_bn_usd": 9.5,
+    "strength_rank": 30,
+    "aircraft": [
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 52,
+        "role": "Caza furtivo",
+        "notes": "52 de 52 entregados. Noruega fue el primer país no fundador en recibir el F-35. Opera desde Ørland Air Base, en el Ártico. Capacidad nuclear táctica certificada."
+      },
+      {
+        "id": "c130",
+        "name": "C-130J-30 Super Hercules",
+        "qty": 4,
+        "role": "Transporte / SAR",
+        "notes": "4 C-130J-30 para transporte ártico y operaciones SAR en el Mar de Noruega."
+      }
+    ],
+    "notes": "Noruega opera el F-35 en condiciones árticas extremas, lo que ha generado datos únicos sobre el rendimiento del avión a -30°C. Su posición estratégica en el flanco norte de la OTAN frente a Rusia le da especial relevancia."
+  },
+  {
+    "country": "Dinamarca",
+    "flag": "🇩🇰",
+    "region": "Europa Occidental",
+    "total_combat": 30,
+    "air_force": "Flyvevåbnet (RDAF — Royal Danish Air Force)",
+    "budget_bn_usd": 5.3,
+    "strength_rank": 35,
+    "aircraft": [
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 27,
+        "role": "Caza furtivo",
+        "notes": "27 en entrega de 27 pedidos. Reemplazan definitivamente al F-16. También donaron F-16 a Ucrania."
+      },
+      {
+        "id": "f16",
+        "name": "F-16AM (residual)",
+        "qty": 3,
+        "role": "Transición / reserva",
+        "notes": "3 F-16 residuales en fase final de transferencia a Ucrania o musealización."
+      }
+    ],
+    "notes": "Dinamarca, junto a Noruega y Países Bajos, completa el triángulo nórdico del F-35. Todos han donado sus F-16 a Ucrania, acelerando la transición a la 5ª generación en el norte de Europa."
+  },
+  {
+    "country": "Bélgica",
+    "flag": "🇧🇪",
+    "region": "Europa Occidental",
+    "total_combat": 54,
+    "air_force": "Composante Air / Luchtcomponent",
+    "budget_bn_usd": 5.8,
+    "strength_rank": 34,
+    "aircraft": [
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 34,
+        "role": "Caza furtivo",
+        "notes": "34 de 34 pedidos en entrega progresiva (2023-2028). Reemplaza al F-16."
+      },
+      {
+        "id": "f16",
+        "name": "F-16AM/BM",
+        "qty": 20,
+        "role": "En retirada",
+        "notes": "20 en servicio residual durante la transición al F-35. Parte donados a Ucrania."
+      }
+    ],
+    "notes": "Bélgica también donó F-16 a Ucrania y completa la transición completa de la OTAN europea hacia el F-35. El F-35 belga portará la bomba nuclear B61-12 bajo el acuerdo de reparto nuclear de la OTAN."
+  },
+  {
+    "country": "Polonia",
+    "flag": "🇵🇱",
+    "region": "Europa del Este / Asia",
+    "total_combat": 151,
+    "air_force": "Siły Powietrzne (PAF — Polish Air Force)",
+    "budget_bn_usd": 21.0,
+    "strength_rank": 15,
+    "aircraft": [
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 0,
+        "role": "Caza furtivo (pedido)",
+        "notes": "32 F-35A pedidos en 2020. Entrega prevista 2024-2030."
+      },
+      {
+        "id": "f16",
+        "name": "F-16C/D Block 52+",
+        "qty": 48,
+        "role": "Caza multirol",
+        "notes": "48 F-16 modernizados. La columna vertebral táctica hasta la llegada del F-35."
+      },
+      {
+        "id": "mig29",
+        "name": "MiG-29A/UB (retirado)",
+        "qty": 0,
+        "role": "Donados a Ucrania",
+        "notes": "Polonia donó todos sus MiG-29 a Ucrania en 2023. 13 unidades transferidas."
+      },
+      {
+        "id": "su22",
+        "name": "Su-22M4 Fitter",
+        "qty": 12,
+        "role": "Ataque a tierra",
+        "notes": "12 Su-22 obsoletos en retiro. Sustituidos por F-16 en rol de ataque."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "FA-50 Golden Eagle (pedido)",
+        "qty": 48,
+        "role": "Caza ligero / ataque avanzado",
+        "notes": "48 FA-50 coreanos pedidos como puente hasta recibir todos los F-35. Entrega 2023-2025."
+      }
+    ],
+    "notes": "Polonia gasta el 4% del PIB en defensa, el mayor porcentaje de la OTAN. Tras la invasión rusa de Ucrania, modernizó su ejército a velocidad récord: F-35, FA-50, F-16 y sistemas Patriot, K2, K9. Es el mayor comprador de armamento del mundo en 2023."
+  },
+  {
+    "country": "Suecia",
+    "flag": "🇸🇪",
+    "region": "Europa Occidental",
+    "total_combat": 96,
+    "air_force": "Flygvapnet (Swedish Air Force)",
+    "budget_bn_usd": 5.9,
+    "strength_rank": 25,
+    "aircraft": [
+      {
+        "id": "gripen",
+        "name": "JAS 39C/D Gripen",
+        "qty": 60,
+        "role": "Caza multirol",
+        "notes": "60 Gripen C/D activos. Operan desde carreteras y bases dispersas. Suecia ingresó en la OTAN en 2024."
+      },
+      {
+        "id": "gripen",
+        "name": "JAS 39E Gripen",
+        "qty": 36,
+        "role": "Caza multirol avanzado",
+        "notes": "36 Gripen E en entrega progresiva (2021-2027) con AESA y Meteor. El más capaz de la familia."
+      },
+      {
+        "id": "c130",
+        "name": "TP84 (C-130H)",
+        "qty": 8,
+        "role": "Transporte táctico",
+        "notes": "8 unidades designadas localmente TP84."
+      }
+    ],
+    "notes": "Suecia desarrolló el Gripen como caza de bajo coste pero alta tecnología, diseñado específicamente para operar desde carreteras. El ingreso en la OTAN en marzo 2024, tras décadas de neutralidad, es el cambio estratégico más significativo del país desde la Segunda Guerra Mundial."
+  },
+  {
+    "country": "Finlandia",
+    "flag": "🇫🇮",
+    "region": "Europa Occidental",
+    "total_combat": 64,
+    "air_force": "Ilmavoimat (Finnish Air Force)",
+    "budget_bn_usd": 6.1,
+    "strength_rank": 28,
+    "aircraft": [
+      {
+        "id": "f35",
+        "name": "F-35A Lightning II",
+        "qty": 64,
+        "role": "Caza furtivo",
+        "notes": "64 F-35A pedidos (2021), el mayor pedido europeo per cápita. Reemplaza a 62 F/A-18C/D Hornet. Finlandia ingresó en la OTAN en 2023."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "F/A-18C/D Hornet (transición)",
+        "qty": 55,
+        "role": "En retirada",
+        "notes": "55 residuales mientras se completa entrega de F-35A (2025-2030)."
+      }
+    ],
+    "notes": "Finlandia comparte 1.340 km de frontera con Rusia. Tras décadas de neutralidad, ingresó en la OTAN en abril 2023 como respuesta directa a la invasión de Ucrania. Su pedido de 64 F-35A es proporcionalmente el mayor de Europa."
+  },
+  {
+    "country": "Emiratos Árabes Unidos",
+    "flag": "🇦🇪",
+    "region": "Oriente Medio",
+    "total_combat": 362,
+    "air_force": "United Arab Emirates Air Force (UAEAF)",
+    "budget_bn_usd": 22.8,
+    "strength_rank": 7,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16E/F Block 60 Desert Falcon",
+        "qty": 79,
+        "role": "Caza multirol avanzado",
+        "notes": "La versión más avanzada jamás exportada del F-16 hasta la fecha: AESA APG-80, 30% más combustible, FLIR integrado. UAE rechazó el F-35 por restricciones de EE.UU. a Huawei."
+      },
+      {
+        "id": "mirage2000",
+        "name": "Mirage 2000-9 / 2000-9D",
+        "qty": 63,
+        "role": "Caza multirol / ataque",
+        "notes": "63 activos con Black Shaheen (Storm Shadow), SCALP y ASRAAM. Los más modernos de la flota Mirage 2000 exportados."
+      },
+      {
+        "id": "ef2000",
+        "name": "Typhoon Tranche 3 (pedido)",
+        "qty": 96,
+        "role": "Caza multirol 4.5ª gen",
+        "notes": "Contrato 2021-2023: 96 Typhoons para sustituir los Mirage 2000 a partir de 2024. El mayor pedido europeo del Typhoon."
+      },
+      {
+        "id": "c17",
+        "name": "C-17 Globemaster III",
+        "qty": 8,
+        "role": "Transporte estratégico",
+        "notes": "8 C-17 para proyección de fuerza en Yemen, Somalia y otros teatros."
+      }
+    ],
+    "notes": "Los EAU tienen una de las fuerzas aéreas más capaces y mejor equipadas del mundo árabe. Han operado activamente en Yemen, Libia y como parte de la coalición anti-ISIS. La cancelación del F-35 por la disputa Huawei/5G fue un revés diplomático mayor con Washington."
+  },
+  {
+    "country": "Egipto",
+    "flag": "🇪🇬",
+    "region": "Oriente Medio",
+    "total_combat": 554,
+    "air_force": "Egyptian Air Force (EAF / القوات الجوية المصرية)",
+    "budget_bn_usd": 5.4,
+    "strength_rank": 10,
+    "aircraft": [
+      {
+        "id": "rafale",
+        "name": "Rafale C/B F3-R",
+        "qty": 54,
+        "role": "Caza multirol",
+        "notes": "54 adquiridos en dos contratos (2015, 2021). Primer cliente de exportación del Rafale. Activos en el Mediterráneo y potencialmente Libia."
+      },
+      {
+        "id": "f16",
+        "name": "F-16C/D Block 40/52",
+        "qty": 218,
+        "role": "Caza multirol",
+        "notes": "218 F-16 activos — la cuarta flota más grande del mundo. EE.UU. condicionó algunas entregas por derechos humanos."
+      },
+      {
+        "id": "mirage2000",
+        "name": "Mirage 2000EM/BM",
+        "qty": 18,
+        "role": "Caza interceptor",
+        "notes": "18 residuales. En retiro progresivo tras la llegada de los Rafale."
+      },
+      {
+        "id": "mig29",
+        "name": "MiG-29M/M2",
+        "qty": 46,
+        "role": "Caza superioridad aérea",
+        "notes": "46 MiG-29M modernizados con AESA Zhuk-ME. Única fuerza aérea árabe con MiG-29 activos."
+      },
+      {
+        "id": "su35",
+        "name": "Su-35S",
+        "qty": 24,
+        "role": "Caza superioridad aérea",
+        "notes": "24 Su-35S pedidos. Entrega parcialmente bloqueada por sanciones CAATSA de EE.UU. Situación legal compleja."
+      }
+    ],
+    "notes": "Egipto tiene la mayor flota de combate del mundo árabe y de África. Su peculiaridad estratégica es operar simultáneamente material soviético/ruso (MiG-29, Su-35), europeo (Rafale) y norteamericano (F-16) — una política de diversificación deliberada para no depender de un solo proveedor."
+  },
+  {
+    "country": "Indonesia",
+    "flag": "🇮🇩",
+    "region": "Asia-Pacífico",
+    "total_combat": 104,
+    "air_force": "Tentara Nasional Indonesia Angkatan Udara (TNI-AU)",
+    "budget_bn_usd": 8.2,
+    "strength_rank": 32,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16C/D Block 25/52",
+        "qty": 33,
+        "role": "Caza multirol",
+        "notes": "33 activos tras actualización Block 52. Primera fuerza aérea del Sudeste Asiático en operar el F-16 (1990)."
+      },
+      {
+        "id": "su27",
+        "name": "Su-27SK/SKM",
+        "qty": 5,
+        "role": "Superioridad aérea",
+        "notes": "5 residuales de 11 comprados. En deterioro. Indonesia canceló nuevos pedidos rusos por sanciones CAATSA."
+      },
+      {
+        "id": "su30",
+        "name": "Su-30MK/MK2",
+        "qty": 11,
+        "role": "Caza-atacante bimotor",
+        "notes": "11 activos. Con misiles R-77 y Kh-31P. Principal plataforma de alcance estratégico."
+      },
+      {
+        "id": "ef2000",
+        "name": "Typhoon Tranche 2",
+        "qty": 0,
+        "role": "Caza (en negociación)",
+        "notes": "Contrato inicial de 13 Typhoon de segunda mano de Austria, después cancelado. Indonesia negocia ahora F-15EX y Rafale."
+      },
+      {
+        "id": "f35",
+        "name": "F-35A (en negociación)",
+        "qty": 0,
+        "role": "Caza furtivo (futuro)",
+        "notes": "Indonesia negocia 48 F-35A como parte del acuerdo Defense Cooperation Agreement con EE.UU. (2023)."
+      }
+    ],
+    "notes": "Indonesia ilustra la complejidad de comprar armamento en el siglo XXI: quería el Su-35 ruso, el Eurofighter austriaco de segunda mano, el F-35 americano y el Rafale francés — todo simultáneamente. Las sanciones CAATSA, problemas de pago y tensiones políticas han retrasado sistemáticamente sus modernizaciones."
+  },
+  {
+    "country": "Taiwán",
+    "flag": "🇹🇼",
+    "region": "Asia-Pacífico",
+    "total_combat": 300,
+    "air_force": "Republic of China Air Force (ROCAF)",
+    "budget_bn_usd": 17.4,
+    "strength_rank": 21,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16A/B/V (Block 20/70)",
+        "qty": 141,
+        "role": "Caza multirol",
+        "notes": "141 activos: 84 F-16V (Block 70) + 57 F-16A/B en actualización. Compra adicional de 66 nuevos F-16V en 2019. La mayor inversión en defensa de la historia taiwanesa."
+      },
+      {
+        "id": "mirage2000",
+        "name": "Mirage 2000-5EI/-DI",
+        "qty": 55,
+        "role": "Caza interceptor",
+        "notes": "55 activos de los 60 recibidos (1997). El único operador asiático del Mirage 2000. Piezas de repuesto difíciles de obtener sin acceso a China continental."
+      },
+      {
+        "id": "f4phantom",
+        "name": "AIDC F-CK-1 Ching-kuo",
+        "qty": 71,
+        "role": "Caza ligero nacional",
+        "notes": "71 IDF (Indigenous Defense Fighter) fabricados localmente por AIDC con tecnología de General Dynamics. Con AESA y misiles Tien Chien II BVR."
+      }
+    ],
+    "notes": "Taiwán mantiene una flota de combate robusta frente a la amenaza de China Continental (que opera 1.500+ aviones de combate). La principal vulnerabilidad taiwanesa es la superioridad numérica del PLAAF: 300 vs 1.500+. La estrategia defensiva prioriza sistemas de misiles terrestres sobre paridad aérea."
+  },
+  {
+    "country": "Vietnam",
+    "flag": "🇻🇳",
+    "region": "Asia-Pacífico",
+    "total_combat": 189,
+    "air_force": "Không quân Nhân dân Việt Nam (VPAF)",
+    "budget_bn_usd": 5.8,
+    "strength_rank": 23,
+    "aircraft": [
+      {
+        "id": "su27",
+        "name": "Su-27SK/UBK",
+        "qty": 12,
+        "role": "Superioridad aérea",
+        "notes": "12 Su-27SK/UBK. Vietnam fue uno de los primeros países en recibir el Su-27 de exportación (1996)."
+      },
+      {
+        "id": "su30",
+        "name": "Su-30MK2V",
+        "qty": 36,
+        "role": "Caza-atacante bimotor",
+        "notes": "36 Su-30MK2V con R-77, Kh-31A antinaval y UPAZ tanquero. La columna vertebral moderna. Enfocado en control del Mar del Sur de China."
+      },
+      {
+        "id": "mig21",
+        "name": "MiG-21bis / PFM",
+        "qty": 80,
+        "role": "Caza interceptor (obsoleto)",
+        "notes": "80 MiG-21 en servicio residual. La gran mayoría no están en condiciones de volar. En retiro forzoso."
+      },
+      {
+        "id": "su25",
+        "name": "Su-25 Frogfoot",
+        "qty": 12,
+        "role": "CAS / ataque a tierra",
+        "notes": "12 Su-25 adquiridos en los 90. En deterioro por falta de repuestos."
+      }
+    ],
+    "notes": "Vietnam tiene una historia única: fue derrotado por EE.UU. en los 70, después ganó la guerra, y ahora adquiere armas occidentales y rusas para hacer frente a China en el Mar del Sur de China. Una de las ironías geopolíticas más marcadas del siglo XXI."
+  },
+  {
+    "country": "Malasia",
+    "flag": "🇲🇾",
+    "region": "Asia-Pacífico",
+    "total_combat": 72,
+    "air_force": "Royal Malaysian Air Force / Tentera Udara DiRaja Malaysia (TUDM)",
+    "budget_bn_usd": 4.3,
+    "strength_rank": 38,
+    "aircraft": [
+      {
+        "id": "su30",
+        "name": "Su-30MKM",
+        "qty": 18,
+        "role": "Caza-atacante bimotor",
+        "notes": "18 Su-30MKM especialmente equipados: vectorización de empuje AL-31FP (como el Su-30MKI indio), PESA Bars y misiles R-77. La variante más avanzada del Flanker de exportación."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "F/A-18D Hornet",
+        "qty": 8,
+        "role": "Caza todo tiempo",
+        "notes": "8 F/A-18D biplaza en deterioro. Malaysia mantiene este mix occidental-ruso deliberadamente."
+      },
+      {
+        "id": "gripen",
+        "name": "JAS 39C/D Gripen",
+        "qty": 18,
+        "role": "Caza multirol",
+        "notes": "18 Gripen C/D. El único operador asiático del Gripen. Con Meteor y IRIS-T."
+      }
+    ],
+    "notes": "Malasia opera simultáneamente material ruso (Su-30MKM), americano (F/A-18D) y sueco (Gripen) — una diversificación que le permite no depender de ningún proveedor. Está evaluando nuevos cazas (F/A-18F Super Hornet, Rafale, F-35) para los próximos años."
+  },
+  {
+    "country": "Colombia",
+    "flag": "🇨🇴",
+    "region": "Latinoamérica",
+    "total_combat": 82,
+    "air_force": "Fuerza Aérea Colombiana (FAC)",
+    "budget_bn_usd": 3.2,
+    "strength_rank": 39,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16A/B (en pedido)",
+        "qty": 16,
+        "role": "Caza multirol",
+        "notes": "16 F-16A/B aprobados por EE.UU. en 2023, pendientes de entrega. Reemplazarán a los Kfir y Mirage."
+      },
+      {
+        "id": "emb314",
+        "name": "A-29 Super Tucano",
+        "qty": 25,
+        "role": "COIN / ataque ligero",
+        "notes": "25 Super Tucano. El avión más importante de la FAC en la lucha antinarcóticos y contrainsurgencia (décadas vs FARC)."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "Kfir C-10/C-12",
+        "qty": 23,
+        "role": "Caza interceptor",
+        "notes": "23 Kfir israelíes modernizados. El caza principal actual, aunque en retiro previsto. Único operador mundial activo del Kfir."
+      }
+    ],
+    "notes": "Colombia tiene la mayor experiencia de combate aéreo de Latinoamérica actualmente, por décadas de operaciones contra las FARC y el narcotráfico. La llegada del F-16 representará el mayor salto tecnológico de su aviación desde los años 70."
+  },
+  {
+    "country": "Argentina",
+    "flag": "🇦🇷",
+    "region": "Latinoamérica",
+    "total_combat": 92,
+    "air_force": "Fuerza Aérea Argentina (FAA)",
+    "budget_bn_usd": 1.8,
+    "strength_rank": 45,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16AM/BM (en entrega)",
+        "qty": 24,
+        "role": "Caza multirol",
+        "notes": "24 F-16AM/BM daneses adquiridos en 2023 por 300 M$. Primera vez que Argentina opera el F-16. Llegaron en 2024."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "IA-63 Pampa III",
+        "qty": 28,
+        "role": "Entrenamiento / ataque ligero",
+        "notes": "Fabricado localmente por FADEA. El único avión militar diseñado y producido en Argentina."
+      },
+      {
+        "id": "mig21",
+        "name": "A-4AR Fightinghawk",
+        "qty": 35,
+        "role": "Caza-atacante (obsoleto)",
+        "notes": "A-4AR: versión modernizada del Douglas A-4 Skyhawk. Envejecida flota de ataque en retiro progresivo."
+      }
+    ],
+    "notes": "Tras las Malvinas (1982) Argentina no pudo adquirir aviones occidentales durante décadas por el embargo post-guerra. La compra de F-16 daneses en 2023 rompe ese bloqueo informal y marca un nuevo rumbo. La flota sigue siendo modesta para el tamaño del país."
+  },
+  {
+    "country": "Chile",
+    "flag": "🇨🇱",
+    "region": "Latinoamérica",
+    "total_combat": 75,
+    "air_force": "Fuerza Aérea de Chile (FACh)",
+    "budget_bn_usd": 3.6,
+    "strength_rank": 37,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16AM/BM/C/D Block 50+",
+        "qty": 46,
+        "role": "Caza multirol",
+        "notes": "46 F-16 en 3 variantes (AM/BM holandeses + C/D nuevos). La flota F-16 más capaz de Sudamérica por variedad de versiones."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "F-5E/F Tiger III",
+        "qty": 18,
+        "role": "Caza ligero (retiro)",
+        "notes": "18 F-5 en retiro definitivo. La generación anterior a los F-16."
+      },
+      {
+        "id": "kc135",
+        "name": "Boeing 707 tanquero",
+        "qty": 3,
+        "role": "Reabastecimiento",
+        "notes": "3 Boeing 707 convertidos a tanqueros. Esenciales para multiplicar el alcance de los F-16 en el vasto territorio chileno."
+      }
+    ],
+    "notes": "Chile tiene la fuerza aérea tecnológicamente más avanzada de Sudamérica. Sus F-16 en 3 variantes ofrecen una capacidad BVR y de ataque de precisión sin par en la región. Comparte frontera estratégica con Argentina (histórica tensión) y Bolivia (acceso al mar)."
+  },
+  {
+    "country": "Venezuela",
+    "flag": "🇻🇪",
+    "region": "Latinoamérica",
+    "total_combat": 62,
+    "air_force": "Aviación Militar Venezolana (AMV)",
+    "budget_bn_usd": 0.8,
+    "strength_rank": 50,
+    "aircraft": [
+      {
+        "id": "su30",
+        "name": "Su-30MKV",
+        "qty": 23,
+        "role": "Caza-atacante bimotor",
+        "notes": "23 Su-30MKV adquiridos 2006-2012. El caza más capaz de Latinoamérica en papel, pero con disponibilidad muy baja (~30-40%) por falta de mantenimiento y crisis económica."
+      },
+      {
+        "id": "f16",
+        "name": "F-16A/B (degradados)",
+        "qty": 22,
+        "role": "Caza multirol (deteriorado)",
+        "notes": "22 F-16 heredados de la era pre-Chávez. Sin actualizaciones ni repuestos desde 2005 (embargo EE.UU.). Disponibilidad estimada <20%."
+      },
+      {
+        "id": "su25",
+        "name": "Su-25UBK",
+        "qty": 11,
+        "role": "CAS",
+        "notes": "11 Su-25 biplaza UBK (entrenamiento/CAS). Deterioro significativo."
+      }
+    ],
+    "notes": "Venezuela tiene en papel una de las flotas más capaces de Latinoamérica (Su-30MKV + F-16) pero en la práctica, la crisis económica ha dejado la mayoría en tierra. El embargo de EE.UU. impide reparar los F-16 y las sanciones dificultan el mantenimiento ruso. Un caso de degradación de capacidades por causas no bélicas."
+  },
+  {
+    "country": "México",
+    "flag": "🇲🇽",
+    "region": "Norteamérica",
+    "total_combat": 40,
+    "air_force": "Fuerza Aérea Mexicana (FAM)",
+    "budget_bn_usd": 1.3,
+    "strength_rank": 48,
+    "aircraft": [
+      {
+        "id": "fa18hornet",
+        "name": "F-5E/F Tiger II",
+        "qty": 10,
+        "role": "Caza ligero (obsoleto)",
+        "notes": "10 F-5 en deterioro. México prácticamente no tiene caza moderno — opción política deliberada."
+      },
+      {
+        "id": "emb314",
+        "name": "PC-7 Turbo Trainer",
+        "qty": 22,
+        "role": "Entrenamiento / COIN",
+        "notes": "22 PC-7. Usados en vigilancia antinarcóticos. La FAM se centra en transporte y apoyo interior."
+      },
+      {
+        "id": "c130",
+        "name": "C-130 Hercules",
+        "qty": 5,
+        "role": "Transporte táctico",
+        "notes": "5 C-130 para logística. La FAM prioriza el transporte sobre el combate."
+      }
+    ],
+    "notes": "México tiene paradójicamente una de las fuerzas aéreas más débiles en combate para ser la decimoquinta economía del mundo. Por política histórica (herencia de la Revolución y no-intervención) México invierte mínimamente en capacidades de combate, priorizando seguridad interior sobre defensa aérea convencional."
+  },
+  {
+    "country": "Argelia",
+    "flag": "🇩🇿",
+    "region": "Oriente Medio",
+    "total_combat": 253,
+    "air_force": "القوات الجوية الجزائرية (QJJ — Algerian Air Force)",
+    "budget_bn_usd": 9.1,
+    "strength_rank": 28,
+    "aircraft": [
+      {
+        "id": "su30",
+        "name": "Su-30MKA",
+        "qty": 44,
+        "role": "Caza-atacante bimotor",
+        "notes": "44 Su-30MKA con TVC AL-31FP y aviónica francesa integrada. El modelo más avanzado de la flota."
+      },
+      {
+        "id": "mig29",
+        "name": "MiG-29S/UBT",
+        "qty": 48,
+        "role": "Caza superioridad aérea",
+        "notes": "48 MiG-29 modernizados con AESA Zhuk-ME. La mayor flota de MiG-29 del norte de África."
+      },
+      {
+        "id": "mig25",
+        "name": "MiG-25PD/RB",
+        "qty": 8,
+        "role": "Interceptor / reconocimiento",
+        "notes": "8 residuales. Los únicos MiG-25 operativos fuera de Rusia/Iraq. Estado real desconocido."
+      },
+      {
+        "id": "su24",
+        "name": "Su-24MK",
+        "qty": 40,
+        "role": "Bombardeo táctico",
+        "notes": "40 Su-24MK para ataque a tierra. En estado operativo cuestionable."
+      }
+    ],
+    "notes": "Argelia es la mayor potencia militar de África y del Magreb. Su política exterior se basa en la no-alineación pero su equipamiento es casi exclusivamente ruso. La tensión con Marruecos (que compra F-16 y Rafale) impulsa su modernización constante."
+  },
+  {
+    "country": "Marruecos",
+    "flag": "🇲🇦",
+    "region": "Oriente Medio",
+    "total_combat": 113,
+    "air_force": "القوات الجوية الملكية المغربية (RMAF — Royal Moroccan Air Force)",
+    "budget_bn_usd": 4.9,
+    "strength_rank": 36,
+    "aircraft": [
+      {
+        "id": "f16",
+        "name": "F-16C/D Block 52+",
+        "qty": 23,
+        "role": "Caza multirol",
+        "notes": "23 F-16C/D Block 52+. Con AESA APG-68V9 y AIM-120C. Marruecos solicitó F-35 pero EE.UU. lo condicionó al acuerdo de Abraham (normalización con Israel)."
+      },
+      {
+        "id": "rafale",
+        "name": "Rafale C/B F3-R",
+        "qty": 0,
+        "role": "Caza (en entrega)",
+        "notes": "Marruecos ordenó 14 Rafale en 2023. Primeras entregas previstas 2024-2025. Reemplazará al Mirage F1."
+      },
+      {
+        "id": "f35",
+        "name": "F-35A (en negociación)",
+        "qty": 0,
+        "role": "Caza furtivo (futuro)",
+        "notes": "EE.UU. aprobó condicionalmente la venta de 25 F-35A a cambio del reconocimiento israelí. Negociación compleja."
+      },
+      {
+        "id": "fa18hornet",
+        "name": "Mirage F1CH/EH",
+        "qty": 25,
+        "role": "Interceptor (retiro)",
+        "notes": "25 Mirage F1 en retiro. Reemplazados por F-16 y próximamente Rafale."
+      }
+    ],
+    "notes": "Marruecos está en la mayor modernización de su historia: F-16, Rafale y potencialmente F-35. La rivalidad con Argelia (que opera Su-30MKA y MiG-29S) alimenta la carrera de armamentos en el norte de África."
+  },
+  {
+    "country": "Corea del Norte",
+    "flag": "🇰🇵",
+    "region": "Asia-Pacífico",
+    "total_combat": 460,
+    "air_force": "조선인민군 공군 (KPAF — Korean People's Army Air Force)",
+    "budget_bn_usd": 3.5,
+    "strength_rank": 25,
+    "aircraft": [
+      {
+        "id": "mig29",
+        "name": "MiG-29 Fulcrum",
+        "qty": 35,
+        "role": "Caza superioridad aérea",
+        "notes": "35 MiG-29 — los únicos modernos de la KPAF. Sin actualizaciones desde los años 90. Mantenimiento dudoso."
+      },
+      {
+        "id": "mig21",
+        "name": "MiG-21bis / F-7",
+        "qty": 120,
+        "role": "Caza interceptor",
+        "notes": "120 MiG-21 y clones chinos F-7. La columna vertebral. Obsoletos pero numerosos."
+      },
+      {
+        "id": "su25",
+        "name": "Su-25",
+        "qty": 34,
+        "role": "CAS",
+        "notes": "34 Su-25 en estado incierto. NK no tiene petróleo propio y el combustible es escaso."
+      },
+      {
+        "id": "mig19",
+        "name": "MiG-19 / F-6 (chino)",
+        "qty": 100,
+        "role": "Caza obsoleto",
+        "notes": "100+ MiG-19 y F-6 chinos. Aviones de los años 50/60. Valor de combate casi nulo vs. F-35."
+      },
+      {
+        "id": "f86sabre",
+        "name": "MiG-17 / F-5",
+        "qty": 100,
+        "role": "Caza obsoleto",
+        "notes": "100+ MiG-17 y variantes. Musealizados en la práctica pero contados como 'fuerza activa'."
+      }
+    ],
+    "notes": "En papel la KPAF tiene 460+ aviones — en la práctica, la escasez de combustible, repuestos y entrenamiento hace que la inmensa mayoría no vuelen. Sus pilotos tienen dramáticamente menos horas de vuelo que los surcoreanos. Su amenaza real es mediante misiles balísticos, no aviación convencional."
+  },
+  {
+    "country": "Kazajistán",
+    "flag": "🇰🇿",
+    "region": "Europa del Este / Asia",
+    "total_combat": 97,
+    "air_force": "Қазақстан Әуе Күштері (KAF — Kazakhstan Air Forces)",
+    "budget_bn_usd": 1.6,
+    "strength_rank": 46,
+    "aircraft": [
+      {
+        "id": "su27",
+        "name": "Su-27S/UBK",
+        "qty": 32,
+        "role": "Superioridad aérea",
+        "notes": "32 Su-27 heredados de la era soviética. Algunos modernizados por Rusia. Disponibilidad moderada."
+      },
+      {
+        "id": "mig31",
+        "name": "MiG-31B/BS",
+        "qty": 30,
+        "role": "Interceptor",
+        "notes": "30 MiG-31 — la flota más grande de MiG-31 fuera de Rusia. Usados para defender el inmenso espacio aéreo kazajo."
+      },
+      {
+        "id": "mig29",
+        "name": "MiG-29",
+        "qty": 12,
+        "role": "Caza ligero",
+        "notes": "12 MiG-29 residuales. En deterioro sin presupuesto de mantenimiento adecuado."
+      },
+      {
+        "id": "su25",
+        "name": "Su-25",
+        "qty": 14,
+        "role": "CAS",
+        "notes": "14 Su-25 para apoyo terrestre."
+      }
+    ],
+    "notes": "Kazajistán heredó una de las mayores flotas aéreas del mundo soviético pero sin recursos para mantenerla. Su posición estratégica entre Rusia y China le obliga a mantener cierta capacidad, pero opera con presupuesto muy limitado. El MiG-31 es su mayor activo táctico real."
   }
 ]
