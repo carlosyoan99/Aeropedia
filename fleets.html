@@ -203,7 +203,7 @@ function buildSummary() {
   const gen5Count      = fleetsDB.reduce(function(s, c) {
     return s + c.aircraft.reduce(function(ss, a) {
       const p = aircraftDB.find(function(p) { return p.id === a.id; });
-      return ss + (p && p.generation === '5ª' && a.qty > 0 ? a.qty : 0);
+      return ss + (p && p.generation === '5' && a.qty > 0 ? a.qty : 0);
     }, 0);
   }, 0);
   const f35Total = fleetsDB.reduce(function(s, c) {
@@ -279,7 +279,7 @@ function buildFleetCard(country) {
   // Tabla de aeronaves
   const rows = country.aircraft.map(function(a) {
     const p = aircraftDB.find(function(x) { return x.id === a.id; });
-    const img  = p ? p.img : FALLBACK_IMG;
+    const img  = p ? '.\/public\/min\/' + p.img + '.webp' : FALLBACK_IMG;
     const gen5badge = (p && p.generation === '5ª') ? ' <span style="color:#f472b6;font-size:.55rem">◈5ª</span>' : '';
     const qtyColor = a.qty === 0 ? 'var(--text-3)' : 'var(--primary)';
     return '<tr onclick="viewPlaneFromFleet(\'' + a.id + '\')" title="Ver ficha de ' + a.name + '">' +

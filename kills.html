@@ -288,10 +288,10 @@ function renderKills() {
   const count  = document.getElementById('killsCount');
 
   // Joinear con aircraftDB
-  let rows = killsDB.map(function(k) {
-    const plane = aircraftDB.find(function(p) { return p.id === k.id; });
+  let rows = killsDB.map(k => {
+    const plane = aircraftDB.find(p =>  p.id === k.id);
     return { ...k, plane };
-  }).filter(function(r) { return r.plane; });
+  }).filter(r => r.plane);
 
   // Filtro de búsqueda
   if (search) {
@@ -304,13 +304,13 @@ function renderKills() {
   // Filtro de era
   if (era !== 'all') {
     const eraConflicts = ERA_MAP[era] || [];
-    rows = rows.filter(function(r) {
-      return (r.conflicts || []).some(function(c) { return eraConflicts.includes(c.id); });
-    });
+    rows = rows.filter(r => 
+      (r.conflicts || []).some(c => eraConflicts.includes(c.id))
+    );
   }
 
   // Ordenar
-  rows.sort(function(a, b) {
+  rows.sort((a, b) => {
     switch(sort) {
       case 'kills_asc':  return a.kills_total - b.kills_total;
       case 'kills_desc': return b.kills_total - a.kills_total;
@@ -324,15 +324,15 @@ function renderKills() {
   if (count) count.textContent = rows.length + ' aeronaves';
 
   // Máximos para las barras
-  const maxKills  = Math.max.apply(null, rows.map(function(r) { return r.kills_total || 0; })) || 1;
-  const maxLosses = Math.max.apply(null, rows.map(function(r) { return r.losses_combat || 0; })) || 1;
+  const maxKills  = Math.max.apply(null, rows.map(r =>r.kills_total || 0)) || 1;
+  const maxLosses = Math.max.apply(null, rows.map(r => r.losses_combat || 0)) || 1;
 
   if (!rows.length) {
     body.innerHTML = '<tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--text-3)">Sin resultados para los filtros seleccionados.</td></tr>';
     return;
   }
 
-  body.innerHTML = rows.map(function(r, i) {
+  body.innerHTML = rows.map((r, i) => {
     const p         = r.plane;
     const kPct      = ((r.kills_total || 0)  / maxKills)  * 100;
     const lPct      = ((r.losses_combat || 0) / maxLosses) * 100;
@@ -341,9 +341,9 @@ function renderKills() {
     const ratioTxt  = ratio ? ratio.toFixed(2) : 'N/D';
 
     // Chips de conflictos
-    const cfChips = (r.conflicts || []).slice(0, 3).map(function(c) {
+    const cfChips = (r.conflicts || []).slice(0, 3).map(c => {
       const cf = conflictsDB[c.id];
-      return cf ? '<span class="kt-cf-chip">' + cf.flag + ' ' + cf.id.toUpperCase().replace(/_/g,' ') + '</span>' : '';
+      return cf ? '<span class="kt-cf-chip">' + cf.flag + ' ' + cf.id?.toUpperCase().replace(/_/g,' ') + '</span>' : '';
     }).join('');
 
     return '<tr onclick="showConflictDetail(' + i + ')" data-idx="' + i + '">' +
