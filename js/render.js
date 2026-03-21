@@ -7,7 +7,7 @@ function showSkeletons(count) {
   count = count || 6;
   const gallery = document.getElementById('gallery');
   if (!gallery) return;
-  gallery.innerHTML = Array.from({ length: count }).map(function() { return `
+  gallery.innerHTML = Array.from({ length: count }).map(() => `
     <div class="skeleton-card">
       <div class="skeleton sk-img"></div>
       <div class="skeleton-body">
@@ -21,7 +21,7 @@ function showSkeletons(count) {
         <div class="skeleton sk-bar"></div>
         <div class="skeleton sk-btn"></div>
       </div>
-    </div>`; }).join('');
+    </div>`).join('');
 }
 
 // ── ESTADO VACÍO ──────────────────────────────────────────────
