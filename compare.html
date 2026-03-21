@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comparador — AeroPedia</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-96.svg" />
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AeroPedia">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <meta name="description" content="Compara especificaciones técnicas de aeronaves militares en profundidad.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -29,10 +34,7 @@
   <!-- Panel de selección -->
   <div class="cmp-select-panel">
     <div class="cmp-search-row">
-      <input type="search" id="cmpSearch" class="search-input"
-             placeholder="Buscar aeronave para añadir..."
-             oninput="filterCmpSearch()"
-             style="width:20rem">
+      <input type="search" id="cmpSearch" class="search-input" placeholder="Buscar aeronave para añadir..." oninput="debounce(filterCmpSearch, 300)" style="width:20rem">
       <select id="cmpCatFilter" class="cat-select" onchange="filterCmpSearch()">
         <option value="all">Todos los tipos</option>
         <option value="Caza">Cazas</option>

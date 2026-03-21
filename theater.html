@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teatro de Operaciones — AeroPedia</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-96.svg" />
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AeroPedia">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <meta name="description" content="Explora los conflictos históricos de aviación militar y los aviones que participaron en cada teatro de operaciones.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -40,10 +45,7 @@
     <div id="resultHeader" class="theater-result-header"></div>
 
     <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
-      <input type="search" id="theaterSearch" class="search-input"
-             placeholder="Filtrar por nombre, país o tipo..."
-             oninput="filterTheaterResults()"
-             style="width:18rem">
+      <input type="search" id="theaterSearch" class="search-input" placeholder="Filtrar por nombre, país o tipo..." oninput="debounce(filterTheaterResults, 300)" style="width:18rem">
       <span id="theaterCount" style="font-family:var(--font-mono);font-size:.65rem;color:var(--text-3)"></span>
       <button class="nav-link" onclick="clearSelection()" style="margin-left:auto">
         <i class="fas fa-arrow-left"></i> Todos los conflictos
@@ -156,18 +158,16 @@ function renderTheaterAircraft(planes) {
   }
 
   if (countEl) countEl.textContent = planes.length + ' aeronave' + (planes.length !== 1 ? 's' : '');
-  grid.innerHTML = planes.map(function(p) { return buildAircraftCard(p); }).join('');
+  grid.innerHTML = planes.map(p => buildAircraftCard(p)).join('');
 }
 
 /* ── Filtro de búsqueda dentro del conflicto ─────────── */
 function filterTheaterResults() {
   const s = (document.getElementById('theaterSearch').value || '').toLowerCase();
   const filtered = s
-    ? theaterPlanes.filter(function(p) {
-        return p.name.toLowerCase().includes(s) ||
-               p.country.toLowerCase().includes(s) ||
-               p.type.toLowerCase().includes(s);
-      })
+    ? theaterPlanes.filter(p => 
+        p.name.toLowerCase().includes(s) || p.country.toLowerCase().includes(s) || p.type.toLowerCase().includes(s)
+      )
     : theaterPlanes;
   renderTheaterAircraft(filtered);
 }

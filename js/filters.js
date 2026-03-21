@@ -74,7 +74,7 @@ function toggleFavFilter() {
 // ── Event listeners de filtros ─────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('mainSearch')
-    ?.addEventListener('input', renderAll);
+    ?.addEventListener('input', debounce(renderAll, 300));
   document.getElementById('catFilter')
     ?.addEventListener('change', renderAll);
 });

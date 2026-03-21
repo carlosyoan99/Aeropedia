@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flotas Activas por País — AeroPedia</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="icons/icon-96.svg"
+  <link rel="icon" href="icons/icon-96.svg" />
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AeroPedia">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <meta name="description" content="Inventario de flota aérea militar activa por país. Cazas, bombarderos y aviones de combate en servicio en 2024.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles/fleets.css">
@@ -33,7 +37,7 @@
   <!-- Filtros y búsqueda -->
   <div class="fleets-toolbar">
     <input type="search" id="fleetsSearch" class="search-input" placeholder="Buscar país o avión..." oninput="renderFleets()" style="width:16rem">
-    <select id="fleetsRegion" class="cat-select" onchange="renderFleets()">
+    <select id="fleetsRegion" class="cat-select" onchange="debounce(renderFleets, 300)">
       <option value="all">Todas las regiones</option>
       <option value="Norteamérica">Norteamérica</option>
       <option value="Europa Occidental">Europa Occidental</option>

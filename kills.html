@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Combate Aéreo — AeroPedia</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-96.svg" />
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AeroPedia">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <meta name="description" content="Tabla de victorias y pérdidas en combate aéreo de los principales cazas de la historia.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="styles/kills.css">
@@ -32,7 +37,7 @@
 
   <!-- Filtros -->
   <div class="kills-filters">
-    <input type="search" id="killsSearch" class="search-input" placeholder="Buscar por nombre de avión..." oninput="renderKills()" style="width:18rem">
+    <input type="search" id="killsSearch" class="search-input" placeholder="Buscar por nombre de avión..." oninput="debounce(renderKills, 300)" style="width:18rem">
     <select id="killsEra" class="cat-select" onchange="renderKills()">
       <option value="all">Todas las épocas</option>
       <option value="wwii">Segunda Guerra Mundial</option>

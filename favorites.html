@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Favoritos — AeroPedia</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-96.svg" />
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AeroPedia">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <meta name="description" content="Tus aeronaves militares favoritas guardadas en AeroPedia.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -34,10 +39,7 @@
       <i class="fas fa-star"></i>
       <span id="favsCountText">0 favoritos</span>
     </div>
-    <input type="search" id="favsSearch" class="search-input"
-           placeholder="Filtrar favoritos..."
-           oninput="filterFavs()"
-           style="width:16rem">
+    <input type="search" id="favsSearch" class="search-input" placeholder="Filtrar favoritos..." oninput="debounce(filterFavs, 300)" style="width:16rem">
     <select id="favsSortSelect" class="cat-select" onchange="filterFavs()">
       <option value="default">Orden guardado</option>
       <option value="name">Nombre A–Z</option>
@@ -86,14 +88,14 @@ function renderFavs(planes) {
   if (total === 0) {
     toolbar.style.display = 'none';
     grid.innerHTML =
-      '<div class="favs-empty">' +
-        '<i class="fas fa-star"></i>' +
-        '<p class="favs-empty-title">// Sin aeronaves guardadas</p>' +
-        '<p class="favs-empty-sub">Usa el botón ★ en las tarjetas de la galería para guardar tus favoritas aquí.</p>' +
-        '<button class="mini-btn-home" onclick="goHome()" style="margin-top:1.5rem;display:inline-flex;width:auto;padding:.6rem 1.5rem">' +
-          '<i class="fas fa-fighter-jet"></i> Ir a la galería' +
-        '</button>' +
-      '</div>';
+      `<div class="favs-empty">
+        <i class="fas fa-star"></i>
+        <p class="favs-empty-title">// Sin aeronaves guardadas</p>
+        <p class="favs-empty-sub">Usa el botón ★ en las tarjetas de la galería para guardar tus favoritas aquí.</p>
+        <button class="mini-btn-home" onclick="goHome()" style="margin-top:1.5rem;display:inline-flex;width:auto;padding:.6rem 1.5rem">
+          <i class="fas fa-fighter-jet"></i> Ir a la galería
+        </button>
+      </div>`;
     return;
   }
 
@@ -102,15 +104,15 @@ function renderFavs(planes) {
 
   if (!planes.length) {
     grid.innerHTML =
-      '<div class="favs-empty">' +
-        '<i class="fas fa-search"></i>' +
-        '<p class="favs-empty-title">// Sin resultados</p>' +
-        '<p class="favs-empty-sub">Ningún favorito coincide con el filtro actual.</p>' +
-      '</div>';
+      `<div class="favs-empty">
+        <i class="fas fa-search"></i>
+        <p class="favs-empty-title">// Sin resultados</p>
+        <p class="favs-empty-sub">Ningún favorito coincide con el filtro actual.</p>
+      </div>`;
     return;
   }
 
-  grid.innerHTML = planes.map(function(p) { return buildAircraftCard(p); }).join('');
+  grid.innerHTML = planes.map(p => buildAircraftCard(p)).join('');
 }
 
 /* ── Filtrar y ordenar ──────────────────────────────── */
@@ -119,23 +121,21 @@ function filterFavs() {
   const sort   = document.getElementById('favsSortSelect').value;
   const favIds = getFavs();
 
-  let planes = allFavPlanes.filter(function(p) { return favIds.includes(p.id); });
+  let planes = allFavPlanes.filter(p => favIds.includes(p.id));
 
   if (s) {
-    planes = planes.filter(function(p) {
-      return p.name.toLowerCase().includes(s) ||
-             p.country.toLowerCase().includes(s) ||
-             p.type.toLowerCase().includes(s);
-    });
+    planes = planes.filter(p =>
+      p.name.toLowerCase().includes(s) || p.country.toLowerCase().includes(s) || p.type.toLowerCase().includes(s)
+    );
   }
 
   switch (sort) {
-    case 'name':      planes.sort(function(a,b){ return a.name.localeCompare(b.name); }); break;
-    case 'year_asc':  planes.sort(function(a,b){ return a.year  - b.year; });  break;
-    case 'year_desc': planes.sort(function(a,b){ return b.year  - a.year; });  break;
-    case 'speed':     planes.sort(function(a,b){ return b.speed - a.speed; }); break;
-    case 'type':      planes.sort(function(a,b){ return a.type.localeCompare(b.type); }); break;
-    default:          planes.sort(function(a,b){ return favIds.indexOf(a.id) - favIds.indexOf(b.id); });
+    case 'name':      planes.sort((a,b) => a.name.localeCompare(b.name)); break;
+    case 'year_asc':  planes.sort((a,b) => a.year  - b.year);  break;
+    case 'year_desc': planes.sort((a,b) => b.year  - a.year);  break;
+    case 'speed':     planes.sort((a,b) => b.speed - a.speed); break;
+    case 'type':      planes.sort((a,b) => a.type.localeCompare(b.type)); break;
+    default:          planes.sort((a,b) => favIds.indexOf(a.id) - favIds.indexOf(b.id));
   }
 
   renderFavs(planes);
@@ -144,7 +144,7 @@ function filterFavs() {
 /* ── Override toggleFavPage para esta página ─────────── */
 const _origToggleFavPage = toggleFavPage;
 // Sobrescribir para actualizar la vista al quitar favorito
-window.toggleFavPage = function(id) {
+window.toggleFavPage = id => {
   _origToggleFavPage(id);
   const removed = !isFav(id);
   showFavsToast(removed ? '★ Quitado de favoritos' : '★ Añadido a favoritos');
@@ -176,7 +176,7 @@ function showFavsToast(msg) {
   toast.style.opacity   = '1';
   toast.style.transform = 'translateX(-50%) translateY(0)';
   clearTimeout(toast._t);
-  toast._t = setTimeout(function() {
+  toast._t = setTimeout(() => {
     toast.style.opacity   = '0';
     toast.style.transform = 'translateX(-50%) translateY(20px)';
   }, 2500);
@@ -188,7 +188,7 @@ async function initFavoritesPage() {
   document.getElementById('navContainer').innerHTML = buildNavBar('favorites');
   try {
     await loadData();
-    allFavPlanes = aircraftDB.filter(function(p) { return getFavs().includes(p.id); });
+    allFavPlanes = aircraftDB.filter(p => getFavs().includes(p.id));
     filterFavs();
   } catch (e) {
     showLoadError('favsGrid', e);

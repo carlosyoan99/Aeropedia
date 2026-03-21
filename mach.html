@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculadora Mach — AeroPedia</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-96.svg" />
   <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="AeroPedia">
+  <link rel="apple-touch-icon" href="icons/icon-192.svg">
   <meta name="description" content="Calcula el Número Mach según velocidad y altitud. Compara con aeronaves reales.">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -38,7 +43,7 @@
 
         <label class="mach-label">Velocidad</label>
         <div class="mach-input-row" style="margin-bottom:1.25rem">
-          <input type="number" id="machSpeedInput" class="mach-input" placeholder="Introduce la velocidad..." min="0" oninput="calcMachPage()">
+          <input type="number" id="machSpeedInput" class="mach-input" placeholder="Introduce la velocidad..." min="0" max="50000" oninput="debounce(calcMachPage, 300)">
           <select id="machUnit" class="mach-select" onchange="calcMachPage()">
             <option value="kmh">KM/H</option>
             <option value="knots">KNOTS</option>
@@ -49,7 +54,7 @@
 
         <label class="mach-label">Altitud: <span id="altLabel">0 m (nivel del mar)</span></label>
         <div class="mach-range-wrap" style="margin-bottom:.4rem">
-          <input type="range" id="altSlider" class="mach-range" min="0" max="30000" step="500" value="0" oninput="updateAltLabelPage(); calcMachPage()">
+          <input type="range" id="altSlider" class="mach-range" min="0" max="30000" step="500" value="0" oninput="updateAltLabelPage(); debounce(calcMachPage, 300)">
         </div>
         <div class="timeline-ticks" style="margin-bottom:1.25rem">
           <span>0</span><span>7.500</span><span>15.000</span><span>22.500</span><span>30.000 m</span>
