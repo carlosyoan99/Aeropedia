@@ -26,7 +26,7 @@ async function loadData() {
 function goHome()    { location.href = './index.html'; }
 function goMach()    { location.href = './mach.html'; }
 function goTheater() { location.href = './theater.html'; }
-function goFavs() { location.href = './favorites.html'; }
+function goFavs()    { location.href = './favorites.html'; }
 function goKills()   { location.href = './kills.html'; }
 function goFleets()  { location.href = './fleets.html'; }
 function goCompare() { location.href = './compare.html'; }
@@ -34,7 +34,7 @@ function goCompare() { location.href = './compare.html'; }
 /* ── Barra de navegación compartida ────────────────────────── */
 function buildNavBar(activePage) {
   const pages = [
-    { id: 'home', label: 'Archivo', icon: 'fa-fighter-jet', fn: 'goHome()' },
+    { id:'home',     label:'Archivo',  icon:'fa-fighter-jet',   fn:'goHome()' },
     { id:'kills',    label:'Combate',  icon:'fa-crosshairs',    fn:'goKills()' },
     { id:'fleets',   label:'Flotas',   icon:'fa-globe',         fn:'goFleets()' },
     { id:'theater',  label:'Teatro',   icon:'fa-crosshairs',    fn:'goTheater()' },
@@ -48,11 +48,11 @@ function buildNavBar(activePage) {
       '<span class="logo-text">AERO<span>PEDIA</span></span>' +
     '</a>' +
     '<div class="page-nav-links">' +
-      pages.map(function(p) {
-        return '<button class="nav-link ' + (p.id === activePage ? 'active' : '') + '" onclick="' + p.fn + '">' +
-          '<i class="fas ' + p.icon + '"></i><span>' + p.label + '</span>' +
-        '</button>';
-      }).join('') +
+      pages.map(p => 
+        `<button class="nav-link ${(p.id === activePage ? 'active' : '')}" onclick="${p.fn}">
+          <i class="fas ${p.icon}"></i><span>${p.label}</span>
+        </button>`
+      ).join('') +
     '</div>' +
     '<div class="theme-toggle-wrap" title="Cambiar tema (D)">' +
       '<i class="theme-icon fas fa-sun" style="color:#eab308"></i>' +
@@ -134,7 +134,7 @@ function toggleFavPage(id) {
 }
 
 /* ── Atajo de teclado: tema ──────────────────────────────────── */
-document.addEventListener('keydown', function(e) {
+document.addEventListener('keydown', e => {
   var tag    = document.activeElement && document.activeElement.tagName.toLowerCase();
   var typing = ['input','select','textarea'].includes(tag);
   if (typing) return;

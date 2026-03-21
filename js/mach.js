@@ -36,8 +36,8 @@ function calcMach() {
   resEl.textContent = `M ${mach.toFixed(3)}`;
 
   let label = '', cls = '';
-  if      (mach < 0.8)  { label = 'SUBSÓNICO';      cls = 'subsonic';     }
-  else if (mach < 1.2)  { label = 'TRANSSÓNICO';     cls = 'transonic';    }
+  if      (mach < 0.8)  { label = 'SUBSÓNICO';        cls = 'subsonic';     }
+  else if (mach < 1.2)  { label = 'TRANSSÓNICO';      cls = 'transonic';    }
   else if (mach < 5)    { label = 'SUPERSÓNICO';      cls = 'supersonic';   }
   else if (mach < 10)   { label = 'HIPERSÓNICO';      cls = 'hypersonic';   }
   else                  { label = 'ALTA HIPERSONÍA';  cls = 'highersonic';  }

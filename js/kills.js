@@ -31,10 +31,9 @@ function renderKills() {
 
   // Filtro de búsqueda
   if (search) {
-    rows = rows.filter(function(r) {
-      return r.plane.name.toLowerCase().includes(search) ||
-             r.plane.country.toLowerCase().includes(search);
-    });
+      rows = rows.filter(r =>
+          r.plane.name.toLowerCase().includes(search) || r.plane.country.toLowerCase().includes(search)
+    );
   }
 
   // Filtro de era
@@ -85,7 +84,7 @@ function renderKills() {
     return '<tr onclick="showConflictDetail(' + i + ')" data-idx="' + i + '">' +
       '<td class="col-plane">' +
         '<div class="kt-plane-cell">' +
-          '<img src="' + p.img + '" class="kt-thumb" alt="' + p.name + '" onerror="this.src=\'' + FALLBACK_IMG + '\'">' +
+          '<img src=".\/public\/min\/' + p.img + '.webp" class="kt-thumb" alt="' + p.name + '" onerror="this.src=\'' + FALLBACK_IMG + '\'">' +
           '<div>' +
             '<p class="kt-name">' + p.name + '</p>' +
             '<p class="kt-meta mono">' + p.country + ' · ' + p.year + (p.generation ? ' · Gen ' + p.generation : '') + '</p>' +

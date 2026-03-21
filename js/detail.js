@@ -360,7 +360,7 @@ function renderWikiResult(result, textEl, linkEl, spinner) {
 // ── COMPARTIR ──────────────────────────────────────────────────
 function shareCurrentDetail() {
   if (!currentDetailId) return;
-  var plane = aircraftDB.find(function(p) { return p.id === currentDetailId; });
+  var plane = aircraftDB.find(p => p.id === currentDetailId);
   var url   = location.origin + location.pathname + '#' + currentDetailId;
   var shareData = {
     title: plane ? 'AeroPedia — ' + plane.name : 'AeroPedia',
@@ -377,16 +377,16 @@ function shareCurrentDetail() {
   }
 }
 function copyFallback(url) {
-  navigator.clipboard.writeText(url).then(showShareToast).catch(function() { prompt('Copia este enlace:', url); });
+  navigator.clipboard.writeText(url).then(showShareToast).catch(() => prompt('Copia este enlace:', url));
 }
 function showShareToast() {
   var t = document.getElementById('shareToast');
   if (!t) return;
   t.classList.add('visible');
-  setTimeout(function() { t.classList.remove('visible'); }, 2500);
+  setTimeout(() => t.classList.remove('visible'), 2500);
 }
 function resolveHash() {
   var hash = location.hash.replace('#', '').trim();
-  if (hash && aircraftDB.find(function(p) { return p.id === hash; }))
-    setTimeout(function() { openDetail(hash); }, 400);
+  if (hash && aircraftDB.find(p => p.id === hash))
+    setTimeout(() => openDetail(hash), 400);
 }
