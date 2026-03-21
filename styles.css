@@ -1938,7 +1938,7 @@ body.dark .rank-stat-pill.active { background: var(--primary); }
 
 /* Imagen con 4 stats */
 .detail-img-stats {
-  display: grid; grid-template-columns: 1fr 1fr;
+  display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: .5rem; margin-top: .75rem;
 }
 .img-stat {
