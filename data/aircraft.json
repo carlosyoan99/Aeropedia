@@ -272,6 +272,11 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "USMC utilizó AH-1W y AH-1Z en Irak y Afganistán para misiones de CAS."
+      },
+      {
+        "conflict": "panama",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -359,6 +364,16 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Operaciones en Afganistán e Irak, muy efectivo en CAS y operaciones nocturnas."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -577,6 +592,16 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Transporte esencial de personal y carga entre portaaviones en el Golfo Pérsico y el Índico."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -659,6 +684,11 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Logística principal para Afganistán e Irak."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -901,6 +931,16 @@
         "conflict": "falklands",
         "missions": null,
         "notes": "Canberras PR.9 de la RAF realizaron misiones de reconocimiento sobre las Malvinas antes y durante el conflicto."
+      },
+      {
+        "conflict": "rhodesian_bush_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "south_african_border",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -998,6 +1038,26 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Operaciones extensivas en Afganistán e Irak, transportando suministros y realizando evacuaciones médicas."
+      },
+      {
+        "conflict": "gulf_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "panama",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -1092,6 +1152,16 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Operaciones en Afganistán e Irak, transportando equipos y realizando evacuaciones médicas."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "panama",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -1177,6 +1247,21 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Vigilancia y control en Afganistán e Irak, especialmente en misiones de apoyo a tropas en tierra."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -1462,12 +1547,7 @@
       {
         "conflict": "wwii_pacific",
         "missions": null,
-        "notes": "El 10 de diciembre de 1941, G4M torpedearon y hundieron los acorazados británicos HMS Prince of Wales y HMS Repulse, demostrando la vulnerabilidad de los buques capitales ante ataques aéreos."
-      },
-      {
-        "conflict": "wwii_pacific",
-        "missions": null,
-        "notes": "Participó en la batalla del Mar de Bismarck (1943) y en numerosas misiones de bombardeo y reconocimiento. Sufrió grandes pérdidas por su falta de blindaje y depósitos de combustible no autosellantes."
+        "notes": "El 10 de diciembre de 1941, G4M torpedearon y hundieron los acorazados británicos HMS Prince of Wales y HMS Repulse, demostrando la vulnerabilidad de los buques capitales ante ataques aéreos. Participó en la batalla del Mar de Bismarck (1943) y en numerosas misiones de bombardeo y reconocimiento. Sufrió grandes pérdidas por su falta de blindaje y depósitos de combustible no autosellantes."
       }
     ]
   },
@@ -1646,6 +1726,11 @@
         "conflict": "wwii_east",
         "missions": null,
         "notes": "Participó en la invasión de la URSS y en las campañas posteriores."
+      },
+      {
+        "conflict": "battle_of_britain",
+        "missions": null,
+        "notes": "P"
       }
     ]
   },
@@ -1900,6 +1985,16 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Ampliamente utilizado por ambos bandos para transporte logístico. Varios han sido derribados o destruidos en tierra."
+      },
+      {
+        "conflict": "chechnya",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -2123,6 +2218,11 @@
         "conflict": "wwii_east",
         "missions": null,
         "notes": "Amplio uso en la invasión de la URSS, tanto en bombardeo como en interdicción."
+      },
+      {
+        "conflict": "battle_of_britain",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -2652,6 +2752,21 @@
         "conflict": "gulf_war",
         "missions": null,
         "notes": "Lynx de la Royal Navy y del Ejército participaron en operaciones contra buques iraquíes y apoyo a tropas."
+      },
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "rhodesian_bush_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "south_african_border",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -2822,6 +2937,41 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Utilizado por ambos bandos; numerosos derribos por MANPADS."
+      },
+      {
+        "conflict": "chechnya",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "croatian_independence",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "bosnian_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "georgia_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "central_african_republic",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -2908,6 +3058,21 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Ampliamente utilizado por ambas partes, con pérdidas significativas."
+      },
+      {
+        "conflict": "chechnya",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "central_african_republic",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -3017,6 +3182,31 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Ampliamente utilizado por ambas partes, con pérdidas significativas."
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "georgia_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "central_african_republic",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -3127,6 +3317,21 @@
         "conflict": "falklands",
         "missions": null,
         "notes": "Mirage IIIEA argentinos realizaron patrullas y combates contra Harriers, sin lograr derribos pero manteniendo la presión."
+      },
+      {
+        "conflict": "vietnam",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "war_of_attrition",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "south_african_border",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -3198,6 +3403,11 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Utilizado hasta su retiro en 2018."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -3289,6 +3499,26 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Ucrania ha recibido MQ-9 para misiones de reconocimiento y ataque."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "sahel_insurgency",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -3462,6 +3692,11 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Misiones de vigilancia y reconocimiento en el Mediterráneo."
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -3671,6 +3906,16 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Amplio uso en Afganistán e Irak para vigilancia de convoyes y apoyo a tropas en tierra."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -4051,6 +4296,16 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Ampliamente utilizado por Rusia desde 2022 para atacar infraestructura energética y objetivos civiles."
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -4117,6 +4372,11 @@
         "conflict": "wwii_europe",
         "missions": null,
         "notes": "Protagonista de la Batalla de Inglaterra (1940). Superó al Bf 109E en maniobrabilidad y velocidad de giro, aunque era inferior en trepada."
+      },
+      {
+        "conflict": "battle_of_britain",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -4193,6 +4453,11 @@
         "conflict": "kosovo",
         "missions": null,
         "notes": "Misiones de ataque de la Armada francesa."
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -4356,6 +4621,16 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Ampliamente utilizado por Ucrania desde 2022 para ataques contra columnas rusas y sistemas de defensa aérea."
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "sahel_insurgency",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -4448,6 +4723,11 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "La variante UH-1N y UH-1Y siguen en servicio en misiones de apoyo."
+      },
+      {
+        "conflict": "dominican_republic",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -4592,6 +4872,11 @@
         "conflict": "wwii_europe",
         "missions": 213873,
         "notes": "Principal escolta de los bombarderos del 8.º Ejército Aéreo. Destruyó más de 4.950 aviones en combate aéreo."
+      },
+      {
+        "conflict": "wwii_pacific",
+        "missions": null,
+        "notes": ""
       },
       {
         "conflict": "korea",
@@ -4766,6 +5051,16 @@
         "conflict": "wwii_east",
         "missions": null,
         "notes": "Frente Oriental: enfrentó a los Il-2 y a los cazas soviéticos."
+      },
+      {
+        "conflict": "spanish_civil_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "battle_of_britain",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -5139,6 +5434,11 @@
         "conflict": "wwii_east",
         "missions": null,
         "notes": "Más de 36.183 unidades. Stalin: 'tan necesario como el aire y el pan'. Causó enormes pérdidas a las divisiones blindadas alemanas."
+      },
+      {
+        "conflict": "winter_war",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -5286,6 +5586,11 @@
         "conflict": "wwii_pacific",
         "missions": null,
         "notes": "Operó con la USAAF en el Pacífico, especialmente en misiones de ataque a tierra."
+      },
+      {
+        "conflict": "algerian_war",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -5475,6 +5780,21 @@
         "conflict": "korea",
         "missions": null,
         "notes": "Transporte táctico durante la guerra de Corea."
+      },
+      {
+        "conflict": "wwii_east",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "algerian_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -5548,6 +5868,16 @@
         "conflict": "korea",
         "missions": 87177,
         "notes": "792 victorias aéreas confirmadas. Proporción 10:1 contra MiG-15."
+      },
+      {
+        "conflict": "portuguese_colonial",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -5810,6 +6140,21 @@
         "conflict": "coldwar_patrols",
         "missions": null,
         "notes": "Defensa aérea de Europa y vigilancia marítima durante la Guerra Fría."
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yom_kippur",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "war_of_attrition",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -5898,9 +6243,14 @@
         "notes": "Realizó vuelos de reconocimiento sobre el Báltico y el Ártico."
       },
       {
-        "conflict": "iraq",
+        "conflict": "iran_iraq",
         "missions": null,
         "notes": "Usado por Irak durante la guerra Irán-Irak y la Guerra del Golfo."
+      },
+      {
+        "conflict": "gulf_war",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6157,6 +6507,31 @@
         "conflict": "coldwar_patrols",
         "missions": null,
         "notes": "Defensa aérea de la frontera soviética en Europa."
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "sudan_civil_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6330,6 +6705,16 @@
         "conflict": "libya",
         "missions": null,
         "notes": "Participó en la operación de la OTAN en 2011 lanzando Storm Shadow."
+      },
+      {
+        "conflict": "gulf_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6420,6 +6805,31 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Amplio uso en Afganistán e Irak en misiones CAS y de apoyo aéreo."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6509,6 +6919,16 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Operaciones contra el Daesh desde portaaviones en el Mediterráneo."
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6589,6 +7009,11 @@
         "conflict": "iraq",
         "missions": null,
         "notes": "Usado en 2003 para ataques de precisión contra objetivos de mando."
+      },
+      {
+        "conflict": "panama",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6775,6 +7200,21 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Empleado por Rusia en la invasión de 2022, con pérdidas registradas."
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "nagorno_karabakh",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -6928,6 +7368,11 @@
         "conflict": "coldwar_patrols",
         "missions": null,
         "notes": "Patrullas en el Ártico y el Lejano Oriente para interceptar bombarderos estadounidenses."
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -7030,7 +7475,7 @@
         "notes": "Participó en la Operación Tormenta del Desierto con misiones de ataque a tierra."
       },
       {
-        "conflict": "yugoslavia",
+        "conflict": "kosovo",
         "missions": null,
         "notes": "Misiones de bombardeo de precisión durante la campaña de la OTAN en Kosovo (1999)."
       },
@@ -7038,6 +7483,21 @@
         "conflict": "mali",
         "missions": null,
         "notes": "Apoyo aéreo cercano en la Operación Serval (2013)."
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -7136,6 +7596,21 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Utilizado por ambos bandos hasta su retiro ruso en 2023; Ucrania aún lo opera."
+      },
+      {
+        "conflict": "georgia_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "sudan_civil_war",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -7273,7 +7748,13 @@
     ],
     "radar_cross_section": "Media-Baja",
     "endurance_h": null,
-    "combat_history": []
+    "combat_history": [
+      {
+        "conflict": "gwot",
+        "missions": null,
+        "notes": ""
+      }
+    ]
   },
   {
     "id": "j10",
@@ -7575,6 +8056,16 @@
         "conflict": "sierra_leone",
         "missions": null,
         "notes": "Operaciones de la ONU en la región."
+      },
+      {
+        "conflict": "ivory_coast",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -7963,6 +8454,16 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Operaciones de apoyo aéreo y ataque de precisión desde 2019."
+      },
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8056,6 +8557,16 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Misiones de ataque a tierra contra el Daesh con Storm Shadow y Paveway IV."
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8140,9 +8651,44 @@
         "notes": "Empleado por Egipto y Siria contra Israel, con resultados mixtos."
       },
       {
-        "conflict": "falklands",
+        "conflict": "afghanistan",
         "missions": null,
-        "notes": "Argentina usó MiG-21? No, usó Mirage III. Corregir: No operó en Falklands, pero fue usado en otros conflictos."
+        "notes": ""
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "lebanon",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "croatian_independence",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "bosnian_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8250,6 +8796,26 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Amplio uso en Afganistán e Irak en misiones CAS y de ataque."
+      },
+      {
+        "conflict": "lebanon",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "red_sea_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8344,9 +8910,24 @@
         "notes": "F-15E Strike Eagle realizó misiones de ataque de precisión en Afganistán e Irak."
       },
       {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
         "conflict": "syria",
         "missions": null,
         "notes": "Derribos de drones y patrullas aéreas en la lucha contra el Daesh."
+      },
+      {
+        "conflict": "lebanon",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8453,6 +9034,16 @@
         "conflict": "libya",
         "missions": null,
         "notes": "Primera misión de combate en 2011, realizando misiones de reconocimiento y ataque."
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "sahel_insurgency",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8606,6 +9197,21 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Operado por ambos bandos, con pérdidas significativas."
+      },
+      {
+        "conflict": "georgia_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8694,6 +9300,11 @@
         "conflict": "libya",
         "missions": null,
         "notes": "Participó en la operación de 2011 lanzando JDAM."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8871,6 +9482,11 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Misiones de bombardeo de precisión en Afganistán e Irak desde 2001."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -8963,6 +9579,11 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Misiones contra el Daesh con JASSM y JDAM."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -9146,6 +9767,11 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Misiones CAS en Afganistán e Irak, altamente valorado por las tropas en tierra."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -9234,6 +9860,41 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Utilizado por Rusia desde 2015 en misiones de ataque a tierra."
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "georgia_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ethiopia_eritrea",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "nagorno_karabakh",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "sudan_civil_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -9584,6 +10245,21 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Vigilancia de la coalición contra el Daesh."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "libya",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -9757,6 +10433,11 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Operaciones de vigilancia contra el Daesh y seguimiento de fuerzas rusas."
+      },
+      {
+        "conflict": "ukraine",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -9971,6 +10652,46 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Misiones de transporte, reabastecimiento y AC-130 en apoyo a tropas."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "humanitarian",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "portuguese_colonial",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "rhodesian_bush_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "south_african_border",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "malayan_emergency",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "algerian_war",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -10149,6 +10870,26 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Indispensable para operaciones de largo alcance en Afganistán e Irak."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "kosovo",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "libya",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -10776,6 +11517,21 @@
         "conflict": "yom_kippur",
         "missions": null,
         "notes": "Participó en combates aire-aire contra F-4 y Mirage israelíes, con resultados mixtos."
+      },
+      {
+        "conflict": "war_of_attrition",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ogaden",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_crisis",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -10871,6 +11627,11 @@
         "conflict": "india_pakistan",
         "missions": null,
         "notes": "El Shenyang J-6 (versión china) fue usado por Pakistán en la guerra de 1971, con algunas victorias aéreas contra la Fuerza Aérea India."
+      },
+      {
+        "conflict": "ogaden",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -11555,7 +12316,13 @@
     ],
     "radar_cross_section": "Extremadamente alta",
     "endurance_h": null,
-    "combat_history": []
+    "combat_history": [
+      {
+        "conflict": "coldwar_patrols",
+        "missions": null,
+        "notes": ""
+      }
+    ]
   },
   {
     "id": "tu22m",
@@ -11634,6 +12401,16 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Usado en la invasión de 2022 para ataques de largo alcance con misiles."
+      },
+      {
+        "conflict": "chechnya",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "georgia_war",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -11860,6 +12637,11 @@
         "conflict": "vietnam",
         "missions": null,
         "notes": "Fue el principal cazabombardero de la USAF en los primeros años de la guerra, realizando misiones de ataque a tierra y escolta. También se usó como Wild Weasel contra radares SAM."
+      },
+      {
+        "conflict": "coldwar_patrols",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12014,6 +12796,11 @@
         "conflict": "vietnam",
         "missions": null,
         "notes": "Usado como escolta de bombarderos y como avión de alerta temprana. No entró en combate aire-aire, pero realizó misiones de escolta en Vietnam."
+      },
+      {
+        "conflict": "coldwar_patrols",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12183,6 +12970,36 @@
         "conflict": "iraq",
         "missions": null,
         "notes": "Irak empleó MiG-23 en la guerra Irán-Irak y en la Tormenta del Desierto."
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "lebanon",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "libya",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "ogaden",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12249,6 +13066,16 @@
         "conflict": "afghanistan",
         "missions": null,
         "notes": "Principal avión de ataque soviético en Afganistán, muy efectivo contra la guerrilla pero vulnerable a los Stingers."
+      },
+      {
+        "conflict": "iran_iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12333,9 +13160,24 @@
         "notes": "Utilizado en Afganistán como cazabombardero, sufriendo pérdidas por Stingers."
       },
       {
-        "conflict": "iraq",
+        "conflict": "iran_iraq",
         "missions": null,
         "notes": "Irak utilizó Su-22 en la guerra Irán-Irak y en la Tormenta del Desierto."
+      },
+      {
+        "conflict": "libya",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12491,7 +13333,7 @@
         "notes": "Utilizado por Francia en misiones defensivas; exportado a Israel? No, Israel no usó Mirage F1. Fue usado por Irak y Libia en conflictos posteriores."
       },
       {
-        "conflict": "iraq",
+        "conflict": "iran_iraq",
         "missions": null,
         "notes": "Los Mirage F1EQ iraquíes fueron utilizados en la guerra Irán-Irak y en la Tormenta del Desierto."
       },
@@ -12499,6 +13341,21 @@
         "conflict": "libya",
         "missions": null,
         "notes": "Libia empleó Mirage F1 en sus conflictos internos y contra Chad."
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "south_african_border",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "congo_wars",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12772,6 +13629,16 @@
         "conflict": "gwot",
         "missions": null,
         "notes": "Utilizado por la USAF en Afganistán para misiones de reabastecimiento y transporte en pistas cortas."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -12996,7 +13863,13 @@
     "tags": ["transporte presidencial", "Air Force One", "VIP", "activo"],
     "radar_cross_section": "Muy alta",
     "endurance_h": null,
-    "combat_history": []
+    "combat_history": [
+      {
+        "conflict": "coldwar_patrols",
+        "missions": null,
+        "notes": ""
+      }
+    ]
   },
   {
     "id": "mi26",
@@ -13263,6 +14136,11 @@
         "conflict": "mali",
         "missions": null,
         "notes": "Francia desplegó NH90 en la Operación Serval y Barkhane."
+      },
+      {
+        "conflict": "syria",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -13648,6 +14526,11 @@
         "conflict": "syria",
         "missions": null,
         "notes": "Utilizado por fuerzas especiales en operaciones contra el Daesh."
+      },
+      {
+        "conflict": "iraq",
+        "missions": null,
+        "notes": ""
       }
     ]
   },
@@ -13792,6 +14675,11 @@
         "conflict": "ukraine",
         "missions": null,
         "notes": "Utilizado por Rusia junto con el Shahed-136 para ataques masivos contra infraestructura ucraniana."
+      },
+      {
+        "conflict": "yemen",
+        "missions": null,
+        "notes": ""
       }
     ]
   },

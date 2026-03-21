@@ -54,8 +54,7 @@ function renderFleets() {
   const countEl= document.getElementById('fleetsCount');
 
   let data = fleetsDB.filter(c => {
-    const matchSearch = !search || c.country.toLowerCase().includes(search) ||
-      c.aircraft.some(a => a.name.toLowerCase().includes(search));
+    const matchSearch = !search || c.country.toLowerCase().includes(search) || c.aircraft.some(a => a.name.toLowerCase().includes(search));
     const matchRegion = region === 'all' || c.region === region;
     return matchSearch && matchRegion;
   });
@@ -103,12 +102,12 @@ function buildFleetCard(country) {
     const p = aircraftDB.find(x => x.id === a.id);
     const gen5badge = (p && p.generation === '5') ? ' <span style="color:#f472b6;font-size:.55rem">◈5ª</span>' : '';
     const qtyColor = a.qty === 0 ? 'var(--text-3)' : 'var(--primary)';
-    return '<tr onclick="viewPlaneFromFleet(\'' + a.id + '\')" title="Ver ficha de ' + a.name + '">' +
-      '<td style="width:50px"><img src=".\/public\/min\/' + a.img + '.webp" class="fat-img" onerror="this.src=\'' + FALLBACK_IMG + '\'"></td>' +
-      '<td><p class="fat-name">' + a.name + gen5badge + '</p><p class="fat-role">' + a.role + '</p></td>' +
-      '<td style="text-align:right;padding-left:.3rem"><span class="fat-qty" style="color:' + qtyColor + '">' + (a.qty || '—') + '</span></td>' +
-      '<td class="fat-note hidden-sm">' + a.notes + '</td>' +
-    '</tr>';
+    return `<tr onclick="viewPlaneFromFleet(\'${a.id}\')" title="Ver ficha de ${a.name}">
+      <td style="width:50px"><img src=".\/public\/min\/${a.img}.webp" class="fat-img" onerror="this.src=\'${FALLBACK_IMG}\'"></td>
+      <td><p class="fat-name">${a.name + gen5badge}</p><p class="fat-role">${a.role}</p></td>
+      <td style="text-align:right;padding-left:.3rem"><span class="fat-qty" style="color:${qtyColor}">${(a.qty || '—')}</span></td>' +
+      <td td class="fat-note hidden-sm" >${a.notes}</td>
+      </tr>`
   }).join('');
 
   // Barra de tipos
